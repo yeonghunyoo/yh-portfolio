@@ -23,11 +23,12 @@ never change what the reader sees.
 
 ```
 src/layouts/Base.astro      <html lang="ko">, metadata + Open Graph, tokens.css + global.css,
-                            pre-paint theme, the theme toggle and the section rail
+                            and the inline script that applies the remembered theme
+                            before the first paint
 src/screens/                one component per contracted screen — markup and its <style> block
 src/components/Lightbox.astro   the shared <dialog> the case-study screenshots open into
-src/content/                the copy the screens cannot express as one Strings key:
-                            codeSamples.ts · rawCopy.ts · skills.ts
+src/content/                resumeCopy · forestCopy · handoffAgentCopy — one field per
+                            contracted string, per screen — plus codeSamples · rawCopy · skills
 src/lib/                    apiClient (ApiRoutes) · pageViews · meta (Screens/ScreenPaths/Strings) ·
                             theme · scrollSpy · lightbox · dom · one <screen>Screen.ts per screen
 src/lib/backend-unmounted/  stand-in endpoints, used only when <repo>/backend is not checked out
@@ -37,9 +38,14 @@ src/styles/global.css       the design's own global rules + the light/mint palet
 scripts/                    shots.ts (compare-page screenshots) · a11y.ts (axe-core)
 ```
 
-Copy and layout are separated on purpose: a `.astro` file never spells a string, it reads
-`Strings.*` (or a field of a `src/content/*.ts` module that does). All 360 contracted keys
-are used; `test/contract.test.ts` proves it and fails on inline Korean.
+Copy and layout are separated on purpose: a `.astro` file never spells a string, it reads a
+field of its `src/content/<screen>Copy.ts` module, and every field there is a `Strings.*`
+constant. All 360 contracted keys are used; `test/contract.test.ts` proves it, fails on
+inline Korean, and fails on a copy field the screen does not render.
+
+The only copy that is not a `Strings` key is in `src/content/rawCopy.ts`: text the design
+carries in an *attribute* (`alt`, `title`), which `strings.json` does not collect. It is
+verbatim from the exports and listed in the build report.
 
 Nothing is copied out of `design/` or `shared/generated/`. Both are read-only and are
 reached through aliases declared in `astro.config.mjs` and `tsconfig.json`:
@@ -66,9 +72,10 @@ stylesheet re-types a generated value.
 
 | Component | Where |
 |---|---|
-| `toggleTheme` `toggleTheme2` `toggleTheme3` (toggle) | `src/layouts/Base.astro` + `src/lib/theme.ts` — `body[data-theme]`, `localStorage['yh-theme']` |
+| `toggleTheme` `toggleTheme2` `toggleTheme3` (toggle) | each screen's own header button + `src/lib/theme.ts` — `body[data-theme]`, `localStorage['yh-theme']` |
 | `pickHandoff` `pickForest` (button) + `skillsEnter` (item) + `enter0`..`enter4` (gesture) | `src/lib/resumeScreen.ts` — the project tabs, the skill rail and the pipeline nodes |
 | `mixEnter` `e1`..`e4` (gesture) | `src/lib/forestScreen.ts` — the mixer bars, `setInterval(900)` from behavior.json |
+| the section rail (`scrollSpy`) | `src/lib/scrollSpy.ts` — one passive scroll listener, used by the two case-study screens |
 | `tokGap` `tokSize` `tokColor` `tokText` `tokClick` `tokLeave` (gesture) | `src/lib/handoffAgentScreen.ts` — one element lights up in all four code samples at once |
 | `open1`..`open5` (button) + `closeLightbox` | `src/components/Lightbox.astro` + `src/lib/lightbox.ts` — a native `<dialog>` (`showModal()` gives the focus trap and Esc) |
 
