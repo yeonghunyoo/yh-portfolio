@@ -1,20 +1,17 @@
 ---
 import { Screens } from "@generated/Screens";
-import { Strings } from "@generated/Strings";
+import { overview } from "../content/s0";
+
+const [titleTop, titleBottom] = overview.titleLines;
+const [quoteTop, quoteBottom] = overview.quoteLines;
 ---
 
 <section id={Screens.s0} class="section">
-  <div class="kicker">{Strings.Shared._202609ClaudeCodePeulreogeuinPython}</div>
+  <div class="kicker">{overview.kicker}</div>
 
-  <h1 class="title">
-    {Strings.Shared.claudeDesignUiHandoffPaekijireulGibaneuro}<br />
-    {Strings.Shared.iOsAndroidBackendSePeulraetpomeulHan}
-  </h1>
+  <h1 class="title">{titleTop}<br />{titleBottom}</h1>
 
-  <blockquote class="quote">
-    {Strings.Shared.modeunGeDaJeonghaejyeoItdamyeonSe}<br />
-    {Strings.Shared.geurigoGeuJeonghaejinGeotISuchiro}
-  </blockquote>
+  <blockquote class="quote">{quoteTop}<br />{quoteBottom}</blockquote>
 </section>
 
 <style>

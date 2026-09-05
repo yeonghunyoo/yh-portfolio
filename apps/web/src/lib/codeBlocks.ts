@@ -15,15 +15,12 @@ import { Strings } from "@generated/Strings";
 /** The five elements the hover highlight ties together across the four samples. */
 export type TokenKey = "gap" | "size" | "color" | "text" | "click";
 
-/** Key of the generated `Strings.Shared` table. */
-export type SharedStringKey = keyof typeof Strings.Shared;
-
 export interface CodePart {
   readonly text: string;
   /** Present on the parts that participate in the cross-sample highlight. */
   readonly tok?: TokenKey;
-  /** `Strings.Shared` key this part must reproduce, when the contract has one. */
-  readonly strings?: SharedStringKey;
+  /** The `Strings.Shared.*` value this part must reproduce, when the contract has one. */
+  readonly contract?: string;
 }
 
 export interface CodeSample {
@@ -47,26 +44,34 @@ const SAMPLE_HTML: CodeSample = {
   title: Strings.Shared.claudeDesignHtmlDesignProjectForest,
   parts: [
     {
-      strings: "divStyleDisplayFlexFlexDirection",
+      contract: Strings.Shared.divStyleDisplayFlexFlexDirection,
       text: '<div style="display:flex;\n     flex-direction:column;\n     ',
     },
-    { tok: "gap", strings: "gap20Px", text: "gap:20px" },
+    { tok: "gap", contract: Strings.Shared.gap20Px, text: "gap:20px" },
     {
-      strings: "divStyleDisplayFlexJustifyContent",
+      contract: Strings.Shared.divStyleDisplayFlexJustifyContent,
       text: '">\n  <div style="display:flex;\n       justify-content:space-between">\n    <span style="\n      font-family:var(--font-heading);\n      ',
     },
-    { tok: "size", strings: "fontSize20Px", text: "font-size:20px" },
+    { tok: "size", contract: Strings.Shared.fontSize20Px, text: "font-size:20px" },
     { text: ";\n      " },
-    { tok: "color", strings: "colorVarColorAccent300", text: "color:var(--color-accent-300)" },
-    { strings: "t28F195", text: '">\n      ' },
-    { tok: "text", strings: "forest2", text: "forest" },
     {
-      strings: "spanSpanStyleFontSize15Px",
+      tok: "color",
+      contract: Strings.Shared.colorVarColorAccent300,
+      text: "color:var(--color-accent-300)",
+    },
+    { contract: Strings.Shared.t28F195, text: '">\n      ' },
+    { tok: "text", contract: Strings.Shared.forest2, text: "forest" },
+    {
+      contract: Strings.Shared.spanSpanStyleFontSize15Px,
       text: '</span>\n    <span style="font-size:15px">\n      {{ greeting }}</span>\n    <div ',
     },
-    { tok: "click", strings: "scCamelOnClick", text: 'sc-camel-on-click="{{ openSettings }}"' },
     {
-      strings: "styleWidth40PxHeight40PxDiv",
+      tok: "click",
+      contract: Strings.Shared.scCamelOnClick,
+      text: 'sc-camel-on-click="{{ openSettings }}"',
+    },
+    {
+      contract: Strings.Shared.styleWidth40PxHeight40PxDiv,
       text: '\n         style="width:40px;height:40px">\n    </div>',
     },
   ],
@@ -77,23 +82,31 @@ const SAMPLE_TREE: CodeSample = {
   title: Strings.Shared.seobeogaMandeunReiautTeuriDesignDerived,
   parts: [
     { text: '{ "kind": "column",\n  "style": { ' },
-    { tok: "gap", strings: "gap20Px2", text: '"gap": "20px"' },
+    { tok: "gap", contract: Strings.Shared.gap20Px2, text: '"gap": "20px"' },
     {
       text: ' },\n  "children": [\n  { "kind": "row",\n    "style": { "justify-content":\n               "space-between" },\n    "children": [\n    { "kind": "text",\n      ',
     },
-    { tok: "text", strings: "textStringsHomeForest", text: '"text": "Strings.Home.forest"' },
+    {
+      tok: "text",
+      contract: Strings.Shared.textStringsHomeForest,
+      text: '"text": "Strings.Home.forest"',
+    },
     { text: ',\n      "style": {\n        ' },
-    { tok: "size", strings: "fontSize20Px2", text: '"font-size": "20px"' },
+    { tok: "size", contract: Strings.Shared.fontSize20Px2, text: '"font-size": "20px"' },
     { text: ",\n        " },
     {
       tok: "color",
-      strings: "colorDesignTokensColorAccent300",
+      contract: Strings.Shared.colorDesignTokensColorAccent300,
       text: '"color": "DesignTokens.Color.Accent._300"',
     },
     {
       text: ' } },\n    { "kind": "text", "bind": "greeting" },\n    { "kind": "box",\n      ',
     },
-    { tok: "click", strings: "onClickOpenSettings", text: '"on_click": "openSettings"' },
+    {
+      tok: "click",
+      contract: Strings.Shared.onClickOpenSettings,
+      text: '"on_click": "openSettings"',
+    },
     {
       text: ',\n      "style": { "width": "40px",\n                 "height": "40px" } }\n    ] } ] }',
     },
@@ -104,18 +117,29 @@ const SAMPLE_TREE: CodeSample = {
 const SAMPLE_SWIFT: CodeSample = {
   title: Strings.Shared.iOsEijeonteugaOmginSwiftUiAppsIos,
   parts: [
-    { strings: "vStackAlignmentLeading", text: "VStack(alignment: .leading,\n       " },
-    { tok: "gap", strings: "spacing20", text: "spacing: 20" },
+    {
+      contract: Strings.Shared.vStackAlignmentLeading,
+      text: "VStack(alignment: .leading,\n       ",
+    },
+    { tok: "gap", contract: Strings.Shared.spacing20, text: "spacing: 20" },
     {
       text: ") {\n  HStack(alignment: .top) {\n    VStack(alignment: .leading,\n           spacing: 4) {\n      ",
     },
-    { tok: "text", strings: "textStringsHomeForest2", text: "Text(Strings.Home.forest)" },
+    {
+      tok: "text",
+      contract: Strings.Shared.textStringsHomeForest2,
+      text: "Text(Strings.Home.forest)",
+    },
     { text: "\n        " },
-    { tok: "size", strings: "fontTypographyHeading20", text: ".font(Typography.heading(20))" },
+    {
+      tok: "size",
+      contract: Strings.Shared.fontTypographyHeading20,
+      text: ".font(Typography.heading(20))",
+    },
     { text: "\n        " },
     {
       tok: "color",
-      strings: "foregroundStylePaletteAccent300",
+      contract: Strings.Shared.foregroundStylePaletteAccent300,
       text: ".foregroundStyle(Palette.accent300)",
     },
     {
@@ -123,7 +147,7 @@ const SAMPLE_SWIFT: CodeSample = {
     },
     {
       tok: "click",
-      strings: "buttonActionModelOpenSettings",
+      contract: Strings.Shared.buttonActionModelOpenSettings,
       text: "Button(action: model.openSettings)",
     },
     { text: " {\n      Circle().frame(width: 40, height: 40)\n    }\n  }\n}" },
@@ -135,24 +159,40 @@ const SAMPLE_COMPOSE: CodeSample = {
   title: Strings.Shared.androidEijeonteugaOmginComposeAppsAndroid,
   parts: [
     {
-      strings: "columnScCamelVerticalArrangement",
+      contract: Strings.Shared.columnScCamelVerticalArrangement,
       text: "Column(\n  sc-camel-vertical-arrangement =\n    ",
     },
-    { tok: "gap", strings: "arrangementSpacedBy20Dp", text: "Arrangement.spacedBy(20.dp)" },
+    {
+      tok: "gap",
+      contract: Strings.Shared.arrangementSpacedBy20Dp,
+      text: "Arrangement.spacedBy(20.dp)",
+    },
     {
       text: "\n) {\n  Row(\n    sc-camel-horizontal-arrangement = Arrangement.SpaceBetween,\n    sc-camel-vertical-alignment = Alignment.Top\n  ) {\n    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {\n      ",
     },
-    { tok: "text", strings: "textTextStringsHomeForest", text: "Text(text = Strings.Home.forest," },
+    {
+      tok: "text",
+      contract: Strings.Shared.textTextStringsHomeForest,
+      text: "Text(text = Strings.Home.forest,",
+    },
     { text: "\n        " },
-    { tok: "size", strings: "styleTypographyHeading20Sp", text: "style = Typography.heading(20.sp)" },
+    {
+      tok: "size",
+      contract: Strings.Shared.styleTypographyHeading20Sp,
+      text: "style = Typography.heading(20.sp)",
+    },
     { text: ",\n        " },
-    { tok: "color", strings: "colorPaletteAccent300", text: "color = Palette.accent300" },
+    {
+      tok: "color",
+      contract: Strings.Shared.colorPaletteAccent300,
+      text: "color = Palette.accent300",
+    },
     {
       text: ")\n      Text(text = model.greeting,\n        style = Typography.body(15.sp))\n    }\n    ",
     },
     {
       tok: "click",
-      strings: "iconButtonOnClickModelOpenSettings",
+      contract: Strings.Shared.iconButtonOnClickModelOpenSettings,
       text: "IconButton(onClick = model::openSettings)",
     },
     { text: " {\n      Box(Modifier.size(40.dp).clip(CircleShape))\n    }\n  }\n}" },
@@ -219,14 +259,20 @@ const collapse = (value: string): string => value.trim().split(/\s+/).join(" ");
 const substituteHoles = (value: string): string =>
   Object.entries(HOLES).reduce((acc, [rendered, raw]) => acc.split(rendered).join(raw), value);
 
-function expect(key: SharedStringKey, actual: string): string | null {
-  const wanted = Strings.Shared[key];
+/** value → constant name, so a mismatch can say which constant drifted. */
+const NAME_BY_VALUE = new Map(
+  Object.entries(Strings.Shared).map(([name, value]) => [value as string, name]),
+);
+
+function expect(wanted: string, actual: string): string | null {
   const got = substituteHoles(collapse(actual));
-  return got === wanted ? null : `Strings.Shared.${key}\n  contract: ${wanted}\n  rendered: ${got}`;
+  if (got === wanted) return null;
+  const name = NAME_BY_VALUE.get(wanted) ?? "?";
+  return `Strings.Shared.${name}\n  contract: ${wanted}\n  rendered: ${got}`;
 }
 
 /**
- * Every code fragment that has a Strings key must collapse to exactly that value.
+ * Every code fragment that the contract names must collapse to exactly that value.
  * Called from the s3/s4/s5 sections at build time and from the test suite.
  */
 export function assertCodeSamplesMatchStrings(): void {
@@ -234,18 +280,18 @@ export function assertCodeSamplesMatchStrings(): void {
 
   for (const sample of TRANSLATION_SAMPLES) {
     for (const part of sample.parts) {
-      if (!part.strings) continue;
-      const problem = expect(part.strings, part.text);
+      if (part.contract === undefined) continue;
+      const problem = expect(part.contract, part.text);
       if (problem) problems.push(problem);
     }
   }
 
-  const standalone: ReadonlyArray<readonly [SharedStringKey, string]> = [
-    ["openapi303InfoTitle", OPENAPI_DRAFT],
-    ["wranglerTomlUiReplacewithd1", SECRET_NUDGE],
+  const standalone: ReadonlyArray<readonly [string, string]> = [
+    [Strings.Shared.openapi303InfoTitle, OPENAPI_DRAFT],
+    [Strings.Shared.wranglerTomlUiReplacewithd1, SECRET_NUDGE],
   ];
-  for (const [key, value] of standalone) {
-    const problem = expect(key, value);
+  for (const [wanted, value] of standalone) {
+    const problem = expect(wanted, value);
     if (problem) problems.push(problem);
   }
 

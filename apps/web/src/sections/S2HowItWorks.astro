@@ -1,62 +1,14 @@
 ---
 import { Screens } from "@generated/Screens";
-import { Strings } from "@generated/Strings";
-import { sectionHref } from "../lib/screens";
-
-interface Step {
-  /** Step number — printed as-is by the design, no Strings key in the contract. */
-  ordinal: string;
-  name: string;
-  description: string;
-  href?: string;
-  invert?: boolean;
-}
-
-const steps: Step[] = [
-  {
-    ordinal: "1",
-    name: Strings.Shared.dijain,
-    description: Strings.Shared.claudeDesignAepDijainPeurototaipJejak,
-  },
-  {
-    ordinal: "2",
-    name: Strings.Shared.hwamyeonBeonyeok,
-    description: Strings.Shared.htmlHwamyeoneulGakNeitibeuEijeonteugaIos,
-    href: sectionHref(Screens.s3),
-  },
-  {
-    ordinal: "3",
-    name: Strings.Shared.seobeoInpeura,
-    description: Strings.Shared.jujeGineungYesangGyumoreulInteobyuroMutgo,
-    href: sectionHref(Screens.s4),
-  },
-  {
-    ordinal: "4",
-    name: Strings.Shared.aPiYaksok,
-    description: Strings.Shared.hwamyeonePilyohanDeiteoreulBogoAepSeobeo,
-    href: sectionHref(Screens.s4),
-  },
-  {
-    ordinal: "5",
-    name: Strings.Shared.gongyongPailSaengseong,
-    description: Strings.Shared.aPiJeonguiDijainTokeunMunguAikoneul,
-  },
-  {
-    ordinal: "6",
-    name: Strings.Shared.gaebalGeomsa,
-    description: Strings.Shared.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin,
-    href: sectionHref(Screens.s5),
-    invert: true,
-  },
-];
+import { howItWorks } from "../content/s2";
 ---
 
 <section id={Screens.s2} class="section">
-  <h2 class="title">{Strings.Shared.dongjakBangsik}</h2>
+  <h2 class="title">{howItWorks.title}</h2>
 
   <div class="steps">
     {
-      steps.map((step) => {
+      howItWorks.steps.map((step) => {
         const Tag = step.href ? "a" : "div";
         return (
           <Tag

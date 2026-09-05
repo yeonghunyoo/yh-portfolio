@@ -1,29 +1,25 @@
 ---
-import { Strings } from "@generated/Strings";
 import { DEFAULT_THEME, THEME_LABELS } from "../lib/theme";
-
-// `title`/`aria-label` of the theme switch. The prototype writes it as a plain
-// attribute and the contract has no Strings key for it — kept verbatim.
-const themeSwitchLabel = "테마 전환";
+import { header } from "../content/header";
 ---
 
 <header class="header">
   <div class="bar">
-    <a class="wordmark" href="https://github.com/yeonghunyoo">{Strings.Shared.yuyeonghun}</a>
+    <a class="wordmark" href={header.links.profile}>{header.wordmark}</a>
 
     <nav class="projects">
-      <span class="chip chipCurrent" aria-current="page">{Strings.Shared.handoffAgent}</span>
-      <a class="chip chipLink" href="https://github.com/yeonghunyoo">{Strings.Shared.forest}</a>
+      <span class="chip chipCurrent" aria-current="page">{header.currentProject}</span>
+      <a class="chip chipLink" href={header.links.profile}>{header.otherProject}</a>
     </nav>
 
     <div class="tools">
       <a
         class="repo"
-        href="https://github.com/yeonghunyoo/handoff-agent"
+        href={header.links.repo}
         target="_blank"
         rel="noreferrer"
       >
-        {Strings.Shared.gitHub}
+        {header.repo}
       </a>
 
       <button
@@ -31,8 +27,8 @@ const themeSwitchLabel = "테마 전환";
         class="themeToggle"
         role="switch"
         aria-checked={DEFAULT_THEME === "mint" ? "true" : "false"}
-        aria-label={themeSwitchLabel}
-        title={themeSwitchLabel}
+        aria-label={header.themeSwitchLabel}
+        title={header.themeSwitchLabel}
         data-theme-toggle
       >
         <span class="themeDot" aria-hidden="true"></span>

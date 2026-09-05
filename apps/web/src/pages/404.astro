@@ -1,6 +1,6 @@
 ---
 import { Screens, ScreenPaths } from "@generated/Screens";
-import { Strings } from "@generated/Strings";
+import { header } from "../content/header";
 import Base from "../layouts/Base.astro";
 import SiteHeader from "../components/SiteHeader.astro";
 import { PAGE_TITLE } from "../lib/screens";
@@ -18,7 +18,7 @@ const STATUS = "404";
 
   <main class="page">
     <p class="status">{STATUS}</p>
-    <a class="back" href={ScreenPaths[Screens.s0]}>{Strings.Shared.yuyeonghun}</a>
+    <a class="back" href={ScreenPaths[Screens.s0]}>{header.wordmark}</a>
   </main>
 </Base>
 

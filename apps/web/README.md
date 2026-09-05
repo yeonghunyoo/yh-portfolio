@@ -24,12 +24,17 @@ contract are the six sections of `/` (every entry in `ScreenPaths` is `"/"`).
 ```
 src/layouts/Base.astro      <html lang="ko">, metadata, tokens.css + global.css, pre-paint theme
 src/components/             SiteHeader (theme toggle) · SectionNav (rail + scroll spy) · Lightbox · CodeSample
-src/sections/               one component per contracted screen
+src/sections/               one component per contracted screen — markup and CSS only
+src/content/                the copy: one module per screen, every field a Strings.Shared.* constant
 src/lib/                    apiClient (ApiRoutes) · screens (Screens/ScreenPaths) · theme · scrollSpy ·
                             tokenHighlight · lightbox · pageViews · codeBlocks
 src/styles/global.css       the design's own <style> block + the light/mint palettes
 src/pages/index.astro       the document · 404.astro · favicon.svg.ts (drawn from DesignTokens)
 ```
+
+Copy and layout are separated on purpose: a `.astro` file never names a string, it
+reads a field of its `src/content/*.ts` module, and those modules only ever assign
+`Strings.Shared.*`. All 207 contracted keys are used; `test/contract.test.ts` proves it.
 
 Nothing is copied out of `design/` or `shared/generated/`. Both are read-only and are
 reached through aliases declared in `astro.config.mjs` and `tsconfig.json`:

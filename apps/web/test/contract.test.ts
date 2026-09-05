@@ -22,10 +22,19 @@ function walk(dir: string): string[] {
   });
 }
 
+/** Comments explain the design in the designer's words; only real code counts here. */
+function stripComments(source: string): string {
+  return source
+    .replace(/\/\*[\s\S]*?\*\//g, "")
+    .split("\n")
+    .filter((line) => !line.trimStart().startsWith("//"))
+    .join("\n");
+}
+
 const sourceFiles = walk(srcRoot);
 const sourceText = sourceFiles
   .filter((file) => file.endsWith(".astro") || file.endsWith(".ts"))
-  .map((file) => readFileSync(file, "utf8"))
+  .map((file) => stripComments(readFileSync(file, "utf8")))
   .join("\n");
 const styleText = sourceFiles
   .filter((file) => file.endsWith(".astro") || file.endsWith(".css"))

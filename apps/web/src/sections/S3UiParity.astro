@@ -1,7 +1,6 @@
 ---
 import { Image, getImage } from "astro:assets";
 import { Screens } from "@generated/Screens";
-import { Strings } from "@generated/Strings";
 import CodeSample from "../components/CodeSample.astro";
 import {
   GENERATED_STRINGS_KOTLIN,
@@ -9,6 +8,7 @@ import {
   TRANSLATION_SAMPLES,
   assertCodeSamplesMatchStrings,
 } from "../lib/codeBlocks";
+import { uiParity } from "../content/s3";
 
 import onboardingCompare from "@design-uploads/c1bc2403.png";
 import homeCompare from "@design-uploads/ec8ec00e.png";
@@ -19,50 +19,17 @@ import extraCompare from "@design-uploads/c66951c6.png";
 // Fails the build if the code samples ever drift from shared/generated/Strings.ts.
 assertCodeSamplesMatchStrings();
 
-// Before/after numbers of the refinement, as `label → value` rows.
-const refinementRows = [
-  { label: Strings.Shared._917JulHanPail, value: Strings.Shared.hwamyeondangTeuri4Gae321243 },
-  { label: Strings.Shared.saekRiteoreol119Gae, value: Strings.Shared._0Gae },
-  {
-    label: Strings.Shared.ireumEoldeonMunguAikonDongjak,
-    value: Strings.Shared.mungu80Aikon10Haendeulreo25,
-  },
-  { label: Strings.Shared.peurototaipJangsik, value: Strings.Shared.jeondalAnHam },
-];
+const { problem, approach, refinement, generated, result } = uiParity;
 
-// The five comparison shots. `alt` is a plain attribute in the prototype and has no
-// Strings key in the contract — kept verbatim.
-const comparisons = [
-  {
-    image: onboardingCompare,
-    alt: "온보딩 화면 비교",
-    caption: Strings.Shared.onbodingBeoteunWichiYeobaekiAEseo,
-  },
-  {
-    image: homeCompare,
-    alt: "홈 화면 비교",
-    caption: Strings.Shared.homHadanChucheonMiksingBaechiwaImiji,
-  },
-  {
-    image: soundCompare,
-    alt: "사운드 화면 비교",
-    caption: Strings.Shared.saundeuTaimeoDeuropdaunSiUiKkaejim,
-  },
-  {
-    image: statsCompare,
-    alt: "기록 화면 비교",
-    caption: Strings.Shared.girokHadanSafeAreaMitJeongryeoliUidowa,
-  },
-  {
-    image: extraCompare,
-    alt: "추가 비교",
-    caption: Strings.Shared.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul,
-  },
-];
-
-/** Full-size variant behind the lightbox — optimised, not the 1.2 MB source PNG. */
-const comparisonsWithZoom = await Promise.all(
-  comparisons.map(async (comparison) => ({
+/** The five comparison shots, in the design's order, with an optimised zoom variant. */
+const comparisons = await Promise.all(
+  [
+    { image: onboardingCompare, ...result.compare.onboarding },
+    { image: homeCompare, ...result.compare.home },
+    { image: soundCompare, ...result.compare.sound },
+    { image: statsCompare, ...result.compare.stats },
+    { image: extraCompare, ...result.compare.extra },
+  ].map(async (comparison) => ({
     ...comparison,
     zoom: await getImage({
       src: comparison.image,
@@ -77,30 +44,26 @@ const [htmlSample, treeSample, swiftSample, composeSample] = TRANSLATION_SAMPLES
 
 <section id={Screens.s3} class="section" data-tok-root>
   <div class="case">
-    <div class="kicker">{Strings.Shared.keiseuSeuteodi1}</div>
-    <h2 class="title">{Strings.Shared.uIuxGuhyeonJeonghapseongeulWihanGyuchik}</h2>
+    <div class="kicker">{uiParity.kicker}</div>
+    <h2 class="title">{uiParity.title}</h2>
 
     <div class="body">
-      <div class="label">{Strings.Shared.munje}</div>
+      <div class="label">{uiParity.labels.problem}</div>
       <div>
-        {Strings.Shared.claudeDesignINaebonaeneunHtmlEun}
-        <ul class="bullets">
-          <li>{Strings.Shared.hwamyeon5Gaega917JulPail}</li>
-          <li>{Strings.Shared.seosikiJeonbuInrainStyle166Gae}</li>
-          <li>{Strings.Shared.aepeEolneunPeurototaipJangsikiSeokyeoIteum}</li>
-        </ul>
+        {problem.lead}
+        <ul class="bullets">{problem.bullets.map((bullet) => <li>{bullet}</li>)}</ul>
       </div>
 
-      <div class="label">{Strings.Shared.jeopgeun}</div>
+      <div class="label">{uiParity.labels.approach}</div>
       <div>
-        {Strings.Shared.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Strings.Shared.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Strings.Shared.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo}
+        {approach.lead} <b>{approach.emphasis}</b>{approach.tail}
       </div>
 
-      <div class="label">{Strings.Shared.guhyeon}</div>
+      <div class="label">{uiParity.labels.implementation}</div>
       <div>
-        <div class="step">{Strings.Shared._1ClaudeDesignUiHandoffPaekijireul}</div>
+        <div class="step">{refinement.title}</div>
         <div class="stepNote">
-          {Strings.Shared.gateunYosoGap20MunguSaek} <span class="tokenLegend">{Strings.Shared.jeomseonMitjul}</span> {Strings.Shared.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun}
+          {refinement.note.lead} <span class="tokenLegend">{refinement.note.legend}</span> {refinement.note.tail}
         </div>
 
         <div class="samples samplesFirst">
@@ -112,10 +75,10 @@ const [htmlSample, treeSample, swiftSample, composeSample] = TRANSLATION_SAMPLES
           {composeSample && <CodeSample sample={composeSample} />}
         </div>
 
-        <div class="numbersTitle">{Strings.Shared.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon}</div>
+        <div class="numbersTitle">{refinement.numbersTitle}</div>
         <div class="numbers">
           {
-            refinementRows.map((row) => (
+            refinement.rows.map((row) => (
               <div class="numberRow">
                 <span class="numberLabel">{row.label}</span>
                 <span class="numberValue">{row.value}</span>
@@ -124,64 +87,63 @@ const [htmlSample, treeSample, swiftSample, composeSample] = TRANSLATION_SAMPLES
           }
         </div>
 
-        <div class="step stepSecond">{Strings.Shared._2SeobeogaGongtongRisoseureulGakPeulraetpome}</div>
+        <div class="step stepSecond">{generated.title}</div>
         <div class="generatedNote">
-          <code>{Strings.Shared.sharedGenerated}</code> {Strings.Shared.eGateunNaeyongiSwiftKotlinEuro} <code>{Strings.Shared.apiRoutesScreensDesignTokensIcons}</code> {Strings.Shared.doDuEoneoroSaengseongdoepnida}
+          <code>{generated.note.path}</code> {generated.note.lead} <code>{generated.note.constants}</code> {generated.note.tail}
         </div>
         <div class="generatedCards">
           <div class="generatedCard">
-            <div class="generatedTitle">{Strings.Shared.stringsSwift}</div>
+            <div class="generatedTitle">{generated.swiftTitle}</div>
             <pre class="generatedCode" tabindex="0">{GENERATED_STRINGS_SWIFT}</pre>
           </div>
           <div class="generatedCard">
-            <div class="generatedTitle">{Strings.Shared.stringsKt}</div>
+            <div class="generatedTitle">{generated.kotlinTitle}</div>
             <pre class="generatedCode" tabindex="0">{GENERATED_STRINGS_KOTLIN}</pre>
           </div>
         </div>
       </div>
 
-      <div class="label">{Strings.Shared.gyeolgwa}</div>
+      <div class="label">{uiParity.labels.result}</div>
       <div>
-        {Strings.Shared.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun}
+        {result.lead}
         <div class="panel">
           <div class="panelHead">
-            <span class="panelTitle">{Strings.Shared.seongneungGeomjeungHandoffPackageJeongjeJeonhu}</span>
-            <span class="panelMeta">{Strings.Shared.homeStatsIosAndroid2Hoe}</span>
+            <span class="panelTitle">{result.panel.title}</span>
+            <span class="panelMeta">{result.panel.meta}</span>
           </div>
 
           <table>
             <thead>
               <tr>
                 <th></th>
-                <th>{Strings.Shared.aWonbonHtml57Kb}</th>
-                <th>{Strings.Shared.bJeongjehanReiautTeuri}</th>
+                {result.panel.headers.map((header) => <th>{header}</th>)}
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="rowLabel">{Strings.Shared.tokeunPyeonggyun}</td>
-                <td>{Strings.Shared._905K}</td>
-                <td><b>{Strings.Shared._551K}</b> <span class="delta">{Strings.Shared._39}</span></td>
+                <td class="rowLabel">{result.panel.tokens.label}</td>
+                <td>{result.panel.tokens.before}</td>
+                <td><b>{result.panel.tokens.after}</b> <span class="delta">{result.panel.tokens.delta}</span></td>
               </tr>
               <tr>
-                <td class="rowLabel">{Strings.Shared.hwamyeonJeonghapseong}</td>
-                <td>{Strings.Shared._8BeonJung7BeonHwamyeoneul}</td>
-                <td>{Strings.Shared.ppatteurinGeonChuchulgigaTeurieAnDameun}</td>
+                <td class="rowLabel">{result.panel.parity.label}</td>
+                <td>{result.panel.parity.before}</td>
+                <td>{result.panel.parity.after}</td>
               </tr>
             </tbody>
           </table>
 
           <div class="panelFoot">
-            {Strings.Shared.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="strong">{Strings.Shared.ipryeokman}</b> {Strings.Shared.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi}
+            {result.panel.foot.lead} <b class="strong">{result.panel.foot.emphasis}</b> {result.panel.foot.tail}
           </div>
         </div>
 
         <div class="compareTitle">
-          {Strings.Shared.uIuxGuhyeonJeonghapseongBigyo} <span class="compareHint">{Strings.Shared.oenjjokbuteoBReiautTeuriAhtml}</span>
+          {result.compare.title} <span class="compareHint">{result.compare.hint}</span>
         </div>
         <div class="compareGrid">
           {
-            comparisonsWithZoom.map((comparison) => (
+            comparisons.map((comparison) => (
               <figure class="figure">
                 <button
                   type="button"

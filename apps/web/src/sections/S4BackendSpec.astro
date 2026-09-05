@@ -1,85 +1,33 @@
 ---
 import { Screens } from "@generated/Screens";
-import { Strings } from "@generated/Strings";
 import { OPENAPI_DRAFT, assertCodeSamplesMatchStrings } from "../lib/codeBlocks";
+import { backendSpec } from "../content/s4";
 
 assertCodeSamplesMatchStrings();
 
-// The four interview steps.
-const interviewSteps = [
-  { name: Strings.Shared._1Seutaek, note: Strings.Shared.peulraetpomgwaBaekendeuEoneoreulHubo23 },
-  { name: Strings.Shared._2Gyumo, note: Strings.Shared.yesangMaudauReulSayongjagaDaeryak },
-  { name: Strings.Shared._3HuboChurigi, note: Strings.Shared._12GaeJohapJungGeuGyumoe },
-  { name: Strings.Shared._4YogeumJohoe, note: Strings.Shared.gongsikYogeumPeijimanIkeumKaesiEoli },
-];
-
-/** The date the prices were re-read. Printed as-is by the design; no Strings key. */
-const CHECKED_ON = "2026-09-04";
-
-const comboRows = [
-  {
-    id: Strings.Shared.awsServerless,
-    db: Strings.Shared.dynamoDb,
-    auth: Strings.Shared.cognito,
-    hosting: Strings.Shared.lambdaApigw,
-    cost: Strings.Shared._05,
-    lockIn: Strings.Shared.nopeum,
-  },
-  {
-    id: Strings.Shared.vpsDocker,
-    db: Strings.Shared.postgreSqlJache,
-    auth: Strings.Shared.jacheJwt,
-    hosting: Strings.Shared.vPsHetzner,
-    cost: Strings.Shared._410,
-    lockIn: Strings.Shared.nateum,
-  },
-  {
-    id: Strings.Shared.firebase,
-    db: Strings.Shared.firestore,
-    auth: Strings.Shared.firebaseAuth,
-    hosting: Strings.Shared.cloudRun,
-    cost: Strings.Shared._010,
-    lockIn: Strings.Shared.nopeum,
-  },
-  {
-    id: Strings.Shared.railway,
-    db: Strings.Shared.postgreSqlRailway,
-    auth: Strings.Shared.jacheJwt,
-    hosting: Strings.Shared.railway2,
-    cost: Strings.Shared._525,
-    lockIn: Strings.Shared.nateum,
-  },
-  {
-    id: Strings.Shared.supabaseFly,
-    db: Strings.Shared.postgreSqlSupabase,
-    auth: Strings.Shared.supabaseAuth,
-    hosting: Strings.Shared.flyIo,
-    cost: Strings.Shared._030,
-    lockIn: Strings.Shared.jung,
-  },
-];
+const { approach, interview, apiSpec, result } = backendSpec;
 ---
 
 <section id={Screens.s4} class="section">
   <div class="case">
-    <div class="kicker">{Strings.Shared.keiseuSeuteodi2}</div>
-    <h2 class="title">{Strings.Shared.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
+    <div class="kicker">{backendSpec.kicker}</div>
+    <h2 class="title">{backendSpec.title}</h2>
 
     <div class="body">
-      <div class="label">{Strings.Shared.munje}</div>
-      <div>{Strings.Shared.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
+      <div class="label">{backendSpec.labels.problem}</div>
+      <div>{backendSpec.problem}</div>
 
-      <div class="label">{Strings.Shared.jeopgeun}</div>
+      <div class="label">{backendSpec.labels.approach}</div>
       <div>
-        {Strings.Shared.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Strings.Shared.bogiSwipgePyoroJean}</b>{Strings.Shared.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}
+        {approach.lead} <b>{approach.emphasis}</b>{approach.tail}
       </div>
 
-      <div class="label">{Strings.Shared.guhyeon}</div>
+      <div class="label">{backendSpec.labels.implementation}</div>
       <div>
-        <div class="step">{Strings.Shared.inpeuraGyeoljeong4DangyeInteobyuGak}</div>
+        <div class="step">{interview.title}</div>
         <div class="interview">
           {
-            interviewSteps.map((step) => (
+            interview.steps.map((step) => (
               <div class="interviewCard">
                 <b>{step.name}</b>
                 <br />
@@ -89,37 +37,37 @@ const comboRows = [
           }
         </div>
 
-        <div class="step stepSpaced">{Strings.Shared.aPiMyeongse}</div>
+        <div class="step stepSpaced">{apiSpec.title}</div>
         <div class="apiNote">
-          {Strings.Shared.inpeuragaJeonghaejimyeonHwamyeonHtmlGwaGaebal} <b>{Strings.Shared.gakHwamyeoniPilyoroHaneunDeiteo}</b>{Strings.Shared.eseoEndeupointeureulPpopa} <code>{Strings.Shared.openapiYaml}</code> {Strings.Shared.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye}
+          {apiSpec.note.lead} <b>{apiSpec.note.emphasis}</b>{apiSpec.note.middle} <code>{apiSpec.note.file}</code> {apiSpec.note.tail}
         </div>
         <div class="codeCard"><pre tabindex="0">{OPENAPI_DRAFT}</pre></div>
       </div>
 
-      <div class="label">{Strings.Shared.gyeolgwa}</div>
+      <div class="label">{backendSpec.labels.result}</div>
       <div>
-        {Strings.Shared.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
+        {result.lead}
         <div class="panel">
           <div class="panelHead">
-            {Strings.Shared.gyumo} <b class="strong">{Strings.Shared.sogyumo}</b> {Strings.Shared.mAu10000Dau1000}
+            {result.scale.label} <b class="strong">{result.scale.emphasis}</b> {result.scale.tail}
           </div>
 
           <div class="tableScroll" tabindex="0">
             <table class="comboTable">
               <thead>
                 <tr>
-                  <th>{Strings.Shared.id}</th>
-                  <th>{Strings.Shared.db}</th>
-                  <th>{Strings.Shared.auth}</th>
-                  <th>{Strings.Shared.hosting}</th>
-                  <th>{Strings.Shared.wolBiyong}</th>
-                  <th>{Strings.Shared.hwakinil}</th>
-                  <th>{Strings.Shared.jongsokseong}</th>
+                  <th>{result.headers.id}</th>
+                  <th>{result.headers.db}</th>
+                  <th>{result.headers.auth}</th>
+                  <th>{result.headers.hosting}</th>
+                  <th>{result.headers.cost}</th>
+                  <th>{result.headers.checkedOn}</th>
+                  <th>{result.headers.lockIn}</th>
                 </tr>
               </thead>
               <tbody>
                 {
-                  comboRows.map((row) => (
+                  result.combos.map((row) => (
                     <tr>
                       <td class="comboId">{row.id}</td>
                       <td>{row.db}</td>
@@ -128,7 +76,7 @@ const comboRows = [
                       <td>
                         <b>{row.cost}</b>
                       </td>
-                      <td>{CHECKED_ON}</td>
+                      <td>{row.checkedOn}</td>
                       <td>{row.lockIn}</td>
                     </tr>
                   ))
@@ -139,11 +87,11 @@ const comboRows = [
         </div>
 
         <ul class="notes">
-          <li>{Strings.Shared.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li>
+          <li>{result.notes.summary}</li>
           <li>
-            {Strings.Shared.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="strong">{Strings.Shared.sayongjaegeBogoseoroJechul}</b>{Strings.Shared.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}
+            {result.notes.report.lead} <b class="strong">{result.notes.report.emphasis}</b>{result.notes.report.tail}
           </li>
-          <li>{Strings.Shared.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li>
+          <li>{result.notes.why}</li>
         </ul>
       </div>
     </div>
