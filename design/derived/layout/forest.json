@@ -1,0 +1,1526 @@
+{
+  "kind": "group",
+  "tag": "html",
+  "children": [
+    {
+      "kind": "group",
+      "tag": "head",
+      "children": [
+        {
+          "kind": "box",
+          "tag": "meta"
+        },
+        {
+          "kind": "box",
+          "tag": "meta"
+        },
+        {
+          "kind": "box",
+          "tag": "script"
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "tag": "body",
+      "children": [
+        {
+          "kind": "group",
+          "tag": "x-dc",
+          "children": [
+            {
+              "kind": "group",
+              "tag": "helmet",
+              "children": [
+                {
+                  "kind": "box",
+                  "tag": "link",
+                  "href": "https://fonts.googleapis.com"
+                },
+                {
+                  "kind": "box",
+                  "tag": "link",
+                  "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+                },
+                {
+                  "kind": "text",
+                  "tag": "style",
+                  "text": "html{scroll-behavior:smooth} body{margin:0;font-family:'IBM Plex Sans KR',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s; --bg:#F7F7F5;--surface:#EEF0F2;--card:#FFFFFF;--line:rgba(22,24,29,.14);--line-soft:rgba(22,24,29,.08);--muted:#6B7280;--ink:#16181D;--accent:#2F5BEA;--accent-ink:#FFFFFF;--accent-soft:rgba(47,91,234,.10);--hl:rgba(47,91,234,.12)} body[data-theme=\"mint\"]{--bg:#0F1115;--surface:#181C24;--card:#141821;--line:rgba(230,232,236,.16);--line-soft:rgba(230,232,236,.08);--muted:#8B93A1;--ink:#E6E8EC;--accent:#3DDC97;--accent-ink:#0F1115;--accent-soft:rgba(61,220,151,.12);--hl:rgba(61,220,151,.14)} a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline} [data-cur=\"1\"]{color:var(--accent)!important;font-weight:600} [data-cur=\"1\"] span{color:var(--accent)!important} [data-pair=\"1\"]{background:var(--hl);border-radius:6px} @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}",
+                  "raw_text": true
+                }
+              ]
+            },
+            {
+              "kind": "group",
+              "tag": "header",
+              "style": {
+                "position": "sticky",
+                "top": "0",
+                "z-index": "20",
+                "background": "DesignTokens.bg",
+                "border-bottom": "1px solid DesignTokens.line"
+              },
+              "children": [
+                {
+                  "kind": "row",
+                  "style": {
+                    "max-width": "1180px",
+                    "margin": "0 auto",
+                    "padding": "14px 32px",
+                    "display": "flex",
+                    "justify-content": "space-between",
+                    "align-items": "center",
+                    "gap": "16px",
+                    "flex-wrap": "wrap"
+                  },
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "a",
+                      "href": "Resume.dc.html#work",
+                      "text": "Strings.Forest.yuyeonghun",
+                      "style": {
+                        "font-weight": "700",
+                        "font-size": "16px",
+                        "color": "DesignTokens.ink",
+                        "text-decoration": "none"
+                      }
+                    },
+                    {
+                      "kind": "row",
+                      "style": {
+                        "display": "flex",
+                        "gap": "6px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "a",
+                          "href": "Handoff%20Agent.dc.html",
+                          "text": "Strings.Resume.handoffAgent",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "color": "DesignTokens.ink",
+                            "border-radius": "8px",
+                            "padding": "6px 14px",
+                            "font-size": "13px",
+                            "font-weight": "500",
+                            "text-decoration": "none"
+                          }
+                        },
+                        {
+                          "kind": "text",
+                          "text": "Strings.Resume.forest",
+                          "style": {
+                            "background": "DesignTokens.ink",
+                            "color": "DesignTokens.bg",
+                            "border": "1px solid DesignTokens.ink",
+                            "border-radius": "8px",
+                            "padding": "6px 14px",
+                            "font-size": "13px",
+                            "font-weight": "600"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "row",
+                      "style": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Forest._202609",
+                          "style": {
+                            "font": "13px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.muted"
+                          }
+                        },
+                        {
+                          "kind": "row",
+                          "tag": "button",
+                          "on_click": "toggleTheme",
+                          "title": "테마 전환",
+                          "bind": "themeLabel",
+                          "style": {
+                            "display": "flex",
+                            "align-items": "center",
+                            "gap": "6px",
+                            "border": "1px solid DesignTokens.line",
+                            "background": "DesignTokens.card",
+                            "color": "DesignTokens.ink",
+                            "border-radius": "999px",
+                            "padding": "5px 12px 5px 8px",
+                            "font": "500 12px 'IBM Plex Mono',monospace",
+                            "cursor": "pointer"
+                          },
+                          "children": [
+                            {
+                              "kind": "box",
+                              "style": {
+                                "width": "14px",
+                                "height": "14px",
+                                "border-radius": "50%",
+                                "background": "DesignTokens.accent",
+                                "display": "inline-block"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "grid",
+              "style": {
+                "max-width": "1180px",
+                "margin": "0 auto",
+                "padding": "0 32px",
+                "display": "grid",
+                "grid-template-columns": "minmax(0,1fr) 150px",
+                "gap": "0"
+              },
+              "children": [
+                {
+                  "kind": "group",
+                  "tag": "main",
+                  "style": {
+                    "min-width": "0",
+                    "padding-right": "36px",
+                    "border-right": "1px solid DesignTokens.Line.soft"
+                  },
+                  "children": [
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s0",
+                      "style": {
+                        "padding": "56px 0 0",
+                        "scroll-margin-top": "90px",
+                        "animation": "rise .5s ease both"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Forest.saundeuMiksingJipjungMyeongsangAepIos",
+                          "style": {
+                            "font": "13px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.muted"
+                          }
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "h1",
+                          "text": "파도 · 비 · 바람 · 모래 · 장작 다섯 가지 자연 소리를 원하는 비율로 섞어 나만의 소리를 만드는 명상 앱",
+                          "raw_text": true,
+                          "style": {
+                            "margin": "10px 0 0",
+                            "font-size": "34px",
+                            "line-height": "1.3",
+                            "font-weight": "700",
+                            "letter-spacing": "-.01em",
+                            "text-wrap": "pretty"
+                          },
+                          "children": [
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "p",
+                          "text": "잠들 때나 집중할 때 배경음으로 틀어두는 용도. 이 프로젝트는 를 활용해 사용자 인터뷰, 디자인 프로토타입을 기반으로 자동 생성되는 프로젝트로 iOS · Android 네이티브로 동시 개발 중입니다.",
+                          "raw_text": true,
+                          "style": {
+                            "margin": "16px 0 0",
+                            "font-size": "17px",
+                            "line-height": "1.75",
+                            "color": "DesignTokens.muted",
+                            "max-width": "720px",
+                            "text-wrap": "pretty"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "a",
+                              "href": "Handoff%20Agent.dc.html",
+                              "text": "Strings.Resume.handoffAgent",
+                              "style": {
+                                "font-weight": "600"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(180px,1fr))",
+                            "gap": "16px",
+                            "margin-top": "32px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "tag": "figure",
+                              "style": {
+                                "margin": "0"
+                              },
+                              "children": [
+                                {
+                                  "kind": "image",
+                                  "src": "assets/forest-01-onboarding.png",
+                                  "alt": "Forest 온보딩",
+                                  "tag": "img",
+                                  "on_click": "open1",
+                                  "style": {
+                                    "width": "100%",
+                                    "border-radius": "22px",
+                                    "border": "1px solid DesignTokens.line",
+                                    "display": "block",
+                                    "cursor": "zoom-in",
+                                    "transition": "transform .3s"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "figcaption",
+                                  "text": "Strings.Forest.onboding",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "8px",
+                                    "text-align": "center"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "figure",
+                              "style": {
+                                "margin": "0"
+                              },
+                              "children": [
+                                {
+                                  "kind": "image",
+                                  "src": "assets/forest-02-home.png",
+                                  "alt": "Forest 홈",
+                                  "tag": "img",
+                                  "on_click": "open2",
+                                  "style": {
+                                    "width": "100%",
+                                    "border-radius": "22px",
+                                    "border": "1px solid DesignTokens.line",
+                                    "display": "block",
+                                    "cursor": "zoom-in",
+                                    "transition": "transform .3s"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "figcaption",
+                                  "text": "Strings.Forest.hom",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "8px",
+                                    "text-align": "center"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "figure",
+                              "style": {
+                                "margin": "0"
+                              },
+                              "children": [
+                                {
+                                  "kind": "image",
+                                  "src": "assets/forest-03-sound.png",
+                                  "alt": "Forest 사운드",
+                                  "tag": "img",
+                                  "on_click": "open3",
+                                  "style": {
+                                    "width": "100%",
+                                    "border-radius": "22px",
+                                    "border": "1px solid DesignTokens.line",
+                                    "display": "block",
+                                    "cursor": "zoom-in",
+                                    "transition": "transform .3s"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "figcaption",
+                                  "text": "Strings.Forest.saundeu",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "8px",
+                                    "text-align": "center"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "figure",
+                              "style": {
+                                "margin": "0"
+                              },
+                              "children": [
+                                {
+                                  "kind": "image",
+                                  "src": "assets/forest-04-stats.png",
+                                  "alt": "Forest 기록",
+                                  "tag": "img",
+                                  "on_click": "open4",
+                                  "style": {
+                                    "width": "100%",
+                                    "border-radius": "22px",
+                                    "border": "1px solid DesignTokens.line",
+                                    "display": "block",
+                                    "cursor": "zoom-in",
+                                    "transition": "transform .3s"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "figcaption",
+                                  "text": "Strings.Forest.girok",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "8px",
+                                    "text-align": "center"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s1",
+                      "style": {
+                        "padding": "56px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(320px,1fr))",
+                            "gap": "36px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "h2",
+                                  "text": "Strings.Forest.gineung",
+                                  "style": {
+                                    "margin": "0",
+                                    "font-size": "24px",
+                                    "font-weight": "700"
+                                  }
+                                },
+                                {
+                                  "kind": "grid",
+                                  "style": {
+                                    "display": "grid",
+                                    "grid-template-columns": "repeat(auto-fit,minmax(200px,1fr))",
+                                    "gap": "10px",
+                                    "margin-top": "14px",
+                                    "font-size": "15.5px",
+                                    "line-height": "1.6"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "on_mouseenter": "mixEnter",
+                                      "on_mouseleave": "mixLeave",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "background": "DesignTokens.card",
+                                        "transition": "border-color .2s"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.saundeuMiksing"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest.reieo5GaereulGakgakBolryumJojeolhae",
+                                          "style": {
+                                            "color": "DesignTokens.muted"
+                                          }
+                                        },
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "gap": "8px",
+                                            "align-items": "flex-end",
+                                            "height": "38px",
+                                            "margin-top": "10px"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "group",
+                                              "style": {
+                                                "flex": "1",
+                                                "background": "DesignTokens.surface",
+                                                "border-radius": "3px",
+                                                "height": "100%",
+                                                "position": "relative",
+                                                "overflow": "hidden"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "box",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "left": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "background": "DesignTokens.accent",
+                                                    "height": "{{ m1 }}",
+                                                    "transition": "height .6s cubic-bezier(.2,.7,.2,1)"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "style": {
+                                                "flex": "1",
+                                                "background": "DesignTokens.surface",
+                                                "border-radius": "3px",
+                                                "height": "100%",
+                                                "position": "relative",
+                                                "overflow": "hidden"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "box",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "left": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "background": "DesignTokens.accent",
+                                                    "height": "{{ m2 }}",
+                                                    "transition": "height .6s .05s cubic-bezier(.2,.7,.2,1)"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "style": {
+                                                "flex": "1",
+                                                "background": "DesignTokens.surface",
+                                                "border-radius": "3px",
+                                                "height": "100%",
+                                                "position": "relative",
+                                                "overflow": "hidden"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "box",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "left": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "background": "DesignTokens.accent",
+                                                    "height": "{{ m3 }}",
+                                                    "transition": "height .6s .1s cubic-bezier(.2,.7,.2,1)"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "style": {
+                                                "flex": "1",
+                                                "background": "DesignTokens.surface",
+                                                "border-radius": "3px",
+                                                "height": "100%",
+                                                "position": "relative",
+                                                "overflow": "hidden"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "box",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "left": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "background": "DesignTokens.accent",
+                                                    "height": "{{ m4 }}",
+                                                    "transition": "height .6s .15s cubic-bezier(.2,.7,.2,1)"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "style": {
+                                                "flex": "1",
+                                                "background": "DesignTokens.surface",
+                                                "border-radius": "3px",
+                                                "height": "100%",
+                                                "position": "relative",
+                                                "overflow": "hidden"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "box",
+                                                  "style": {
+                                                    "position": "absolute",
+                                                    "left": "0",
+                                                    "right": "0",
+                                                    "bottom": "0",
+                                                    "background": "DesignTokens.accent",
+                                                    "height": "{{ m5 }}",
+                                                    "transition": "height .6s .2s cubic-bezier(.2,.7,.2,1)"
+                                                  }
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "font": "10.5px 'IBM Plex Mono',monospace",
+                                            "color": "DesignTokens.muted",
+                                            "margin-top": "4px"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.Forest.pado"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.Forest.bi"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.Forest.baram"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.Forest.morae"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.Forest.jangjak"
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "background": "DesignTokens.card"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.peurisetNamanuiMikseu"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest.jeonyeokMulgyeolSupsokAchimDeungPeuriset",
+                                          "style": {
+                                            "color": "DesignTokens.muted"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "background": "DesignTokens.card"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.sumyeonTaimeo"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest._15304560BunDwi",
+                                          "style": {
+                                            "color": "DesignTokens.muted"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "background": "DesignTokens.card"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.girokTonggye"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest.sesyeonGirokgwaYeonsokilSeuteurik",
+                                          "style": {
+                                            "color": "DesignTokens.muted"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "border": "1px dashed DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "color": "DesignTokens.muted"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.sNsLoginNaeJeongboDonggihwa",
+                                          "style": {
+                                            "color": "DesignTokens.ink"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest.chugaYejeong",
+                                          "style": {
+                                            "font": "11px 'IBM Plex Mono',monospace",
+                                            "margin-top": "2px"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "border": "1px dashed DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "color": "DesignTokens.muted"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Forest.gudokMitInaepGyeoljeIap",
+                                          "style": {
+                                            "color": "DesignTokens.ink"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Forest.chugaYejeong",
+                                          "style": {
+                                            "font": "11px 'IBM Plex Mono',monospace",
+                                            "margin-top": "2px"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "h2",
+                                  "text": "Strings.Forest.seukil",
+                                  "style": {
+                                    "margin": "0",
+                                    "font-size": "24px",
+                                    "font-weight": "700"
+                                  }
+                                },
+                                {
+                                  "kind": "row",
+                                  "style": {
+                                    "display": "flex",
+                                    "flex-wrap": "wrap",
+                                    "gap": "6px",
+                                    "margin-top": "14px"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.swiftSwiftUi",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.kotlinCompose",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.typeScript",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.hono",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.cloudflareWorkers",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.d1",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.r2",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Forest.openApi",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.Resume.handoffAgent",
+                                      "style": {
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "999px",
+                                        "padding": "4px 12px",
+                                        "font": "12.5px 'IBM Plex Mono',monospace"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s2",
+                      "style": {
+                        "padding": "56px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "h2",
+                          "text": "Strings.Forest.baekendeuWaeIreotgeGolratna",
+                          "style": {
+                            "margin": "0",
+                            "font-size": "24px",
+                            "font-weight": "700"
+                          }
+                        },
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(230px,1fr))",
+                            "gap": "10px",
+                            "margin-top": "14px",
+                            "font-size": "15.5px",
+                            "line-height": "1.65"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.hosting",
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.cloudflareWorkersHono",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "p",
+                                  "text": "Strings.Forest.seobeoreulJikjeopGuchukUnyeonghaneunDaesinKodeuman",
+                                  "style": {
+                                    "margin": "6px 0 0",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.db",
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.d1SqLite",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "p",
+                                  "text": "Strings.Forest.workersAneseoBaroSseulSuItneun",
+                                  "style": {
+                                    "margin": "6px 0 0",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.storage",
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.r2EumwonJeojangso",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "p",
+                                  "text": "Strings.Forest.pailNaeryeobateulTtaeButneunJeonsongEgress",
+                                  "style": {
+                                    "margin": "6px 0 0",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.auth",
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.jacheJwtInjeungIkmyeongRogeuin",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "p",
+                                  "text": "Strings.Forest.hoewongaipJeolchaEoliGigimaneuroBaroSseul",
+                                  "style": {
+                                    "margin": "6px 0 0",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s3",
+                      "style": {
+                        "padding": "56px 0 64px",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "h2",
+                          "text": "Strings.Forest.iOsAndroidNaranhi",
+                          "style": {
+                            "margin": "0",
+                            "font-size": "24px",
+                            "font-weight": "700"
+                          }
+                        },
+                        {
+                          "kind": "text",
+                          "text": "Strings.Forest.gateunHandoffPaekijieseoDuPeulraetpomiDongsie",
+                          "style": {
+                            "font-size": "14.5px",
+                            "color": "DesignTokens.muted",
+                            "margin-top": "4px"
+                          }
+                        },
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(300px,1fr))",
+                            "gap": "14px",
+                            "margin-top": "16px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "12px",
+                                "padding": "20px 22px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.iOsSwiftUi",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "column",
+                                  "style": {
+                                    "display": "flex",
+                                    "flex-direction": "column",
+                                    "gap": "6px",
+                                    "margin-top": "10px",
+                                    "font-size": "15.5px",
+                                    "line-height": "1.65"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p1 }}",
+                                      "on_mouseenter": "e1",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.hwamyeon4GaeOnbodingHomSaundeu",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p2 }}",
+                                      "on_mouseenter": "e2",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing2",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p3 }}",
+                                      "on_mouseenter": "e3",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.aPiTongsinDeiteoModelOpeurainMokeop",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p4 }}",
+                                      "on_mouseenter": "e4",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.saeksangTaipoGangyeokDeungDijainTokeun",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "12px",
+                                "padding": "20px 22px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.androidJetpackCompose",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "column",
+                                  "style": {
+                                    "display": "flex",
+                                    "flex-direction": "column",
+                                    "gap": "6px",
+                                    "margin-top": "10px",
+                                    "font-size": "15.5px",
+                                    "line-height": "1.65"
+                                  },
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p1 }}",
+                                      "on_mouseenter": "e1",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.iOsWaDongilhanHwamyeonKeomponeonteuGuseongeul",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p2 }}",
+                                      "on_mouseenter": "e2",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.odioMikseuPeulreieoGuhyeon",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p3 }}",
+                                      "on_mouseenter": "e3",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.aPiKeulraieonteuOpeurainMokeopPolbaekGyecheung",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "data-pair": "{{ p4 }}",
+                                      "on_mouseenter": "e4",
+                                      "on_mouseleave": "pl",
+                                      "text": "Strings.Forest.aepSangtaeByumodelgwaDanwiTeseuteu4",
+                                      "style": {
+                                        "padding": "6px 8px",
+                                        "margin": "0 -8px",
+                                        "transition": "background .2s"
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "row",
+                          "style": {
+                            "margin-top": "48px",
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "12px",
+                            "padding": "20px 24px",
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "align-items": "center",
+                            "gap": "16px",
+                            "flex-wrap": "wrap",
+                            "background": "DesignTokens.card"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.iAepeulMandeunDogu",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.handoffAgentSePeulraetpomeulHanBeone",
+                                  "style": {
+                                    "font-size": "18px",
+                                    "font-weight": "700",
+                                    "margin-top": "2px"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "a",
+                              "href": "Handoff%20Agent.dc.html",
+                              "text": "Strings.Forest.handoffAgentSangse",
+                              "style": {
+                                "background": "DesignTokens.ink",
+                                "color": "DesignTokens.bg",
+                                "padding": "10px 18px",
+                                "border-radius": "8px",
+                                "font-size": "14px",
+                                "font-weight": "600",
+                                "text-decoration": "none"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "aside",
+                  "style": {
+                    "position": "relative"
+                  },
+                  "children": [
+                    {
+                      "kind": "group",
+                      "style": {
+                        "position": "sticky",
+                        "top": "96px",
+                        "padding": "56px 0 0 20px",
+                        "font": "12.5px/1.35 'IBM Plex Mono',monospace"
+                      },
+                      "children": [
+                        {
+                          "kind": "box",
+                          "style": {
+                            "position": "absolute",
+                            "left": "-1px",
+                            "top": "56px",
+                            "bottom": "0",
+                            "width": "2px",
+                            "background": "DesignTokens.accent",
+                            "transform-origin": "top",
+                            "transform": "scaleY({{ railScale }})",
+                            "transition": "transform .15s linear"
+                          }
+                        },
+                        {
+                          "kind": "column",
+                          "tag": "nav",
+                          "style": {
+                            "display": "flex",
+                            "flex-direction": "column",
+                            "gap": "16px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s0",
+                              "data-cur": "{{ c0 }}",
+                              "text": "01",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.gaeyo",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s1",
+                              "data-cur": "{{ c1 }}",
+                              "text": "02",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.gineungSeukil",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s2",
+                              "data-cur": "{{ c2 }}",
+                              "text": "03",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.baekendeu",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s3",
+                              "data-cur": "{{ c3 }}",
+                              "text": "04",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.iOsAndroid",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "if",
+              "when": "lightboxOpen",
+              "default": "false",
+              "children": [
+                {
+                  "kind": "row",
+                  "on_click": "closeLightbox",
+                  "style": {
+                    "position": "fixed",
+                    "inset": "0",
+                    "z-index": "50",
+                    "background": "rgba(10,12,16,.86)",
+                    "display": "flex",
+                    "align-items": "center",
+                    "justify-content": "center",
+                    "padding": "32px",
+                    "cursor": "zoom-out",
+                    "animation": "rise .2s ease both"
+                  },
+                  "children": [
+                    {
+                      "kind": "image",
+                      "src": "{{ lightboxSrc }}",
+                      "alt": "확대 이미지",
+                      "tag": "img",
+                      "style": {
+                        "max-width": "100%",
+                        "max-height": "100%",
+                        "border-radius": "22px",
+                        "box-shadow": "0 30px 80px rgba(0,0,0,.5)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

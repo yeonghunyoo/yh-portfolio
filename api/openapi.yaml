@@ -7,8 +7,9 @@ info:
     per-page view counter (increment + read). Served by Astro server endpoints on Vercel,
     backed by Upstash Redis (env: VIEWS_STORE_URL, VIEWS_STORE_TOKEN — placeholders only).
     No authentication: counters are public aggregates and the design has no login screen.
-    Page keys are slugs; the handoff-agent case study page (screens s0–s5, path "/") uses
-    the slug `handoff-agent`, and the portfolio index uses `home`.
+    Page keys are slugs, one per screen in design/handoff.manifest.json:
+    `resume` (the resume index, path "/"), `forest` (the Forest case study) and
+    `handoff-agent` (the Handoff Agent case study).
 servers:
   - url: /api
     description: Same-origin Astro endpoints (relative to the deployed site)
@@ -90,8 +91,10 @@ components:
       schema:
         $ref: '#/components/schemas/PageSlug'
       examples:
-        home:
-          value: home
+        resume:
+          value: resume
+        forest:
+          value: forest
         handoffAgent:
           value: handoff-agent
   schemas:
@@ -100,7 +103,7 @@ components:
       pattern: '^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$'
       minLength: 1
       maxLength: 64
-      examples: [home, handoff-agent]
+      examples: [resume, forest, handoff-agent]
     PageViews:
       type: object
       required: [page, views]
