@@ -1,4 +1,4 @@
-import { invalidPageMessage } from "../domain/slug.ts";
+import { invalidPageMessage, unknownPageMessage } from "../domain/slug.ts";
 import { ErrorCodes, type ApiError, type PageViews, type PageViewsList } from "../domain/types.ts";
 
 const JSON_HEADERS = { "content-type": "application/json; charset=utf-8" } as const;
@@ -26,6 +26,13 @@ export const fail = {
   invalidPage: (): Response =>
     noStore(
       json({ code: ErrorCodes.invalidPage, message: invalidPageMessage() } satisfies ApiError, {
+        status: 400,
+      }),
+    ),
+  /** 400 — well-formed slug, but not a page of this site (writes only). */
+  unknownPage: (): Response =>
+    noStore(
+      json({ code: ErrorCodes.invalidPage, message: unknownPageMessage() } satisfies ApiError, {
         status: 400,
       }),
     ),

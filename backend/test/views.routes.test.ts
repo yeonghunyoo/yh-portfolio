@@ -145,6 +145,34 @@ describe("API-03 POST /views/{page} — ApiRoutes.incrementPageViews", () => {
     await expect(store.read("NOT A SLUG")).resolves.toBe(0);
   });
 
+  it("refuses to create a counter for a page this site does not have", async () => {
+    // Regression: the slug pattern alone accepts any lowercase word, and every slug
+    // that reaches increment() is indexed by the store — so a well-formed but unknown
+    // page let anyone create unlimited keys and choose the text in the public list.
+    const response = await call(ApiRoutes.incrementPageViews, store, {
+      params: { page: "not-a-page-of-this-site" },
+      headers: freshClient(),
+    });
+    expect(response.status).toBe(400);
+    await expect(store.read("not-a-page-of-this-site")).resolves.toBe(0);
+    const listed = await bodyOf<PageViewsList>(await call(ApiRoutes.listPageViews, store));
+    expect(listed.items.map((item) => item.page)).not.toContain("not-a-page-of-this-site");
+  });
+
+  it("still reads an unknown page as 0 — the contract says never 404", async () => {
+    const body = await bodyOf<PageViews>(
+      await call(ApiRoutes.getPageViews, store, { params: { page: "not-a-page-of-this-site" } }),
+    );
+    expect(body).toEqual({ page: "not-a-page-of-this-site", views: 0 });
+  });
+
+  it("keeps a page the store already holds out of the list when it is not ours", async () => {
+    // A key written before the write restriction landed must not surface as content.
+    await store.increment("left-over-key");
+    const listed = await bodyOf<PageViewsList>(await call(ApiRoutes.listPageViews, store));
+    expect(listed.items.map((item) => item.page)).not.toContain("left-over-key");
+  });
+
   it("answers 429 with Retry-After when one client repeats inside the window", async () => {
     const client = { "x-forwarded-for": "203.0.113.9" };
     const first = await call(ApiRoutes.incrementPageViews, store, {

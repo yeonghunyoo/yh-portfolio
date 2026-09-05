@@ -253,8 +253,12 @@ import forest04 from "@design-assets/forest-04-stats.png";
    also a caption class elsewhere on this screen. */
 @media (max-width:820px){
   .div22{flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:0}
-  .div22>.div23,.div22>.div26,.div22>.div27,.div22>.div29{flex:none;width:100%}
-  .div22>.div28{flex:none;width:100%;flex-direction:row;flex-wrap:wrap;gap:6px;padding:0}
+  /* `flex:none` alone — a column flex child already stretches to the full content
+     width. Adding width:100% would put the cards' padding and border *outside* that
+     width (there is no global box-sizing:border-box here) and push them past the
+     panel they sit in. */
+  .div22>.div23,.div22>.div26,.div22>.div27,.div22>.div29{flex:none}
+  .div22>.div28{flex:none;flex-direction:row;flex-wrap:wrap;justify-content:center;gap:6px;padding:0}
   .div22>.span9{align-self:center;transform:rotate(90deg);margin:8px 0;line-height:1}
 }
 

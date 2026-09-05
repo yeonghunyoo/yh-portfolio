@@ -44,7 +44,25 @@ export function isValidPageSlug(value: unknown): value is PageSlug {
   );
 }
 
+/**
+ * Whether the slug names a page this site actually has.
+ *
+ * `isValidPageSlug` only checks the shape the contract documents, which every string
+ * of lowercase letters and hyphens satisfies. Writes must be narrower than that: the
+ * counter store indexes each slug it is asked to increment, so accepting any
+ * well-formed slug lets anyone create unlimited keys and put arbitrary text into the
+ * public list. Reads stay wide — the contract says an unseen page reads 0, never 404.
+ */
+export function isKnownPageSlug(value: unknown): value is PageSlug {
+  return isValidPageSlug(value) && knownPageSlugs.includes(value);
+}
+
 /** The 400 body message the contract documents for an invalid slug. */
 export function invalidPageMessage(): string {
   return `page must match ${PAGE_SLUG_PATTERN}`;
+}
+
+/** The 400 body message for a well-formed slug that is not one of this site's pages. */
+export function unknownPageMessage(): string {
+  return `page must be one of ${knownPageSlugs.join(", ")}`;
 }
