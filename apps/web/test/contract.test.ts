@@ -5,6 +5,9 @@ import { DesignTokens } from "@generated/DesignTokens";
 import { Screens, ScreenPaths, type ScreenId } from "@generated/Screens";
 import { Strings } from "@generated/Strings";
 import { SCREEN_META, SCREEN_ORDER } from "../src/lib/meta";
+import { ResumeCopy } from "../src/content/resumeCopy";
+import { ForestCopy } from "../src/content/forestCopy";
+import { HandoffAgentCopy } from "../src/content/handoffAgentCopy";
 
 const read = (relative: string): string =>
   readFileSync(fileURLToPath(new URL(relative, import.meta.url)), "utf8");
@@ -15,8 +18,16 @@ const screenSource: Record<ScreenId, string> = {
   [Screens.handoffAgent]: read("../src/screens/HandoffAgentScreen.astro"),
 };
 
+/** The screens' copy lives in these modules — one `Strings.*` constant per field. */
+const copySource = [
+  read("../src/content/resumeCopy.ts"),
+  read("../src/content/forestCopy.ts"),
+  read("../src/content/handoffAgentCopy.ts"),
+].join("\n");
+
 const allSource = [
   ...Object.values(screenSource),
+  copySource,
   read("../src/content/codeSamples.ts"),
   read("../src/content/rawCopy.ts"),
   read("../src/lib/meta.ts"),
@@ -74,6 +85,36 @@ describe("strings", () => {
     for (const [screen, source] of Object.entries(screenSource)) {
       const body = source.slice(source.indexOf("---", 3));
       expect(body.match(/[가-힣]+/g) ?? [], `inline Korean in ${screen}`).toEqual([]);
+    }
+  });
+});
+
+describe("copy modules", () => {
+  const modules: ReadonlyArray<[ScreenId, string, Record<string, Record<string, string>>]> = [
+    [Screens.resume, "ResumeCopy", ResumeCopy],
+    [Screens.forest, "ForestCopy", ForestCopy],
+    [Screens.handoffAgent, "HandoffAgentCopy", HandoffAgentCopy],
+  ];
+
+  it("carry only generated values — every field is a Strings.* constant", () => {
+    for (const [, name, copy] of modules) {
+      for (const [namespace, entries] of Object.entries(copy)) {
+        const source = Strings[namespace as keyof typeof Strings] as Record<string, string>;
+        for (const [key, value] of Object.entries(entries)) {
+          expect(source[key], `${name}.${namespace}.${key} is not a Strings key`).toBe(value);
+        }
+      }
+    }
+  });
+
+  it("carry no field the screen does not render", () => {
+    for (const [screen, name, copy] of modules) {
+      const source = screenSource[screen];
+      for (const [namespace, entries] of Object.entries(copy)) {
+        for (const key of Object.keys(entries)) {
+          expect(source.includes(`Copy.${namespace}.${key}`), `${name}.${namespace}.${key} is unused`).toBe(true);
+        }
+      }
     }
   });
 });

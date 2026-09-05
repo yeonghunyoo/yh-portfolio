@@ -1,8 +1,8 @@
 ---
 // Transplanted from the frozen design export for screen "handoffAgent".
 // Every inline style of the prototype became a class in the scoped <style> below;
-// every piece of copy is a Strings.* constant.
-import { Strings } from "@generated/Strings";
+// every piece of copy is a generated constant, listed in ../content/handoffAgentCopy.ts.
+import { HandoffAgentCopy as Copy } from "../content/handoffAgentCopy";
 import { ScreenPaths } from "@generated/Screens";
 import { RawCopy } from "../content/rawCopy";
 import { CodeSamples } from "../content/codeSamples";
@@ -16,13 +16,13 @@ import Lightbox from "../components/Lightbox.astro";
 ---
 <header class="header1">
   <div class="div1">
-    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Strings.Forest.yuyeonghun}</a>
+    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Copy.Forest.yuyeonghun}</a>
     <div class="div2">
-      <span class="span1">{Strings.Resume.handoffAgent}</span>
-      <a class="a2" href={ScreenPaths.forest}>{Strings.Resume.forest}</a>
+      <span class="span1">{Copy.Resume.handoffAgent}</span>
+      <a class="a2" href={ScreenPaths.forest}>{Copy.Resume.forest}</a>
     </div>
     <div class="div3">
-      <a class="a3" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
+      <a class="a3" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Copy.Resume.gitHub}</a>
       <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span2"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
     </div>
   </div>
@@ -33,90 +33,90 @@ import Lightbox from "../components/Lightbox.astro";
 <main class="main1">
 
   <section class="section1" id="s0">
-    <div class="div5">{Strings.HandoffAgent._202609ClaudeCodePeulreogeuinPython}</div>
-    <h1 class="h11">{Strings.HandoffAgent.claudeDesignUiHandoffPaekijireulGibaneuro}<br />{Strings.HandoffAgent.iOsAndroidBackendSePeulraetpomeulHan}</h1>
-    <blockquote class="blockquote1">{Strings.HandoffAgent.modeunGeDaJeonghaejyeoItdamyeonSe}<br />{Strings.HandoffAgent.geurigoGeuJeonghaejinGeotISuchiro}</blockquote>
+    <div class="div5">{Copy.HandoffAgent._202609ClaudeCodePeulreogeuinPython}</div>
+    <h1 class="h11">{Copy.HandoffAgent.claudeDesignUiHandoffPaekijireulGibaneuro}<br />{Copy.HandoffAgent.iOsAndroidBackendSePeulraetpomeulHan}</h1>
+    <blockquote class="blockquote1">{Copy.HandoffAgent.modeunGeDaJeonghaejyeoItdamyeonSe}<br />{Copy.HandoffAgent.geurigoGeuJeonghaejinGeotISuchiro}</blockquote>
   </section>
 
   <section class="section2" id="s1">
-    <h2 class="h21">{Strings.HandoffAgent.peulreogeuinGuseong}</h2>
+    <h2 class="h21">{Copy.HandoffAgent.peulreogeuinGuseong}</h2>
     <div class="div6">
-      <div class="div7">{Strings.HandoffAgent.dijainJeongjeBaekendeuInpeuraSeupekInteobyu} <b>{Strings.HandoffAgent.mCpSeobeo}</b>{Strings.HandoffAgent.roGuchuk}</div>
-      <div class="div7">{Strings.HandoffAgent.jungganSanchulmuleunGakPeulraetpomeMatneun} <b>{Strings.HandoffAgent.swiftKotlin}</b> {Strings.HandoffAgent.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim}</div>
-      <div class="div7">{Strings.HandoffAgent.pythonGibanMcpGa} <b>{Strings.Forest.openApi}</b> {Strings.HandoffAgent.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo}</div>
-      <div class="div7">{Strings.HandoffAgent.peulraetpomIosAndroidBackendEijeonteu} <b>{Strings.HandoffAgent._3Gae}</b> {Strings.HandoffAgent.dijainYeondongEijeonteu} <b>{Strings.HandoffAgent._1Gae}</b></div>
+      <div class="div7">{Copy.HandoffAgent.dijainJeongjeBaekendeuInpeuraSeupekInteobyu} <b>{Copy.HandoffAgent.mCpSeobeo}</b>{Copy.HandoffAgent.roGuchuk}</div>
+      <div class="div7">{Copy.HandoffAgent.jungganSanchulmuleunGakPeulraetpomeMatneun} <b>{Copy.HandoffAgent.swiftKotlin}</b> {Copy.HandoffAgent.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim}</div>
+      <div class="div7">{Copy.HandoffAgent.pythonGibanMcpGa} <b>{Copy.Forest.openApi}</b> {Copy.HandoffAgent.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo}</div>
+      <div class="div7">{Copy.HandoffAgent.peulraetpomIosAndroidBackendEijeonteu} <b>{Copy.HandoffAgent._3Gae}</b> {Copy.HandoffAgent.dijainYeondongEijeonteu} <b>{Copy.HandoffAgent._1Gae}</b></div>
     </div>
   </section>
 
   <section class="section3" id="s2">
-    <h2 class="h21">{Strings.HandoffAgent.dongjakBangsik}</h2>
+    <h2 class="h21">{Copy.HandoffAgent.dongjakBangsik}</h2>
     <div class="div8">
-      <div class="div9"><div class="div10">1</div><div class="div11">{Strings.HandoffAgent.dijain}</div><div class="div12">{Strings.HandoffAgent.claudeDesignAepDijainPeurototaipJejak}</div></div>
-      <a class="a4" href="#s3"><div class="div10">2</div><div class="div11">{Strings.HandoffAgent.hwamyeonBeonyeok}</div><div class="div12">{Strings.HandoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIos}</div></a>
-      <a class="a4" href="#s4"><div class="div10">3</div><div class="div11">{Strings.HandoffAgent.seobeoInpeura}</div><div class="div12">{Strings.HandoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo}</div></a>
-      <a class="a4" href="#s4"><div class="div10">4</div><div class="div11">{Strings.HandoffAgent.aPiYaksok}</div><div class="div12">{Strings.HandoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo}</div></a>
-      <div class="div9"><div class="div10">5</div><div class="div11">{Strings.HandoffAgent.gongyongPailSaengseong}</div><div class="div12">{Strings.HandoffAgent.aPiJeonguiDijainTokeunMunguAikoneul}</div></div>
-      <a class="a5" href="#s5"><div class="div13">6</div><div class="div11">{Strings.HandoffAgent.gaebalGeomsa}</div><div class="div14">{Strings.HandoffAgent.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin}</div></a>
+      <div class="div9"><div class="div10">1</div><div class="div11">{Copy.HandoffAgent.dijain}</div><div class="div12">{Copy.HandoffAgent.claudeDesignAepDijainPeurototaipJejak}</div></div>
+      <a class="a4" href="#s3"><div class="div10">2</div><div class="div11">{Copy.HandoffAgent.hwamyeonBeonyeok}</div><div class="div12">{Copy.HandoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIos}</div></a>
+      <a class="a4" href="#s4"><div class="div10">3</div><div class="div11">{Copy.HandoffAgent.seobeoInpeura}</div><div class="div12">{Copy.HandoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo}</div></a>
+      <a class="a4" href="#s4"><div class="div10">4</div><div class="div11">{Copy.HandoffAgent.aPiYaksok}</div><div class="div12">{Copy.HandoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo}</div></a>
+      <div class="div9"><div class="div10">5</div><div class="div11">{Copy.HandoffAgent.gongyongPailSaengseong}</div><div class="div12">{Copy.HandoffAgent.aPiJeonguiDijainTokeunMunguAikoneul}</div></div>
+      <a class="a5" href="#s5"><div class="div13">6</div><div class="div11">{Copy.HandoffAgent.gaebalGeomsa}</div><div class="div14">{Copy.HandoffAgent.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin}</div></a>
     </div>
   </section>
 
   <section class="section4" id="s3">
     <div class="div15">
-      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi1}</div>
-      <h2 class="h22">{Strings.HandoffAgent.uIuxGuhyeonJeonghapseongeulWihanGyuchik}</h2>
+      <div class="div16">{Copy.HandoffAgent.keiseuSeuteodi1}</div>
+      <h2 class="h22">{Copy.HandoffAgent.uIuxGuhyeonJeonghapseongeulWihanGyuchik}</h2>
 
       <div class="div17">
-        <div class="div18">{Strings.HandoffAgent.munje}</div>
-        <div>{Strings.HandoffAgent.claudeDesignINaebonaeneunHtmlEun}
-          <ul class="ul1"><li>{Strings.HandoffAgent.hwamyeon5Gaega917JulPail}</li><li>{Strings.HandoffAgent.seosikiJeonbuInrainStyle166Gae}</li><li>{Strings.HandoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum}</li></ul></div>
+        <div class="div18">{Copy.HandoffAgent.munje}</div>
+        <div>{Copy.HandoffAgent.claudeDesignINaebonaeneunHtmlEun}
+          <ul class="ul1"><li>{Copy.HandoffAgent.hwamyeon5Gaega917JulPail}</li><li>{Copy.HandoffAgent.seosikiJeonbuInrainStyle166Gae}</li><li>{Copy.HandoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum}</li></ul></div>
 
-        <div class="div18">{Strings.HandoffAgent.jeopgeun}</div>
-        <div>{Strings.HandoffAgent.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Strings.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Strings.HandoffAgent.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo}</div>
+        <div class="div18">{Copy.HandoffAgent.jeopgeun}</div>
+        <div>{Copy.HandoffAgent.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Copy.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Copy.HandoffAgent.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo}</div>
 
-        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
+        <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
         <div>
-          <div class="div19">{Strings.HandoffAgent._1ClaudeDesignUiHandoffPaekijireul}</div>
-          <div class="div20">{Strings.HandoffAgent.gateunYosoGap20MunguSaek} <span class="span3">{Strings.HandoffAgent.jeomseonMitjul}</span> {Strings.HandoffAgent.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun}</div>
+          <div class="div19">{Copy.HandoffAgent._1ClaudeDesignUiHandoffPaekijireul}</div>
+          <div class="div20">{Copy.HandoffAgent.gateunYosoGap20MunguSaek} <span class="span3">{Copy.HandoffAgent.jeomseonMitjul}</span> {Copy.HandoffAgent.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun}</div>
           <div class="div21">
-            <div class="div22"><div class="div23">{Strings.HandoffAgent.claudeDesignHtmlDesignProjectForest}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h1.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h2.text}</span>{CodeSamples.h3.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h4.text}</span>{CodeSamples.h5.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h6.text}</span>{CodeSamples.h7.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h8.text}</span>{CodeSamples.h9.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h10.text}</span>{CodeSamples.h11.text}</pre></div>
-            <div class="div22"><div class="div23">{Strings.HandoffAgent.seobeogaMandeunReiautTeuriDesignDerived}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h12.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h13.text}</span>{CodeSamples.h14.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h15.text}</span>{CodeSamples.h16.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h17.text}</span>{CodeSamples.h18.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h19.text}</span>{CodeSamples.h20.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h21.text}</span>{CodeSamples.h22.text}</pre></div>
+            <div class="div22"><div class="div23">{Copy.HandoffAgent.claudeDesignHtmlDesignProjectForest}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h1.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h2.text}</span>{CodeSamples.h3.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h4.text}</span>{CodeSamples.h5.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h6.text}</span>{CodeSamples.h7.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h8.text}</span>{CodeSamples.h9.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h10.text}</span>{CodeSamples.h11.text}</pre></div>
+            <div class="div22"><div class="div23">{Copy.HandoffAgent.seobeogaMandeunReiautTeuriDesignDerived}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h12.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h13.text}</span>{CodeSamples.h14.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h15.text}</span>{CodeSamples.h16.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h17.text}</span>{CodeSamples.h18.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h19.text}</span>{CodeSamples.h20.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h21.text}</span>{CodeSamples.h22.text}</pre></div>
           </div>
           <div class="div24">
-            <div class="div22"><div class="div23">{Strings.HandoffAgent.iOsEijeonteugaOmginSwiftUiAppsIos}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h23.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h24.text}</span>{CodeSamples.h25.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h26.text}</span>{CodeSamples.h27.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h28.text}</span>{CodeSamples.h29.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h30.text}</span>{CodeSamples.h31.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h32.text}</span>{CodeSamples.h33.text}</pre></div>
-            <div class="div22"><div class="div23">{Strings.HandoffAgent.androidEijeonteugaOmginComposeAppsAndroid}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h34.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h35.text}</span>{CodeSamples.h36.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h37.text}</span>{CodeSamples.h38.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h39.text}</span>{CodeSamples.h40.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h41.text}</span>{CodeSamples.h42.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h43.text}</span>{CodeSamples.h44.text}</pre></div>
+            <div class="div22"><div class="div23">{Copy.HandoffAgent.iOsEijeonteugaOmginSwiftUiAppsIos}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h23.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h24.text}</span>{CodeSamples.h25.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h26.text}</span>{CodeSamples.h27.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h28.text}</span>{CodeSamples.h29.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h30.text}</span>{CodeSamples.h31.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h32.text}</span>{CodeSamples.h33.text}</pre></div>
+            <div class="div22"><div class="div23">{Copy.HandoffAgent.androidEijeonteugaOmginComposeAppsAndroid}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h34.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h35.text}</span>{CodeSamples.h36.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h37.text}</span>{CodeSamples.h38.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h39.text}</span>{CodeSamples.h40.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h41.text}</span>{CodeSamples.h42.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h43.text}</span>{CodeSamples.h44.text}</pre></div>
           </div>
 
-          <div class="div25">{Strings.HandoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon}</div>
+          <div class="div25">{Copy.HandoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon}</div>
           <div class="div26">
-            <div class="div27"><span class="span4">{Strings.HandoffAgent._917JulHanPail}</span><span class="span5">{Strings.HandoffAgent.hwamyeondangTeuri4Gae321243}</span></div>
-            <div class="div27"><span class="span4">{Strings.HandoffAgent.saekRiteoreol119Gae}</span><span class="span5">{Strings.HandoffAgent._0Gae}</span></div>
-            <div class="div27"><span class="span4">{Strings.HandoffAgent.ireumEoldeonMunguAikonDongjak}</span><span class="span5">{Strings.HandoffAgent.mungu80Aikon10Haendeulreo25}</span></div>
-            <div class="div27"><span class="span4">{Strings.HandoffAgent.peurototaipJangsik}</span><span class="span5">{Strings.HandoffAgent.jeondalAnHam}</span></div>
+            <div class="div27"><span class="span4">{Copy.HandoffAgent._917JulHanPail}</span><span class="span5">{Copy.HandoffAgent.hwamyeondangTeuri4Gae321243}</span></div>
+            <div class="div27"><span class="span4">{Copy.HandoffAgent.saekRiteoreol119Gae}</span><span class="span5">{Copy.HandoffAgent._0Gae}</span></div>
+            <div class="div27"><span class="span4">{Copy.HandoffAgent.ireumEoldeonMunguAikonDongjak}</span><span class="span5">{Copy.HandoffAgent.mungu80Aikon10Haendeulreo25}</span></div>
+            <div class="div27"><span class="span4">{Copy.HandoffAgent.peurototaipJangsik}</span><span class="span5">{Copy.HandoffAgent.jeondalAnHam}</span></div>
           </div>
 
-          <div class="div28">{Strings.HandoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome}</div>
-          <div class="div29"><code class="code1">{Strings.HandoffAgent.sharedGenerated}</code> {Strings.HandoffAgent.eGateunNaeyongiSwiftKotlinEuro} <code class="code1">{Strings.HandoffAgent.apiRoutesScreensDesignTokensIcons}</code> {Strings.HandoffAgent.doDuEoneoroSaengseongdoepnida}</div>
+          <div class="div28">{Copy.HandoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome}</div>
+          <div class="div29"><code class="code1">{Copy.HandoffAgent.sharedGenerated}</code> {Copy.HandoffAgent.eGateunNaeyongiSwiftKotlinEuro} <code class="code1">{Copy.HandoffAgent.apiRoutesScreensDesignTokensIcons}</code> {Copy.HandoffAgent.doDuEoneoroSaengseongdoepnida}</div>
           <div class="div30">
-            <div class="div31"><div class="div32">{Strings.HandoffAgent.stringsSwift}</div><pre class="pre1" tabindex="0">{CodeSamples.h45.text}</pre></div>
-            <div class="div31"><div class="div32">{Strings.HandoffAgent.stringsKt}</div><pre class="pre1" tabindex="0">{CodeSamples.h46.text}</pre></div>
+            <div class="div31"><div class="div32">{Copy.HandoffAgent.stringsSwift}</div><pre class="pre1" tabindex="0">{CodeSamples.h45.text}</pre></div>
+            <div class="div31"><div class="div32">{Copy.HandoffAgent.stringsKt}</div><pre class="pre1" tabindex="0">{CodeSamples.h46.text}</pre></div>
           </div>
         </div>
 
-        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
-        <div>{Strings.HandoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun}
+        <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
+        <div>{Copy.HandoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun}
           <div class="div33">
-            <div class="div34"><span class="div19">{Strings.HandoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu}</span><span class="div16">{Strings.HandoffAgent.homeStatsIosAndroid2Hoe}</span></div>
-            <table><thead><tr><th></th><th>{Strings.HandoffAgent.aWonbonHtml57Kb}</th><th>{Strings.HandoffAgent.bJeongjehanReiautTeuri}</th></tr></thead><tbody><tr><td class="span4">{Strings.HandoffAgent.tokeunPyeonggyun}</td><td>{Strings.HandoffAgent._905K}</td><td><b>{Strings.HandoffAgent._551K}</b> <span class="span6">{Strings.HandoffAgent._39}</span></td></tr><tr><td class="span4">{Strings.HandoffAgent.hwamyeonJeonghapseong}</td><td>{Strings.HandoffAgent._8BeonJung7BeonHwamyeoneul}</td><td>{Strings.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun}</td></tr></tbody></table>
-            <div class="div35">{Strings.HandoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="pre1">{Strings.HandoffAgent.ipryeokman}</b> {Strings.HandoffAgent.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi}</div>
+            <div class="div34"><span class="div19">{Copy.HandoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu}</span><span class="div16">{Copy.HandoffAgent.homeStatsIosAndroid2Hoe}</span></div>
+            <table><thead><tr><th></th><th>{Copy.HandoffAgent.aWonbonHtml57Kb}</th><th>{Copy.HandoffAgent.bJeongjehanReiautTeuri}</th></tr></thead><tbody><tr><td class="span4">{Copy.HandoffAgent.tokeunPyeonggyun}</td><td>{Copy.HandoffAgent._905K}</td><td><b>{Copy.HandoffAgent._551K}</b> <span class="span6">{Copy.HandoffAgent._39}</span></td></tr><tr><td class="span4">{Copy.HandoffAgent.hwamyeonJeonghapseong}</td><td>{Copy.HandoffAgent._8BeonJung7BeonHwamyeoneul}</td><td>{Copy.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun}</td></tr></tbody></table>
+            <div class="div35">{Copy.HandoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="pre1">{Copy.HandoffAgent.ipryeokman}</b> {Copy.HandoffAgent.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi}</div>
           </div>
 
-          <div class="div36">{Strings.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo} <span class="span7">{Strings.HandoffAgent.oenjjokbuteoBReiautTeuriAhtml}</span></div>
+          <div class="div36">{Copy.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo} <span class="span7">{Copy.HandoffAgent.oenjjokbuteoBReiautTeuriAhtml}</span></div>
           <div class="div37">
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt6}><Image src={compare01} class="img1" alt={RawCopy.alt6} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.onbodingBeoteunWichiYeobaekiAEseo}</figcaption></figure>
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt7}><Image src={compare02} class="img1" alt={RawCopy.alt7} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.homHadanChucheonMiksingBaechiwaImiji}</figcaption></figure>
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt8}><Image src={compare03} class="img1" alt={RawCopy.alt8} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.saundeuTaimeoDeuropdaunSiUiKkaejim}</figcaption></figure>
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt9}><Image src={compare04} class="img1" alt={RawCopy.alt9} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa}</figcaption></figure>
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open5" aria-label={RawCopy.alt10}><Image src={compare05} class="img1" alt={RawCopy.alt10} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt6}><Image src={compare01} class="img1" alt={RawCopy.alt6} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.onbodingBeoteunWichiYeobaekiAEseo}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt7}><Image src={compare02} class="img1" alt={RawCopy.alt7} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.homHadanChucheonMiksingBaechiwaImiji}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt8}><Image src={compare03} class="img1" alt={RawCopy.alt8} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.saundeuTaimeoDeuropdaunSiUiKkaejim}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt9}><Image src={compare04} class="img1" alt={RawCopy.alt9} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open5" aria-label={RawCopy.alt10}><Image src={compare05} class="img1" alt={RawCopy.alt10} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul}</figcaption></figure>
           </div>
         </div>
       </div>
@@ -125,39 +125,39 @@ import Lightbox from "../components/Lightbox.astro";
 
   <section class="section4" id="s4">
     <div class="div15">
-      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi2}</div>
-      <h2 class="h22">{Strings.HandoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
+      <div class="div16">{Copy.HandoffAgent.keiseuSeuteodi2}</div>
+      <h2 class="h22">{Copy.HandoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
       <div class="div17">
-        <div class="div18">{Strings.HandoffAgent.munje}</div>
-        <div>{Strings.HandoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
-        <div class="div18">{Strings.HandoffAgent.jeopgeun}</div>
-        <div>{Strings.HandoffAgent.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Strings.HandoffAgent.bogiSwipgePyoroJean}</b>{Strings.HandoffAgent.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}</div>
-        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
+        <div class="div18">{Copy.HandoffAgent.munje}</div>
+        <div>{Copy.HandoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
+        <div class="div18">{Copy.HandoffAgent.jeopgeun}</div>
+        <div>{Copy.HandoffAgent.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Copy.HandoffAgent.bogiSwipgePyoroJean}</b>{Copy.HandoffAgent.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}</div>
+        <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
         <div>
-          <div class="div19">{Strings.HandoffAgent.inpeuraGyeoljeong4DangyeInteobyuGak}</div>
+          <div class="div19">{Copy.HandoffAgent.inpeuraGyeoljeong4DangyeInteobyuGak}</div>
           <div class="div38">
-            <div class="div39"><b>{Strings.HandoffAgent._1Seutaek}</b><br /><span class="span4">{Strings.HandoffAgent.peulraetpomgwaBaekendeuEoneoreulHubo23}</span></div>
-            <div class="div39"><b>{Strings.HandoffAgent._2Gyumo}</b><br /><span class="span4">{Strings.HandoffAgent.yesangMaudauReulSayongjagaDaeryak}</span></div>
-            <div class="div39"><b>{Strings.HandoffAgent._3HuboChurigi}</b><br /><span class="span4">{Strings.HandoffAgent._12GaeJohapJungGeuGyumoe}</span></div>
-            <div class="div39"><b>{Strings.HandoffAgent._4YogeumJohoe}</b><br /><span class="span4">{Strings.HandoffAgent.gongsikYogeumPeijimanIkeumKaesiEoli}</span></div>
+            <div class="div39"><b>{Copy.HandoffAgent._1Seutaek}</b><br /><span class="span4">{Copy.HandoffAgent.peulraetpomgwaBaekendeuEoneoreulHubo23}</span></div>
+            <div class="div39"><b>{Copy.HandoffAgent._2Gyumo}</b><br /><span class="span4">{Copy.HandoffAgent.yesangMaudauReulSayongjagaDaeryak}</span></div>
+            <div class="div39"><b>{Copy.HandoffAgent._3HuboChurigi}</b><br /><span class="span4">{Copy.HandoffAgent._12GaeJohapJungGeuGyumoe}</span></div>
+            <div class="div39"><b>{Copy.HandoffAgent._4YogeumJohoe}</b><br /><span class="span4">{Copy.HandoffAgent.gongsikYogeumPeijimanIkeumKaesiEoli}</span></div>
           </div>
-          <div class="div40">{Strings.HandoffAgent.aPiMyeongse}</div>
-          <div class="div41">{Strings.HandoffAgent.inpeuragaJeonghaejimyeonHwamyeonHtmlGwaGaebal} <b>{Strings.HandoffAgent.gakHwamyeoniPilyoroHaneunDeiteo}</b>{Strings.HandoffAgent.eseoEndeupointeureulPpopa} <code class="code1">{Strings.HandoffAgent.openapiYaml}</code> {Strings.HandoffAgent.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye}</div>
+          <div class="div40">{Copy.HandoffAgent.aPiMyeongse}</div>
+          <div class="div41">{Copy.HandoffAgent.inpeuragaJeonghaejimyeonHwamyeonHtmlGwaGaebal} <b>{Copy.HandoffAgent.gakHwamyeoniPilyoroHaneunDeiteo}</b>{Copy.HandoffAgent.eseoEndeupointeureulPpopa} <code class="code1">{Copy.HandoffAgent.openapiYaml}</code> {Copy.HandoffAgent.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye}</div>
           <div class="div42"><pre tabindex="0">{CodeSamples.h47.text}</pre></div>
         </div>
-        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
-        <div>{Strings.HandoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
+        <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
+        <div>{Copy.HandoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
           <div class="div43">
-            <div class="div44">{Strings.HandoffAgent.gyumo} <b class="pre1">{Strings.HandoffAgent.sogyumo}</b> {Strings.HandoffAgent.mAu10000Dau1000}</div>
-            <div class="div45"><table class="table1"><thead><tr><th>{Strings.HandoffAgent.id}</th><th>{Strings.Forest.db}</th><th>{Strings.Forest.auth}</th><th>{Strings.Forest.hosting}</th><th>{Strings.HandoffAgent.wolBiyong}</th><th>{Strings.HandoffAgent.hwakinil}</th><th>{Strings.HandoffAgent.jongsokseong}</th></tr></thead><tbody>
-              <tr><td class="code1">{Strings.HandoffAgent.awsServerless}</td><td>{Strings.HandoffAgent.dynamoDb}</td><td>{Strings.HandoffAgent.cognito}</td><td>{Strings.HandoffAgent.lambdaApigw}</td><td><b>{Strings.HandoffAgent._05}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nopeum}</td></tr>
-              <tr><td class="code1">{Strings.HandoffAgent.vpsDocker}</td><td>{Strings.HandoffAgent.postgreSqlJache}</td><td>{Strings.HandoffAgent.jacheJwt}</td><td>{Strings.HandoffAgent.vPsHetzner}</td><td><b>{Strings.HandoffAgent._410}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nateum}</td></tr>
-              <tr><td class="code1">{Strings.HandoffAgent.firebase}</td><td>{Strings.HandoffAgent.firestore}</td><td>{Strings.HandoffAgent.firebaseAuth}</td><td>{Strings.HandoffAgent.cloudRun}</td><td><b>{Strings.HandoffAgent._010}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nopeum}</td></tr>
-              <tr><td class="code1">{Strings.HandoffAgent.railway}</td><td>{Strings.HandoffAgent.postgreSqlRailway}</td><td>{Strings.HandoffAgent.jacheJwt}</td><td>{Strings.HandoffAgent.railway2}</td><td><b>{Strings.HandoffAgent._525}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nateum}</td></tr>
-              <tr><td class="code1">{Strings.HandoffAgent.supabaseFly}</td><td>{Strings.HandoffAgent.postgreSqlSupabase}</td><td>{Strings.HandoffAgent.supabaseAuth}</td><td>{Strings.HandoffAgent.flyIo}</td><td><b>{Strings.HandoffAgent._030}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.jung}</td></tr>
+            <div class="div44">{Copy.HandoffAgent.gyumo} <b class="pre1">{Copy.HandoffAgent.sogyumo}</b> {Copy.HandoffAgent.mAu10000Dau1000}</div>
+            <div class="div45"><table class="table1"><thead><tr><th>{Copy.HandoffAgent.id}</th><th>{Copy.Forest.db}</th><th>{Copy.Forest.auth}</th><th>{Copy.Forest.hosting}</th><th>{Copy.HandoffAgent.wolBiyong}</th><th>{Copy.HandoffAgent.hwakinil}</th><th>{Copy.HandoffAgent.jongsokseong}</th></tr></thead><tbody>
+              <tr><td class="code1">{Copy.HandoffAgent.awsServerless}</td><td>{Copy.HandoffAgent.dynamoDb}</td><td>{Copy.HandoffAgent.cognito}</td><td>{Copy.HandoffAgent.lambdaApigw}</td><td><b>{Copy.HandoffAgent._05}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nopeum}</td></tr>
+              <tr><td class="code1">{Copy.HandoffAgent.vpsDocker}</td><td>{Copy.HandoffAgent.postgreSqlJache}</td><td>{Copy.HandoffAgent.jacheJwt}</td><td>{Copy.HandoffAgent.vPsHetzner}</td><td><b>{Copy.HandoffAgent._410}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nateum}</td></tr>
+              <tr><td class="code1">{Copy.HandoffAgent.firebase}</td><td>{Copy.HandoffAgent.firestore}</td><td>{Copy.HandoffAgent.firebaseAuth}</td><td>{Copy.HandoffAgent.cloudRun}</td><td><b>{Copy.HandoffAgent._010}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nopeum}</td></tr>
+              <tr><td class="code1">{Copy.HandoffAgent.railway}</td><td>{Copy.HandoffAgent.postgreSqlRailway}</td><td>{Copy.HandoffAgent.jacheJwt}</td><td>{Copy.HandoffAgent.railway2}</td><td><b>{Copy.HandoffAgent._525}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nateum}</td></tr>
+              <tr><td class="code1">{Copy.HandoffAgent.supabaseFly}</td><td>{Copy.HandoffAgent.postgreSqlSupabase}</td><td>{Copy.HandoffAgent.supabaseAuth}</td><td>{Copy.HandoffAgent.flyIo}</td><td><b>{Copy.HandoffAgent._030}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.jung}</td></tr>
             </tbody></table></div>
           </div>
-          <ul class="ul2"><li>{Strings.HandoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li><li>{Strings.HandoffAgent.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="pre1">{Strings.HandoffAgent.sayongjaegeBogoseoroJechul}</b>{Strings.HandoffAgent.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}</li><li>{Strings.HandoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li></ul>
+          <ul class="ul2"><li>{Copy.HandoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li><li>{Copy.HandoffAgent.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="pre1">{Copy.HandoffAgent.sayongjaegeBogoseoroJechul}</b>{Copy.HandoffAgent.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}</li><li>{Copy.HandoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li></ul>
         </div>
       </div>
     </div>
@@ -165,21 +165,21 @@ import Lightbox from "../components/Lightbox.astro";
 
   <section class="section5" id="s5">
     <div class="div15">
-      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi3}</div>
-      <h2 class="h22">{Strings.HandoffAgent.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji}</h2>
+      <div class="div16">{Copy.HandoffAgent.keiseuSeuteodi3}</div>
+      <h2 class="h22">{Copy.HandoffAgent.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji}</h2>
       <div class="div17">
-        <div class="div18">{Strings.HandoffAgent.munje}</div>
-        <div>{Strings.HandoffAgent.aPiKiMingamJeongbogaKeulraudeuSesyeongwa}</div>
-        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
-        <div>{Strings.HandoffAgent.mingamGaleul} <b>{Strings.HandoffAgent.hwangyeongbyeonsuroman}</b> {Strings.HandoffAgent.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago} <b>{Strings.HandoffAgent.hukeuroMakneunda}</b>.</div>
-        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
-        <div>{Strings.HandoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung} <b>{Strings.HandoffAgent._0Gae2}</b> {Strings.HandoffAgent.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon}
-          <div class="div46"><div class="div23">{Strings.HandoffAgent.eijeonteuuiYudoYesi}</div><pre tabindex="0">{CodeSamples.h48.text}</pre></div>
+        <div class="div18">{Copy.HandoffAgent.munje}</div>
+        <div>{Copy.HandoffAgent.aPiKiMingamJeongbogaKeulraudeuSesyeongwa}</div>
+        <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
+        <div>{Copy.HandoffAgent.mingamGaleul} <b>{Copy.HandoffAgent.hwangyeongbyeonsuroman}</b> {Copy.HandoffAgent.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago} <b>{Copy.HandoffAgent.hukeuroMakneunda}</b>.</div>
+        <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
+        <div>{Copy.HandoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung} <b>{Copy.HandoffAgent._0Gae2}</b> {Copy.HandoffAgent.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon}
+          <div class="div46"><div class="div23">{Copy.HandoffAgent.eijeonteuuiYudoYesi}</div><pre tabindex="0">{CodeSamples.h48.text}</pre></div>
         </div>
       </div>
       <div class="div47">
-        <div><div class="div16">{Strings.HandoffAgent.iDoguroMandeulgoItneunSeobiseu}</div><div class="div48">{Strings.HandoffAgent.forestSaundeuMiksingJipjungMyeongsangAep}</div></div>
-        <a class="a6" href={ScreenPaths.forest}>{Strings.HandoffAgent.daeumPeurojekteu}</a>
+        <div><div class="div16">{Copy.HandoffAgent.iDoguroMandeulgoItneunSeobiseu}</div><div class="div48">{Copy.HandoffAgent.forestSaundeuMiksingJipjungMyeongsangAep}</div></div>
+        <a class="a6" href={ScreenPaths.forest}>{Copy.HandoffAgent.daeumPeurojekteu}</a>
       </div>
     </div>
   </section>
@@ -189,12 +189,12 @@ import Lightbox from "../components/Lightbox.astro";
   <div class="div49">
     <div class="div50" data-var="railScale"></div>
     <nav class="nav1">
-      <a class="a7" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="pre1">{Strings.Forest.gaeyo}</span></a>
-      <a class="a7" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="pre1">{Strings.HandoffAgent.guseong}</span></a>
-      <a class="a7" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="pre1">{Strings.HandoffAgent.dongjakBangsik}</span></a>
-      <a class="a7" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="pre1">{Strings.HandoffAgent.uIuxJeonghapseong}</span></a>
-      <a class="a7" href="#s4" data-cur="0" data-cur-key="c4">05<br /><span class="pre1">{Strings.HandoffAgent.baekendeuSeupek}</span></a>
-      <a class="a7" href="#s5" data-cur="0" data-cur-key="c5">06<br /><span class="pre1">{Strings.HandoffAgent.sikeuritGyeokri}</span></a>
+      <a class="a7" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="pre1">{Copy.Forest.gaeyo}</span></a>
+      <a class="a7" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="pre1">{Copy.HandoffAgent.guseong}</span></a>
+      <a class="a7" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="pre1">{Copy.HandoffAgent.dongjakBangsik}</span></a>
+      <a class="a7" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="pre1">{Copy.HandoffAgent.uIuxJeonghapseong}</span></a>
+      <a class="a7" href="#s4" data-cur="0" data-cur-key="c4">05<br /><span class="pre1">{Copy.HandoffAgent.baekendeuSeupek}</span></a>
+      <a class="a7" href="#s5" data-cur="0" data-cur-key="c5">06<br /><span class="pre1">{Copy.HandoffAgent.sikeuritGyeokri}</span></a>
     </nav>
   </div>
 </aside>

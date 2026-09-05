@@ -1,8 +1,8 @@
 ---
 // Transplanted from the frozen design export for screen "resume".
 // Every inline style of the prototype became a class in the scoped <style> below;
-// every piece of copy is a Strings.* constant.
-import { Strings } from "@generated/Strings";
+// every piece of copy is a generated constant, listed in ../content/resumeCopy.ts.
+import { ResumeCopy as Copy } from "../content/resumeCopy";
 import { ScreenPaths } from "@generated/Screens";
 import { RawCopy } from "../content/rawCopy";
 import { Skills } from "../content/skills";
@@ -14,11 +14,11 @@ import forest04 from "@design-assets/forest-04-stats.png";
 ---
 <header class="header1">
   <div class="div1">
-    <a class="a1" href="#top">{Strings.Resume.yuyeonghun}</a>
+    <a class="a1" href="#top">{Copy.Resume.yuyeonghun}</a>
     <nav class="nav1">
-      <a class="a2" href="#about">{Strings.Resume._01Sogae}</a>
-      <a class="a2" href="#work">{Strings.Resume._02MandeunGeot}</a>
-      <a class="a2" href="#career">{Strings.Resume._03Gyeongryeok}</a>
+      <a class="a2" href="#about">{Copy.Resume._01Sogae}</a>
+      <a class="a2" href="#work">{Copy.Resume._02MandeunGeot}</a>
+      <a class="a2" href="#career">{Copy.Resume._03Gyeongryeok}</a>
     </nav>
     <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span1"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
   </div>
@@ -28,78 +28,78 @@ import forest04 from "@design-assets/forest-04-stats.png";
 <main class="main1" id="top">
 
   <section class="section1" id="about">
-    <div class="div4">{Strings.Resume.softwareEngineerIosBuilder}</div>
-    <h1 class="h11">{Strings.Resume.yuyeonghun}</h1>
-    <p class="p1">{Strings.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman}<br />{Strings.Resume.ilhadaBanbokdoeneunMunjereulMannamyeon} <span class="span2">{Strings.Resume.dogureulJikjeopMandeuleoHaegyeol}</span>{Strings.Resume.hagoGeuDoguroDasiSeobiseureulMandeuneun}<br />{Strings.Resume.choegeuneneunIosAndroidReulTtaroGaebalhamyeo} <a class="a3" href="#work" data-on-click="pickHandoff">{Strings.Resume.handoffAgent}</a>{Strings.Resume.raneunPeulreogeuineuroPuleotgo}<br />{Strings.Resume.jigeumeunGeuDoguro} <a class="a3" href="#work" data-on-click="pickForest">{Strings.Resume.forest}</a>{Strings.Resume.raneunSeobiseureulMandeulgoItseupnida}</p>
+    <div class="div4">{Copy.Resume.softwareEngineerIosBuilder}</div>
+    <h1 class="h11">{Copy.Resume.yuyeonghun}</h1>
+    <p class="p1">{Copy.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman}<br />{Copy.Resume.ilhadaBanbokdoeneunMunjereulMannamyeon} <span class="span2">{Copy.Resume.dogureulJikjeopMandeuleoHaegyeol}</span>{Copy.Resume.hagoGeuDoguroDasiSeobiseureulMandeuneun}<br />{Copy.Resume.choegeuneneunIosAndroidReulTtaroGaebalhamyeo} <a class="a3" href="#work" data-on-click="pickHandoff">{Copy.Resume.handoffAgent}</a>{Copy.Resume.raneunPeulreogeuineuroPuleotgo}<br />{Copy.Resume.jigeumeunGeuDoguro} <a class="a3" href="#work" data-on-click="pickForest">{Copy.Resume.forest}</a>{Copy.Resume.raneunSeobiseureulMandeulgoItseupnida}</p>
 
     <div class="div5">
       <div class="div6">
-        <div class="div7">{Strings.Resume.wonchik1}</div>
-        <div class="div8">{Strings.Resume.gwichaneumeunAidieouiSijakjeom}</div>
-        <p class="p2">{Strings.Resume.banbokdoeneunEopmugaGwichandagoNeukkyeojilTtaeJeoneun}</p>
+        <div class="div7">{Copy.Resume.wonchik1}</div>
+        <div class="div8">{Copy.Resume.gwichaneumeunAidieouiSijakjeom}</div>
+        <p class="p2">{Copy.Resume.banbokdoeneunEopmugaGwichandagoNeukkyeojilTtaeJeoneun}</p>
       </div>
       <div class="div6">
-        <div class="div7">{Strings.Resume.wonchik2}</div>
-        <div class="div8">{Strings.Resume.geungeoroMalhapnida}</div>
-        <p class="p2">{Strings.Resume.malbodaNuneuroHwakinsikineunGeotiOhaereulJulipnida}</p>
+        <div class="div7">{Copy.Resume.wonchik2}</div>
+        <div class="div8">{Copy.Resume.geungeoroMalhapnida}</div>
+        <p class="p2">{Copy.Resume.malbodaNuneuroHwakinsikineunGeotiOhaereulJulipnida}</p>
       </div>
     </div>
 
     <div class="div9">
-      <a class="a4" href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
-      <a class="a5" href="mailto:yeonghun.yoo@gmail.com">{Strings.Resume.yeonghunYooGmailCom}</a>
+      <a class="a4" href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Copy.Resume.gitHub}</a>
+      <a class="a5" href="mailto:yeonghun.yoo@gmail.com">{Copy.Resume.yeonghunYooGmailCom}</a>
     </div>
   </section>
 
   <div class="div10">
-    <div class="div11"><span class="div7">{Strings.Resume.gyeongryeok}</span><span class="span3">{Strings.Resume._4Nyeon2Gaewol}</span></div>
+    <div class="div11"><span class="div7">{Copy.Resume.gyeongryeok}</span><span class="span3">{Copy.Resume._4Nyeon2Gaewol}</span></div>
     <div class="div12">
-      <span class="span4">{Strings.Resume.skill}</span>
+      <span class="span4">{Copy.Resume.skill}</span>
       {Skills.map((s) => (<span class="span5" data-skill={s.name} data-on-leave="leaveSkill">{s.name}</span>))}
     </div>
   </div>
 
   <section class="section2" id="work">
-    <div class="div4">{Strings.Resume._02MandeunGeot2}</div>
-    <h2 class="h21">{Strings.Resume.dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida}</h2>
+    <div class="div4">{Copy.Resume._02MandeunGeot2}</div>
+    <h2 class="h21">{Copy.Resume.dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida}</h2>
 
     <div class="div13" role="tablist" tabindex="0" data-on-keydown="onTabKey">
-      <button class="button2" type="button" role="tab" data-active="1" data-active-key="tab0" data-on-click="pickHandoff"><div class="div14">{Strings.Resume.handoffAgent}</div><span class="span6">{Strings.Resume.claudeCodePeulreogeuin202609}</span></button>
-      <button class="button2" type="button" role="tab" data-active="0" data-active-key="tab1" data-on-click="pickForest"><div class="div14">{Strings.Resume.forest}</div><span class="span6">{Strings.Resume.saundeuMiksingJipjungMyeongsangAep2026}</span></button>
-      <span class="span7">{Strings.Resume.kiroJeonhwan}</span>
+      <button class="button2" type="button" role="tab" data-active="1" data-active-key="tab0" data-on-click="pickHandoff"><div class="div14">{Copy.Resume.handoffAgent}</div><span class="span6">{Copy.Resume.claudeCodePeulreogeuin202609}</span></button>
+      <button class="button2" type="button" role="tab" data-active="0" data-active-key="tab1" data-on-click="pickForest"><div class="div14">{Copy.Resume.forest}</div><span class="span6">{Copy.Resume.saundeuMiksingJipjungMyeongsangAep2026}</span></button>
+      <span class="span7">{Copy.Resume.kiroJeonhwan}</span>
     </div>
 
     
     <div id="panel-handoff" role="tabpanel" aria-labelledby="tab-handoff" data-panel="handoff">
       <div class="div15">
         <div class="div16">
-          <div class="div17"><div class="div18">{Strings.Resume.handoffAgent}</div><p class="p3">{Strings.Handoff.claudeDesignHaendeuopeuPaekiji1Gaero}</p></div>
+          <div class="div17"><div class="div18">{Copy.Resume.handoffAgent}</div><p class="p3">{Copy.Handoff.claudeDesignHaendeuopeuPaekiji1Gaero}</p></div>
           <div class="div19">
-            <a class="a6" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
-            <a class="a7" href={ScreenPaths.handoffAgent}>{Strings.Handoff.sangseBogi}</a>
+            <a class="a6" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Copy.Resume.gitHub}</a>
+            <a class="a7" href={ScreenPaths.handoffAgent}>{Copy.Handoff.sangseBogi}</a>
           </div>
         </div>
 
         <div class="div20">
-          <div class="div21"><span class="span8">{Strings.Handoff.pIpeline}</span><span class="span3">{Strings.Handoff.dijainHaendeuopeu1GaeIosAndroid}</span></div>
+          <div class="div21"><span class="span8">{Copy.Handoff.pIpeline}</span><span class="span3">{Copy.Handoff.dijainHaendeuopeu1GaeIosAndroid}</span></div>
           <div class="div22">
-            <div class="div23" data-hl="0" data-hl-key="hl0" data-on-enter="enter0" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.input}</div><div class="div25">{Strings.Handoff.claudeDesignSanchulmul}</div></div>
+            <div class="div23" data-hl="0" data-hl-key="hl0" data-on-enter="enter0" data-on-leave="leaveNode"><div class="div24">{Copy.Handoff.input}</div><div class="div25">{Copy.Handoff.claudeDesignSanchulmul}</div></div>
             <span class="span9">→</span>
-            <div class="div26" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.refine}</div><div class="div25">{Strings.Handoff.reiautTeuriJson}</div></div>
+            <div class="div26" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div24">{Copy.Handoff.refine}</div><div class="div25">{Copy.Handoff.reiautTeuriJson}</div></div>
             <span class="span9">→</span>
-            <div class="div27" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.interview}</div><div class="div25">{Strings.Handoff.seupekMunseoSeontaekjiPyo}</div></div>
+            <div class="div27" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div24">{Copy.Handoff.interview}</div><div class="div25">{Copy.Handoff.seupekMunseoSeontaekjiPyo}</div></div>
             <span class="span9">→</span>
-            <div class="div28" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><span class="span10">{Strings.Handoff.iOs}</span><span class="span10">{Strings.Handoff.android}</span><span class="span10">{Strings.Handoff.backend}</span></div>
+            <div class="div28" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><span class="span10">{Copy.Handoff.iOs}</span><span class="span10">{Copy.Handoff.android}</span><span class="span10">{Copy.Handoff.backend}</span></div>
             <span class="span9">→</span>
-            <div class="div29" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.verify}</div><div class="div25">{Strings.Handoff.jeonghapseongChekeuForest}</div></div>
+            <div class="div29" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div24">{Copy.Handoff.verify}</div><div class="div25">{Copy.Handoff.jeonghapseongChekeuForest}</div></div>
           </div>
         </div>
 
         <div class="div30">
-          <div class="div31" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri}</div><div class="span9">{Strings.Handoff.guhyeonEijeonteuTokeun39Jeolgam16}</div></div>
-          <div class="div31" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero}</div><div class="span9">{Strings.Handoff.yogeumGineungYecheukSayongjaGyumoreulInteobyu}</div></div>
-          <div class="div31" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.wiSanchulmulGibaneuroByeongryeolGuhyeonhaneun3}</div><div class="span9">{Strings.Handoff.iOsAndroidBackendDongsiSaengseong}</div></div>
-          <div class="div31" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.inteobyuGibanBaekendeuInpeuraGyeoljeonggujoMit}</div><div class="span9">{Strings.Handoff.mingamJeongboInjeungseoKiNeunSayongjaga}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri}</div><div class="span9">{Copy.Handoff.guhyeonEijeonteuTokeun39Jeolgam16}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero}</div><div class="span9">{Copy.Handoff.yogeumGineungYecheukSayongjaGyumoreulInteobyu}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.wiSanchulmulGibaneuroByeongryeolGuhyeonhaneun3}</div><div class="span9">{Copy.Handoff.iOsAndroidBackendDongsiSaengseong}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.inteobyuGibanBaekendeuInpeuraGyeoljeonggujoMit}</div><div class="span9">{Copy.Handoff.mingamJeongboInjeungseoKiNeunSayongjaga}</div></div>
         </div>
       </div>
     </div>
@@ -109,9 +109,9 @@ import forest04 from "@design-assets/forest-04-stats.png";
     <div id="panel-forest" role="tabpanel" aria-labelledby="tab-forest" data-panel="forest" hidden>
       <div class="div15">
         <div class="div16">
-          <div class="div17"><div class="div18">{Strings.Resume.forest}</div><p class="p3">{Strings.Forest.padoBiBaramMoraeJangjakDaseot}</p></div>
+          <div class="div17"><div class="div18">{Copy.Resume.forest}</div><p class="p3">{Copy.Forest.padoBiBaramMoraeJangjakDaseot}</p></div>
           <div class="div19">
-            <a class="a7" href={ScreenPaths.forest}>{Strings.Handoff.sangseBogi}</a>
+            <a class="a7" href={ScreenPaths.forest}>{Copy.Handoff.sangseBogi}</a>
           </div>
         </div>
         <div class="div33">
@@ -121,9 +121,9 @@ import forest04 from "@design-assets/forest-04-stats.png";
           <Image src={forest04} class="img1" alt={RawCopy.alt4} />
         </div>
         <div class="div30">
-          <div><div class="div32">{Strings.Forest.handoffAgentReulHwalyonghanIosAndroid}</div><div class="span9">{Strings.Forest.swiftUiJetpackComposeGateunHwamyeonKeomponeonteu}</div></div>
-          <div><div class="div32">{Strings.Forest.cloudflareWorkersHonoD1R2Baekendeu}</div><div class="span9">{Strings.Forest.seobeoGwanriBudamEoliIGyumoeseo}</div></div>
-          <div><div class="div32">{Strings.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing}</div><div class="span9">{Strings.Forest.reieobyeolBolryumPeurisetSumyeonTaimeo}</div></div>
+          <div><div class="div32">{Copy.Forest.handoffAgentReulHwalyonghanIosAndroid}</div><div class="span9">{Copy.Forest.swiftUiJetpackComposeGateunHwamyeonKeomponeonteu}</div></div>
+          <div><div class="div32">{Copy.Forest.cloudflareWorkersHonoD1R2Baekendeu}</div><div class="span9">{Copy.Forest.seobeoGwanriBudamEoliIGyumoeseo}</div></div>
+          <div><div class="div32">{Copy.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing}</div><div class="span9">{Copy.Forest.reieobyeolBolryumPeurisetSumyeonTaimeo}</div></div>
         </div>
       </div>
     </div>
@@ -131,34 +131,34 @@ import forest04 from "@design-assets/forest-04-stats.png";
   </section>
 
   <section class="section3" id="career">
-    <div class="div4">{Strings.Resume._03Gyeongryeok4Nyeon2Gaewol}</div>
+    <div class="div4">{Copy.Resume._03Gyeongryeok4Nyeon2Gaewol}</div>
     <div class="div34">
 
       <article class="article1" data-dim="0" data-dim-key="dimA">
-        <div class="div21"><div class="div35">{Strings.Resume.teuripeideuTripaidIosNative}</div><span class="span11">{Strings.Resume._202510Hyeonjae}</span></div>
-        <div class="div36">{Strings.Resume.helmidakAiChaetingGeongangsangdamSeobiseu} <a href="https://apps.apple.com/kr/app/%ED%97%AC%EB%AF%B8%EB%8B%A5-helpmedoc/id6475003834" target="_blank" rel="noreferrer">{Strings.Resume.appStore}</a> {Strings.Resume.iOsNeitibeuAepGaebalMitAkitekcheo}</div>
+        <div class="div21"><div class="div35">{Copy.Resume.teuripeideuTripaidIosNative}</div><span class="span11">{Copy.Resume._202510Hyeonjae}</span></div>
+        <div class="div36">{Copy.Resume.helmidakAiChaetingGeongangsangdamSeobiseu} <a href="https://apps.apple.com/kr/app/%ED%97%AC%EB%AF%B8%EB%8B%A5-helpmedoc/id6475003834" target="_blank" rel="noreferrer">{Copy.Resume.appStore}</a> {Copy.Resume.iOsNeitibeuAepGaebalMitAkitekcheo}</div>
         <div class="div37">
-          <div><div class="div32">{Strings.Resume.iOsuiuxJeongbiMitPeulraetpom}</div><div class="span9">{Strings.Resume.androidDaebiJeongchedoenIosHwangyeongeulJeomgeomhae}</div></div>
-          <div><div class="div32">{Strings.Resume.neteuwokeuGongtongInteosepteoDoipMitTokeun}</div><div class="span9">{Strings.Resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae}</div></div>
-          <div><div class="div32">{Strings.Resume.claudeDesignEulHwalyonghanDijainSoyo}</div><div class="span9">{Strings.Resume.dijainSaempeulroTimGanBanghyangseongGongyu}</div></div>
+          <div><div class="div32">{Copy.Resume.iOsuiuxJeongbiMitPeulraetpom}</div><div class="span9">{Copy.Resume.androidDaebiJeongchedoenIosHwangyeongeulJeomgeomhae}</div></div>
+          <div><div class="div32">{Copy.Resume.neteuwokeuGongtongInteosepteoDoipMitTokeun}</div><div class="span9">{Copy.Resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae}</div></div>
+          <div><div class="div32">{Copy.Resume.claudeDesignEulHwalyonghanDijainSoyo}</div><div class="span9">{Copy.Resume.dijainSaempeulroTimGanBanghyangseongGongyu}</div></div>
         </div>
       </article>
 
       <article class="article1" data-dim="0" data-dim-key="dimB">
-        <div class="div21"><div class="div35">{Strings.Resume.holricheuHolich}</div><span class="span11">{Strings.Resume._2023042025021Nyeon}</span></div>
+        <div class="div21"><div class="div35">{Copy.Resume.holricheuHolich}</div><span class="span11">{Copy.Resume._2023042025021Nyeon}</span></div>
         <div class="div37">
-          <div><div class="div32">{Strings.Resume.letSBeePilripinEumsikBaedal}</div><div class="div38">{Strings.Resume._202407202501Flutter}</div><div class="span9">{Strings.Resume.yujeoPateuneoJeomjuAepUiux}</div></div>
-          <div><div class="div32">{Strings.Resume.guLetSBeeKeulrakJiyeok}</div><div class="div38">{Strings.Resume._202306202411Ios}</div><div class="span9">{Strings.Resume.uIuxGaeseonMitTeureobeulsyuting6}</div></div>
-          <div><div class="div32">{Strings.Resume.myConectHotelBidaemyeonSeobiseuPeulraetpom}</div><div class="div38">{Strings.Resume._202304202412Ios}</div><div class="span9">{Strings.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro}</div></div>
+          <div><div class="div32">{Copy.Resume.letSBeePilripinEumsikBaedal}</div><div class="div38">{Copy.Resume._202407202501Flutter}</div><div class="span9">{Copy.Resume.yujeoPateuneoJeomjuAepUiux}</div></div>
+          <div><div class="div32">{Copy.Resume.guLetSBeeKeulrakJiyeok}</div><div class="div38">{Copy.Resume._202306202411Ios}</div><div class="span9">{Copy.Resume.uIuxGaeseonMitTeureobeulsyuting6}</div></div>
+          <div><div class="div32">{Copy.Resume.myConectHotelBidaemyeonSeobiseuPeulraetpom}</div><div class="div38">{Copy.Resume._202304202412Ios}</div><div class="span9">{Copy.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro}</div></div>
         </div>
       </article>
 
       <article class="article1" data-dim="0" data-dim-key="dimC">
-        <div class="div21"><div class="div35">{Strings.Resume.juAlpaigeulru}</div><span class="span11">{Strings.Resume._2020112022031Nyeon}</span></div>
-        <div class="div36">{Strings.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu}</div>
+        <div class="div21"><div class="div35">{Copy.Resume.juAlpaigeulru}</div><span class="span11">{Copy.Resume._2020112022031Nyeon}</span></div>
+        <div class="div36">{Copy.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu}</div>
         <div class="div37">
-          <div><div class="div32">{Strings.Resume.uIuxGaeseonMitKeontencheuChuga}</div><div class="span9">{Strings.Resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu}</div></div>
-          <div><div class="div32">{Strings.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><div class="span9">{Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa}</div></div>
+          <div><div class="div32">{Copy.Resume.uIuxGaeseonMitKeontencheuChuga}</div><div class="span9">{Copy.Resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu}</div></div>
+          <div><div class="div32">{Copy.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><div class="span9">{Copy.Resume.gyeoljeHuSangpumMijigeupeuroCsWa}</div></div>
         </div>
       </article>
     </div>
@@ -168,8 +168,8 @@ import forest04 from "@design-assets/forest-04-stats.png";
 
 <footer class="footer1">
   <div class="div39">
-    <span class="span12">{Strings.Resume.hamkkeMandeuleobolkkayo}</span>
-    <span class="span11"><a href="mailto:yeonghun.yoo@gmail.com">{Strings.Resume.yeonghunYooGmailCom}</a> · <a href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Strings.Resume.githubComYeonghunyoo}</a> · 010 9390 8827</span>
+    <span class="span12">{Copy.Resume.hamkkeMandeuleobolkkayo}</span>
+    <span class="span11"><a href="mailto:yeonghun.yoo@gmail.com">{Copy.Resume.yeonghunYooGmailCom}</a> · <a href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Copy.Resume.githubComYeonghunyoo}</a> · 010 9390 8827</span>
   </div>
 </footer>
 

@@ -1,8 +1,8 @@
 ---
 // Transplanted from the frozen design export for screen "forest".
 // Every inline style of the prototype became a class in the scoped <style> below;
-// every piece of copy is a Strings.* constant.
-import { Strings } from "@generated/Strings";
+// every piece of copy is a generated constant, listed in ../content/forestCopy.ts.
+import { ForestCopy as Copy } from "../content/forestCopy";
 import { ScreenPaths } from "@generated/Screens";
 import { RawCopy } from "../content/rawCopy";
 import { Image } from "astro:assets";
@@ -14,13 +14,13 @@ import Lightbox from "../components/Lightbox.astro";
 ---
 <header class="header1">
   <div class="div1">
-    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Strings.Forest.yuyeonghun}</a>
+    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Copy.Forest.yuyeonghun}</a>
     <div class="div2">
-      <a class="a2" href={ScreenPaths.handoffAgent}>{Strings.Resume.handoffAgent}</a>
-      <span class="span1">{Strings.Resume.forest}</span>
+      <a class="a2" href={ScreenPaths.handoffAgent}>{Copy.Resume.handoffAgent}</a>
+      <span class="span1">{Copy.Resume.forest}</span>
     </div>
     <div class="div3">
-      <span class="span2">{Strings.Forest._202609}</span>
+      <span class="span2">{Copy.Forest._202609}</span>
       <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span3"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
     </div>
   </div>
@@ -30,24 +30,24 @@ import Lightbox from "../components/Lightbox.astro";
 <main class="main1">
 
   <section class="section1" id="s0">
-    <div class="span2">{Strings.Forest.saundeuMiksingJipjungMyeongsangAepIos}</div>
-    <h1 class="h11">{Strings.Forest.padoBiBaramMoraeJangjakDaseot2}<br />{Strings.Forest.wonhaneunBiyulroSeokeoNamanuiSorireulMandeuneun}</h1>
-    <p class="p1">{Strings.Forest.jamdeulTtaenaJipjunghalTtaeBaegyeongeumeuroTeuleoduneun} <a class="a3" href={ScreenPaths.handoffAgent}>{Strings.Resume.handoffAgent}</a>{Strings.Forest.reulHwalyonghaeSayongjaInteobyuDijainPeurototaipeul}</p>
+    <div class="span2">{Copy.Forest.saundeuMiksingJipjungMyeongsangAepIos}</div>
+    <h1 class="h11">{Copy.Forest.padoBiBaramMoraeJangjakDaseot2}<br />{Copy.Forest.wonhaneunBiyulroSeokeoNamanuiSorireulMandeuneun}</h1>
+    <p class="p1">{Copy.Forest.jamdeulTtaenaJipjunghalTtaeBaegyeongeumeuroTeuleoduneun} <a class="a3" href={ScreenPaths.handoffAgent}>{Copy.Resume.handoffAgent}</a>{Copy.Forest.reulHwalyonghaeSayongjaInteobyuDijainPeurototaipeul}</p>
 
     <div class="div5">
-      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt1}><Image src={forest01} class="img1" alt={RawCopy.alt1} /></button><figcaption class="figcaption1">{Strings.Forest.onboding}</figcaption></figure>
-      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt2}><Image src={forest02} class="img1" alt={RawCopy.alt2} /></button><figcaption class="figcaption1">{Strings.Forest.hom}</figcaption></figure>
-      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt3}><Image src={forest03} class="img1" alt={RawCopy.alt3} /></button><figcaption class="figcaption1">{Strings.Forest.saundeu}</figcaption></figure>
-      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt4}><Image src={forest04} class="img1" alt={RawCopy.alt4} /></button><figcaption class="figcaption1">{Strings.Forest.girok}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt1}><Image src={forest01} class="img1" alt={RawCopy.alt1} /></button><figcaption class="figcaption1">{Copy.Forest.onboding}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt2}><Image src={forest02} class="img1" alt={RawCopy.alt2} /></button><figcaption class="figcaption1">{Copy.Forest.hom}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt3}><Image src={forest03} class="img1" alt={RawCopy.alt3} /></button><figcaption class="figcaption1">{Copy.Forest.saundeu}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt4}><Image src={forest04} class="img1" alt={RawCopy.alt4} /></button><figcaption class="figcaption1">{Copy.Forest.girok}</figcaption></figure>
     </div>
   </section>
 
   <section class="section2" id="s1">
     <div class="div6">
       <div>
-        <h2 class="h21">{Strings.Forest.gineung}</h2>
+        <h2 class="h21">{Copy.Forest.gineung}</h2>
         <div class="div7">
-          <div class="div8" data-on-enter="mixEnter" data-on-leave="mixLeave"><b>{Strings.Forest.saundeuMiksing}</b><div class="div9">{Strings.Forest.reieo5GaereulGakgakBolryumJojeolhae}</div>
+          <div class="div8" data-on-enter="mixEnter" data-on-leave="mixLeave"><b>{Copy.Forest.saundeuMiksing}</b><div class="div9">{Copy.Forest.reieo5GaereulGakgakBolryumJojeolhae}</div>
             <div class="div10">
               <div class="div11"><div class="div12" data-var="m1"></div></div>
               <div class="div11"><div class="div13" data-var="m2"></div></div>
@@ -55,68 +55,68 @@ import Lightbox from "../components/Lightbox.astro";
               <div class="div11"><div class="div15" data-var="m4"></div></div>
               <div class="div11"><div class="div16" data-var="m5"></div></div>
             </div>
-            <div class="div17"><span>{Strings.Forest.pado}</span><span>{Strings.Forest.bi}</span><span>{Strings.Forest.baram}</span><span>{Strings.Forest.morae}</span><span>{Strings.Forest.jangjak}</span></div>
+            <div class="div17"><span>{Copy.Forest.pado}</span><span>{Copy.Forest.bi}</span><span>{Copy.Forest.baram}</span><span>{Copy.Forest.morae}</span><span>{Copy.Forest.jangjak}</span></div>
           </div>
-          <div class="div18"><b>{Strings.Forest.peurisetNamanuiMikseu}</b><div class="div9">{Strings.Forest.jeonyeokMulgyeolSupsokAchimDeungPeuriset}</div></div>
-          <div class="div18"><b>{Strings.Forest.sumyeonTaimeo}</b><div class="div9">{Strings.Forest._15304560BunDwi}</div></div>
-          <div class="div18"><b>{Strings.Forest.girokTonggye}</b><div class="div9">{Strings.Forest.sesyeonGirokgwaYeonsokilSeuteurik}</div></div>
-          <div class="div19"><b class="b1">{Strings.Forest.sNsLoginNaeJeongboDonggihwa}</b><div class="div20">{Strings.Forest.chugaYejeong}</div></div>
-          <div class="div19"><b class="b1">{Strings.Forest.gudokMitInaepGyeoljeIap}</b><div class="div20">{Strings.Forest.chugaYejeong}</div></div>
+          <div class="div18"><b>{Copy.Forest.peurisetNamanuiMikseu}</b><div class="div9">{Copy.Forest.jeonyeokMulgyeolSupsokAchimDeungPeuriset}</div></div>
+          <div class="div18"><b>{Copy.Forest.sumyeonTaimeo}</b><div class="div9">{Copy.Forest._15304560BunDwi}</div></div>
+          <div class="div18"><b>{Copy.Forest.girokTonggye}</b><div class="div9">{Copy.Forest.sesyeonGirokgwaYeonsokilSeuteurik}</div></div>
+          <div class="div19"><b class="b1">{Copy.Forest.sNsLoginNaeJeongboDonggihwa}</b><div class="div20">{Copy.Forest.chugaYejeong}</div></div>
+          <div class="div19"><b class="b1">{Copy.Forest.gudokMitInaepGyeoljeIap}</b><div class="div20">{Copy.Forest.chugaYejeong}</div></div>
         </div>
       </div>
       <div>
-        <h2 class="h21">{Strings.Forest.seukil}</h2>
+        <h2 class="h21">{Copy.Forest.seukil}</h2>
         <div class="div21">
-          <span class="span4">{Strings.Forest.swiftSwiftUi}</span>
-          <span class="span4">{Strings.Forest.kotlinCompose}</span>
-          <span class="span4">{Strings.Forest.typeScript}</span>
-          <span class="span4">{Strings.Forest.hono}</span>
-          <span class="span4">{Strings.Forest.cloudflareWorkers}</span>
-          <span class="span4">{Strings.Forest.d1}</span>
-          <span class="span4">{Strings.Forest.r2}</span>
-          <span class="span4">{Strings.Forest.openApi}</span>
-          <span class="span4">{Strings.Resume.handoffAgent}</span>
+          <span class="span4">{Copy.Forest.swiftSwiftUi}</span>
+          <span class="span4">{Copy.Forest.kotlinCompose}</span>
+          <span class="span4">{Copy.Forest.typeScript}</span>
+          <span class="span4">{Copy.Forest.hono}</span>
+          <span class="span4">{Copy.Forest.cloudflareWorkers}</span>
+          <span class="span4">{Copy.Forest.d1}</span>
+          <span class="span4">{Copy.Forest.r2}</span>
+          <span class="span4">{Copy.Forest.openApi}</span>
+          <span class="span4">{Copy.Resume.handoffAgent}</span>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section2" id="s2">
-    <h2 class="h21">{Strings.Forest.baekendeuWaeIreotgeGolratna}</h2>
+    <h2 class="h21">{Copy.Forest.baekendeuWaeIreotgeGolratna}</h2>
     <div class="div22">
-      <div class="div23"><div class="div24">{Strings.Forest.hosting}</div><div class="div25">{Strings.Forest.cloudflareWorkersHono}</div><p class="p2">{Strings.Forest.seobeoreulJikjeopGuchukUnyeonghaneunDaesinKodeuman}</p></div>
-      <div class="div23"><div class="div24">{Strings.Forest.db}</div><div class="div25">{Strings.Forest.d1SqLite}</div><p class="p2">{Strings.Forest.workersAneseoBaroSseulSuItneun}</p></div>
-      <div class="div23"><div class="div24">{Strings.Forest.storage}</div><div class="div25">{Strings.Forest.r2EumwonJeojangso}</div><p class="p2">{Strings.Forest.pailNaeryeobateulTtaeButneunJeonsongEgress}</p></div>
-      <div class="div23"><div class="div24">{Strings.Forest.auth}</div><div class="div25">{Strings.Forest.jacheJwtInjeungIkmyeongRogeuin}</div><p class="p2">{Strings.Forest.hoewongaipJeolchaEoliGigimaneuroBaroSseul}</p></div>
+      <div class="div23"><div class="div24">{Copy.Forest.hosting}</div><div class="div25">{Copy.Forest.cloudflareWorkersHono}</div><p class="p2">{Copy.Forest.seobeoreulJikjeopGuchukUnyeonghaneunDaesinKodeuman}</p></div>
+      <div class="div23"><div class="div24">{Copy.Forest.db}</div><div class="div25">{Copy.Forest.d1SqLite}</div><p class="p2">{Copy.Forest.workersAneseoBaroSseulSuItneun}</p></div>
+      <div class="div23"><div class="div24">{Copy.Forest.storage}</div><div class="div25">{Copy.Forest.r2EumwonJeojangso}</div><p class="p2">{Copy.Forest.pailNaeryeobateulTtaeButneunJeonsongEgress}</p></div>
+      <div class="div23"><div class="div24">{Copy.Forest.auth}</div><div class="div25">{Copy.Forest.jacheJwtInjeungIkmyeongRogeuin}</div><p class="p2">{Copy.Forest.hoewongaipJeolchaEoliGigimaneuroBaroSseul}</p></div>
     </div>
   </section>
 
   <section class="section3" id="s3">
-    <h2 class="h21">{Strings.Forest.iOsAndroidNaranhi}</h2>
-    <div class="div26">{Strings.Forest.gateunHandoffPaekijieseoDuPeulraetpomiDongsie}</div>
+    <h2 class="h21">{Copy.Forest.iOsAndroidNaranhi}</h2>
+    <div class="div26">{Copy.Forest.gateunHandoffPaekijieseoDuPeulraetpomiDongsie}</div>
     <div class="div27">
       <div class="div28">
-        <div class="div29">{Strings.Forest.iOsSwiftUi}</div>
+        <div class="div29">{Copy.Forest.iOsSwiftUi}</div>
         <div class="div30">
-          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Strings.Forest.hwamyeon4GaeOnbodingHomSaundeu}</div>
-          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Strings.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing2}</div>
-          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Strings.Forest.aPiTongsinDeiteoModelOpeurainMokeop}</div>
-          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Strings.Forest.saeksangTaipoGangyeokDeungDijainTokeun}</div>
+          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Copy.Forest.hwamyeon4GaeOnbodingHomSaundeu}</div>
+          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Copy.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing2}</div>
+          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Copy.Forest.aPiTongsinDeiteoModelOpeurainMokeop}</div>
+          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Copy.Forest.saeksangTaipoGangyeokDeungDijainTokeun}</div>
         </div>
       </div>
       <div class="div28">
-        <div class="div29">{Strings.Forest.androidJetpackCompose}</div>
+        <div class="div29">{Copy.Forest.androidJetpackCompose}</div>
         <div class="div30">
-          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Strings.Forest.iOsWaDongilhanHwamyeonKeomponeonteuGuseongeul}</div>
-          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Strings.Forest.odioMikseuPeulreieoGuhyeon}</div>
-          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Strings.Forest.aPiKeulraieonteuOpeurainMokeopPolbaekGyecheung}</div>
-          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Strings.Forest.aepSangtaeByumodelgwaDanwiTeseuteu4}</div>
+          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Copy.Forest.iOsWaDongilhanHwamyeonKeomponeonteuGuseongeul}</div>
+          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Copy.Forest.odioMikseuPeulreieoGuhyeon}</div>
+          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Copy.Forest.aPiKeulraieonteuOpeurainMokeopPolbaekGyecheung}</div>
+          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Copy.Forest.aepSangtaeByumodelgwaDanwiTeseuteu4}</div>
         </div>
       </div>
     </div>
     <div class="div32">
-      <div><div class="div29">{Strings.Forest.iAepeulMandeunDogu}</div><div class="div33">{Strings.Forest.handoffAgentSePeulraetpomeulHanBeone}</div></div>
-      <a class="a4" href={ScreenPaths.handoffAgent}>{Strings.Forest.handoffAgentSangse}</a>
+      <div><div class="div29">{Copy.Forest.iAepeulMandeunDogu}</div><div class="div33">{Copy.Forest.handoffAgentSePeulraetpomeulHanBeone}</div></div>
+      <a class="a4" href={ScreenPaths.handoffAgent}>{Copy.Forest.handoffAgentSangse}</a>
     </div>
   </section>
 </main>
@@ -125,10 +125,10 @@ import Lightbox from "../components/Lightbox.astro";
   <div class="div34">
     <div class="div35" data-var="railScale"></div>
     <nav class="nav1">
-      <a class="a5" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="b1">{Strings.Forest.gaeyo}</span></a>
-      <a class="a5" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="b1">{Strings.Forest.gineungSeukil}</span></a>
-      <a class="a5" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="b1">{Strings.Forest.baekendeu}</span></a>
-      <a class="a5" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="b1">{Strings.Forest.iOsAndroid}</span></a>
+      <a class="a5" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="b1">{Copy.Forest.gaeyo}</span></a>
+      <a class="a5" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="b1">{Copy.Forest.gineungSeukil}</span></a>
+      <a class="a5" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="b1">{Copy.Forest.baekendeu}</span></a>
+      <a class="a5" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="b1">{Copy.Forest.iOsAndroid}</span></a>
     </nav>
   </div>
 </aside>
