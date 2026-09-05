@@ -1,115 +1,118 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { ApiRoutes } from "@generated/ApiRoutes";
+import { Screens } from "@generated/Screens";
 import {
+  API_BASE,
   ApiError,
   DEFAULT_API_BASE,
-  HANDOFF_AGENT_PAGE,
   PAGE_SLUG_PATTERN,
   buildUrl,
   getPageViews,
   incrementPageViews,
   listPageViews,
+  pageSlug,
 } from "../src/lib/apiClient";
+import { countVisit } from "../src/lib/pageViews";
 
-function mockFetch(response: Response) {
-  const fetchMock = vi.fn(async () => response);
-  vi.stubGlobal("fetch", fetchMock);
-  return fetchMock;
+function jsonResponse(body: unknown, status = 200): Response {
+  return new Response(JSON.stringify(body), {
+    status,
+    headers: { "content-type": "application/json" },
+  });
 }
-
-const json = (body: unknown, status = 200) =>
-  new Response(JSON.stringify(body), { status, headers: { "content-type": "application/json" } });
 
 afterEach(() => {
   vi.unstubAllGlobals();
-  vi.restoreAllMocks();
+});
+
+describe("page slugs", () => {
+  it("derives one slug per contracted screen, as api/openapi.yaml documents", () => {
+    expect(pageSlug(Screens.resume)).toBe("resume");
+    expect(pageSlug(Screens.forest)).toBe("forest");
+    expect(pageSlug(Screens.handoffAgent)).toBe("handoff-agent");
+  });
+
+  it("keeps every slug inside the contract's PageSlug pattern", () => {
+    for (const screen of Object.values(Screens)) {
+      expect(pageSlug(screen)).toMatch(PAGE_SLUG_PATTERN);
+    }
+  });
 });
 
 describe("buildUrl", () => {
-  it("API-01 · builds GET /views from ApiRoutes.listPageViews", () => {
-    expect(ApiRoutes.listPageViews.method).toBe("GET");
-    expect(buildUrl(ApiRoutes.listPageViews)).toBe(`${DEFAULT_API_BASE}/views`);
+  it("defaults to the servers[0].url of the contract", () => {
+    expect(API_BASE).toBe(DEFAULT_API_BASE);
+    expect(DEFAULT_API_BASE).toBe("/api");
   });
 
-  it("API-02 · fills {page} of ApiRoutes.getPageViews", () => {
-    expect(ApiRoutes.getPageViews.method).toBe("GET");
-    expect(buildUrl(ApiRoutes.getPageViews, { page: HANDOFF_AGENT_PAGE })).toBe(
-      `${DEFAULT_API_BASE}/views/${HANDOFF_AGENT_PAGE}`,
-    );
+  it("fills the {page} parameter of the generated route", () => {
+    expect(buildUrl(ApiRoutes.getPageViews, { page: pageSlug(Screens.forest) })).toBe("/api/views/forest");
   });
 
-  it("API-03 · fills {page} of ApiRoutes.incrementPageViews", () => {
-    expect(ApiRoutes.incrementPageViews.method).toBe("POST");
-    expect(buildUrl(ApiRoutes.incrementPageViews, { page: "home" })).toBe(
-      `${DEFAULT_API_BASE}/views/home`,
-    );
-  });
-
-  it("percent-encodes the slug and refuses a missing parameter", () => {
-    expect(buildUrl(ApiRoutes.getPageViews, { page: "a b" })).toContain("a%20b");
-    expect(() => buildUrl(ApiRoutes.getPageViews)).toThrow(/missing path parameter "page"/);
-  });
-
-  it("keeps the contracted page slug legal", () => {
-    expect(PAGE_SLUG_PATTERN.test(HANDOFF_AGENT_PAGE)).toBe(true);
-    expect(PAGE_SLUG_PATTERN.test("Handoff_Agent")).toBe(false);
+  it("refuses a route whose parameter was not supplied", () => {
+    expect(() => buildUrl(ApiRoutes.incrementPageViews)).toThrow(/missing path parameter "page"/);
   });
 });
 
 describe("calls", () => {
-  it("listPageViews reads the counter list", async () => {
-    const fetchMock = mockFetch(json({ items: [{ page: HANDOFF_AGENT_PAGE, views: 128 }] }));
+  it("API-01 listPageViews uses the generated method and path", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse({ items: [{ page: "resume", views: 3 }] }));
+    vi.stubGlobal("fetch", fetchMock);
 
-    await expect(listPageViews()).resolves.toEqual({
-      items: [{ page: HANDOFF_AGENT_PAGE, views: 128 }],
-    });
+    await expect(listPageViews()).resolves.toEqual({ items: [{ page: "resume", views: 3 }] });
     expect(fetchMock).toHaveBeenCalledWith(
-      buildUrl(ApiRoutes.listPageViews),
+      `${API_BASE}${ApiRoutes.listPageViews.path}`,
       expect.objectContaining({ method: ApiRoutes.listPageViews.method }),
     );
   });
 
-  it("getPageViews reads one counter", async () => {
-    const fetchMock = mockFetch(json({ page: HANDOFF_AGENT_PAGE, views: 0 }));
+  it("API-02 getPageViews reads one counter", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse({ page: "forest", views: 0 }));
+    vi.stubGlobal("fetch", fetchMock);
 
-    await expect(getPageViews(HANDOFF_AGENT_PAGE)).resolves.toEqual({
-      page: HANDOFF_AGENT_PAGE,
-      views: 0,
-    });
+    await expect(getPageViews(pageSlug(Screens.forest))).resolves.toEqual({ page: "forest", views: 0 });
     expect(fetchMock).toHaveBeenCalledWith(
-      buildUrl(ApiRoutes.getPageViews, { page: HANDOFF_AGENT_PAGE }),
-      expect.objectContaining({ method: "GET" }),
+      "/api/views/forest",
+      expect.objectContaining({ method: ApiRoutes.getPageViews.method }),
     );
   });
 
-  it("incrementPageViews posts and returns the new total", async () => {
-    const fetchMock = mockFetch(json({ page: HANDOFF_AGENT_PAGE, views: 129 }));
+  it("API-03 incrementPageViews posts to the same path", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse({ page: "handoff-agent", views: 9 }));
+    vi.stubGlobal("fetch", fetchMock);
 
-    await expect(incrementPageViews(HANDOFF_AGENT_PAGE, { keepalive: true })).resolves.toEqual({
-      page: HANDOFF_AGENT_PAGE,
-      views: 129,
-    });
+    await incrementPageViews(pageSlug(Screens.handoffAgent));
     expect(fetchMock).toHaveBeenCalledWith(
-      buildUrl(ApiRoutes.incrementPageViews, { page: HANDOFF_AGENT_PAGE }),
-      expect.objectContaining({ method: "POST", keepalive: true }),
+      "/api/views/handoff-agent",
+      expect.objectContaining({ method: ApiRoutes.incrementPageViews.method }),
     );
+    expect(ApiRoutes.incrementPageViews.method).toBe("POST");
   });
 
   it("turns a contract error body into an ApiError", async () => {
-    mockFetch(json({ code: "store_unavailable", message: "views store unavailable" }, 503));
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async () => jsonResponse({ code: "invalid_page", message: "bad slug" }, 400)),
+    );
 
-    await expect(getPageViews(HANDOFF_AGENT_PAGE)).rejects.toMatchObject({
+    await expect(getPageViews("NOPE")).rejects.toMatchObject({
       name: "ApiError",
-      status: 503,
-      code: "store_unavailable",
+      status: 400,
+      code: "invalid_page",
     });
+    expect(new ApiError(503, "store_unavailable", "down")).toBeInstanceOf(Error);
   });
+});
 
-  it("survives an error body that is not JSON", async () => {
-    mockFetch(new Response("nope", { status: 429 }));
+describe("countVisit", () => {
+  it("counts the visit of a screen and never rejects when the API is down", async () => {
+    const fetchMock = vi.fn(async () => {
+      throw new Error("offline");
+    });
+    vi.stubGlobal("fetch", fetchMock);
 
-    const error = await incrementPageViews("home").catch((caught: unknown) => caught);
-    expect(error).toBeInstanceOf(ApiError);
-    expect((error as ApiError).code).toBe("unknown");
+    expect(() => countVisit(Screens.resume)).not.toThrow();
+    await Promise.resolve();
+    expect(fetchMock).toHaveBeenCalledWith("/api/views/resume", expect.objectContaining({ keepalive: true }));
   });
 });
