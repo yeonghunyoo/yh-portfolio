@@ -3,14 +3,20 @@ import { DesignTokens } from "@generated/DesignTokens";
 import "@generated/tokens.css";
 import "../styles/global.css";
 import { DEFAULT_THEME, THEMES, THEME_STORAGE_KEY } from "../lib/theme";
-import { PAGE_DESCRIPTION, PAGE_TITLE } from "../lib/screens";
+import { SCREEN_META } from "../lib/meta";
+import { Screens, type ScreenId } from "@generated/Screens";
 
 interface Props {
+  /** Which contracted screen this document is; its title/description come from Strings. */
+  screen?: ScreenId;
   title?: string;
   description?: string;
 }
 
-const { title = PAGE_TITLE, description = PAGE_DESCRIPTION } = Astro.props;
+const { screen = Screens.resume, title, description } = Astro.props;
+const meta = SCREEN_META[screen];
+const pageTitle = title ?? meta.title;
+const pageDescription = description ?? meta.description;
 
 // Absolute URL for canonical/Open Graph. `site` comes from PUBLIC_SITE_URL; without
 // it we fall back to the origin the page was requested from.
@@ -22,20 +28,20 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).hr
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
-    <meta name="description" content={description} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
     <link rel="canonical" href={canonical} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta name="theme-color" content={DesignTokens.accent} />
 
     <meta property="og:type" content="website" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="ko_KR" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={pageDescription} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

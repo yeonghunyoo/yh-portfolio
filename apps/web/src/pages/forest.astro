@@ -1,0 +1,15 @@
+---
+/** `ScreenPaths.forest` — the Forest case study. */
+import { Screens } from "@generated/Screens";
+import Base from "../layouts/Base.astro";
+import ForestScreen from "../screens/ForestScreen.astro";
+---
+
+<Base screen={Screens.forest}>
+  <ForestScreen />
+</Base>
+
+<script>
+  import { initForestScreen } from "../lib/forestScreen";
+  initForestScreen();
+</script>

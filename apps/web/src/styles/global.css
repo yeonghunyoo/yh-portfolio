@@ -1,19 +1,14 @@
 /*
- * Global stylesheet — transplanted verbatim from the second <style> block of
- * design/6b7a554c-handoffagent.dc.html. Every colour goes through a CSS variable;
- * the variables themselves come from shared/generated/tokens.css (imported first).
+ * Global rules of the three design exports — the parts that sit on `html`, `body`
+ * and `a`. Everything else is scoped to its screen component.
+ *
+ * shared/generated/tokens.css declares the design tokens on :root. It carries the
+ * palette the prototype calls `data-theme="mint"`, so the mint theme reads straight
+ * from the tokens and only the prototype's light palette (which has no tokens) is
+ * written out here. `--mint-*` are aliases captured at :root before `body` shadows
+ * the token names, so no token value is ever duplicated as a literal.
  */
 
-/* ---------------------------------------------------------------------------
- * Themes.
- *
- * shared/generated/tokens.css declares the 14 design tokens on :root with the
- * MINT (dark) palette — that is the palette the extractor captured. The prototype
- * ships two themes: `light` (default) and `mint`. So we keep the generated values
- * under aliases and hand them back on [data-theme="mint"]; nothing re-types a mint
- * colour by hand. The light palette has no tokens in the contract (see the report's
- * proposals), so its values are literals, exactly as the design HTML has them.
- * ------------------------------------------------------------------------ */
 :root {
   --mint-bg: var(--bg);
   --mint-surface: var(--surface);
@@ -29,9 +24,6 @@
   --mint-code-ink: var(--code-ink);
   --mint-code-dim: var(--code-dim);
   --mint-hl: var(--hl);
-
-  --font-sans: "IBM Plex Sans KR", system-ui, sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
 }
 
 html {
@@ -40,13 +32,13 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: "IBM Plex Sans KR", system-ui, sans-serif;
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
   transition: background 0.3s, color 0.3s;
 
-  /* light — the default theme (no tokens exist for this palette) */
+  /* light theme — the prototype's default palette; these values carry no token */
   --bg: #f7f7f5;
   --surface: #eef0f2;
   --card: #ffffff;
@@ -78,12 +70,8 @@ body[data-theme="mint"] {
   --code-ink: var(--mint-code-ink);
   --code-dim: var(--mint-code-dim);
   --hl: var(--mint-hl);
-  color-scheme: dark;
 }
 
-/* --------------------------------------------------------------------------
- * Element rules — verbatim from the design's <style> block.
- * ------------------------------------------------------------------------ */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -93,119 +81,34 @@ a:hover {
   text-decoration: underline;
 }
 
-[data-cur="1"] {
-  color: var(--accent) !important;
-  font-weight: 600;
-}
-
-[data-cur="1"] span {
-  color: var(--accent) !important;
-}
-
-[data-tok] {
-  border-bottom: 1px dashed var(--accent);
-  color: var(--accent);
-  cursor: crosshair;
-  border-radius: 3px;
-  transition: background 0.15s;
-}
-
-[data-tok="1"] {
-  background: var(--hl);
-  box-shadow: 0 0 0 1px var(--accent);
-  border-bottom-color: transparent;
-}
-
-tbody tr {
-  transition: background 0.15s;
-}
-
-tbody tr:hover td {
-  background: var(--hl);
-  box-shadow: inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
-}
-
-tbody tr:hover td:first-child {
-  box-shadow: inset 1px 0 0 var(--accent), inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
-}
-
-tbody tr:hover td:last-child {
-  box-shadow: inset -1px 0 0 var(--accent), inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
-}
-
-pre {
-  margin: 0;
-  font: 13.5px/1.65 var(--font-mono);
-  white-space: pre;
-  overflow: auto;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-  font-size: 15px;
-}
-
-th {
-  font: 500 11.5px var(--font-mono);
-  color: var(--muted);
-  text-align: left;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--line);
-  background: var(--surface);
-}
-
-td {
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--line-soft);
-  vertical-align: top;
+/* Keyframes the screens' scoped rules reference by name. */
+@keyframes drawline {
+  from { background-size: 0% 3px; }
+  to { background-size: 100% 3px; }
 }
 
 @keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
 }
 
-/* --------------------------------------------------------------------------
- * Accessibility additions (not in the prototype, agreed in the spec notes):
- * a visible focus ring from the tokens, and a reduced-motion mode that drops
- * the animations while keeping every state change.
- * ------------------------------------------------------------------------ */
-:focus-visible {
+@keyframes lit {
+  0% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+/* The prototype has no focus styling; a keyboard user needs one. Token colours only. */
+:where(a, button, [tabindex], summary, input):focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip-path: inset(50%);
-  white-space: nowrap;
-  border: 0;
-}
-
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

@@ -1,4 +1,5 @@
 import { ApiRoutes, type Route } from "@generated/ApiRoutes";
+import { type ScreenId } from "@generated/Screens";
 
 /**
  * One client for the whole app. Every call goes through an `ApiRoutes.*` entry —
@@ -18,10 +19,13 @@ export const API_BASE: string =
 export const PAGE_SLUG_PATTERN = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
 
 /**
- * Slug of this document. api/openapi.yaml: "the handoff-agent case study page
- * (screens s0–s5, path "/") uses the slug `handoff-agent`".
+ * Page slug of a screen. api/openapi.yaml: "Page keys are slugs, one per screen in
+ * design/handoff.manifest.json: `resume`, `forest` and `handoff-agent`" — the
+ * kebab-case of the `Screens.*` id, derived rather than written out.
  */
-export const HANDOFF_AGENT_PAGE = "handoff-agent";
+export function pageSlug(screen: ScreenId): string {
+  return screen.replace(/([a-z0-9])([A-Z])/g, "$1-$2").toLowerCase();
+}
 
 export interface PageViews {
   readonly page: string;

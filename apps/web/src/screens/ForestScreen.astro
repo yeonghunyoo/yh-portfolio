@@ -1,0 +1,212 @@
+---
+// Transplanted from the frozen design export for screen "forest".
+// Every inline style of the prototype became a class in the scoped <style> below;
+// every piece of copy is a Strings.* constant.
+import { Strings } from "@generated/Strings";
+import { ScreenPaths } from "@generated/Screens";
+import { RawCopy } from "../content/rawCopy";
+import { Image } from "astro:assets";
+import forest01 from "@design-assets/forest-01-onboarding.png";
+import forest02 from "@design-assets/forest-02-home.png";
+import forest03 from "@design-assets/forest-03-sound.png";
+import forest04 from "@design-assets/forest-04-stats.png";
+import Lightbox from "../components/Lightbox.astro";
+---
+<header class="header1">
+  <div class="div1">
+    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Strings.Forest.yuyeonghun}</a>
+    <div class="div2">
+      <a class="a2" href={ScreenPaths.handoffAgent}>{Strings.Resume.handoffAgent}</a>
+      <span class="span1">{Strings.Resume.forest}</span>
+    </div>
+    <div class="div3">
+      <span class="span2">{Strings.Forest._202609}</span>
+      <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span3"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="div4">
+<main class="main1">
+
+  <section class="section1" id="s0">
+    <div class="span2">{Strings.Forest.saundeuMiksingJipjungMyeongsangAepIos}</div>
+    <h1 class="h11">{Strings.Forest.padoBiBaramMoraeJangjakDaseot2}<br />{Strings.Forest.wonhaneunBiyulroSeokeoNamanuiSorireulMandeuneun}</h1>
+    <p class="p1">{Strings.Forest.jamdeulTtaenaJipjunghalTtaeBaegyeongeumeuroTeuleoduneun} <a class="a3" href={ScreenPaths.handoffAgent}>{Strings.Resume.handoffAgent}</a>{Strings.Forest.reulHwalyonghaeSayongjaInteobyuDijainPeurototaipeul}</p>
+
+    <div class="div5">
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt1}><Image src={forest01} class="img1" alt={RawCopy.alt1} /></button><figcaption class="figcaption1">{Strings.Forest.onboding}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt2}><Image src={forest02} class="img1" alt={RawCopy.alt2} /></button><figcaption class="figcaption1">{Strings.Forest.hom}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt3}><Image src={forest03} class="img1" alt={RawCopy.alt3} /></button><figcaption class="figcaption1">{Strings.Forest.saundeu}</figcaption></figure>
+      <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt4}><Image src={forest04} class="img1" alt={RawCopy.alt4} /></button><figcaption class="figcaption1">{Strings.Forest.girok}</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="section2" id="s1">
+    <div class="div6">
+      <div>
+        <h2 class="h21">{Strings.Forest.gineung}</h2>
+        <div class="div7">
+          <div class="div8" data-on-enter="mixEnter" data-on-leave="mixLeave"><b>{Strings.Forest.saundeuMiksing}</b><div class="div9">{Strings.Forest.reieo5GaereulGakgakBolryumJojeolhae}</div>
+            <div class="div10">
+              <div class="div11"><div class="div12" data-var="m1"></div></div>
+              <div class="div11"><div class="div13" data-var="m2"></div></div>
+              <div class="div11"><div class="div14" data-var="m3"></div></div>
+              <div class="div11"><div class="div15" data-var="m4"></div></div>
+              <div class="div11"><div class="div16" data-var="m5"></div></div>
+            </div>
+            <div class="div17"><span>{Strings.Forest.pado}</span><span>{Strings.Forest.bi}</span><span>{Strings.Forest.baram}</span><span>{Strings.Forest.morae}</span><span>{Strings.Forest.jangjak}</span></div>
+          </div>
+          <div class="div18"><b>{Strings.Forest.peurisetNamanuiMikseu}</b><div class="div9">{Strings.Forest.jeonyeokMulgyeolSupsokAchimDeungPeuriset}</div></div>
+          <div class="div18"><b>{Strings.Forest.sumyeonTaimeo}</b><div class="div9">{Strings.Forest._15304560BunDwi}</div></div>
+          <div class="div18"><b>{Strings.Forest.girokTonggye}</b><div class="div9">{Strings.Forest.sesyeonGirokgwaYeonsokilSeuteurik}</div></div>
+          <div class="div19"><b class="b1">{Strings.Forest.sNsLoginNaeJeongboDonggihwa}</b><div class="div20">{Strings.Forest.chugaYejeong}</div></div>
+          <div class="div19"><b class="b1">{Strings.Forest.gudokMitInaepGyeoljeIap}</b><div class="div20">{Strings.Forest.chugaYejeong}</div></div>
+        </div>
+      </div>
+      <div>
+        <h2 class="h21">{Strings.Forest.seukil}</h2>
+        <div class="div21">
+          <span class="span4">{Strings.Forest.swiftSwiftUi}</span>
+          <span class="span4">{Strings.Forest.kotlinCompose}</span>
+          <span class="span4">{Strings.Forest.typeScript}</span>
+          <span class="span4">{Strings.Forest.hono}</span>
+          <span class="span4">{Strings.Forest.cloudflareWorkers}</span>
+          <span class="span4">{Strings.Forest.d1}</span>
+          <span class="span4">{Strings.Forest.r2}</span>
+          <span class="span4">{Strings.Forest.openApi}</span>
+          <span class="span4">{Strings.Resume.handoffAgent}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2" id="s2">
+    <h2 class="h21">{Strings.Forest.baekendeuWaeIreotgeGolratna}</h2>
+    <div class="div22">
+      <div class="div23"><div class="div24">{Strings.Forest.hosting}</div><div class="div25">{Strings.Forest.cloudflareWorkersHono}</div><p class="p2">{Strings.Forest.seobeoreulJikjeopGuchukUnyeonghaneunDaesinKodeuman}</p></div>
+      <div class="div23"><div class="div24">{Strings.Forest.db}</div><div class="div25">{Strings.Forest.d1SqLite}</div><p class="p2">{Strings.Forest.workersAneseoBaroSseulSuItneun}</p></div>
+      <div class="div23"><div class="div24">{Strings.Forest.storage}</div><div class="div25">{Strings.Forest.r2EumwonJeojangso}</div><p class="p2">{Strings.Forest.pailNaeryeobateulTtaeButneunJeonsongEgress}</p></div>
+      <div class="div23"><div class="div24">{Strings.Forest.auth}</div><div class="div25">{Strings.Forest.jacheJwtInjeungIkmyeongRogeuin}</div><p class="p2">{Strings.Forest.hoewongaipJeolchaEoliGigimaneuroBaroSseul}</p></div>
+    </div>
+  </section>
+
+  <section class="section3" id="s3">
+    <h2 class="h21">{Strings.Forest.iOsAndroidNaranhi}</h2>
+    <div class="div26">{Strings.Forest.gateunHandoffPaekijieseoDuPeulraetpomiDongsie}</div>
+    <div class="div27">
+      <div class="div28">
+        <div class="div29">{Strings.Forest.iOsSwiftUi}</div>
+        <div class="div30">
+          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Strings.Forest.hwamyeon4GaeOnbodingHomSaundeu}</div>
+          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Strings.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing2}</div>
+          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Strings.Forest.aPiTongsinDeiteoModelOpeurainMokeop}</div>
+          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Strings.Forest.saeksangTaipoGangyeokDeungDijainTokeun}</div>
+        </div>
+      </div>
+      <div class="div28">
+        <div class="div29">{Strings.Forest.androidJetpackCompose}</div>
+        <div class="div30">
+          <div class="div31" data-pair="0" data-pair-key="p1" data-on-enter="e1" data-on-leave="pl">{Strings.Forest.iOsWaDongilhanHwamyeonKeomponeonteuGuseongeul}</div>
+          <div class="div31" data-pair="0" data-pair-key="p2" data-on-enter="e2" data-on-leave="pl">{Strings.Forest.odioMikseuPeulreieoGuhyeon}</div>
+          <div class="div31" data-pair="0" data-pair-key="p3" data-on-enter="e3" data-on-leave="pl">{Strings.Forest.aPiKeulraieonteuOpeurainMokeopPolbaekGyecheung}</div>
+          <div class="div31" data-pair="0" data-pair-key="p4" data-on-enter="e4" data-on-leave="pl">{Strings.Forest.aepSangtaeByumodelgwaDanwiTeseuteu4}</div>
+        </div>
+      </div>
+    </div>
+    <div class="div32">
+      <div><div class="div29">{Strings.Forest.iAepeulMandeunDogu}</div><div class="div33">{Strings.Forest.handoffAgentSePeulraetpomeulHanBeone}</div></div>
+      <a class="a4" href={ScreenPaths.handoffAgent}>{Strings.Forest.handoffAgentSangse}</a>
+    </div>
+  </section>
+</main>
+
+<aside class="aside1">
+  <div class="div34">
+    <div class="div35" data-var="railScale"></div>
+    <nav class="nav1">
+      <a class="a5" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="b1">{Strings.Forest.gaeyo}</span></a>
+      <a class="a5" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="b1">{Strings.Forest.gineungSeukil}</span></a>
+      <a class="a5" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="b1">{Strings.Forest.baekendeu}</span></a>
+      <a class="a5" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="b1">{Strings.Forest.iOsAndroid}</span></a>
+    </nav>
+  </div>
+</aside>
+</div>
+
+<Lightbox />
+
+<style>
+[data-cur="1"]{color:var(--accent)!important;font-weight:600}
+[data-cur="1"] span{color:var(--accent)!important}
+[data-pair="1"]{background:var(--hl);border-radius:6px}
+.header1{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.div1{max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.a1{font-weight:700;font-size:16px;color:var(--ink);text-decoration:none}
+.a1:hover{color:var(--accent)}
+.div2{display:flex;gap:6px}
+.a2{border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:500;text-decoration:none}
+.a2:hover{border-color:var(--accent);color:var(--accent)}
+.span1{background:var(--ink);color:var(--bg);border:1px solid var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600}
+.div3{display:flex;align-items:center;gap:10px}
+.span2{font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+.button1{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer}
+.button1:hover{border-color:var(--accent)}
+.span3{width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block}
+.div4{max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:0}
+.main1{min-width:0;padding-right:36px;border-right:1px solid var(--line-soft)}
+.section1{padding:56px 0 0;scroll-margin-top:90px;animation:rise .5s ease both}
+.h11{margin:10px 0 0;font-size:34px;line-height:1.3;font-weight:700;letter-spacing:-.01em;text-wrap:pretty}
+.p1{margin:16px 0 0;font-size:17px;line-height:1.75;color:var(--muted);max-width:720px;text-wrap:pretty}
+.a3{font-weight:600}
+.div5{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:32px}
+.figure1{margin:0}
+.img1{width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s}
+.img1:hover{transform:translateY(-6px)}
+.figcaption1{font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center}
+.section2{padding:56px 0 0;scroll-margin-top:90px}
+.div6{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px}
+.h21{margin:0;font-size:24px;font-weight:700}
+.div7{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.6}
+.div8{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card);transition:border-color .2s}
+.div8:hover{border-color:var(--accent)}
+.div9{color:var(--muted)}
+.div10{display:flex;gap:8px;align-items:flex-end;height:38px;margin-top:10px}
+.div11{flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden}
+.div12{position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:var(--m1,55%);transition:height .6s cubic-bezier(.2,.7,.2,1)}
+.div13{position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:var(--m2,30%);transition:height .6s .05s cubic-bezier(.2,.7,.2,1)}
+.div14{position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:var(--m3,70%);transition:height .6s .1s cubic-bezier(.2,.7,.2,1)}
+.div15{position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:var(--m4,20%);transition:height .6s .15s cubic-bezier(.2,.7,.2,1)}
+.div16{position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:var(--m5,45%);transition:height .6s .2s cubic-bezier(.2,.7,.2,1)}
+.div17{display:flex;justify-content:space-between;font:10.5px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:4px}
+.div18{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)}
+.div19{border:1px dashed var(--line);border-radius:10px;padding:14px 16px;color:var(--muted)}
+.b1{color:var(--ink)}
+.div20{font:11px 'IBM Plex Mono',monospace;margin-top:2px}
+.div21{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.span4{border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace}
+.div22{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.65}
+.div23{border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card)}
+.div24{font:11px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div25{font-weight:700;margin-top:2px}
+.p2{margin:6px 0 0;color:var(--muted)}
+.section3{padding:56px 0 64px;scroll-margin-top:90px}
+.div26{font-size:14.5px;color:var(--muted);margin-top:4px}
+.div27{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px}
+.div28{border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--card)}
+.div29{font:12px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div30{display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:15.5px;line-height:1.65}
+.div31{padding:6px 8px;margin:0 -8px;transition:background .2s}
+.div32{margin-top:48px;border:1px solid var(--line);border-radius:12px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--card)}
+.div33{font-size:18px;font-weight:700;margin-top:2px}
+.a4{background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+.a4:hover{background:var(--accent);color:var(--accent-ink)}
+.aside1{position:relative}
+.div34{position:sticky;top:96px;padding:56px 0 0 20px;font:12.5px/1.35 'IBM Plex Mono',monospace}
+.div35{position:absolute;left:-1px;top:56px;bottom:0;width:2px;background:var(--accent);transform-origin:top;transform:scaleY(var(--rail-scale,0));transition:transform .15s linear}
+.nav1{display:flex;flex-direction:column;gap:16px}
+.a5{color:var(--muted);text-decoration:none;transition:color .2s}
+.a5:hover{color:var(--ink);text-decoration:none}
+.div36{position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.86);display:flex;align-items:center;justify-content:center;padding:32px;cursor:zoom-out;animation:rise .2s ease both}
+.img2{max-width:100%;max-height:100%;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+</style>

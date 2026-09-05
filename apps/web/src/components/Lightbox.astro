@@ -1,56 +1,61 @@
 ---
-// `lightbox` (modal) — a full-screen zoom of one comparison image.
-// Opened by the five `open1`..`open5` buttons in the s3 section; closed by a click
-// anywhere on the overlay (`closeLightbox`) or by Esc (`escClose`, native to <dialog>).
+/**
+ * The `<sc-if value="{{ lightboxOpen }}">` overlay of the forest and handoffAgent
+ * exports. An overlay is not a screen, so it lives inside the screen that opens it.
+ * On the web it is a real `<dialog>`: `showModal()` traps focus, Escape closes it and
+ * the page behind it cannot be scrolled — the same outcome as the prototype's
+ * `closeLightbox` plus its window `keydown` listener.
+ */
+import { RawCopy } from "../content/rawCopy";
+
+interface Props {
+  /** Corner radius the screen's own overlay uses: 22px in forest, 12px in handoffAgent. */
+  tight?: boolean;
+}
+
+const { tight = false } = Astro.props;
 ---
 
-<dialog class="overlay" data-lightbox>
-  <img class="picture" alt="" data-lightbox-image />
+<dialog class="lightbox" data-lightbox aria-label={RawCopy.alt5}>
+  <img class:list={["shot", { tight }]} data-lightbox-image alt={RawCopy.alt5} />
 </dialog>
 
-<script>
-  import { initLightbox } from "../lib/lightbox";
-
-  initLightbox();
-</script>
-
 <style>
-  .overlay {
+  .lightbox {
     position: fixed;
     inset: 0;
     z-index: 50;
-    /* The prototype paints rgba(10,12,16,.86) — DesignTokens.Code.bg at 86%.
-       The mint alias keeps it identical in both themes, as the prototype has it. */
-    background: color-mix(in srgb, var(--mint-code-bg) 86%, transparent);
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 32px;
+    border: 0;
+    background: rgba(10, 12, 16, 0.86);
+    cursor: zoom-out;
+    overflow: hidden;
+  }
+
+  .lightbox[open] {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px;
-    cursor: zoom-out;
     animation: rise 0.2s ease both;
-
-    /* reset the user-agent dialog box — the overlay is the whole viewport */
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    max-height: none;
-    margin: 0;
-    border: 0;
-    color: var(--ink);
   }
 
-  .overlay:not([open]) {
-    display: none;
+  .lightbox::backdrop {
+    background: rgba(10, 12, 16, 0.86);
   }
 
-  .overlay::backdrop {
-    background: transparent;
-  }
-
-  .picture {
+  .shot {
     max-width: 100%;
     max-height: 100%;
-    border-radius: 12px;
+    border-radius: 22px;
     box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .shot.tight {
+    border-radius: 12px;
   }
 </style>

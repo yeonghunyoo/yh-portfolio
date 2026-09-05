@@ -1,0 +1,315 @@
+---
+// Transplanted from the frozen design export for screen "handoffAgent".
+// Every inline style of the prototype became a class in the scoped <style> below;
+// every piece of copy is a Strings.* constant.
+import { Strings } from "@generated/Strings";
+import { ScreenPaths } from "@generated/Screens";
+import { RawCopy } from "../content/rawCopy";
+import { CodeSamples } from "../content/codeSamples";
+import { Image } from "astro:assets";
+import compare01 from "@design-assets/compare-01.png";
+import compare02 from "@design-assets/compare-02.png";
+import compare03 from "@design-assets/compare-03.png";
+import compare04 from "@design-assets/compare-04.png";
+import compare05 from "@design-assets/compare-05.png";
+import Lightbox from "../components/Lightbox.astro";
+---
+<header class="header1">
+  <div class="div1">
+    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Strings.Forest.yuyeonghun}</a>
+    <div class="div2">
+      <span class="span1">{Strings.Resume.handoffAgent}</span>
+      <a class="a2" href={ScreenPaths.forest}>{Strings.Resume.forest}</a>
+    </div>
+    <div class="div3">
+      <a class="a3" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
+      <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span2"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
+    </div>
+  </div>
+</header>
+
+<div class="div4">
+
+<main class="main1">
+
+  <section class="section1" id="s0">
+    <div class="div5">{Strings.HandoffAgent._202609ClaudeCodePeulreogeuinPython}</div>
+    <h1 class="h11">{Strings.HandoffAgent.claudeDesignUiHandoffPaekijireulGibaneuro}<br />{Strings.HandoffAgent.iOsAndroidBackendSePeulraetpomeulHan}</h1>
+    <blockquote class="blockquote1">{Strings.HandoffAgent.modeunGeDaJeonghaejyeoItdamyeonSe}<br />{Strings.HandoffAgent.geurigoGeuJeonghaejinGeotISuchiro}</blockquote>
+  </section>
+
+  <section class="section2" id="s1">
+    <h2 class="h21">{Strings.HandoffAgent.peulreogeuinGuseong}</h2>
+    <div class="div6">
+      <div class="div7">{Strings.HandoffAgent.dijainJeongjeBaekendeuInpeuraSeupekInteobyu} <b>{Strings.HandoffAgent.mCpSeobeo}</b>{Strings.HandoffAgent.roGuchuk}</div>
+      <div class="div7">{Strings.HandoffAgent.jungganSanchulmuleunGakPeulraetpomeMatneun} <b>{Strings.HandoffAgent.swiftKotlin}</b> {Strings.HandoffAgent.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim}</div>
+      <div class="div7">{Strings.HandoffAgent.pythonGibanMcpGa} <b>{Strings.Forest.openApi}</b> {Strings.HandoffAgent.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo}</div>
+      <div class="div7">{Strings.HandoffAgent.peulraetpomIosAndroidBackendEijeonteu} <b>{Strings.HandoffAgent._3Gae}</b> {Strings.HandoffAgent.dijainYeondongEijeonteu} <b>{Strings.HandoffAgent._1Gae}</b></div>
+    </div>
+  </section>
+
+  <section class="section3" id="s2">
+    <h2 class="h21">{Strings.HandoffAgent.dongjakBangsik}</h2>
+    <div class="div8">
+      <div class="div9"><div class="div10">1</div><div class="div11">{Strings.HandoffAgent.dijain}</div><div class="div12">{Strings.HandoffAgent.claudeDesignAepDijainPeurototaipJejak}</div></div>
+      <a class="a4" href="#s3"><div class="div10">2</div><div class="div11">{Strings.HandoffAgent.hwamyeonBeonyeok}</div><div class="div12">{Strings.HandoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIos}</div></a>
+      <a class="a4" href="#s4"><div class="div10">3</div><div class="div11">{Strings.HandoffAgent.seobeoInpeura}</div><div class="div12">{Strings.HandoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo}</div></a>
+      <a class="a4" href="#s4"><div class="div10">4</div><div class="div11">{Strings.HandoffAgent.aPiYaksok}</div><div class="div12">{Strings.HandoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo}</div></a>
+      <div class="div9"><div class="div10">5</div><div class="div11">{Strings.HandoffAgent.gongyongPailSaengseong}</div><div class="div12">{Strings.HandoffAgent.aPiJeonguiDijainTokeunMunguAikoneul}</div></div>
+      <a class="a5" href="#s5"><div class="div13">6</div><div class="div11">{Strings.HandoffAgent.gaebalGeomsa}</div><div class="div14">{Strings.HandoffAgent.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin}</div></a>
+    </div>
+  </section>
+
+  <section class="section4" id="s3">
+    <div class="div15">
+      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi1}</div>
+      <h2 class="h22">{Strings.HandoffAgent.uIuxGuhyeonJeonghapseongeulWihanGyuchik}</h2>
+
+      <div class="div17">
+        <div class="div18">{Strings.HandoffAgent.munje}</div>
+        <div>{Strings.HandoffAgent.claudeDesignINaebonaeneunHtmlEun}
+          <ul class="ul1"><li>{Strings.HandoffAgent.hwamyeon5Gaega917JulPail}</li><li>{Strings.HandoffAgent.seosikiJeonbuInrainStyle166Gae}</li><li>{Strings.HandoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum}</li></ul></div>
+
+        <div class="div18">{Strings.HandoffAgent.jeopgeun}</div>
+        <div>{Strings.HandoffAgent.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Strings.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Strings.HandoffAgent.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo}</div>
+
+        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
+        <div>
+          <div class="div19">{Strings.HandoffAgent._1ClaudeDesignUiHandoffPaekijireul}</div>
+          <div class="div20">{Strings.HandoffAgent.gateunYosoGap20MunguSaek} <span class="span3">{Strings.HandoffAgent.jeomseonMitjul}</span> {Strings.HandoffAgent.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun}</div>
+          <div class="div21">
+            <div class="div22"><div class="div23">{Strings.HandoffAgent.claudeDesignHtmlDesignProjectForest}</div><pre data-on-leave="tokLeave">{CodeSamples.h1.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h2.text}</span>{CodeSamples.h3.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h4.text}</span>{CodeSamples.h5.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h6.text}</span>{CodeSamples.h7.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h8.text}</span>{CodeSamples.h9.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h10.text}</span>{CodeSamples.h11.text}</pre></div>
+            <div class="div22"><div class="div23">{Strings.HandoffAgent.seobeogaMandeunReiautTeuriDesignDerived}</div><pre data-on-leave="tokLeave">{CodeSamples.h12.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h13.text}</span>{CodeSamples.h14.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h15.text}</span>{CodeSamples.h16.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h17.text}</span>{CodeSamples.h18.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h19.text}</span>{CodeSamples.h20.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h21.text}</span>{CodeSamples.h22.text}</pre></div>
+          </div>
+          <div class="div24">
+            <div class="div22"><div class="div23">{Strings.HandoffAgent.iOsEijeonteugaOmginSwiftUiAppsIos}</div><pre data-on-leave="tokLeave">{CodeSamples.h23.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h24.text}</span>{CodeSamples.h25.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h26.text}</span>{CodeSamples.h27.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h28.text}</span>{CodeSamples.h29.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h30.text}</span>{CodeSamples.h31.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h32.text}</span>{CodeSamples.h33.text}</pre></div>
+            <div class="div22"><div class="div23">{Strings.HandoffAgent.androidEijeonteugaOmginComposeAppsAndroid}</div><pre data-on-leave="tokLeave">{CodeSamples.h34.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h35.text}</span>{CodeSamples.h36.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h37.text}</span>{CodeSamples.h38.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h39.text}</span>{CodeSamples.h40.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h41.text}</span>{CodeSamples.h42.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h43.text}</span>{CodeSamples.h44.text}</pre></div>
+          </div>
+
+          <div class="div25">{Strings.HandoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon}</div>
+          <div class="div26">
+            <div class="div27"><span class="span4">{Strings.HandoffAgent._917JulHanPail}</span><span class="span5">{Strings.HandoffAgent.hwamyeondangTeuri4Gae321243}</span></div>
+            <div class="div27"><span class="span4">{Strings.HandoffAgent.saekRiteoreol119Gae}</span><span class="span5">{Strings.HandoffAgent._0Gae}</span></div>
+            <div class="div27"><span class="span4">{Strings.HandoffAgent.ireumEoldeonMunguAikonDongjak}</span><span class="span5">{Strings.HandoffAgent.mungu80Aikon10Haendeulreo25}</span></div>
+            <div class="div27"><span class="span4">{Strings.HandoffAgent.peurototaipJangsik}</span><span class="span5">{Strings.HandoffAgent.jeondalAnHam}</span></div>
+          </div>
+
+          <div class="div28">{Strings.HandoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome}</div>
+          <div class="div29"><code class="code1">{Strings.HandoffAgent.sharedGenerated}</code> {Strings.HandoffAgent.eGateunNaeyongiSwiftKotlinEuro} <code class="code1">{Strings.HandoffAgent.apiRoutesScreensDesignTokensIcons}</code> {Strings.HandoffAgent.doDuEoneoroSaengseongdoepnida}</div>
+          <div class="div30">
+            <div class="div31"><div class="div32">{Strings.HandoffAgent.stringsSwift}</div><pre class="pre1">{CodeSamples.h45.text}</pre></div>
+            <div class="div31"><div class="div32">{Strings.HandoffAgent.stringsKt}</div><pre class="pre1">{CodeSamples.h46.text}</pre></div>
+          </div>
+        </div>
+
+        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
+        <div>{Strings.HandoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun}
+          <div class="div33">
+            <div class="div34"><span class="div19">{Strings.HandoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu}</span><span class="div16">{Strings.HandoffAgent.homeStatsIosAndroid2Hoe}</span></div>
+            <table><thead><tr><th></th><th>{Strings.HandoffAgent.aWonbonHtml57Kb}</th><th>{Strings.HandoffAgent.bJeongjehanReiautTeuri}</th></tr></thead><tbody><tr><td class="span4">{Strings.HandoffAgent.tokeunPyeonggyun}</td><td>{Strings.HandoffAgent._905K}</td><td><b>{Strings.HandoffAgent._551K}</b> <span class="span6">{Strings.HandoffAgent._39}</span></td></tr><tr><td class="span4">{Strings.HandoffAgent.hwamyeonJeonghapseong}</td><td>{Strings.HandoffAgent._8BeonJung7BeonHwamyeoneul}</td><td>{Strings.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun}</td></tr></tbody></table>
+            <div class="div35">{Strings.HandoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="pre1">{Strings.HandoffAgent.ipryeokman}</b> {Strings.HandoffAgent.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi}</div>
+          </div>
+
+          <div class="div36">{Strings.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo} <span class="span7">{Strings.HandoffAgent.oenjjokbuteoBReiautTeuriAhtml}</span></div>
+          <div class="div37">
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt6}><Image src={compare01} class="img1" alt={RawCopy.alt6} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.onbodingBeoteunWichiYeobaekiAEseo}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt7}><Image src={compare02} class="img1" alt={RawCopy.alt7} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.homHadanChucheonMiksingBaechiwaImiji}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt8}><Image src={compare03} class="img1" alt={RawCopy.alt8} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.saundeuTaimeoDeuropdaunSiUiKkaejim}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt9}><Image src={compare04} class="img1" alt={RawCopy.alt9} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open5" aria-label={RawCopy.alt10}><Image src={compare05} class="img1" alt={RawCopy.alt10} /></button><figcaption class="figcaption1">{Strings.HandoffAgent.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul}</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section4" id="s4">
+    <div class="div15">
+      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi2}</div>
+      <h2 class="h22">{Strings.HandoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
+      <div class="div17">
+        <div class="div18">{Strings.HandoffAgent.munje}</div>
+        <div>{Strings.HandoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
+        <div class="div18">{Strings.HandoffAgent.jeopgeun}</div>
+        <div>{Strings.HandoffAgent.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Strings.HandoffAgent.bogiSwipgePyoroJean}</b>{Strings.HandoffAgent.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}</div>
+        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
+        <div>
+          <div class="div19">{Strings.HandoffAgent.inpeuraGyeoljeong4DangyeInteobyuGak}</div>
+          <div class="div38">
+            <div class="div39"><b>{Strings.HandoffAgent._1Seutaek}</b><br /><span class="span4">{Strings.HandoffAgent.peulraetpomgwaBaekendeuEoneoreulHubo23}</span></div>
+            <div class="div39"><b>{Strings.HandoffAgent._2Gyumo}</b><br /><span class="span4">{Strings.HandoffAgent.yesangMaudauReulSayongjagaDaeryak}</span></div>
+            <div class="div39"><b>{Strings.HandoffAgent._3HuboChurigi}</b><br /><span class="span4">{Strings.HandoffAgent._12GaeJohapJungGeuGyumoe}</span></div>
+            <div class="div39"><b>{Strings.HandoffAgent._4YogeumJohoe}</b><br /><span class="span4">{Strings.HandoffAgent.gongsikYogeumPeijimanIkeumKaesiEoli}</span></div>
+          </div>
+          <div class="div40">{Strings.HandoffAgent.aPiMyeongse}</div>
+          <div class="div41">{Strings.HandoffAgent.inpeuragaJeonghaejimyeonHwamyeonHtmlGwaGaebal} <b>{Strings.HandoffAgent.gakHwamyeoniPilyoroHaneunDeiteo}</b>{Strings.HandoffAgent.eseoEndeupointeureulPpopa} <code class="code1">{Strings.HandoffAgent.openapiYaml}</code> {Strings.HandoffAgent.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye}</div>
+          <div class="div42"><pre>{CodeSamples.h47.text}</pre></div>
+        </div>
+        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
+        <div>{Strings.HandoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
+          <div class="div43">
+            <div class="div44">{Strings.HandoffAgent.gyumo} <b class="pre1">{Strings.HandoffAgent.sogyumo}</b> {Strings.HandoffAgent.mAu10000Dau1000}</div>
+            <div class="div45"><table class="table1"><thead><tr><th>{Strings.HandoffAgent.id}</th><th>{Strings.Forest.db}</th><th>{Strings.Forest.auth}</th><th>{Strings.Forest.hosting}</th><th>{Strings.HandoffAgent.wolBiyong}</th><th>{Strings.HandoffAgent.hwakinil}</th><th>{Strings.HandoffAgent.jongsokseong}</th></tr></thead><tbody>
+              <tr><td class="code1">{Strings.HandoffAgent.awsServerless}</td><td>{Strings.HandoffAgent.dynamoDb}</td><td>{Strings.HandoffAgent.cognito}</td><td>{Strings.HandoffAgent.lambdaApigw}</td><td><b>{Strings.HandoffAgent._05}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nopeum}</td></tr>
+              <tr><td class="code1">{Strings.HandoffAgent.vpsDocker}</td><td>{Strings.HandoffAgent.postgreSqlJache}</td><td>{Strings.HandoffAgent.jacheJwt}</td><td>{Strings.HandoffAgent.vPsHetzner}</td><td><b>{Strings.HandoffAgent._410}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nateum}</td></tr>
+              <tr><td class="code1">{Strings.HandoffAgent.firebase}</td><td>{Strings.HandoffAgent.firestore}</td><td>{Strings.HandoffAgent.firebaseAuth}</td><td>{Strings.HandoffAgent.cloudRun}</td><td><b>{Strings.HandoffAgent._010}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nopeum}</td></tr>
+              <tr><td class="code1">{Strings.HandoffAgent.railway}</td><td>{Strings.HandoffAgent.postgreSqlRailway}</td><td>{Strings.HandoffAgent.jacheJwt}</td><td>{Strings.HandoffAgent.railway2}</td><td><b>{Strings.HandoffAgent._525}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.nateum}</td></tr>
+              <tr><td class="code1">{Strings.HandoffAgent.supabaseFly}</td><td>{Strings.HandoffAgent.postgreSqlSupabase}</td><td>{Strings.HandoffAgent.supabaseAuth}</td><td>{Strings.HandoffAgent.flyIo}</td><td><b>{Strings.HandoffAgent._030}</b></td><td>2026-09-04</td><td>{Strings.HandoffAgent.jung}</td></tr>
+            </tbody></table></div>
+          </div>
+          <ul class="ul2"><li>{Strings.HandoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li><li>{Strings.HandoffAgent.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="pre1">{Strings.HandoffAgent.sayongjaegeBogoseoroJechul}</b>{Strings.HandoffAgent.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}</li><li>{Strings.HandoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section5" id="s5">
+    <div class="div15">
+      <div class="div16">{Strings.HandoffAgent.keiseuSeuteodi3}</div>
+      <h2 class="h22">{Strings.HandoffAgent.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji}</h2>
+      <div class="div17">
+        <div class="div18">{Strings.HandoffAgent.munje}</div>
+        <div>{Strings.HandoffAgent.aPiKiMingamJeongbogaKeulraudeuSesyeongwa}</div>
+        <div class="div18">{Strings.HandoffAgent.guhyeon}</div>
+        <div>{Strings.HandoffAgent.mingamGaleul} <b>{Strings.HandoffAgent.hwangyeongbyeonsuroman}</b> {Strings.HandoffAgent.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago} <b>{Strings.HandoffAgent.hukeuroMakneunda}</b>.</div>
+        <div class="div18">{Strings.HandoffAgent.gyeolgwa}</div>
+        <div>{Strings.HandoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung} <b>{Strings.HandoffAgent._0Gae2}</b> {Strings.HandoffAgent.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon}
+          <div class="div46"><div class="div23">{Strings.HandoffAgent.eijeonteuuiYudoYesi}</div><pre>{CodeSamples.h48.text}</pre></div>
+        </div>
+      </div>
+      <div class="div47">
+        <div><div class="div16">{Strings.HandoffAgent.iDoguroMandeulgoItneunSeobiseu}</div><div class="div48">{Strings.HandoffAgent.forestSaundeuMiksingJipjungMyeongsangAep}</div></div>
+        <a class="a6" href={ScreenPaths.forest}>{Strings.HandoffAgent.daeumPeurojekteu}</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside class="aside1">
+  <div class="div49">
+    <div class="div50" data-var="railScale"></div>
+    <nav class="nav1">
+      <a class="a7" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="pre1">{Strings.Forest.gaeyo}</span></a>
+      <a class="a7" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="pre1">{Strings.HandoffAgent.guseong}</span></a>
+      <a class="a7" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="pre1">{Strings.HandoffAgent.dongjakBangsik}</span></a>
+      <a class="a7" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="pre1">{Strings.HandoffAgent.uIuxJeonghapseong}</span></a>
+      <a class="a7" href="#s4" data-cur="0" data-cur-key="c4">05<br /><span class="pre1">{Strings.HandoffAgent.baekendeuSeupek}</span></a>
+      <a class="a7" href="#s5" data-cur="0" data-cur-key="c5">06<br /><span class="pre1">{Strings.HandoffAgent.sikeuritGyeokri}</span></a>
+    </nav>
+  </div>
+</aside>
+</div>
+
+<Lightbox tight />
+
+<style>
+[data-cur="1"]{color:var(--accent)!important;font-weight:600}
+[data-cur="1"] span{color:var(--accent)!important}
+[data-tok]{border-bottom:1px dashed var(--accent);color:var(--accent);cursor:crosshair;border-radius:3px;transition:background .15s}
+[data-tok="1"]{background:var(--hl);box-shadow:0 0 0 1px var(--accent);border-bottom-color:transparent}
+tbody tr{transition:background .15s}
+tbody tr:hover td{background:var(--hl);box-shadow:inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}
+tbody tr:hover td:first-child{box-shadow:inset 1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}
+tbody tr:hover td:last-child{box-shadow:inset -1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}
+pre{margin:0;font:13.5px/1.65 'IBM Plex Mono',monospace;white-space:pre;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}
+th{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--muted);text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surface)}
+td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+.header1{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.div1{max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.a1{font-weight:700;font-size:16px;color:var(--ink);text-decoration:none}
+.a1:hover{color:var(--accent)}
+.div2{display:flex;gap:6px}
+.span1{background:var(--ink);color:var(--bg);border:1px solid var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600}
+.a2{border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:500;text-decoration:none}
+.a2:hover{border-color:var(--accent);color:var(--accent)}
+.div3{display:flex;align-items:center;gap:10px}
+.a3{font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+.a3:hover{color:var(--accent)}
+.button1{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer}
+.button1:hover{border-color:var(--accent)}
+.span2{width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block}
+.div4{max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:0}
+.main1{min-width:0;padding-right:36px;border-right:1px solid var(--line-soft)}
+.section1{padding:56px 0 40px;border-bottom:1px solid var(--line);scroll-margin-top:90px;animation:rise .5s ease both}
+.div5{font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+.h11{margin:10px 0 0;font-size:34px;line-height:1.3;font-weight:700;letter-spacing:-.01em;text-wrap:pretty}
+.blockquote1{margin:24px 0 0;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:17px;line-height:1.75;color:var(--ink);text-wrap:pretty}
+.section2{padding:40px 0 0;scroll-margin-top:90px}
+.h21{margin:0;font-size:24px;font-weight:700}
+.div6{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.65}
+.div7{border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)}
+.section3{padding:44px 0 0;scroll-margin-top:90px}
+.div8{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px}
+.div9{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card)}
+.div10{font:11px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div11{font-weight:700;font-size:14px;margin-top:2px}
+.div12{font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5}
+.a4{border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .2s}
+.a4:hover{border-color:var(--accent);text-decoration:none}
+.a5{border:1px solid var(--ink);border-radius:10px;padding:12px;background:var(--ink);color:var(--bg);text-decoration:none;transition:opacity .2s}
+.a5:hover{opacity:.85;text-decoration:none}
+.div13{font:11px 'IBM Plex Mono',monospace;opacity:.7}
+.div14{font-size:13.5px;opacity:.8;margin-top:3px;line-height:1.5}
+.section4{padding:56px 0 0;scroll-margin-top:90px}
+.div15{border-top:1px solid var(--line);padding-top:36px}
+.div16{font:12px 'IBM Plex Mono',monospace;color:var(--muted)}
+.h22{margin:6px 0 0;font-size:28px;line-height:1.3;font-weight:700}
+.div17{display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px 22px;margin-top:24px;font-size:17px;line-height:1.75}
+.div18{font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px}
+.ul1{margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px}
+.div19{font-weight:700}
+.div20{font-size:14px;color:var(--muted);margin-top:4px}
+.span3{border-bottom:1px dashed var(--accent);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12.5px}
+.div21{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:12px}
+.div22{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0}
+.div23{font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px}
+.div24{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:10px}
+.div25{margin-top:18px;font-weight:600}
+.div26{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:8px;font-size:15.5px}
+.div27{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0}
+.span4{color:var(--muted)}
+.span5{font-weight:600}
+.div28{margin-top:26px;font-weight:700}
+.div29{font-size:15px;color:var(--muted);margin-top:4px}
+.code1{font:12.5px 'IBM Plex Mono',monospace}
+.div30{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:10px}
+.div31{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.div32{font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:8px}
+.pre1{color:var(--ink)}
+.div33{margin-top:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.div34{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.span6{color:var(--accent);font-weight:600}
+.div35{padding:12px 16px;font-size:15px;color:var(--muted)}
+.div36{margin-top:22px;font-weight:600}
+.span7{font:12px 'IBM Plex Mono',monospace;color:var(--muted);font-weight:400;margin-left:6px}
+.div37{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:10px}
+.figure1{margin:0}
+.img1{width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s}
+.img1:hover{transform:scale(1.015)}
+.figcaption1{font-size:14px;color:var(--muted);margin-top:6px}
+.div38{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:10px}
+.div39{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);font-size:15px;line-height:1.55}
+.div40{margin-top:22px;font-weight:700}
+.div41{font-size:15.5px;margin-top:4px}
+.div42{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;margin-top:10px;min-width:0}
+.div43{margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+.div44{padding:10px 14px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--muted)}
+.div45{overflow-x:auto}
+.table1{min-width:640px}
+.ul2{margin:14px 0 0;padding-left:18px;font-size:15.5px;color:var(--muted)}
+.section5{padding:56px 0 64px;scroll-margin-top:90px}
+.div46{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;margin-top:12px;min-width:0}
+.div47{margin-top:48px;border:1px solid var(--line);border-radius:12px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--card)}
+.div48{font-size:18px;font-weight:700;margin-top:2px}
+.a6{background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+.a6:hover{background:var(--accent);color:var(--accent-ink)}
+.aside1{position:relative}
+.div49{position:sticky;top:96px;padding:56px 0 0 20px;font:12.5px/1.35 'IBM Plex Mono',monospace}
+.div50{position:absolute;left:-1px;top:56px;bottom:0;width:2px;background:var(--accent);transform-origin:top;transform:scaleY(var(--rail-scale,0));transition:transform .15s linear}
+.nav1{display:flex;flex-direction:column;gap:16px}
+.a7{color:var(--muted);text-decoration:none;transition:color .2s}
+.a7:hover{color:var(--ink);text-decoration:none}
+.div51{position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.86);display:flex;align-items:center;justify-content:center;padding:32px;cursor:zoom-out;animation:rise .2s ease both}
+.img2{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+</style>

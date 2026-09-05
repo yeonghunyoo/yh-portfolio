@@ -5,7 +5,7 @@
     "baseUrl": ".",
     "paths": {
       "@generated/*": ["../../shared/generated/*"],
-      "@design-uploads/*": ["../../design/uploads/*"]
+      "@design-assets/*": ["../../design/assets/*"]
     },
     "noEmit": true,
     "noUncheckedIndexedAccess": true,

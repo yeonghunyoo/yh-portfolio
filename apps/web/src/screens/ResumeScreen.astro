@@ -1,0 +1,266 @@
+---
+// Transplanted from the frozen design export for screen "resume".
+// Every inline style of the prototype became a class in the scoped <style> below;
+// every piece of copy is a Strings.* constant.
+import { Strings } from "@generated/Strings";
+import { ScreenPaths } from "@generated/Screens";
+import { RawCopy } from "../content/rawCopy";
+import { Skills } from "../content/skills";
+import { Image } from "astro:assets";
+import forest01 from "@design-assets/forest-01-onboarding.png";
+import forest02 from "@design-assets/forest-02-home.png";
+import forest03 from "@design-assets/forest-03-sound.png";
+import forest04 from "@design-assets/forest-04-stats.png";
+---
+<header class="header1">
+  <div class="div1">
+    <a class="a1" href="#top">{Strings.Resume.yuyeonghun}</a>
+    <nav class="nav1">
+      <a class="a2" href="#about">{Strings.Resume._01Sogae}</a>
+      <a class="a2" href="#work">{Strings.Resume._02MandeunGeot}</a>
+      <a class="a2" href="#career">{Strings.Resume._03Gyeongryeok}</a>
+    </nav>
+    <button class="button1" type="button" data-on-click="toggleTheme" title={RawCopy.title1}><span class="span1"></span><span data-theme-label>{RawCopy.themeLight}</span></button>
+  </div>
+  <div class="div2"><div class="div3" data-var="progressPct"></div></div>
+</header>
+
+<main class="main1" id="top">
+
+  <section class="section1" id="about">
+    <div class="div4">{Strings.Resume.softwareEngineerIosBuilder}</div>
+    <h1 class="h11">{Strings.Resume.yuyeonghun}</h1>
+    <p class="p1">{Strings.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman}<br />{Strings.Resume.ilhadaBanbokdoeneunMunjereulMannamyeon} <span class="span2">{Strings.Resume.dogureulJikjeopMandeuleoHaegyeol}</span>{Strings.Resume.hagoGeuDoguroDasiSeobiseureulMandeuneun}<br />{Strings.Resume.choegeuneneunIosAndroidReulTtaroGaebalhamyeo} <a class="a3" href="#work" data-on-click="pickHandoff">{Strings.Resume.handoffAgent}</a>{Strings.Resume.raneunPeulreogeuineuroPuleotgo}<br />{Strings.Resume.jigeumeunGeuDoguro} <a class="a3" href="#work" data-on-click="pickForest">{Strings.Resume.forest}</a>{Strings.Resume.raneunSeobiseureulMandeulgoItseupnida}</p>
+
+    <div class="div5">
+      <div class="div6">
+        <div class="div7">{Strings.Resume.wonchik1}</div>
+        <div class="div8">{Strings.Resume.gwichaneumeunAidieouiSijakjeom}</div>
+        <p class="p2">{Strings.Resume.banbokdoeneunEopmugaGwichandagoNeukkyeojilTtaeJeoneun}</p>
+      </div>
+      <div class="div6">
+        <div class="div7">{Strings.Resume.wonchik2}</div>
+        <div class="div8">{Strings.Resume.geungeoroMalhapnida}</div>
+        <p class="p2">{Strings.Resume.malbodaNuneuroHwakinsikineunGeotiOhaereulJulipnida}</p>
+      </div>
+    </div>
+
+    <div class="div9">
+      <a class="a4" href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
+      <a class="a5" href="mailto:yeonghun.yoo@gmail.com">{Strings.Resume.yeonghunYooGmailCom}</a>
+    </div>
+  </section>
+
+  <div class="div10">
+    <div class="div11"><span class="div7">{Strings.Resume.gyeongryeok}</span><span class="span3">{Strings.Resume._4Nyeon2Gaewol}</span></div>
+    <div class="div12">
+      <span class="span4">{Strings.Resume.skill}</span>
+      {Skills.map((s) => (<span class="span5" data-skill={s.name} data-on-leave="leaveSkill">{s.name}</span>))}
+    </div>
+  </div>
+
+  <section class="section2" id="work">
+    <div class="div4">{Strings.Resume._02MandeunGeot2}</div>
+    <h2 class="h21">{Strings.Resume.dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida}</h2>
+
+    <div class="div13" role="tablist" tabindex="0" data-on-keydown="onTabKey">
+      <button class="button2" type="button" role="tab" data-active="1" data-active-key="tab0" data-on-click="pickHandoff"><div class="div14">{Strings.Resume.handoffAgent}</div><span class="span6">{Strings.Resume.claudeCodePeulreogeuin202609}</span></button>
+      <button class="button2" type="button" role="tab" data-active="0" data-active-key="tab1" data-on-click="pickForest"><div class="div14">{Strings.Resume.forest}</div><span class="span6">{Strings.Resume.saundeuMiksingJipjungMyeongsangAep2026}</span></button>
+      <span class="span7">{Strings.Resume.kiroJeonhwan}</span>
+    </div>
+
+    
+    <div id="panel-handoff" role="tabpanel" aria-labelledby="tab-handoff" data-panel="handoff">
+      <div class="div15">
+        <div class="div16">
+          <div class="div17"><div class="div18">{Strings.Resume.handoffAgent}</div><p class="p3">{Strings.Handoff.claudeDesignHaendeuopeuPaekiji1Gaero}</p></div>
+          <div class="div19">
+            <a class="a6" href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer">{Strings.Resume.gitHub}</a>
+            <a class="a7" href={ScreenPaths.handoffAgent}>{Strings.Handoff.sangseBogi}</a>
+          </div>
+        </div>
+
+        <div class="div20">
+          <div class="div21"><span class="span8">{Strings.Handoff.pIpeline}</span><span class="span3">{Strings.Handoff.dijainHaendeuopeu1GaeIosAndroid}</span></div>
+          <div class="div22">
+            <div class="div23" data-hl="0" data-hl-key="hl0" data-on-enter="enter0" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.input}</div><div class="div25">{Strings.Handoff.claudeDesignSanchulmul}</div></div>
+            <span class="span9">→</span>
+            <div class="div26" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.refine}</div><div class="div25">{Strings.Handoff.reiautTeuriJson}</div></div>
+            <span class="span9">→</span>
+            <div class="div27" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.interview}</div><div class="div25">{Strings.Handoff.seupekMunseoSeontaekjiPyo}</div></div>
+            <span class="span9">→</span>
+            <div class="div28" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><span class="span10">{Strings.Handoff.iOs}</span><span class="span10">{Strings.Handoff.android}</span><span class="span10">{Strings.Handoff.backend}</span></div>
+            <span class="span9">→</span>
+            <div class="div29" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div24">{Strings.Handoff.verify}</div><div class="div25">{Strings.Handoff.jeonghapseongChekeuForest}</div></div>
+          </div>
+        </div>
+
+        <div class="div30">
+          <div class="div31" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri}</div><div class="span9">{Strings.Handoff.guhyeonEijeonteuTokeun39Jeolgam16}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero}</div><div class="span9">{Strings.Handoff.yogeumGineungYecheukSayongjaGyumoreulInteobyu}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.wiSanchulmulGibaneuroByeongryeolGuhyeonhaneun3}</div><div class="span9">{Strings.Handoff.iOsAndroidBackendDongsiSaengseong}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div32">{Strings.Handoff.inteobyuGibanBaekendeuInpeuraGyeoljeonggujoMit}</div><div class="span9">{Strings.Handoff.mingamJeongboInjeungseoKiNeunSayongjaga}</div></div>
+        </div>
+      </div>
+    </div>
+    
+
+    
+    <div id="panel-forest" role="tabpanel" aria-labelledby="tab-forest" data-panel="forest" hidden>
+      <div class="div15">
+        <div class="div16">
+          <div class="div17"><div class="div18">{Strings.Resume.forest}</div><p class="p3">{Strings.Forest.padoBiBaramMoraeJangjakDaseot}</p></div>
+          <div class="div19">
+            <a class="a7" href={ScreenPaths.forest}>{Strings.Handoff.sangseBogi}</a>
+          </div>
+        </div>
+        <div class="div33">
+          <Image src={forest01} class="img1" alt={RawCopy.alt1} />
+          <Image src={forest02} class="img1" alt={RawCopy.alt2} />
+          <Image src={forest03} class="img1" alt={RawCopy.alt3} />
+          <Image src={forest04} class="img1" alt={RawCopy.alt4} />
+        </div>
+        <div class="div30">
+          <div><div class="div32">{Strings.Forest.handoffAgentReulHwalyonghanIosAndroid}</div><div class="span9">{Strings.Forest.swiftUiJetpackComposeGateunHwamyeonKeomponeonteu}</div></div>
+          <div><div class="div32">{Strings.Forest.cloudflareWorkersHonoD1R2Baekendeu}</div><div class="span9">{Strings.Forest.seobeoGwanriBudamEoliIGyumoeseo}</div></div>
+          <div><div class="div32">{Strings.Forest.aVAudioEngineGiban5TeuraekDongsiMiksing}</div><div class="span9">{Strings.Forest.reieobyeolBolryumPeurisetSumyeonTaimeo}</div></div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="section3" id="career">
+    <div class="div4">{Strings.Resume._03Gyeongryeok4Nyeon2Gaewol}</div>
+    <div class="div34">
+
+      <article class="article1" data-dim="0" data-dim-key="dimA">
+        <div class="div21"><div class="div35">{Strings.Resume.teuripeideuTripaidIosNative}</div><span class="span11">{Strings.Resume._202510Hyeonjae}</span></div>
+        <div class="div36">{Strings.Resume.helmidakAiChaetingGeongangsangdamSeobiseu} <a href="https://apps.apple.com/kr/app/%ED%97%AC%EB%AF%B8%EB%8B%A5-helpmedoc/id6475003834" target="_blank" rel="noreferrer">{Strings.Resume.appStore}</a> {Strings.Resume.iOsNeitibeuAepGaebalMitAkitekcheo}</div>
+        <div class="div37">
+          <div><div class="div32">{Strings.Resume.iOsuiuxJeongbiMitPeulraetpom}</div><div class="span9">{Strings.Resume.androidDaebiJeongchedoenIosHwangyeongeulJeomgeomhae}</div></div>
+          <div><div class="div32">{Strings.Resume.neteuwokeuGongtongInteosepteoDoipMitTokeun}</div><div class="span9">{Strings.Resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae}</div></div>
+          <div><div class="div32">{Strings.Resume.claudeDesignEulHwalyonghanDijainSoyo}</div><div class="span9">{Strings.Resume.dijainSaempeulroTimGanBanghyangseongGongyu}</div></div>
+        </div>
+      </article>
+
+      <article class="article1" data-dim="0" data-dim-key="dimB">
+        <div class="div21"><div class="div35">{Strings.Resume.holricheuHolich}</div><span class="span11">{Strings.Resume._2023042025021Nyeon}</span></div>
+        <div class="div37">
+          <div><div class="div32">{Strings.Resume.letSBeePilripinEumsikBaedal}</div><div class="div38">{Strings.Resume._202407202501Flutter}</div><div class="span9">{Strings.Resume.yujeoPateuneoJeomjuAepUiux}</div></div>
+          <div><div class="div32">{Strings.Resume.guLetSBeeKeulrakJiyeok}</div><div class="div38">{Strings.Resume._202306202411Ios}</div><div class="span9">{Strings.Resume.uIuxGaeseonMitTeureobeulsyuting6}</div></div>
+          <div><div class="div32">{Strings.Resume.myConectHotelBidaemyeonSeobiseuPeulraetpom}</div><div class="div38">{Strings.Resume._202304202412Ios}</div><div class="span9">{Strings.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro}</div></div>
+        </div>
+      </article>
+
+      <article class="article1" data-dim="0" data-dim-key="dimC">
+        <div class="div21"><div class="div35">{Strings.Resume.juAlpaigeulru}</div><span class="span11">{Strings.Resume._2020112022031Nyeon}</span></div>
+        <div class="div36">{Strings.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu}</div>
+        <div class="div37">
+          <div><div class="div32">{Strings.Resume.uIuxGaeseonMitKeontencheuChuga}</div><div class="span9">{Strings.Resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu}</div></div>
+          <div><div class="div32">{Strings.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><div class="span9">{Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa}</div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer1">
+  <div class="div39">
+    <span class="span12">{Strings.Resume.hamkkeMandeuleobolkkayo}</span>
+    <span class="span11"><a href="mailto:yeonghun.yoo@gmail.com">{Strings.Resume.yeonghunYooGmailCom}</a> · <a href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">{Strings.Resume.githubComYeonghunyoo}</a> · 010 9390 8827</span>
+  </div>
+</footer>
+
+<style>
+[data-hl="1"]{background:var(--hl)!important;border-color:var(--accent)!important}
+[data-dim="1"]{opacity:.35}
+[data-active="1"]{background:var(--ink)!important;color:var(--bg)!important;border-color:var(--ink)!important}
+[data-active="1"] span{color:inherit!important;opacity:.7}
+.header1{position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.div1{max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.a1{font-weight:700;font-size:16px;color:var(--ink);text-decoration:none}
+.nav1{display:flex;gap:22px;font-family:'IBM Plex Mono',monospace;font-size:13px}
+.a2{color:var(--muted)}
+.a2:hover{color:var(--ink)}
+.button1{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer}
+.button1:hover{border-color:var(--accent)}
+.span1{width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block}
+.div2{height:2px;background:var(--line-soft)}
+.div3{height:2px;background:var(--accent);transition:width .1s linear;width:var(--progress-pct,0%)}
+.main1{max-width:1080px;margin:0 auto;padding:0 32px}
+.section1{padding:72px 0 44px;scroll-margin-top:80px}
+.div4{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)}
+.h11{margin:10px 0 0;font-size:52px;line-height:1.05;font-weight:700;letter-spacing:-.02em}
+.p1{margin:26px 0 0;font-size:19px;line-height:1.8;max-width:760px;text-wrap:pretty;animation:rise .6s ease both}
+.span2{font-weight:600;background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:0 100%;background-size:100% 3px;animation:drawline 1.1s .5s cubic-bezier(.2,.7,.2,1) both;padding-bottom:2px}
+.a3{font-weight:600;color:var(--ink);border-bottom:1px dashed var(--muted);text-decoration:none}
+.a3:hover{color:var(--accent);border-color:var(--accent)}
+.div5{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:34px;animation:rise .6s .15s ease both}
+.div6{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:transform .25s,border-color .25s}
+.div6:hover{transform:translateY(-3px);border-color:var(--accent)}
+.div7{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)}
+.div8{font-size:19px;font-weight:700;margin-top:6px}
+.p2{margin:10px 0 0;font-size:16px;line-height:1.7;color:var(--muted);text-wrap:pretty}
+.div9{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+.a4{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none}
+.a4:hover{background:var(--accent);color:var(--accent-ink)}
+.a5{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+.a5:hover{border-color:var(--accent);color:var(--accent)}
+.div10{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.div11{display:flex;align-items:baseline;gap:10px;flex:none}
+.span3{font-weight:700;font-size:15px}
+.div12{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.span4{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-right:4px}
+.span5{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font:12px 'IBM Plex Mono',monospace;color:var(--ink);cursor:default;transition:all .2s}
+.span5:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+.section2{padding:64px 0 24px;scroll-margin-top:80px}
+.h21{margin:6px 0 0;font-size:30px;line-height:1.25;font-weight:700;letter-spacing:-.01em}
+.div13{display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;outline:none}
+.button2{text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:12px 18px;min-width:220px;cursor:pointer;transition:all .2s;font-family:inherit}
+.button2:hover{border-color:var(--accent)}
+.div14{font-weight:700;font-size:16px}
+.span6{display:block;font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:2px}
+.span7{align-self:center;font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-left:auto}
+.div15{margin-top:28px;animation:rise .35s ease both}
+.div16{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap}
+.div17{max-width:640px}
+.div18{font-size:24px;font-weight:700}
+.p3{margin:6px 0 0;font-size:17px;line-height:1.7;color:var(--muted);text-wrap:pretty}
+.div19{display:flex;gap:8px;flex:none}
+.a6{background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.a6:hover{background:var(--accent);color:var(--accent-ink)}
+.a7{border:1.5px solid var(--accent);color:var(--accent);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none}
+.a7:hover{background:var(--accent);color:var(--accent-ink)}
+.div20{margin-top:20px;border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--surface)}
+.div21{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.span8{font:12px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div22{display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.div23{flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .1s both;transition:all .2s;cursor:default}
+.div24{font:11px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div25{font-weight:600;font-size:14px;margin-top:2px}
+.span9{color:var(--muted)}
+.div26{flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .3s both;transition:all .2s;cursor:default}
+.div27{flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .5s both;transition:all .2s;cursor:default}
+.div28{flex:0 0 auto;display:flex;flex-direction:column;gap:5px;animation:lit .5s .7s both;transition:all .2s;cursor:default;border-radius:10px;padding:4px}
+.span10{background:var(--ink);color:var(--bg);padding:5px 12px;border-radius:6px;font:600 13px 'IBM Plex Mono',monospace}
+.div29{flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .9s both;transition:all .2s;cursor:default}
+.div30{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px 32px;margin-top:22px;font-size:16px;line-height:1.7}
+.div31{padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s}
+.div32{font-weight:600}
+.div33{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:20px}
+.img1{width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s}
+.img1:hover{transform:translateY(-4px)}
+.section3{padding:56px 0 24px;scroll-margin-top:80px}
+.div34{display:flex;flex-direction:column;gap:12px;margin-top:16px}
+.article1{border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:opacity .25s}
+.div35{font-size:19px;font-weight:700}
+.span11{font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+.div36{margin-top:4px;color:var(--muted);font-size:16px}
+.div37{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;font-size:15px;line-height:1.65}
+.div38{font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin:2px 0 4px}
+.footer1{border-top:1px solid var(--line);margin-top:48px}
+.div39{max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.span12{font-size:18px;font-weight:700}
+</style>

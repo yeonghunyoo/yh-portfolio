@@ -1,31 +1,36 @@
 /**
- * `lightbox` (modal) + `open1`..`open5` + `closeLightbox` from
- * design/derived/components.json.
+ * `open1..open5` / `closeLightbox` of the forest and handoffAgent exports.
  *
- * A native `<dialog>` opened with `showModal()`: the browser gives us the focus trap,
- * the inert background and Esc-to-close (`escClose`) for free. Clicking anywhere on
- * the overlay closes it, exactly as the prototype does (the whole surface is zoom-out).
+ * The prototype swaps `state.lightbox` to an asset path and renders the overlay.
+ * Here the opening button already contains the image, so the dialog reuses that
+ * element's built source — the bundler's optimised copy, never a hand-written path.
  */
-export function initLightbox(): void {
+import type { Handlers } from "./dom";
+
+export function lightboxHandlers(): Handlers {
   const dialog = document.querySelector<HTMLDialogElement>("[data-lightbox]");
-  const image = dialog?.querySelector<HTMLImageElement>("[data-lightbox-image]");
-  if (!dialog || !image) return;
+  const image = document.querySelector<HTMLImageElement>("[data-lightbox-image]");
+  if (!dialog || !image) return {};
 
-  document.querySelectorAll<HTMLElement>("[data-lightbox-open]").forEach((trigger) => {
-    trigger.addEventListener("click", () => {
-      const src = trigger.dataset["lightboxSrc"];
-      if (!src) return;
-      image.src = src;
-      image.alt = trigger.dataset["lightboxAlt"] ?? "";
-      if (!dialog.open) dialog.showModal();
-    });
-  });
+  const close = (): void => {
+    if (dialog.open) dialog.close();
+  };
 
-  // Any click on the overlay — background or the picture itself — closes it.
-  dialog.addEventListener("click", () => dialog.close());
-
+  dialog.addEventListener("click", close);
   dialog.addEventListener("close", () => {
     image.removeAttribute("src");
-    image.alt = "";
   });
+
+  const open = (_event: Event, element: HTMLElement): void => {
+    const source = element.querySelector("img");
+    if (!source) return;
+    image.src = source.currentSrc || source.src;
+    const alt = source.getAttribute("alt");
+    if (alt !== null) image.alt = alt;
+    dialog.showModal();
+  };
+
+  const handlers: Handlers = { closeLightbox: close };
+  for (let n = 1; n <= 5; n += 1) handlers[`open${n}`] = open;
+  return handlers;
 }
