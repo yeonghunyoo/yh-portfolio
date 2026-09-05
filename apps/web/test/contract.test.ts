@@ -8,6 +8,7 @@ import { SCREEN_META, SCREEN_ORDER } from "../src/lib/meta";
 import { ResumeCopy } from "../src/content/resumeCopy";
 import { ForestCopy } from "../src/content/forestCopy";
 import { HandoffAgentCopy } from "../src/content/handoffAgentCopy";
+import { RetiredCopy, RetiredCopyPaths } from "../src/content/retiredCopy";
 
 const read = (relative: string): string =>
   readFileSync(fileURLToPath(new URL(relative, import.meta.url)), "utf8");
@@ -76,9 +77,19 @@ describe("screens", () => {
 });
 
 describe("strings", () => {
-  it("STR-001..360 — every generated key is used by a screen", () => {
-    const unused = stringPaths().filter((path) => !allSource.includes(path));
+  it("STR-001..360 — every generated key is used by a screen, or is on the retired record", () => {
+    const unused = stringPaths().filter(
+      (path) => !allSource.includes(path) && !RetiredCopyPaths.has(path),
+    );
     expect(unused).toEqual([]);
+  });
+
+  it("retires a string only while it really is out of the UI", () => {
+    // A stale entry would silently excuse a future accidental drop of the same key.
+    for (const { path, reason } of RetiredCopy) {
+      expect(allSource.includes(path), `${path} is retired but still rendered`).toBe(false);
+      expect(reason.length, `${path} needs a reason`).toBeGreaterThan(10);
+    }
   });
 
   it("has no Korean copy inlined in a screen", () => {

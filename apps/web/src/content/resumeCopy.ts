@@ -70,7 +70,6 @@ export const ResumeCopy = {
     oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu: Strings.Resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu,
     gyeoljePeuroseseuIsyuHaegyeol: Strings.Resume.gyeoljePeuroseseuIsyuHaegyeol,
     gyeoljeHuSangpumMijigeupeuroCsWa: Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa,
-    hamkkeMandeuleobolkkayo: Strings.Resume.hamkkeMandeuleobolkkayo,
     githubComYeonghunyoo: Strings.Resume.githubComYeonghunyoo,
   },
   Handoff: {
