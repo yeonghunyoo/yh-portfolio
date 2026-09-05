@@ -9,9 +9,7 @@
  * when this session has already seen it, so a repeat visit never flashes.
  */
 import { LoadingCopy } from "../content/systemCopy";
-
-/** One visit per tab shows it; the flag lives in sessionStorage under this key. */
-const SEEN_KEY = "yh-landed";
+import { SEEN_KEY, SEEN_FRESH_FOR_MS } from "../lib/loadingTerminal";
 ---
 
 <div class="overlay" data-loading-terminal aria-hidden="true">
@@ -24,10 +22,17 @@ const SEEN_KEY = "yh-landed";
   </div>
 </div>
 
-{/* Before the first paint: if this tab already saw the terminal, drop it outright. */}
-<script is:inline define:vars={{ seenKey: SEEN_KEY }}>
+{/*
+  Before the first paint: drop the overlay outright if this tab saw it a moment ago.
+  Closing the tab clears sessionStorage, so coming back shows it again — except that
+  a browser restoring a session (reopen-closed-tab, "continue where you left off")
+  hands the flag back and the visit looks like a reload. The timestamp settles that:
+  a restored flag is old, so the terminal plays again.
+*/}
+<script is:inline define:vars={{ seenKey: SEEN_KEY, freshForMs: SEEN_FRESH_FOR_MS }}>
   try {
-    if (window.sessionStorage.getItem(seenKey) === "1") {
+    var seenAt = Number(window.sessionStorage.getItem(seenKey));
+    if (seenAt > 0 && Date.now() - seenAt < freshForMs) {
       var node = document.querySelector("[data-loading-terminal]");
       if (node) node.remove();
     }

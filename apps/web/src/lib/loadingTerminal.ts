@@ -11,12 +11,24 @@ import { LoadingCopy } from "../content/systemCopy";
 export const HOLD_MS = 2000;
 const FADE_MS = 350;
 const SPINNER_MS = 220;
-const SEEN_KEY = "yh-landed";
 
-/** Marks this tab as having seen the terminal. Storage may be unavailable; that is fine. */
+/** sessionStorage key holding the epoch-ms of the last time the terminal played. */
+export const SEEN_KEY = "yh-landed";
+
+/**
+ * How long a "already seen" mark counts for.
+ *
+ * The mark lives in sessionStorage, so closing the tab drops it and the next visit
+ * plays the terminal — which is the behaviour asked for. A browser that restores a
+ * session hands the mark back, though, and a genuine return then looks like a reload.
+ * Anything older than this is treated as a new visit, so a restored tab still plays.
+ */
+export const SEEN_FRESH_FOR_MS = 30 * 60 * 1000;
+
+/** Records when the terminal played. Storage may be unavailable; that is fine. */
 function markSeen(): void {
   try {
-    window.sessionStorage.setItem(SEEN_KEY, "1");
+    window.sessionStorage.setItem(SEEN_KEY, String(Date.now()));
   } catch {
     /* storage disabled — the terminal shows again next time */
   }
