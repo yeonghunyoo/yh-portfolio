@@ -1,0 +1,211 @@
+/*
+ * Global stylesheet — transplanted verbatim from the second <style> block of
+ * design/6b7a554c-handoffagent.dc.html. Every colour goes through a CSS variable;
+ * the variables themselves come from shared/generated/tokens.css (imported first).
+ */
+
+/* ---------------------------------------------------------------------------
+ * Themes.
+ *
+ * shared/generated/tokens.css declares the 14 design tokens on :root with the
+ * MINT (dark) palette — that is the palette the extractor captured. The prototype
+ * ships two themes: `light` (default) and `mint`. So we keep the generated values
+ * under aliases and hand them back on [data-theme="mint"]; nothing re-types a mint
+ * colour by hand. The light palette has no tokens in the contract (see the report's
+ * proposals), so its values are literals, exactly as the design HTML has them.
+ * ------------------------------------------------------------------------ */
+:root {
+  --mint-bg: var(--bg);
+  --mint-surface: var(--surface);
+  --mint-card: var(--card);
+  --mint-line: var(--line);
+  --mint-line-soft: var(--line-soft);
+  --mint-muted: var(--muted);
+  --mint-ink: var(--ink);
+  --mint-accent: var(--accent);
+  --mint-accent-ink: var(--accent-ink);
+  --mint-accent-soft: var(--accent-soft);
+  --mint-code-bg: var(--code-bg);
+  --mint-code-ink: var(--code-ink);
+  --mint-code-dim: var(--code-dim);
+  --mint-hl: var(--hl);
+
+  --font-sans: "IBM Plex Sans KR", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+
+  /* light — the default theme (no tokens exist for this palette) */
+  --bg: #f7f7f5;
+  --surface: #eef0f2;
+  --card: #ffffff;
+  --line: rgba(22, 24, 29, 0.14);
+  --line-soft: rgba(22, 24, 29, 0.08);
+  --muted: #6b7280;
+  --ink: #16181d;
+  --accent: #2f5bea;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(47, 91, 234, 0.1);
+  --code-bg: #1d1f24;
+  --code-ink: #d5d8de;
+  --code-dim: #8a909b;
+  --hl: rgba(47, 91, 234, 0.12);
+}
+
+body[data-theme="mint"] {
+  --bg: var(--mint-bg);
+  --surface: var(--mint-surface);
+  --card: var(--mint-card);
+  --line: var(--mint-line);
+  --line-soft: var(--mint-line-soft);
+  --muted: var(--mint-muted);
+  --ink: var(--mint-ink);
+  --accent: var(--mint-accent);
+  --accent-ink: var(--mint-accent-ink);
+  --accent-soft: var(--mint-accent-soft);
+  --code-bg: var(--mint-code-bg);
+  --code-ink: var(--mint-code-ink);
+  --code-dim: var(--mint-code-dim);
+  --hl: var(--mint-hl);
+  color-scheme: dark;
+}
+
+/* --------------------------------------------------------------------------
+ * Element rules — verbatim from the design's <style> block.
+ * ------------------------------------------------------------------------ */
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+[data-cur="1"] {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+[data-cur="1"] span {
+  color: var(--accent) !important;
+}
+
+[data-tok] {
+  border-bottom: 1px dashed var(--accent);
+  color: var(--accent);
+  cursor: crosshair;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+[data-tok="1"] {
+  background: var(--hl);
+  box-shadow: 0 0 0 1px var(--accent);
+  border-bottom-color: transparent;
+}
+
+tbody tr {
+  transition: background 0.15s;
+}
+
+tbody tr:hover td {
+  background: var(--hl);
+  box-shadow: inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
+}
+
+tbody tr:hover td:first-child {
+  box-shadow: inset 1px 0 0 var(--accent), inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
+}
+
+tbody tr:hover td:last-child {
+  box-shadow: inset -1px 0 0 var(--accent), inset 0 1px 0 var(--accent), inset 0 -1px 0 var(--accent);
+}
+
+pre {
+  margin: 0;
+  font: 13.5px/1.65 var(--font-mono);
+  white-space: pre;
+  overflow: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 15px;
+}
+
+th {
+  font: 500 11.5px var(--font-mono);
+  color: var(--muted);
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+td {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+ * Accessibility additions (not in the prototype, agreed in the spec notes):
+ * a visible focus ring from the tokens, and a reduced-motion mode that drops
+ * the animations while keeping every state change.
+ * ------------------------------------------------------------------------ */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
