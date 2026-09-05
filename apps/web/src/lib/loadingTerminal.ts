@@ -38,10 +38,35 @@ function prefersReducedMotion(): boolean {
   return window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
 }
 
+/**
+ * Holds the terminal back until the page is really on screen.
+ *
+ * A browser that preloads links (Chrome's "preload pages", typing a URL it has seen
+ * before) renders the page in a hidden prerender first and runs this script there.
+ * Without this wait the two seconds elapse while nobody is looking, the seen-mark is
+ * written, and the visit that follows shows no terminal at all — which is exactly how
+ * "I never see it, even in a private window" happens.
+ */
+function whenOnScreen(run: () => void): void {
+  const doc = document as Document & { prerendering?: boolean };
+  if (doc.prerendering) {
+    doc.addEventListener("prerenderingchange", () => whenOnScreen(run), { once: true });
+    return;
+  }
+  if (doc.visibilityState === "hidden") {
+    doc.addEventListener("visibilitychange", () => whenOnScreen(run), { once: true });
+    return;
+  }
+  run();
+}
+
 export function initLoadingTerminal(): void {
   const overlay = document.querySelector<HTMLElement>("[data-loading-terminal]");
   if (!overlay) return; // already removed before paint — this tab has been here
+  whenOnScreen(() => play(overlay));
+}
 
+function play(overlay: HTMLElement): void {
   const out = overlay.querySelector<HTMLElement>("[data-terminal-text]");
   const script = LoadingCopy.lines.join("\n");
   markSeen();
