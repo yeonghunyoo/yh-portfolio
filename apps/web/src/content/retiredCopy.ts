@@ -24,6 +24,12 @@ export const RetiredCopy: readonly RetiredString[] = [
     on: "2026-09-06",
     reason: "사람이 이력서 하단 CTA 문구 '함께 만들어볼까요?' 삭제를 지시했다. 푸터에는 연락처 줄만 남긴다.",
   },
+  {
+    path: "Strings.Resume.kiroJeonhwan",
+    on: "2026-09-06",
+    reason:
+      "사람이 탭 옆의 '← → 키로 전환' 힌트 삭제를 지시했다. 화살표 키 전환 자체는 살아 있다 — role=\"tablist\" 의 표준 키보드 동작이라 눈에 보이는 안내 없이도 스크린리더가 알린다.",
+  },
 ];
 
 export const RetiredCopyPaths: ReadonlySet<string> = new Set(RetiredCopy.map((entry) => entry.path));

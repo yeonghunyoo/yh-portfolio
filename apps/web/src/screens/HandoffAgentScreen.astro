@@ -189,12 +189,12 @@ import Lightbox from "../components/Lightbox.astro";
   <div class="div49">
     <div class="div50" data-var="railScale"></div>
     <nav class="nav1">
-      <a class="a7" href="#s0" data-cur="1" data-cur-key="c0">01<br /><span class="pre1">{Copy.Forest.gaeyo}</span></a>
-      <a class="a7" href="#s1" data-cur="0" data-cur-key="c1">02<br /><span class="pre1">{Copy.HandoffAgent.guseong}</span></a>
-      <a class="a7" href="#s2" data-cur="0" data-cur-key="c2">03<br /><span class="pre1">{Copy.HandoffAgent.dongjakBangsik}</span></a>
-      <a class="a7" href="#s3" data-cur="0" data-cur-key="c3">04<br /><span class="pre1">{Copy.HandoffAgent.uIuxJeonghapseong}</span></a>
-      <a class="a7" href="#s4" data-cur="0" data-cur-key="c4">05<br /><span class="pre1">{Copy.HandoffAgent.baekendeuSeupek}</span></a>
-      <a class="a7" href="#s5" data-cur="0" data-cur-key="c5">06<br /><span class="pre1">{Copy.HandoffAgent.sikeuritGyeokri}</span></a>
+      <a class="a7" href="#s0" data-cur="1" data-cur-key="c0" aria-label={Copy.Forest.gaeyo}>01<br /><span class="pre1">{Copy.Forest.gaeyo}</span></a>
+      <a class="a7" href="#s1" data-cur="0" data-cur-key="c1" aria-label={Copy.HandoffAgent.guseong}>02<br /><span class="pre1">{Copy.HandoffAgent.guseong}</span></a>
+      <a class="a7" href="#s2" data-cur="0" data-cur-key="c2" aria-label={Copy.HandoffAgent.dongjakBangsik}>03<br /><span class="pre1">{Copy.HandoffAgent.dongjakBangsik}</span></a>
+      <a class="a7" href="#s3" data-cur="0" data-cur-key="c3" aria-label={Copy.HandoffAgent.uIuxJeonghapseong}>04<br /><span class="pre1">{Copy.HandoffAgent.uIuxJeonghapseong}</span></a>
+      <a class="a7" href="#s4" data-cur="0" data-cur-key="c4" aria-label={Copy.HandoffAgent.baekendeuSeupek}>05<br /><span class="pre1">{Copy.HandoffAgent.baekendeuSeupek}</span></a>
+      <a class="a7" href="#s5" data-cur="0" data-cur-key="c5" aria-label={Copy.HandoffAgent.sikeuritGyeokri}>06<br /><span class="pre1">{Copy.HandoffAgent.sikeuritGyeokri}</span></a>
     </nav>
   </div>
 </aside>
@@ -263,7 +263,11 @@ td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
 .span3{border-bottom:1px dashed var(--accent);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12.5px}
 .div21{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:12px}
 .div22{background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0}
-.div23{font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px}
+/* These captions carry file paths (apps/android/…/ui/screens/HomeScreen.kt) in a
+   monospace face with no break opportunity, so they pushed the page wider than a
+   phone viewport. `anywhere` only takes effect when the line has nowhere else to
+   break, so the desktop rendering is unchanged. */
+.div23{font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px;overflow-wrap:anywhere}
 .div24{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:10px}
 .div25{margin-top:18px;font-weight:600}
 .div26{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:8px;font-size:15.5px}
@@ -311,6 +315,26 @@ td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
 .div50{position:absolute;left:-1px;top:56px;bottom:0;width:2px;background:var(--accent);transform-origin:top;transform:scaleY(var(--rail-scale,0));transition:transform .15s linear}
 .nav1{display:flex;flex-direction:column;gap:16px}
 .a7{color:var(--muted);text-decoration:none;transition:color .2s}
+
+/* See ForestScreen: the 150px rail column starves the body on a phone. Below this
+   width the page goes single-column and the index floats as a translucent pill,
+   numbers only — the section name lives on each link's aria-label. */
+@media (max-width: 820px){
+  .div4{grid-template-columns:minmax(0,1fr);padding:0 20px}
+  .main1{padding-right:0;border-right:0}
+  .aside1{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:30}
+  .div49{position:static;padding:6px 10px;border:1px solid var(--line);border-radius:999px;
+    background:var(--card);background:color-mix(in srgb,var(--card) 78%,transparent);
+    -webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+  .div50{display:none}
+  .nav1{flex-direction:row;gap:2px}
+  .a7{min-width:32px;padding:4px 0;text-align:center;font-size:11px}
+  .pre1{display:none}
+  /* auto-fit with a 260–300px minimum still lays out one column that cannot shrink
+     below its minimum, so the code cards pushed the document past the viewport.
+     One column that is allowed to shrink; the <pre> inside keeps its own scroll. */
+  .div6,.div21,.div24,.div30,.div37{grid-template-columns:minmax(0,1fr)}
+}
 .a7:hover{color:var(--ink);text-decoration:none}
 .div51{position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.86);display:flex;align-items:center;justify-content:center;padding:32px;cursor:zoom-out;animation:rise .2s ease both}
 .img2{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}

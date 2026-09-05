@@ -39,7 +39,6 @@ export const ResumeCopy = {
     dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida: Strings.Resume.dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida,
     claudeCodePeulreogeuin202609: Strings.Resume.claudeCodePeulreogeuin202609,
     saundeuMiksingJipjungMyeongsangAep2026: Strings.Resume.saundeuMiksingJipjungMyeongsangAep2026,
-    kiroJeonhwan: Strings.Resume.kiroJeonhwan,
     _03Gyeongryeok4Nyeon2Gaewol: Strings.Resume._03Gyeongryeok4Nyeon2Gaewol,
     teuripeideuTripaidIosNative: Strings.Resume.teuripeideuTripaidIosNative,
     _202510Hyeonjae: Strings.Resume._202510Hyeonjae,
