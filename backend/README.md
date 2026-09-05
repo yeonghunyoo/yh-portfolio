@@ -48,7 +48,12 @@ which the re-export already carries) and the `@astrojs/vercel` adapter.
 Client side, count a visit once per page load:
 
 ```ts
-fetch(`/api/views/handoff-agent`, { method: "POST", keepalive: true }).catch(() => {});
+import { Screens, pageSlugForScreen } from "@yh/backend";
+
+fetch(`/api/views/${pageSlugForScreen(Screens.handoffAgent)}`, {
+  method: "POST",
+  keepalive: true,
+}).catch(() => {});
 ```
 
 Failures are ignored on purpose — the counter is invisible in the design (no screen
@@ -56,9 +61,18 @@ renders a view count), so it must never affect rendering.
 
 ## Page slugs
 
-`handoff-agent` is the case study document served at `/` (screens s0–s5 are sections of
-that one page, per `ScreenPaths`). `home` is reserved for the portfolio index.
+One slug per screen in `design/handoff.manifest.json`, derived from the generated
+`Screens` constant by `pageSlugForScreen()` (camelCase id → kebab-case slug), so a new
+screen needs no edit here:
+
+| Screen id (`Screens.*`) | `ScreenPaths` | Page slug |
+|---|---|---|
+| `resume` | `/resume` | `resume` |
+| `forest` | `/forest` | `forest` |
+| `handoffAgent` | `/handoffAgent` | `handoff-agent` |
+
 Slugs must match `^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$`; anything else is `400 invalid_page`.
+The routes accept any conforming slug — unknown ones simply read as `0`, per the contract.
 
 ## Storage
 
@@ -91,6 +105,6 @@ With either missing, every route answers `503`, which is the contracted behaviou
 ```bash
 npm install
 npm run typecheck                                   # tsc --noEmit
-npm test                                            # vitest, 48 tests
+npm test                                            # vitest, 52 tests
 VIEWS_STORE_DRIVER=memory npm run dev               # http://localhost:4321/api/views
 ```

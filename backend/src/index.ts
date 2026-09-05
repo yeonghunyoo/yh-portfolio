@@ -1,8 +1,11 @@
 /** Public surface of @yh/backend — the views API contracted in api/openapi.yaml. */
 export { ApiRoutes } from "../../shared/generated/ApiRoutes.ts";
+export { ScreenPaths, Screens, type ScreenId } from "../../shared/generated/Screens.ts";
 
 export {
   KnownPages,
+  knownPageSlugs,
+  pageSlugForScreen,
   PAGE_SLUG_PATTERN,
   PAGE_SLUG_MAX_LENGTH,
   isValidPageSlug,

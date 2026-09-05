@@ -55,8 +55,8 @@ describe("UpstashViewsStore — Redis REST wire format", () => {
 
   it("GETs the counter key and treats a missing key as 0", async () => {
     const { store, log } = storeWith(() => ({ result: null }));
-    await expect(store.read(KnownPages.home)).resolves.toBe(0);
-    expect(log[0]?.body).toEqual(["GET", counterKey(KnownPages.home)]);
+    await expect(store.read(KnownPages.resume)).resolves.toBe(0);
+    expect(log[0]?.body).toEqual(["GET", counterKey(KnownPages.resume)]);
   });
 
   it("coerces Upstash's string counters to numbers", async () => {
@@ -67,14 +67,14 @@ describe("UpstashViewsStore — Redis REST wire format", () => {
   it("reads all pages with SMEMBERS + MGET", async () => {
     const { store, log } = storeWith((command) => {
       const [verb] = command as string[];
-      if (verb === "SMEMBERS") return { result: [KnownPages.home, KnownPages.handoffAgent] };
+      if (verb === "SMEMBERS") return { result: [KnownPages.resume, KnownPages.handoffAgent] };
       return { result: ["3", "128"] };
     });
     await expect(store.readAll()).resolves.toEqual([
-      { page: KnownPages.home, views: 3 },
+      { page: KnownPages.resume, views: 3 },
       { page: KnownPages.handoffAgent, views: 128 },
     ]);
-    expect(log[1]?.body).toEqual(["MGET", counterKey(KnownPages.home), counterKey(KnownPages.handoffAgent)]);
+    expect(log[1]?.body).toEqual(["MGET", counterKey(KnownPages.resume), counterKey(KnownPages.handoffAgent)]);
   });
 
   it("claims a rate-limit slot with SET NX EX", async () => {
@@ -91,14 +91,14 @@ describe("UpstashViewsStore — Redis REST wire format", () => {
   it("raises StoreUnavailableError when the REST call fails", async () => {
     const fetchImpl: typeof fetch = () => Promise.reject(new Error("ECONNREFUSED"));
     const store = new UpstashViewsStore({ url: URL_PLACEHOLDER, token: TOKEN_PLACEHOLDER, fetchImpl });
-    await expect(store.read(KnownPages.home)).rejects.toBeInstanceOf(StoreUnavailableError);
+    await expect(store.read(KnownPages.resume)).rejects.toBeInstanceOf(StoreUnavailableError);
   });
 
   it("never leaks the token into the error message", async () => {
     const fetchImpl: typeof fetch = () =>
       Promise.resolve(new Response("nope", { status: 401 }));
     const store = new UpstashViewsStore({ url: URL_PLACEHOLDER, token: TOKEN_PLACEHOLDER, fetchImpl });
-    const thrown = await store.read(KnownPages.home).then(
+    const thrown = await store.read(KnownPages.resume).then(
       () => null,
       (e: unknown) => e as Error,
     );
@@ -122,7 +122,7 @@ describe("routes degrade to 503 when Upstash is down", () => {
   });
 
   it("GET /views/{page} answers 503", async () => {
-    const response = await call(ApiRoutes.getPageViews, downStore, { params: { page: KnownPages.home } });
+    const response = await call(ApiRoutes.getPageViews, downStore, { params: { page: KnownPages.resume } });
     expect(response.status).toBe(503);
   });
 

@@ -3,7 +3,7 @@ import { ApiRoutes } from "../../shared/generated/ApiRoutes.ts";
 import { ScreenPaths, Screens } from "../../shared/generated/Screens.ts";
 import * as viewsIndex from "../src/astro/views-index.ts";
 import * as viewsPage from "../src/astro/views-page.ts";
-import { KnownPages } from "../src/domain/slug.ts";
+import { KnownPages, isValidPageSlug, knownPageSlugs, pageSlugForScreen } from "../src/domain/slug.ts";
 import type { PageViews, PageViewsList } from "../src/domain/types.ts";
 import { EnvKeys, createViewsStore, getViewsStore, resetViewsStoreCache } from "../src/store/factory.ts";
 import { MemoryViewsStore } from "../src/store/memory.ts";
@@ -107,10 +107,38 @@ describe("store factory reads the approved env vars", () => {
 });
 
 describe("page slugs cover the designed screens", () => {
-  it("every screen in the design maps to a countable page slug", () => {
-    // s0–s5 are sections of one document served at "/" (ScreenPaths), counted as `handoff-agent`.
-    const paths = new Set(Object.values(Screens).map((id) => ScreenPaths[id]));
-    expect([...paths]).toEqual(["/"]);
-    expect(KnownPages.handoffAgent).toBe("handoff-agent");
+  it("derives one slug per generated screen id", () => {
+    expect(Object.keys(KnownPages).sort()).toEqual(Object.keys(Screens).sort());
+  });
+
+  it("spells the slugs exactly as api/openapi.yaml documents them", () => {
+    expect(pageSlugForScreen(Screens.resume)).toBe("resume");
+    expect(pageSlugForScreen(Screens.forest)).toBe("forest");
+    expect(pageSlugForScreen(Screens.handoffAgent)).toBe("handoff-agent");
+  });
+
+  it("keeps every derived slug inside the contracted pattern", () => {
+    expect(knownPageSlugs).toHaveLength(Object.keys(Screens).length);
+    for (const slug of knownPageSlugs) expect(isValidPageSlug(slug)).toBe(true);
+  });
+
+  it("counts each screen path independently", async () => {
+    const counted: Record<string, number> = {};
+    let client = 0;
+    for (const id of Object.values(Screens)) {
+      const page = pageSlugForScreen(id);
+      const response = await viewsPage.POST(
+        context(ApiRoutes.incrementPageViews, { page }, memoryEnv, {
+          "x-forwarded-for": `198.51.100.${(client += 1)}`,
+        }),
+      );
+      expect(response.status).toBe(200);
+      const body = (await response.json()) as PageViews;
+      expect(ScreenPaths[id]).toBeTypeOf("string");
+      counted[body.page] = body.views;
+    }
+    // Every screen got its own counter at 1 — no screen shares another's slug.
+    expect(Object.values(counted)).toEqual(Object.values(Screens).map(() => 1));
+    expect(Object.keys(counted).sort()).toEqual([...knownPageSlugs].sort());
   });
 });

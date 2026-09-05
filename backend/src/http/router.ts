@@ -96,7 +96,7 @@ export async function handleRequest(request: Request, options: RouterOptions): P
   return fail.notFound();
 }
 
-/** Absolute request path for an operation, e.g. apiPath(ApiRoutes.getPageViews, { page: "home" }). */
+/** Absolute request path for an operation, e.g. apiPath(ApiRoutes.getPageViews, { page: "resume" }). */
 export function apiPath(route: Route, params: Record<string, string> = {}): string {
   const filled = route.path.replace(/\{(\w+)\}/g, (_match, name: string) => {
     const value = params[name];

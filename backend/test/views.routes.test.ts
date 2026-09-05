@@ -29,13 +29,13 @@ describe("API-01 GET /views — ApiRoutes.listPageViews", () => {
   });
 
   it("lists every known page with its current count", async () => {
-    store.seed(KnownPages.home, 3);
+    store.seed(KnownPages.resume, 3);
     store.seed(KnownPages.handoffAgent, 128);
     const body = await bodyOf<PageViewsList>(await call(ApiRoutes.listPageViews, store));
     expect(body.items).toHaveLength(2);
     expect(body.items).toEqual(
       expect.arrayContaining([
-        { page: KnownPages.home, views: 3 },
+        { page: KnownPages.resume, views: 3 },
         { page: KnownPages.handoffAgent, views: 128 },
       ]),
     );
@@ -57,9 +57,9 @@ describe("API-02 GET /views/{page} — ApiRoutes.getPageViews", () => {
   });
 
   it("returns 0 for a page that was never viewed (never 404)", async () => {
-    const response = await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.home } });
+    const response = await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.resume } });
     expect(response.status).toBe(200);
-    await expect(bodyOf<PageViews>(response)).resolves.toEqual({ page: KnownPages.home, views: 0 });
+    await expect(bodyOf<PageViews>(response)).resolves.toEqual({ page: KnownPages.resume, views: 0 });
   });
 
   it("returns the stored count for the handoff-agent case study page", async () => {
@@ -71,9 +71,10 @@ describe("API-02 GET /views/{page} — ApiRoutes.getPageViews", () => {
   });
 
   it.each([
-    ["uppercase", "Home"],
-    ["leading hyphen", "-home"],
-    ["trailing hyphen", "home-"],
+    ["uppercase", "Resume"],
+    ["camelCase screen id, not the slug", "handoffAgent"],
+    ["leading hyphen", "-resume"],
+    ["trailing hyphen", "resume-"],
     ["underscore", "handoff_agent"],
     ["too long", "a".repeat(65)],
   ])("rejects an invalid slug (%s) with 400 invalid_page", async (_label, slug) => {
@@ -85,7 +86,7 @@ describe("API-02 GET /views/{page} — ApiRoutes.getPageViews", () => {
   });
 
   it("answers 503 when the store is not configured", async () => {
-    const response = await call(ApiRoutes.getPageViews, null, { params: { page: KnownPages.home } });
+    const response = await call(ApiRoutes.getPageViews, null, { params: { page: KnownPages.resume } });
     expect(response.status).toBe(503);
   });
 });
@@ -115,18 +116,18 @@ describe("API-03 POST /views/{page} — ApiRoutes.incrementPageViews", () => {
 
   it("is visible to a subsequent read of the same page", async () => {
     await call(ApiRoutes.incrementPageViews, store, {
-      params: { page: KnownPages.home },
+      params: { page: KnownPages.resume },
       headers: freshClient(),
     });
     const read = await bodyOf<PageViews>(
-      await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.home } }),
+      await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.resume } }),
     );
     expect(read.views).toBe(1);
   });
 
   it("counts pages independently", async () => {
     await call(ApiRoutes.incrementPageViews, store, {
-      params: { page: KnownPages.home },
+      params: { page: KnownPages.resume },
       headers: freshClient(),
     });
     const other = await bodyOf<PageViews>(
@@ -167,7 +168,7 @@ describe("API-03 POST /views/{page} — ApiRoutes.incrementPageViews", () => {
     const client = { "x-forwarded-for": "203.0.113.9" };
     await call(ApiRoutes.incrementPageViews, store, { params: { page: KnownPages.handoffAgent }, headers: client });
     const other = await call(ApiRoutes.incrementPageViews, store, {
-      params: { page: KnownPages.home },
+      params: { page: KnownPages.resume },
       headers: client,
     });
     expect(other.status).toBe(200);
@@ -175,7 +176,7 @@ describe("API-03 POST /views/{page} — ApiRoutes.incrementPageViews", () => {
 
   it("answers 503 when the store is not configured", async () => {
     const response = await call(ApiRoutes.incrementPageViews, null, {
-      params: { page: KnownPages.home },
+      params: { page: KnownPages.resume },
       headers: freshClient(),
     });
     expect(response.status).toBe(503);
@@ -191,7 +192,7 @@ describe("routing edges", () => {
 
   it("405s a DELETE on the item route listing both contracted methods", async () => {
     const response = await call({ method: "DELETE", path: ApiRoutes.getPageViews.path }, store, {
-      params: { page: KnownPages.home },
+      params: { page: KnownPages.resume },
     });
     expect(response.status).toBe(405);
     expect(response.headers.get("allow")).toBe("GET, POST");
@@ -203,7 +204,7 @@ describe("routing edges", () => {
   });
 
   it("marks every response no-store so counters are never cached", async () => {
-    const response = await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.home } });
+    const response = await call(ApiRoutes.getPageViews, store, { params: { page: KnownPages.resume } });
     expect(response.headers.get("cache-control")).toBe("no-store");
   });
 });
