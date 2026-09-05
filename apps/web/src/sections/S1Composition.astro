@@ -1,0 +1,52 @@
+---
+import { Screens } from "@generated/Screens";
+import { Strings } from "@generated/Strings";
+---
+
+<section id={Screens.s1} class="section">
+  <h2 class="title">{Strings.Shared.peulreogeuinGuseong}</h2>
+
+  <div class="cards">
+    <div class="card">
+      {Strings.Shared.dijainJeongjeBaekendeuInpeuraSeupekInteobyu} <b>{Strings.Shared.mCpSeobeo}</b>{Strings.Shared.roGuchuk}
+    </div>
+    <div class="card">
+      {Strings.Shared.jungganSanchulmuleunGakPeulraetpomeMatneun} <b>{Strings.Shared.swiftKotlin}</b> {Strings.Shared.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim}
+    </div>
+    <div class="card">
+      {Strings.Shared.pythonGibanMcpGa} <b>{Strings.Shared.openApi}</b> {Strings.Shared.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo}
+    </div>
+    <div class="card">
+      {Strings.Shared.peulraetpomIosAndroidBackendEijeonteu} <b>{Strings.Shared._3Gae}</b> {Strings.Shared.dijainYeondongEijeonteu} <b>{Strings.Shared._1Gae}</b>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 40px 0 0;
+    scroll-margin-top: 90px;
+  }
+
+  .title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin-top: 14px;
+    font-size: 15.5px;
+    line-height: 1.65;
+  }
+
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: var(--card);
+  }
+</style>

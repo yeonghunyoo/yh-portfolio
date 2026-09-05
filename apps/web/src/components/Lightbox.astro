@@ -1,0 +1,56 @@
+---
+// `lightbox` (modal) — a full-screen zoom of one comparison image.
+// Opened by the five `open1`..`open5` buttons in the s3 section; closed by a click
+// anywhere on the overlay (`closeLightbox`) or by Esc (`escClose`, native to <dialog>).
+---
+
+<dialog class="overlay" data-lightbox>
+  <img class="picture" alt="" data-lightbox-image />
+</dialog>
+
+<script>
+  import { initLightbox } from "../lib/lightbox";
+
+  initLightbox();
+</script>
+
+<style>
+  .overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    /* The prototype paints rgba(10,12,16,.86) — DesignTokens.Code.bg at 86%.
+       The mint alias keeps it identical in both themes, as the prototype has it. */
+    background: color-mix(in srgb, var(--mint-code-bg) 86%, transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px;
+    cursor: zoom-out;
+    animation: rise 0.2s ease both;
+
+    /* reset the user-agent dialog box — the overlay is the whole viewport */
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    color: var(--ink);
+  }
+
+  .overlay:not([open]) {
+    display: none;
+  }
+
+  .overlay::backdrop {
+    background: transparent;
+  }
+
+  .picture {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+</style>

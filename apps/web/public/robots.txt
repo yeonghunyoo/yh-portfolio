@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# The views API is a counter, not content.
+Disallow: /api/

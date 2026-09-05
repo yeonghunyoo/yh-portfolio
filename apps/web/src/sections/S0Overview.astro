@@ -1,0 +1,53 @@
+---
+import { Screens } from "@generated/Screens";
+import { Strings } from "@generated/Strings";
+---
+
+<section id={Screens.s0} class="section">
+  <div class="kicker">{Strings.Shared._202609ClaudeCodePeulreogeuinPython}</div>
+
+  <h1 class="title">
+    {Strings.Shared.claudeDesignUiHandoffPaekijireulGibaneuro}<br />
+    {Strings.Shared.iOsAndroidBackendSePeulraetpomeulHan}
+  </h1>
+
+  <blockquote class="quote">
+    {Strings.Shared.modeunGeDaJeonghaejyeoItdamyeonSe}<br />
+    {Strings.Shared.geurigoGeuJeonghaejinGeotISuchiro}
+  </blockquote>
+</section>
+
+<style>
+  .section {
+    padding: 56px 0 40px;
+    border-bottom: 1px solid var(--line);
+    scroll-margin-top: 90px;
+    animation: rise 0.5s ease both;
+  }
+
+  .kicker {
+    font: 13px var(--font-mono);
+    color: var(--muted);
+  }
+
+  .title {
+    margin: 10px 0 0;
+    font-size: 34px;
+    line-height: 1.3;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    text-wrap: pretty;
+  }
+
+  .quote {
+    margin: 24px 0 0;
+    padding: 18px 22px;
+    border-left: 3px solid var(--accent);
+    background: var(--surface);
+    border-radius: 0 10px 10px 0;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--ink);
+    text-wrap: pretty;
+  }
+</style>

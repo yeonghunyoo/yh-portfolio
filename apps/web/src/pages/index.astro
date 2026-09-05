@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import SiteHeader from "../components/SiteHeader.astro";
+import SectionNav from "../components/SectionNav.astro";
+import Lightbox from "../components/Lightbox.astro";
+import S0Overview from "../sections/S0Overview.astro";
+import S1Composition from "../sections/S1Composition.astro";
+import S2HowItWorks from "../sections/S2HowItWorks.astro";
+import S3UiParity from "../sections/S3UiParity.astro";
+import S4BackendSpec from "../sections/S4BackendSpec.astro";
+import S5SecretIsolation from "../sections/S5SecretIsolation.astro";
+---
+
+<Base>
+  <SiteHeader />
+
+  <div class="page">
+    <main class="main">
+      <S0Overview />
+      <S1Composition />
+      <S2HowItWorks />
+      <S3UiParity />
+      <S4BackendSpec />
+      <S5SecretIsolation />
+    </main>
+
+    <SectionNav />
+  </div>
+
+  <Lightbox />
+</Base>
+
+<script>
+  import { countVisit } from "../lib/pageViews";
+
+  countVisit();
+</script>
+
+<style>
+  .page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 150px;
+    gap: 0;
+  }
+
+  .main {
+    min-width: 0;
+    padding-right: 36px;
+    border-right: 1px solid var(--line-soft);
+  }
+</style>

@@ -1,0 +1,59 @@
+---
+import { DesignTokens } from "@generated/DesignTokens";
+import "@generated/tokens.css";
+import "../styles/global.css";
+import { DEFAULT_THEME, THEMES, THEME_STORAGE_KEY } from "../lib/theme";
+import { PAGE_DESCRIPTION, PAGE_TITLE } from "../lib/screens";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = PAGE_TITLE, description = PAGE_DESCRIPTION } = Astro.props;
+
+// Absolute URL for canonical/Open Graph. `site` comes from PUBLIC_SITE_URL; without
+// it we fall back to the origin the page was requested from.
+const canonical = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="theme-color" content={DesignTokens.accent} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="ko_KR" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap"
+    />
+  </head>
+  <body data-theme={DEFAULT_THEME}>
+    {/* Applies the remembered theme before the first paint — no flash of the wrong palette. */}
+    <script is:inline define:vars={{ storageKey: THEME_STORAGE_KEY, themes: THEMES }}>
+      try {
+        var stored = window.localStorage.getItem(storageKey);
+        if (themes.indexOf(stored) !== -1) document.body.dataset.theme = stored;
+      } catch (error) {
+        /* storage disabled — the default theme stays */
+      }
+    </script>
+    <slot />
+  </body>
+</html>

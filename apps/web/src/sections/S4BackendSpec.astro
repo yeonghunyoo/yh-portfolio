@@ -1,0 +1,274 @@
+---
+import { Screens } from "@generated/Screens";
+import { Strings } from "@generated/Strings";
+import { OPENAPI_DRAFT, assertCodeSamplesMatchStrings } from "../lib/codeBlocks";
+
+assertCodeSamplesMatchStrings();
+
+// The four interview steps.
+const interviewSteps = [
+  { name: Strings.Shared._1Seutaek, note: Strings.Shared.peulraetpomgwaBaekendeuEoneoreulHubo23 },
+  { name: Strings.Shared._2Gyumo, note: Strings.Shared.yesangMaudauReulSayongjagaDaeryak },
+  { name: Strings.Shared._3HuboChurigi, note: Strings.Shared._12GaeJohapJungGeuGyumoe },
+  { name: Strings.Shared._4YogeumJohoe, note: Strings.Shared.gongsikYogeumPeijimanIkeumKaesiEoli },
+];
+
+/** The date the prices were re-read. Printed as-is by the design; no Strings key. */
+const CHECKED_ON = "2026-09-04";
+
+const comboRows = [
+  {
+    id: Strings.Shared.awsServerless,
+    db: Strings.Shared.dynamoDb,
+    auth: Strings.Shared.cognito,
+    hosting: Strings.Shared.lambdaApigw,
+    cost: Strings.Shared._05,
+    lockIn: Strings.Shared.nopeum,
+  },
+  {
+    id: Strings.Shared.vpsDocker,
+    db: Strings.Shared.postgreSqlJache,
+    auth: Strings.Shared.jacheJwt,
+    hosting: Strings.Shared.vPsHetzner,
+    cost: Strings.Shared._410,
+    lockIn: Strings.Shared.nateum,
+  },
+  {
+    id: Strings.Shared.firebase,
+    db: Strings.Shared.firestore,
+    auth: Strings.Shared.firebaseAuth,
+    hosting: Strings.Shared.cloudRun,
+    cost: Strings.Shared._010,
+    lockIn: Strings.Shared.nopeum,
+  },
+  {
+    id: Strings.Shared.railway,
+    db: Strings.Shared.postgreSqlRailway,
+    auth: Strings.Shared.jacheJwt,
+    hosting: Strings.Shared.railway2,
+    cost: Strings.Shared._525,
+    lockIn: Strings.Shared.nateum,
+  },
+  {
+    id: Strings.Shared.supabaseFly,
+    db: Strings.Shared.postgreSqlSupabase,
+    auth: Strings.Shared.supabaseAuth,
+    hosting: Strings.Shared.flyIo,
+    cost: Strings.Shared._030,
+    lockIn: Strings.Shared.jung,
+  },
+];
+---
+
+<section id={Screens.s4} class="section">
+  <div class="case">
+    <div class="kicker">{Strings.Shared.keiseuSeuteodi2}</div>
+    <h2 class="title">{Strings.Shared.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
+
+    <div class="body">
+      <div class="label">{Strings.Shared.munje}</div>
+      <div>{Strings.Shared.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
+
+      <div class="label">{Strings.Shared.jeopgeun}</div>
+      <div>
+        {Strings.Shared.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Strings.Shared.bogiSwipgePyoroJean}</b>{Strings.Shared.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}
+      </div>
+
+      <div class="label">{Strings.Shared.guhyeon}</div>
+      <div>
+        <div class="step">{Strings.Shared.inpeuraGyeoljeong4DangyeInteobyuGak}</div>
+        <div class="interview">
+          {
+            interviewSteps.map((step) => (
+              <div class="interviewCard">
+                <b>{step.name}</b>
+                <br />
+                <span class="interviewNote">{step.note}</span>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="step stepSpaced">{Strings.Shared.aPiMyeongse}</div>
+        <div class="apiNote">
+          {Strings.Shared.inpeuragaJeonghaejimyeonHwamyeonHtmlGwaGaebal} <b>{Strings.Shared.gakHwamyeoniPilyoroHaneunDeiteo}</b>{Strings.Shared.eseoEndeupointeureulPpopa} <code>{Strings.Shared.openapiYaml}</code> {Strings.Shared.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye}
+        </div>
+        <div class="codeCard"><pre>{OPENAPI_DRAFT}</pre></div>
+      </div>
+
+      <div class="label">{Strings.Shared.gyeolgwa}</div>
+      <div>
+        {Strings.Shared.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
+        <div class="panel">
+          <div class="panelHead">
+            {Strings.Shared.gyumo} <b class="strong">{Strings.Shared.sogyumo}</b> {Strings.Shared.mAu10000Dau1000}
+          </div>
+
+          <div class="tableScroll">
+            <table class="comboTable">
+              <thead>
+                <tr>
+                  <th>{Strings.Shared.id}</th>
+                  <th>{Strings.Shared.db}</th>
+                  <th>{Strings.Shared.auth}</th>
+                  <th>{Strings.Shared.hosting}</th>
+                  <th>{Strings.Shared.wolBiyong}</th>
+                  <th>{Strings.Shared.hwakinil}</th>
+                  <th>{Strings.Shared.jongsokseong}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {
+                  comboRows.map((row) => (
+                    <tr>
+                      <td class="comboId">{row.id}</td>
+                      <td>{row.db}</td>
+                      <td>{row.auth}</td>
+                      <td>{row.hosting}</td>
+                      <td>
+                        <b>{row.cost}</b>
+                      </td>
+                      <td>{CHECKED_ON}</td>
+                      <td>{row.lockIn}</td>
+                    </tr>
+                  ))
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <ul class="notes">
+          <li>{Strings.Shared.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li>
+          <li>
+            {Strings.Shared.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="strong">{Strings.Shared.sayongjaegeBogoseoroJechul}</b>{Strings.Shared.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}
+          </li>
+          <li>{Strings.Shared.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .section {
+    padding: 56px 0 0;
+    scroll-margin-top: 90px;
+  }
+
+  .case {
+    border-top: 1px solid var(--line);
+    padding-top: 36px;
+  }
+
+  .kicker {
+    font: 12px var(--font-mono);
+    color: var(--muted);
+  }
+
+  .title {
+    margin: 6px 0 0;
+    font-size: 28px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    gap: 16px 22px;
+    margin-top: 24px;
+    font-size: 17px;
+    line-height: 1.75;
+  }
+
+  .label {
+    font: 12px var(--font-mono);
+    color: var(--muted);
+    padding-top: 5px;
+  }
+
+  .step {
+    font-weight: 700;
+  }
+
+  .stepSpaced {
+    margin-top: 22px;
+  }
+
+  .interview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .interviewCard {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 12px 14px;
+    background: var(--card);
+    font-size: 15px;
+    line-height: 1.55;
+  }
+
+  .interviewNote {
+    color: var(--muted);
+  }
+
+  .apiNote {
+    font-size: 15.5px;
+    margin-top: 4px;
+  }
+
+  .apiNote code {
+    font: 12.5px var(--font-mono);
+  }
+
+  .codeCard {
+    background: var(--code-bg);
+    color: var(--code-ink);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-top: 10px;
+    min-width: 0;
+  }
+
+  .panel {
+    margin-top: 12px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--card);
+  }
+
+  .panelHead {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 14.5px;
+    color: var(--muted);
+  }
+
+  .strong {
+    color: var(--ink);
+  }
+
+  .tableScroll {
+    overflow-x: auto;
+  }
+
+  .comboTable {
+    min-width: 640px;
+  }
+
+  .comboId {
+    font: 12.5px var(--font-mono);
+  }
+
+  .notes {
+    margin: 14px 0 0;
+    padding-left: 18px;
+    font-size: 15.5px;
+    color: var(--muted);
+  }
+</style>
