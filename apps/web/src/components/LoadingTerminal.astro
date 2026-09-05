@@ -1,0 +1,84 @@
+---
+/**
+ * The terminal that greets a first visit to the landing page — the loading view of the
+ * design export the human added after the contract was frozen.
+ *
+ * It covers the page rather than replacing it: the resume is in the DOM the whole time,
+ * so a crawler, a reader with JavaScript off and anyone arriving a second time all get
+ * the content immediately. An inline script removes the overlay before the first paint
+ * when this session has already seen it, so a repeat visit never flashes.
+ */
+import { LoadingCopy } from "../content/systemCopy";
+
+/** One visit per tab shows it; the flag lives in sessionStorage under this key. */
+const SEEN_KEY = "yh-landed";
+---
+
+<div class="overlay" data-loading-terminal aria-hidden="true">
+  <div class="window">
+    <div class="titlebar">
+      <span class="light red"></span><span class="light amber"></span><span class="light green"></span>
+      <span class="title">{LoadingCopy.windowTitle}</span>
+    </div>
+    <div class="body"><span data-terminal-text></span><span class="cursor"></span></div>
+  </div>
+</div>
+
+{/* Before the first paint: if this tab already saw the terminal, drop it outright. */}
+<script is:inline define:vars={{ seenKey: SEEN_KEY }}>
+  try {
+    if (window.sessionStorage.getItem(seenKey) === "1") {
+      var node = document.querySelector("[data-loading-terminal]");
+      if (node) node.remove();
+    }
+  } catch (error) {
+    /* storage disabled — the terminal simply shows again */
+  }
+</script>
+
+<style>
+  .overlay{
+    position:fixed;inset:0;z-index:60;background:var(--bg);
+    display:flex;align-items:center;justify-content:center;padding:32px;
+    animation:rise .3s ease both;
+  }
+  .overlay[data-leaving]{opacity:0;transition:opacity .35s ease;pointer-events:none}
+
+  .window{
+    background:var(--code-bg);color:var(--code-ink);border-radius:12px;
+    border:1px solid var(--line-soft);width:100%;max-width:820px;overflow:hidden;
+  }
+  .titlebar{
+    display:flex;align-items:center;gap:8px;padding:10px 14px;
+    border-bottom:1px solid var(--line-soft);background:var(--surface);
+  }
+  .light{width:11px;height:11px;border-radius:50%;display:inline-block}
+  /* The three traffic lights are macOS chrome, not palette — they stay literal. */
+  .red{background:#FF5F57}
+  .amber{background:#FEBC2E}
+  .green{background:#28C840}
+  .title{margin-left:auto;margin-right:auto;font:12px 'IBM Plex Mono',monospace;color:var(--code-dim)}
+
+  .body{
+    padding:16px 18px 18px;font:14.5px/1.8 'IBM Plex Mono',monospace;
+    min-height:230px;white-space:pre-wrap;word-break:break-word;
+  }
+  .cursor{
+    display:inline-block;width:9px;height:16px;vertical-align:-2px;
+    background:var(--accent);animation:blink 1s step-end infinite;
+  }
+
+  @keyframes blink{50%{opacity:0}}
+
+  @media (max-width:820px){
+    .overlay{padding:20px}
+    .body{font-size:12.5px;min-height:180px;padding:14px}
+    .title{font-size:11px}
+  }
+
+  /* Someone who asked for less motion gets the finished frame, not the typing. */
+  @media (prefers-reduced-motion:reduce){
+    .overlay,.cursor{animation:none}
+    .overlay[data-leaving]{transition:none}
+  }
+</style>

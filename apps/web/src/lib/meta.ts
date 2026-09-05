@@ -1,5 +1,6 @@
 import { Screens, ScreenPaths, type ScreenId } from "@generated/Screens";
 import { Strings } from "@generated/Strings";
+import { SiteCopy } from "../content/systemCopy";
 
 /**
  * Document metadata per contracted screen. Every word comes from `Strings.*`, so a
@@ -16,7 +17,10 @@ export const SCREEN_META: Record<ScreenId, ScreenMeta> = {
   [Screens.resume]: {
     id: Screens.resume,
     path: ScreenPaths[Screens.resume],
-    title: `${Strings.Resume.yuyeonghun} — ${Strings.Resume.softwareEngineerIosBuilder}`,
+    // The share card names the site. The headline the page renders
+    // (Strings.Resume.softwareEngineerIosBuilder) stays where it belongs — in the
+    // content — instead of being repeated as the title of every shared link.
+    title: SiteCopy.siteTitle,
     description: Strings.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman,
   },
   [Screens.forest]: {

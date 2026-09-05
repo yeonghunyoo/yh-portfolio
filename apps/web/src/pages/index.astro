@@ -3,17 +3,25 @@
  * Entry screen — design/derived/navigation.json → `entry: "resume"`.
  * The same document is served at `ScreenPaths.resume`; `/` is the root the reader
  * lands on, so both routes render the one screen component.
+ *
+ * Only this route carries the loading terminal: the human asked for it on the first
+ * landing, so arriving at `/resume` directly, or coming back to `/` in the same tab,
+ * goes straight to the resume.
  */
 import { Screens } from "@generated/Screens";
 import Base from "../layouts/Base.astro";
 import ResumeScreen from "../screens/ResumeScreen.astro";
+import LoadingTerminal from "../components/LoadingTerminal.astro";
 ---
 
 <Base screen={Screens.resume}>
+  <LoadingTerminal />
   <ResumeScreen />
 </Base>
 
 <script>
   import { initResumeScreen } from "../lib/resumeScreen";
+  import { initLoadingTerminal } from "../lib/loadingTerminal";
   initResumeScreen();
+  initLoadingTerminal();
 </script>

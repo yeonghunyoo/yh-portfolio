@@ -1,0 +1,80 @@
+---
+/**
+ * Transplanted from the 500 view of the design export the human added after the
+ * contract was frozen. Astro renders this page for an unhandled error in an
+ * on-demand route; it is also reachable at /500 so the state can be checked.
+ */
+import { Screens, ScreenPaths } from "@generated/Screens";
+import Base from "../layouts/Base.astro";
+import SystemChrome from "../components/SystemChrome.astro";
+import { ContactCopy, ServerErrorCopy } from "../content/systemCopy";
+---
+
+<Base
+  screen={Screens.resume}
+  title={`500 — ${ServerErrorCopy.headline}`}
+  description={ServerErrorCopy.body}
+>
+  <SystemChrome>
+    <main class="page">
+      <div class="status">{ServerErrorCopy.status}</div>
+      <h1 class="code">5<span>0</span>0</h1>
+      <p class="headline">{ServerErrorCopy.headline}</p>
+      <p class="body">{ServerErrorCopy.body}</p>
+
+      <div class="log">
+        <button class="copy" type="button" data-on-click="copyLog" data-copy-label>
+          {ServerErrorCopy.copy}
+        </button>
+        <div class="dim">// error.log · <span data-log-now></span></div>
+        <div><span class="key">status</span>: 500</div>
+        <div><span class="key">path</span>: <span data-log-path></span></div>
+        <div><span class="key">message</span>: {ServerErrorCopy.logMessage}</div>
+        <div><span class="key">hint</span>: {ServerErrorCopy.logHint}</div>
+      </div>
+
+      <div class="actions">
+        <button class="primary" type="button" data-on-click="reload">{ServerErrorCopy.reload}</button>
+        <a class="secondary" href={ScreenPaths[Screens.resume]}>{ServerErrorCopy.home}</a>
+      </div>
+
+      <div class="contact">
+        <a href={`mailto:${ContactCopy.email}`}>{ContactCopy.email}</a>
+      </div>
+    </main>
+  </SystemChrome>
+</Base>
+
+<script>
+  import { initServerErrorPage } from "../lib/serverErrorPage";
+  initServerErrorPage();
+</script>
+
+<style>
+  .page{max-width:1080px;margin:0 auto;padding:96px 32px}
+  .status{font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+  .code{margin:10px 0 0;font:700 clamp(72px,14vw,140px)/1 'IBM Plex Mono',monospace;letter-spacing:-.04em;color:var(--ink)}
+  .code span{color:var(--accent)}
+  .headline{margin:28px 0 0;font-size:22px;line-height:1.5;font-weight:600;max-width:640px;text-wrap:pretty}
+  .body{margin:10px 0 0;font-size:17px;line-height:1.75;color:var(--muted);max-width:640px;text-wrap:pretty}
+
+  .log{margin-top:28px;background:var(--code-bg);color:var(--code-ink);border-radius:12px;padding:16px 18px;max-width:820px;font:13.5px/1.7 'IBM Plex Mono',monospace;overflow-x:auto;position:relative}
+  /* The log block is dark in both themes, so this chip is tinted against it with
+     literal translucent white rather than a palette token, exactly as the export does. */
+  .copy{position:absolute;top:10px;right:10px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:var(--code-ink);border-radius:6px;padding:4px 10px;font:12px 'IBM Plex Mono',monospace;cursor:pointer}
+  .copy:hover{border-color:var(--accent);color:var(--accent)}
+  .dim{color:var(--code-dim)}
+  .key{color:var(--accent)}
+
+  .actions{display:flex;gap:10px;margin-top:28px;flex-wrap:wrap}
+  .primary{background:var(--ink);color:var(--bg);border:1px solid var(--ink);padding:10px 18px;border-radius:8px;font:600 14px 'IBM Plex Sans KR',sans-serif;cursor:pointer}
+  .primary:hover{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+  .secondary{border:1px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none}
+  .secondary:hover{border-color:var(--accent);color:var(--accent)}
+  .contact{margin-top:40px;font:13px 'IBM Plex Mono',monospace;color:var(--muted)}
+
+  @media (max-width:820px){
+    .page{padding:64px 20px 96px}
+    .log{font-size:12.5px}
+  }
+</style>
