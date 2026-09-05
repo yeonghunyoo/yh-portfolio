@@ -250,7 +250,9 @@ import forest04 from "@design-assets/forest-04-stats.png";
 .div31{padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s}
 .div32{font-weight:600}
 .div33{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:20px}
-.img1{width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s}
+/* height:auto is load-bearing — see ForestScreen: <Image> emits width/height attributes,
+   and without it the attribute height overrides the intrinsic ratio. */
+.img1{width:100%;height:auto;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s}
 .img1:hover{transform:translateY(-4px)}
 .section3{padding:56px 0 24px;scroll-margin-top:80px}
 .div34{display:flex;flex-direction:column;gap:12px;margin-top:16px}

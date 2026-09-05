@@ -161,7 +161,11 @@ import Lightbox from "../components/Lightbox.astro";
 .a3{font-weight:600}
 .div5{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:32px}
 .figure1{margin:0}
-.img1{width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s}
+/* height:auto is load-bearing — <Image> emits width/height attributes (1320x2868 here),
+   and without it the attribute height wins over the intrinsic ratio and stretches the
+   shot to 2868px tall. The prototype's plain <img> carried no attributes, so it never
+   needed this. */
+.img1{width:100%;height:auto;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s}
 .img1:hover{transform:translateY(-6px)}
 .figcaption1{font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center}
 .section2{padding:56px 0 0;scroll-margin-top:90px}

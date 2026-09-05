@@ -285,7 +285,9 @@ td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
 .span7{font:12px 'IBM Plex Mono',monospace;color:var(--muted);font-weight:400;margin-left:6px}
 .div37{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:10px}
 .figure1{margin:0}
-.img1{width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s}
+/* height:auto is load-bearing — see ForestScreen: <Image> emits width/height attributes,
+   and without it the attribute height overrides the intrinsic ratio. */
+.img1{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s}
 .img1:hover{transform:scale(1.015)}
 .figcaption1{font-size:14px;color:var(--muted);margin-top:6px}
 .div38{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:10px}
