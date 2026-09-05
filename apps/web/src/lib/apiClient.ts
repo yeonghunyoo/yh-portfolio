@@ -68,6 +68,21 @@ export function buildUrl(
   return `${base}${path}`;
 }
 
+/**
+ * Vercel rejects a POST that carries no `content-type` with
+ * "Cross-site POST form submissions are forbidden" (403), and a browser sets no
+ * content-type on a bodyless `fetch` POST — so `POST /views/{page}` was answering 403
+ * in production while every GET worked. Declaring the type on writes is enough; it is
+ * same-origin, so it triggers no preflight.
+ */
+function defaultHeaders(route: Route): Record<string, string> {
+  const headers: Record<string, string> = { accept: "application/json" };
+  if (route.method !== "GET" && route.method !== "HEAD") {
+    headers["content-type"] = "application/json";
+  }
+  return headers;
+}
+
 async function call<T>(
   route: Route,
   params: Readonly<Record<string, string>> = {},
@@ -76,7 +91,7 @@ async function call<T>(
   const response = await fetch(buildUrl(route, params), {
     ...init,
     method: route.method,
-    headers: { accept: "application/json", ...init.headers },
+    headers: { ...defaultHeaders(route), ...init.headers },
   });
 
   if (!response.ok) {

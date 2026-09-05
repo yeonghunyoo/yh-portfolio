@@ -89,6 +89,33 @@ describe("calls", () => {
     expect(ApiRoutes.incrementPageViews.method).toBe("POST");
   });
 
+  it("declares content-type on writes, so Vercel does not answer 403", async () => {
+    // Regression: a bodyless POST carries no content-type from the browser, and Vercel
+    // rejects it with "Cross-site POST form submissions are forbidden" — every visit
+    // was silently dropped in production while GET kept working.
+    const fetchMock = vi.fn(async () => jsonResponse({ page: "resume", views: 1 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await incrementPageViews("resume");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/views/resume",
+      expect.objectContaining({
+        headers: { accept: "application/json", "content-type": "application/json" },
+      }),
+    );
+  });
+
+  it("leaves reads without a content-type", async () => {
+    const fetchMock = vi.fn(async () => jsonResponse({ page: "resume", views: 1 }));
+    vi.stubGlobal("fetch", fetchMock);
+
+    await getPageViews("resume");
+    expect(fetchMock).toHaveBeenCalledWith(
+      "/api/views/resume",
+      expect.objectContaining({ headers: { accept: "application/json" } }),
+    );
+  });
+
   it("turns a contract error body into an ApiError", async () => {
     vi.stubGlobal(
       "fetch",
