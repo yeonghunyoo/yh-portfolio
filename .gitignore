@@ -34,3 +34,6 @@ secrets.json
 *.ovpn
 *.kdbx
 !*.example
+
+# 원본 핸드오프 패키지 드롭 (등록본이 정본)
+handoff/

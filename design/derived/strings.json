@@ -1,1248 +1,2166 @@
 {
   "strings": [
     {
-      "key": "shared.yuyeonghun",
-      "text": "← 유영훈",
-      "screen": "shared",
+      "key": "resume.yuyeonghun",
+      "text": "유영훈",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.handoffAgent",
+      "key": "resume._01Sogae",
+      "text": "01 소개",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._02MandeunGeot",
+      "text": "02 만든 것",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._03Gyeongryeok",
+      "text": "03 경력",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.softwareEngineerIOSBuilder",
+      "text": "Software Engineer · iOS · Builder",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.iOSNeitibeuAepGaebaleulJuroMatawatjiman",
+      "text": "iOS 네이티브 앱 개발을 주로 맡아왔지만, 특정 플랫폼이나 직무에 저를 가두지 않습니다.",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.ilhadaBanbokdoeneunMunjereulMannamyeon",
+      "text": "일하다 반복되는 문제를 만나면",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.dogureulJikjeopMandeuleoHaegyeol",
+      "text": "도구를 직접 만들어 해결",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.hagoGeuDoguroDasiSeobiseureulMandeuneun",
+      "text": "하고, 그 도구로 다시 서비스를 만드는 방식으로 일합니다.",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.choegeuneneunIOSAndroidReulTtaroGaebalhamyeo",
+      "text": "최근에는 iOS · Android를 따로 개발하며 겪은 비효율을",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.handoffAgent",
       "text": "handoff-agent",
-      "screen": "shared",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.forest",
+      "key": "resume.raneunPeulreogeuineuroPuleotgo",
+      "text": "라는 플러그인으로 풀었고,",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.jigeumeunGeuDoguro",
+      "text": "지금은 그 도구로",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.forest",
       "text": "Forest",
-      "screen": "shared",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.gitHub",
+      "key": "resume.raneunSeobiseureulMandeulgoItseupnida",
+      "text": "라는 서비스를 만들고 있습니다.",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.wonchik1",
+      "text": "원칙 1",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.gwichaneumeunAidieouiSijakjeom",
+      "text": "귀찮음은 아이디어의 시작점",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.banbokdoeneunEopmugaGwichandagoNeukkyeojilTtaeJeoneun",
+      "text": "반복되는 업무가 귀찮다고 느껴질 때, 저는 그 감각을 자동화 아이디어의 출발점으로 삼습니다. 사람의 뇌는 사실 멀티태스킹이 되지 않기 때문에, 반복 작업은 최대한 자동화로 덜어내려 합니다.",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.wonchik2",
+      "text": "원칙 2",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.geungeoroMalhapnida",
+      "text": "근거로 말합니다",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.malbodaNuneuroHwakinsikineunGeotiOhaereulJulipnida",
+      "text": "말보다 눈으로 확인시키는 것이 오해를 줄입니다. API 통신 로그는 보기 좋게 포맷화해 전달하고, 화면 이슈는 이미지·영상으로, 디자인은 샘플 데이터로 미리 확인하며 대화합니다.",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.gitHub",
       "text": "GitHub ↗",
-      "screen": "shared",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared._202609ClaudeCodePeulreogeuinPython",
-      "text": "2026.09 ~ · Claude Code 플러그인 · Python MCP",
-      "screen": "shared",
+      "key": "resume.yeonghunYooGmailCom",
+      "text": "yeonghun.yoo@gmail.com",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.claudeDesignUiHandoffPaekijireulGibaneuro",
-      "text": "Claude Design의 handoff 패키지를 기반으로",
-      "screen": "shared",
+      "key": "resume.gyeongryeok",
+      "text": "경력",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.iOSAndroidBackendSePeulraetpomeulHan",
-      "text": "iOS · Android · backend 세 플랫폼을 한 번에 구현하는 플러그인",
-      "screen": "shared",
+      "key": "resume._4Nyeon2Gaewol",
+      "text": "4년 2개월",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.modeunGeDaJeonghaejyeoItdamyeonSe",
-      "text": "모든 게 다 정해져 있다면 세 플랫폼을 한 번에 개발해도 되지 않을까?",
-      "screen": "shared",
+      "key": "resume.skill",
+      "text": "Skill",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.geurigoGeuJeonghaejinGeotISuchiro",
-      "text": "그리고 그 \"정해진 것\"이 수치로 말하는 정제된 산출물이라면, 에이전트가 각자의 언어로 옮기기만 해도 구현 정합성을 보장할 수 있지 않을까?",
-      "screen": "shared",
+      "key": "resume._02MandeunGeot2",
+      "text": "02 — 만든 것",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.peulreogeuinGuseong",
-      "text": "플러그인 구성",
-      "screen": "shared",
+      "key": "resume.dogureulMandeulgoGeuDoguroSeobiseureulMandeupnida",
+      "text": "도구를 만들고, 그 도구로 서비스를 만듭니다",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.dijainJeongjeBaekendeuInpeuraSeupekInteobyu",
-      "text": "디자인 정제 · 백엔드 인프라 스펙 인터뷰 · 중간 산출물 관리를",
-      "screen": "shared",
+      "key": "resume.claudeCodePeulreogeuin202609",
+      "text": "Claude Code 플러그인 · 2026.09 ~",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.mCPSeobeo",
-      "text": "MCP 서버",
-      "screen": "shared",
+      "key": "resume.saundeuMiksingJipjungMyeongsangAep2026",
+      "text": "사운드 믹싱 집중 & 명상 앱 · 2026.09 ~",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.roGuchuk",
-      "text": "로 구축",
-      "screen": "shared",
+      "key": "resume.kiroJeonhwan",
+      "text": "← → 키로 전환",
+      "screen": "resume",
       "source": "markup"
     },
     {
-      "key": "shared.jungganSanchulmuleunGakPeulraetpomeMatneun",
-      "text": "중간 산출물은 각 플랫폼에 맞는",
-      "screen": "shared",
+      "key": "handoff.claudeDesignHaendeuopeuPaekiji1Gaero",
+      "text": "Claude Design 핸드오프 패키지 1개로 iOS · Android · backend를 한 번에 만드는 Claude Code 플러그인",
+      "screen": "handoff",
       "source": "markup"
     },
     {
-      "key": "shared.swiftKotlin",
-      "text": "Swift / Kotlin",
-      "screen": "shared",
+      "key": "handoff.sangseBogi",
+      "text": "상세 보기 →",
+      "screen": "handoff",
       "source": "markup"
     },
     {
-      "key": "shared.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim",
-      "text": "등 언어로 생성되어 에이전트에 넘겨짐",
-      "screen": "shared",
+      "key": "handoff.pIPELINE",
+      "text": "PIPELINE",
+      "screen": "handoff",
       "source": "markup"
     },
     {
-      "key": "shared.pythonGibanMCPGa",
-      "text": "Python 기반 MCP가",
-      "screen": "shared",
+      "key": "handoff.dijainHaendeuopeu1GaeIOSAndroid",
+      "text": "디자인 핸드오프 1개 → iOS · Android · backend 동시 구현",
+      "screen": "handoff",
       "source": "markup"
     },
     {
-      "key": "shared.openAPI",
+      "key": "handoff.input",
+      "text": "input",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.claudeDesignSanchulmul",
+      "text": "Claude Design 산출물",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.refine",
+      "text": "refine",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.reiautTeuriJSON",
+      "text": "레이아웃 트리 (JSON)",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.interview",
+      "text": "interview",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.seupekMunseoSeontaekjiPyo",
+      "text": "스펙 문서 · 선택지 표",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.iOS",
+      "text": "iOS",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.android",
+      "text": "Android",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.backend",
+      "text": "backend",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.verify",
+      "text": "verify",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.jeonghapseongChekeuForest",
+      "text": "정합성 체크 → Forest",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri",
+      "text": "Claude Design 프로토타입 산출물을 레이아웃 트리(JSON) 구조로 정제화",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.guhyeonEijeonteuTokeun39Jeolgam16",
+      "text": "구현 에이전트 토큰 39% 절감 (16회 A/B 실측)",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero",
+      "text": "프론트 + 백엔드 인프라 인터뷰 결과를 토대로 스펙 문서화 프로세스 구축",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.yogeumGineungYecheukSayongjaGyumoreulInteobyu",
+      "text": "요금·기능·예측 사용자 규모를 인터뷰 기반으로 표로 선택지 제공",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.wiSanchulmulGibaneuroByeongryeolGuhyeonhaneun3",
+      "text": "위 산출물 기반으로 병렬 구현하는 3개 플랫폼 빌더 에이전트",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.iOSAndroidBackendDongsiSaengseong",
+      "text": "iOS · Android · backend 동시 생성",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.inteobyuGibanBaekendeuInpeuraGyeoljeonggujoMit",
+      "text": "인터뷰 기반 백엔드 인프라 결정구조 및 보고서 기반 정합성 체크 프로세스",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "handoff.mingamJeongboInjeungseoKiNeunSayongjaga",
+      "text": "민감 정보(인증서·키)는 사용자가 직접 입력",
+      "screen": "handoff",
+      "source": "markup"
+    },
+    {
+      "key": "forest.padoBiBaramMoraeJangjakDaseot",
+      "text": "파도 · 비 · 바람 · 모래 · 장작 다섯 가지 자연 소리를 원하는 비율로 섞어 나만의 소리를 만드는 명상 앱. handoff-agent로 iOS · Android 네이티브 동시 개발 중",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.handoffAgentReulHwalyonghanIOSAndroid",
+      "text": "handoff-agent를 활용한 iOS · Android 네이티브 동시 개발",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.swiftUIJetpackComposeGateunHwamyeonKeomponeonteu",
+      "text": "SwiftUI · Jetpack Compose, 같은 화면·컴포넌트 구성",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.cloudflareWorkersHonoD1R2Baekendeu",
+      "text": "Cloudflare Workers + Hono · D1 · R2 백엔드",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.seobeoGwanriBudamEoliIGyumoeseo",
+      "text": "서버 관리 부담 없이, 이 규모에서 비용 거의 0",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.aVAudioEngineGiban5TeuraekDongsiMiksing",
+      "text": "AVAudioEngine 기반 5트랙 동시 믹싱 플레이어",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.reieobyeolBolryumPeurisetSumyeonTaimeo",
+      "text": "레이어별 볼륨 · 프리셋 · 수면 타이머",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "resume._03Gyeongryeok4Nyeon2Gaewol",
+      "text": "03 — 경력 · 4년 2개월",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.teuripeideuTripaidIOSNative",
+      "text": "트립에이드 (Tripaid) · iOS Native",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._202510Hyeonjae",
+      "text": "2025.10 ~ 현재",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.helmidakAIChaetingGeongangsangdamSeobiseu",
+      "text": "헬미닥 AI 채팅 건강상담 서비스 ·",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.appStore",
+      "text": "App Store ↗",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.iOSNeitibeuAepGaebalMitAkitekcheo",
+      "text": "· iOS 네이티브 앱 개발 및 아키텍처/DX 고도화",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.iOSUIUXJeongbiMitPeulraetpom",
+      "text": "iOS UI/UX 정비 및 플랫폼 간 서비스 동기화",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.androidDaebiJeongchedoenIOSHwangyeongeulJeomgeomhae",
+      "text": "Android 대비 정체된 iOS 환경을 점검해 UI/UX 전반 개선, 플랫폼 간 정합성 확보. 디자인 컴포넌트화·토큰화로 뷰 유지보수성 향상",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.neteuwokeuGongtongInteosepteoDoipMitTokeun",
+      "text": "네트워크 공통 인터셉터 도입 및 토큰 자동화",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae",
+      "text": "응답·에러 처리를 인터셉터 계층으로 분리해 중복 제거, 인증 토큰 주입·갱신 자동화. 커스텀 로깅으로 디버깅 효율 개선",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.claudeDesignEulHwalyonghanDijainSoyo",
+      "text": "Claude Design을 활용한 디자인 소요 최소화",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.dijainSaempeulroTimGanBanghyangseongGongyu",
+      "text": "디자인 샘플로 팀 간 방향성 공유, 디자인·번역 결과를 네이티브 리소스로 컨버트해 빠르게 전달",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.holricheuHolich",
+      "text": "홀리츠 (holich)",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._2023042025021Nyeon",
+      "text": "2023.04 – 2025.02 · 1년 11개월",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.letSBeePilripinEumsikBaedal",
+      "text": "Let's Bee 필리핀 음식 배달 서비스",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._202407202501Flutter",
+      "text": "2024.07 – 2025.01 · Flutter",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.yujeoPateuneoJeomjuAepUIUX",
+      "text": "유저·파트너(점주) 앱 UI/UX 구현, 번역 자동화 프로세스를 기능 개발에 통합",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.guLetSBeeKeulrakJiyeok",
+      "text": "(구) Let's Bee 클락 지역 배달 서비스",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._202306202411IOS",
+      "text": "2023.06 – 2024.11 · iOS",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.uIUXGaeseonMitTeureobeulsyuting6",
+      "text": "UI/UX 개선 및 트러블슈팅 6건 — 로그아웃 플래그, 장바구니 동기화, 탭 간 스크롤 위치 캐싱. 비밀번호 찾기, Apple 계정 삭제 대응(토큰 revoke), SNS 가입 정보 통일",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.myCONECTHotelBidaemyeonSeobiseuPeulraetpom",
+      "text": "MyCONECT 호텔 비대면 서비스 플랫폼",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._202304202412IOS",
+      "text": "2023.04 – 2024.12 · iOS",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro",
+      "text": "얼굴·신분증 인식 기반 본인확인, 가로 스택 차트 형태의 시간별 예약 기능",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.juAlpaigeulru",
+      "text": "(주)알파이글루",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume._2020112022031Nyeon",
+      "text": "2020.11 – 2022.03 · 1년 5개월",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu",
+      "text": "사주기반 아이 이름 작명 서비스 · 네이티브 iOS 앱 유지보수",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.uIUXGaeseonMitKeontencheuChuga",
+      "text": "UI/UX 개선 및 컨텐츠 추가",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu",
+      "text": "'오늘의 띠별 운세', '타로 신년운세' 컨텐츠 추가",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.gyeoljePeuroseseuIsyuHaegyeol",
+      "text": "결제 프로세스 이슈 해결",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.gyeoljeHuSangpumMijigeupeuroCSWa",
+      "text": "결제 후 상품 미지급으로 CS와 DB 수정이 반복되던 이슈. 클로저 캡처 리스트 메모리 누수로 상품 코드가 섞이던 원인을 로그 분석으로 파악해 수정. IAP finishTransaction이 지급 전에 호출되던 순서를 바로잡아 재지급 안정성 확보",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.hamkkeMandeuleobolkkayo",
+      "text": "함께 만들어볼까요?",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "resume.githubComYeonghunyoo",
+      "text": "github.com/yeonghunyoo",
+      "screen": "resume",
+      "source": "markup"
+    },
+    {
+      "key": "forest.yuyeonghun",
+      "text": "← 유영훈",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest._202609",
+      "text": "2026.09 ~",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.saundeuMiksingJipjungMyeongsangAepIOS",
+      "text": "사운드 믹싱 집중 & 명상 앱 · iOS · Android 네이티브 동시 개발 중",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.padoBiBaramMoraeJangjakDaseot2",
+      "text": "파도 · 비 · 바람 · 모래 · 장작 다섯 가지 자연 소리를",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.wonhaneunBiyulroSeokeoNamanuiSorireulMandeuneun",
+      "text": "원하는 비율로 섞어 나만의 소리를 만드는 명상 앱",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.jamdeulTtaenaJipjunghalTtaeBaegyeongeumeuroTeuleoduneun",
+      "text": "잠들 때나 집중할 때 배경음으로 틀어두는 용도. 이 프로젝트는",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.reulHwalyonghaeSayongjaInteobyuDijainPeurototaipeul",
+      "text": "를 활용해 사용자 인터뷰, 디자인 프로토타입을 기반으로 자동 생성되는 프로젝트로 iOS · Android 네이티브로 동시 개발 중입니다.",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.onboding",
+      "text": "온보딩",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.hom",
+      "text": "홈",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.saundeu",
+      "text": "사운드",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.girok",
+      "text": "기록",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.gineung",
+      "text": "기능",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.saundeuMiksing",
+      "text": "사운드 믹싱",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.reieo5GaereulGakgakBolryumJojeolhae",
+      "text": "레이어 5개를 각각 볼륨 조절해 겹쳐 재생",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.pado",
+      "text": "파도",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.bi",
+      "text": "비",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.baram",
+      "text": "바람",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.morae",
+      "text": "모래",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.jangjak",
+      "text": "장작",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.peurisetNamanuiMikseu",
+      "text": "프리셋 · 나만의 믹스",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.jeonyeokMulgyeolSupsokAchimDeungPeuriset",
+      "text": "저녁 물결, 숲속 아침 등 프리셋 5종. 직접 만든 조합도 저장",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.sumyeonTaimeo",
+      "text": "수면 타이머",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest._15304560BunDwi",
+      "text": "15 / 30 / 45 / 60분 뒤 자동 정지",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.girokTonggye",
+      "text": "기록 · 통계",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.sesyeonGirokgwaYeonsokilSeuteurik",
+      "text": "세션 기록과 연속일 스트릭",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.sNSLoginNaeJeongboDonggihwa",
+      "text": "SNS Login · 내 정보 동기화",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.chugaYejeong",
+      "text": "추가 예정",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.gudokMitInaepGyeoljeIAP",
+      "text": "구독 및 인앱 결제 (IAP)",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.seukil",
+      "text": "스킬",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.swiftSwiftUI",
+      "text": "Swift (SwiftUI)",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.kotlinCompose",
+      "text": "Kotlin (Compose)",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.typeScript",
+      "text": "TypeScript",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.hono",
+      "text": "Hono",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.cloudflareWorkers",
+      "text": "Cloudflare Workers",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.d1",
+      "text": "D1",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.r2",
+      "text": "R2",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.openAPI",
       "text": "OpenAPI",
-      "screen": "shared",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo",
-      "text": "기반 백엔드 스펙을 제안 / 조립하여 문서 생성",
-      "screen": "shared",
+      "key": "forest.baekendeuWaeIreotgeGolratna",
+      "text": "백엔드 — 왜 이렇게 골랐나",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.peulraetpomIOSAndroidBackendEijeonteu",
-      "text": "플랫폼 (iOS, Android, backend) 에이전트",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._3Gae",
-      "text": "3개",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.dijainYeondongEijeonteu",
-      "text": "· 디자인 연동 에이전트",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._1Gae",
-      "text": "1개",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.dongjakBangsik",
-      "text": "동작 방식",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.dijain",
-      "text": "디자인",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.claudeDesignAepDijainPeurototaipJejak",
-      "text": "Claude Design 앱 디자인 프로토타입 제작",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwamyeonBeonyeok",
-      "text": "화면 번역",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.htmlHwamyeoneulGakNeitibeuEijeonteugaIOS",
-      "text": "html 화면을 각 네이티브 에이전트가 iOS · Android 언어로 번역",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.seobeoInpeura",
-      "text": "서버 인프라",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jujeGineungYesangGyumoreulInteobyuroMutgo",
-      "text": "주제 · 기능 · 예상 규모를 인터뷰로 묻고 인프라 구성 선택",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aPIYaksok",
-      "text": "API 약속",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwamyeonePilyohanDeiteoreulBogoAepSeobeo",
-      "text": "화면에 필요한 데이터를 보고 앱·서버 API 정의",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gongyongPailSaengseong",
-      "text": "공용 파일 생성",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aPIJeonguiDijainTokeunMunguAikoneul",
-      "text": "API 정의 · 디자인 토큰 · 문구 · 아이콘을 파일로 전달",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gaebalGeomsa",
-      "text": "개발 · 검사",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin",
-      "text": "세 에이전트가 개발, 정합성을 프로그램이 확인 후 사람이 승인하면 합침",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.keiseuSeuteodi1",
-      "text": "케이스 스터디 1",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.uIUXGuhyeonJeonghapseongeulWihanGyuchik",
-      "text": "UI / UX 구현 정합성을 위한 규칙 설계",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.munje",
-      "text": "문제",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.claudeDesignINaebonaeneunHTMLEun",
-      "text": "Claude Design이 내보내는 HTML은 브라우저용 프로토타입이라, 구현 에이전트에 그대로 넘기기엔 걸러지지 않은 것이 많았음",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwamyeon5Gaega917JulPail",
-      "text": "화면 5개가 917줄 파일 하나에 상태 분기로 합쳐져 있음",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.seosikiJeonbuInrainStyle166Gae",
-      "text": "서식이 전부 인라인(style 166개, class 0개)이라 재사용 컴포넌트 개념이 없음",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aepeEolneunPeurototaipJangsikiSeokyeoIteum",
-      "text": "앱에 없는 프로토타입 장식이 섞여 있음 (가짜 상태바 · 홈 인디케이터 · 스마트폰 프레임 · 런타임 JS)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jeopgeun",
-      "text": "접근",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.makeudaunGibanSanmunEuroIrueojinSoft",
-      "text": "마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro",
-      "text": "수치화된 문서·산출물을 코드 기반 파이프라인으로 생성",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo",
-      "text": "하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.guhyeon",
-      "text": "구현",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._1ClaudeDesignUiHandoffPaekijireul",
-      "text": "1. Claude Design의 handoff 패키지를 정제 — HTML → 레이아웃 트리 → 네이티브",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gateunYosoGap20MunguSaek",
-      "text": "같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jeomseonMitjul",
-      "text": "점선 밑줄",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun",
-      "text": "부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.claudeDesignHTMLDesignProjectForest",
-      "text": "① Claude Design HTML · design/project/forest.dc.html",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.divStyleDisplayFlexFlexDirection",
-      "text": "<div style=\"display:flex; flex-direction:column;",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gap20px",
-      "text": "gap:20px",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.divStyleDisplayFlexJustifyContent",
-      "text": "\"> <div style=\"display:flex; justify-content:space-between\"> <span style=\" font-family:var(--font-heading);",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.fontSize20px",
-      "text": "font-size:20px",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.colorVarColorAccent300",
-      "text": "color:var(--color-accent-300)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.t28f195",
-      "text": "\">",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.forest2",
-      "text": "forest",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.styleWidth40pxHeight40pxDiv",
-      "text": "style=\"width:40px;height:40px\"> </div>",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.seobeogaMandeunReiautTeuriDesignDerived",
-      "text": "② 서버가 만든 레이아웃 트리 · design/derived/layout/home.json",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gap20px2",
-      "text": "\"gap\": \"20px\"",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.textStringsHomeForest",
-      "text": "\"text\": \"Strings.Home.forest\"",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.fontSize20px2",
-      "text": "\"font-size\": \"20px\"",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.colorDesignTokensColorAccent300",
-      "text": "\"color\": \"DesignTokens.Color.Accent._300\"",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.onClickOpenSettings",
-      "text": "\"on_click\": \"openSettings\"",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.iOSEijeonteugaOmginSwiftUIAppsIos",
-      "text": "③ iOS 에이전트가 옮긴 SwiftUI · apps/ios/Forest/Screens/HomeView.swift",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.vStackAlignmentLeading",
-      "text": "VStack(alignment: .leading,",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.spacing20",
-      "text": "spacing: 20",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.textStringsHomeForest2",
-      "text": "Text(Strings.Home.forest)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.fontTypographyHeading20",
-      "text": ".font(Typography.heading(20))",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.foregroundStylePaletteAccent300",
-      "text": ".foregroundStyle(Palette.accent300)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.buttonActionModelOpenSettings",
-      "text": "Button(action: model.openSettings)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.androidEijeonteugaOmginComposeAppsAndroid",
-      "text": "④ Android 에이전트가 옮긴 Compose · apps/android/.../ui/screens/HomeScreen.kt",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.columnScCamelVerticalArrangement",
-      "text": "Column( sc-camel-vertical-arrangement =",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.arrangementSpacedBy20Dp",
-      "text": "Arrangement.spacedBy(20.dp)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.textTextStringsHomeForest",
-      "text": "Text(text = Strings.Home.forest,",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.styleTypographyHeading20Sp",
-      "text": "style = Typography.heading(20.sp)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.colorPaletteAccent300",
-      "text": "color = Palette.accent300",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.iconButtonOnClickModelOpenSettings",
-      "text": "IconButton(onClick = model::openSettings)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon",
-      "text": "정제 전후의 입력을 숫자로 보면",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._917JulHanPail",
-      "text": "917줄 한 파일",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwamyeondangTeuri4Gae321243",
-      "text": "→ 화면당 트리 4개 (321 · 243 · 151 · 104줄)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.saekRiteoreol119Gae",
-      "text": "색 리터럴 119개",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._0Gae",
-      "text": "→ 0개",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.ireumEoldeonMunguAikonDongjak",
-      "text": "이름 없던 문구 · 아이콘 · 동작",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.mungu80Aikon10Haendeulreo25",
-      "text": "→ 문구 80 · 아이콘 10 · 핸들러 25 · 컴포넌트 31",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.peurototaipJangsik",
-      "text": "프로토타입 장식",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jeondalAnHam",
-      "text": "→ 전달 안 함",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._2SeobeogaGongtongRisoseureulGakPeulraetpome",
-      "text": "2. 서버가 공통 리소스를 각 플랫폼에 맞게 상수 파일로 생성",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.sharedGenerated",
-      "text": "shared/generated/",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.eGateunNaeyongiSwiftKotlinEuro",
-      "text": "에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.apiRoutesScreensDesignTokensIcons",
-      "text": "ApiRoutes · Screens · DesignTokens · Icons",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.doDuEoneoroSaengseongdoepnida",
-      "text": "도 두 언어로 생성됩니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.stringsSwift",
-      "text": "Strings.swift",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.stringsKt",
-      "text": "Strings.kt",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gyeolgwa",
-      "text": "결과",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun",
-      "text": "같은 화면을 만드는 데 에이전트가 쓰는 비용이 줄었고, 결과물은 더 디자인에 가까워졌습니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.seongneungGeomjeungHandoffPackageJeongjeJeonhu",
-      "text": "성능 검증 — Handoff package 정제 전후 A/B",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.homeStatsIOSAndroid2Hoe",
-      "text": "home · stats × iOS · Android × 2회 = 16회",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aWonbonHTML57KB",
-      "text": "A · 원본 HTML (57KB)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.bJeongjehanReiautTeuri",
-      "text": "B · 정제한 레이아웃 트리",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.tokeunPyeonggyun",
-      "text": "토큰 (평균)",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._905k",
-      "text": "90.5k",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._551k",
-      "text": "55.1k",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._39",
-      "text": "−39%",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwamyeonJeonghapseong",
-      "text": "화면 정합성",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._8BeonJung7BeonHwamyeoneul",
-      "text": "8번 중 7번 화면을 제 마음대로 바꿈 — 조건부 영역을 항상 표시, 정해진 색 대신 임의 색",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.ppatteurinGeonChuchulgigaTeurieAnDameun",
-      "text": "빠뜨린 건 추출기가 트리에 안 담은 속성뿐 → 이후 스타일 속성을 전부 담는 무손실 방식으로 개선",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gateunHwamyeoneulGateunModelroGuhyeonhageHago",
-      "text": "같은 화면을 같은 모델로 구현하게 하고",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.ipryeokman",
-      "text": "입력만",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi",
-      "text": "바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.uIUXGuhyeonJeonghapseongBigyo",
-      "text": "UI / UX 구현 정합성 비교",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.oenjjokbuteoBReiautTeuriAHTML",
-      "text": "왼쪽부터 B 레이아웃 트리 · A HTML 직접 변환 · 인터랙티브 프로토타입 · 클릭하면 확대",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.onbodingBeoteunWichiYeobaekiAEseo",
-      "text": "온보딩 — 버튼 위치·여백이 A에서 프로토타입과 달라짐",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.homHadanChucheonMiksingBaechiwaImiji",
-      "text": "홈 — 하단 추천 믹싱 배치와 이미지 스타일 불일치",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.saundeuTaimeoDeuropdaunSiUIKkaejim",
-      "text": "사운드 — 타이머 드롭다운 시 UI 깨짐",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.girokHadanSafeAreaMitJeongryeoliUidowa",
-      "text": "기록 — 하단 SafeArea 및 정렬이 의도와 다르게 구현됨",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul",
-      "text": "그 외 — 버튼 터치영역, 바텀시트 핸들 드래그, 스크롤 인디케이터 미숨김",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.keiseuSeuteodi2",
-      "text": "케이스 스터디 2",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.baekendeuInpeuraSeupekMunseoMandeulgi",
-      "text": "백엔드 인프라 스펙 문서 만들기",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.baekendeuInpeuraGuseongeunJuyoGineungYecheuk",
-      "text": "백엔드 인프라 구성은 주요 기능, 예측 사용자 규모, 예산 등에 따라 가변적이라 번거로움이 느껴졌고, 이를 돕는 인터뷰 프로세스가 필요했음. 사용자 니즈를 파악해 과한 서버 구성을 피하기 위함도 있음.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui",
-      "text": "에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.bogiSwipgePyoroJean",
-      "text": "보기 쉽게 표로 제안",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge",
-      "text": "하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.inpeuraGyeoljeong4DangyeInteobyuGak",
-      "text": "인프라 결정 — 4단계 인터뷰, 각 단계가 끝나야 다음으로",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._1Seutaek",
-      "text": "1 스택",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.peulraetpomgwaBaekendeuEoneoreulHubo23",
-      "text": "플랫폼과 백엔드 언어를 후보 2~3개로 좁혀 선택",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._2Gyumo",
-      "text": "2 규모",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.yesangMAUDAUReulSayongjagaDaeryak",
-      "text": "예상 MAU · DAU를 사용자가 대략 입력",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._3HuboChurigi",
-      "text": "3 후보 추리기",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._12GaeJohapJungGeuGyumoe",
-      "text": "12개 조합 중 그 규모에 맞는 5개만 남김",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._4YogeumJohoe",
-      "text": "4 요금 조회",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gongsikYogeumPeijimanIkeumKaesiEoli",
-      "text": "공식 요금 페이지만 읽음. 캐시 없이 매번 새로",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aPIMyeongse",
-      "text": "API 명세",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.inpeuragaJeonghaejimyeonHwamyeonHTMLGwaGaebal",
-      "text": "인프라가 정해지면 화면 HTML과 개발 문서를 읽고,",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gakHwamyeoniPilyoroHaneunDeiteo",
-      "text": "각 화면이 필요로 하는 데이터",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.eseoEndeupointeureulPpopa",
-      "text": "에서 엔드포인트를 뽑아",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.openapiYaml",
-      "text": "openapi.yaml",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye",
-      "text": "초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.openapi303InfoTitle",
-      "text": "openapi: 3.0.3 info: title: forest API description: | 디자인 화면 4개(onboarding · home · sound · stats)와 공유 컴포넌트가 필요로 하는 데이터만 담는다. 범위 밖(디자인에 화면이 없어 만들지 않는다): - 로그인/회원가입 화면이 없다 → 기기 익명 등록으로 계정을 만들고 JWT 를 발급한다. - 확장 음원 브라우징 UI 가 없다 → 카탈로그·다운로드 URL 만 제공한다. - 결제/구독 구매 화면이 없다 → 구독 상태는 읽기 전용, 관리·내역은 외부 링크로 넘긴다. paths: /auth/device: post: operationId: registerDevice summary: 기기 익명 등록 — 계정 생성 또는 기존 계정 재획득 후 토큰 발급",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan",
-      "text": "월 비용 · 확인일 · 종속성 · 장단점을 싼 값 순으로 정리한 비교표를 세션에서 바로 확인",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gyumo",
-      "text": "규모",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.sogyumo",
-      "text": "소규모",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.mAU10000DAU1000",
-      "text": "(MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.id",
-      "text": "id",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.db",
-      "text": "db",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.auth",
-      "text": "auth",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hosting",
+      "key": "forest.hosting",
       "text": "hosting",
-      "screen": "shared",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.wolBiyong",
-      "text": "월 비용",
-      "screen": "shared",
+      "key": "forest.cloudflareWorkersHono",
+      "text": "Cloudflare Workers + Hono",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.hwakinil",
-      "text": "확인일",
-      "screen": "shared",
+      "key": "forest.seobeoreulJikjeopGuchukUnyeonghaneunDaesinKodeuman",
+      "text": "서버를 직접 구축·운영하는 대신 코드만 올리면 전 세계 엣지에서 바로 실행되는 서버리스 플랫폼. Hono는 그 위에서 API를 간단하게 짜게 해주는 가벼운 프레임워크. 서버 관리 부담이 없고, 이 규모 트래픽엔 비용도 가장 저렴해서 선택.",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.jongsokseong",
-      "text": "종속성",
-      "screen": "shared",
+      "key": "forest.db",
+      "text": "db",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.awsServerless",
-      "text": "aws-serverless",
-      "screen": "shared",
+      "key": "forest.d1SQLite",
+      "text": "D1 (SQLite)",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.dynamoDB",
-      "text": "DynamoDB",
-      "screen": "shared",
+      "key": "forest.workersAneseoBaroSseulSuItneun",
+      "text": "Workers 안에서 바로 쓸 수 있는 DB라 별도 연결 설정이 필요 없음. 이 규모 트래픽은 무료 티어만으로도 충분해서 선택.",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.cognito",
-      "text": "Cognito",
-      "screen": "shared",
+      "key": "forest.storage",
+      "text": "storage",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.lambdaAPIGW",
-      "text": "Lambda + API GW",
-      "screen": "shared",
+      "key": "forest.r2EumwonJeojangso",
+      "text": "R2 (음원 저장소)",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared._05",
-      "text": "$0-5",
-      "screen": "shared",
+      "key": "forest.pailNaeryeobateulTtaeButneunJeonsongEgress",
+      "text": "파일 내려받을 때 붙는 전송(egress) 비용이 없음. AAC 256kbps · 90초 루프 = 개당 약 2.75MB 기준, 무료 10GB로 확장 음원 약 3,700곡까지 저장 가능. 비용 부담이 사실상 없다고 판단.",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.nopeum",
-      "text": "높음",
-      "screen": "shared",
+      "key": "forest.auth",
+      "text": "auth",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.vpsDocker",
-      "text": "vps-docker",
-      "screen": "shared",
+      "key": "forest.jacheJWTInjeungIkmyeongRogeuin",
+      "text": "자체 JWT 인증 (익명 로그인)",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.postgreSQLJache",
-      "text": "PostgreSQL (자체)",
-      "screen": "shared",
+      "key": "forest.hoewongaipJeolchaEoliGigimaneuroBaroSseul",
+      "text": "회원가입 절차 없이 기기만으로 바로 쓸 수 있게 함. 사용자가 부담 없이 접근하도록 하려는 목적. 추후 SNS 로그인을 붙여 정보 이관할 수 있도록 동기화 구현 예정.",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.jacheJWT",
-      "text": "자체 JWT",
-      "screen": "shared",
+      "key": "forest.iOSAndroidNaranhi",
+      "text": "iOS · Android 나란히",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.vPSHetzner",
-      "text": "VPS (Hetzner)",
-      "screen": "shared",
+      "key": "forest.gateunHandoffPaekijieseoDuPeulraetpomiDongsie",
+      "text": "같은 handoff 패키지에서 두 플랫폼이 동시에 만들어졌습니다. 항목에 마우스를 올리면 짝이 되는 반대편 항목이 함께 표시됩니다.",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared._410",
-      "text": "$4-10",
-      "screen": "shared",
+      "key": "forest.iOSSwiftUI",
+      "text": "iOS · SwiftUI",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.nateum",
-      "text": "낮음",
-      "screen": "shared",
+      "key": "forest.hwamyeon4GaeOnbodingHomSaundeu",
+      "text": "화면 4개(온보딩 · 홈 · 사운드 · 기록)와 재생 중 화면 · 믹스 시트 · 설정 시트 등 오버레이 컴포넌트 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.firebase",
-      "text": "firebase",
-      "screen": "shared",
+      "key": "forest.aVAudioEngineGiban5TeuraekDongsiMiksing2",
+      "text": "AVAudioEngine 기반 5트랙 동시 믹싱 플레이어 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.firestore",
-      "text": "Firestore",
-      "screen": "shared",
+      "key": "forest.aPITongsinDeiteoModelOpeurainMokeop",
+      "text": "API 통신 · 데이터 모델 · 오프라인 목업 폴백 계층 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.firebaseAuth",
-      "text": "Firebase Auth",
-      "screen": "shared",
+      "key": "forest.saeksangTaipoGangyeokDeungDijainTokeun",
+      "text": "색상 · 타이포 · 간격 등 디자인 토큰 전용 테마 시스템 구성",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.cloudRun",
-      "text": "Cloud Run",
-      "screen": "shared",
+      "key": "forest.androidJetpackCompose",
+      "text": "Android · Jetpack Compose",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared._010",
-      "text": "$0-10",
-      "screen": "shared",
+      "key": "forest.iOSWaDongilhanHwamyeonKeomponeonteuGuseongeul",
+      "text": "iOS와 동일한 화면 · 컴포넌트 구성을 Compose로 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.railway",
-      "text": "railway",
-      "screen": "shared",
+      "key": "forest.odioMikseuPeulreieoGuhyeon",
+      "text": "오디오 믹스 플레이어 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.postgreSQLRailway",
-      "text": "PostgreSQL (Railway)",
-      "screen": "shared",
+      "key": "forest.aPIKeulraieonteuOpeurainMokeopPolbaekGyecheung",
+      "text": "API 클라이언트, 오프라인 목업 폴백 계층 구현",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.railway2",
-      "text": "Railway",
-      "screen": "shared",
+      "key": "forest.aepSangtaeByumodelgwaDanwiTeseuteu4",
+      "text": "앱 상태 뷰모델과 단위 테스트 4개, 내비게이션 UI 테스트 1개 작성",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared._525",
-      "text": "$5-25",
-      "screen": "shared",
+      "key": "forest.iAepeulMandeunDogu",
+      "text": "이 앱을 만든 도구",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.supabaseFly",
-      "text": "supabase-fly",
-      "screen": "shared",
+      "key": "forest.handoffAgentSePeulraetpomeulHanBeone",
+      "text": "handoff-agent — 세 플랫폼을 한 번에 구현하는 플러그인",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.postgreSQLSupabase",
-      "text": "PostgreSQL (Supabase)",
-      "screen": "shared",
+      "key": "forest.handoffAgentSangse",
+      "text": "handoff-agent 상세 →",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.supabaseAuth",
-      "text": "Supabase Auth",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.flyIo",
-      "text": "Fly.io",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._030",
-      "text": "$0-30",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.jung",
-      "text": "중",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero",
-      "text": "인터뷰가 끝나면 요약표로 정리되어 다음 단계로 넘어가기 전 사용자에게 세션에서 제공됩니다.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.guhyeonWanryoHuBaekendeuSujeongiPilyohan",
-      "text": "구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.sayongjaegeBogoseoroJechul",
-      "text": "사용자에게 보고서로 제출",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye",
-      "text": "하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul",
-      "text": "보고서가 필요한 이유: 에이전트의 자율성이 차이를 만들기 때문에 이를 아예 강제하기 어렵고, 설계대로 작성해도 추가 요구사항이 발생할 수 있음은 당연한 일.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.keiseuSeuteodi3",
-      "text": "케이스 스터디 3",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji",
-      "text": "공개 배포 전제 — 시크릿을 파이프라인에 들이지 않기",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.aPIKiMingamJeongbogaKeulraudeuSesyeongwa",
-      "text": "API 키, 민감 정보가 클라우드 세션과 공개 저장소에 노출될 수 있는 환경 — 읽는 순간 컨텍스트에 실리고 저장소 기록에도 남음.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.mingamGaleul",
-      "text": "민감 값을",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwangyeongbyeonsuroman",
-      "text": "환경변수로만",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago",
-      "text": "관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hukeuroMakneunda",
-      "text": "훅으로 막는다",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung",
-      "text": "생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared._0Gae2",
-      "text": "0개",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon",
-      "text": "— 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.eijeonteuuiYudoYesi",
-      "text": "에이전트의 유도 예시",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.wranglerTomlUiREPLACEWITHD1",
-      "text": "· wrangler.toml 의 REPLACE_WITH_D1_DATABASE_ID → `npx wrangler d1 create forest` 로 만든 실제 id 로 교체 · JWT_SECRET 은 Worker 시크릿으로만 넣는다 → npx wrangler secret put JWT_SECRET (32바이트 이상 랜덤) → 저장소에는 자리표시자만 있다 · 배포 전 원격 마이그레이션 적용 → npx wrangler d1 migrations apply forest --remote",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.iDoguroMandeulgoItneunSeobiseu",
-      "text": "이 도구로 만들고 있는 서비스",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.forestSaundeuMiksingJipjungMyeongsangAep",
-      "text": "Forest — 사운드 믹싱 집중 & 명상 앱",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.daeumPeurojekteu",
-      "text": "다음 프로젝트 →",
-      "screen": "shared",
-      "source": "markup"
-    },
-    {
-      "key": "shared.gaeyo",
+      "key": "forest.gaeyo",
       "text": "개요",
-      "screen": "shared",
+      "screen": "forest",
       "source": "markup"
     },
     {
-      "key": "shared.guseong",
+      "key": "forest.gineungSeukil",
+      "text": "기능 · 스킬",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.baekendeu",
+      "text": "백엔드",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "forest.iOSAndroid",
+      "text": "iOS · Android",
+      "screen": "forest",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._202609ClaudeCodePeulreogeuinPython",
+      "text": "2026.09 ~ · Claude Code 플러그인 · Python MCP",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.claudeDesignUiHandoffPaekijireulGibaneuro",
+      "text": "Claude Design의 handoff 패키지를 기반으로",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.iOSAndroidBackendSePeulraetpomeulHan",
+      "text": "iOS · Android · backend 세 플랫폼을 한 번에 구현하는 플러그인",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.modeunGeDaJeonghaejyeoItdamyeonSe",
+      "text": "모든 게 다 정해져 있다면 세 플랫폼을 한 번에 개발해도 되지 않을까?",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.geurigoGeuJeonghaejinGeotISuchiro",
+      "text": "그리고 그 \"정해진 것\"이 수치로 말하는 정제된 산출물이라면, 에이전트가 각자의 언어로 옮기기만 해도 구현 정합성을 보장할 수 있지 않을까?",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.peulreogeuinGuseong",
+      "text": "플러그인 구성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.dijainJeongjeBaekendeuInpeuraSeupekInteobyu",
+      "text": "디자인 정제 · 백엔드 인프라 스펙 인터뷰 · 중간 산출물 관리를",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.mCPSeobeo",
+      "text": "MCP 서버",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.roGuchuk",
+      "text": "로 구축",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jungganSanchulmuleunGakPeulraetpomeMatneun",
+      "text": "중간 산출물은 각 플랫폼에 맞는",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.swiftKotlin",
+      "text": "Swift / Kotlin",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim",
+      "text": "등 언어로 생성되어 에이전트에 넘겨짐",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.pythonGibanMCPGa",
+      "text": "Python 기반 MCP가",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo",
+      "text": "기반 백엔드 스펙을 제안 / 조립하여 문서 생성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.peulraetpomIOSAndroidBackendEijeonteu",
+      "text": "플랫폼 (iOS, Android, backend) 에이전트",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._3Gae",
+      "text": "3개",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.dijainYeondongEijeonteu",
+      "text": "· 디자인 연동 에이전트",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._1Gae",
+      "text": "1개",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.dongjakBangsik",
+      "text": "동작 방식",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.dijain",
+      "text": "디자인",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.claudeDesignAepDijainPeurototaipJejak",
+      "text": "Claude Design 앱 디자인 프로토타입 제작",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwamyeonBeonyeok",
+      "text": "화면 번역",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIOS",
+      "text": "html 화면을 각 네이티브 에이전트가 iOS · Android 언어로 번역",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.seobeoInpeura",
+      "text": "서버 인프라",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo",
+      "text": "주제 · 기능 · 예상 규모를 인터뷰로 묻고 인프라 구성 선택",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aPIYaksok",
+      "text": "API 약속",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo",
+      "text": "화면에 필요한 데이터를 보고 앱·서버 API 정의",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gongyongPailSaengseong",
+      "text": "공용 파일 생성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aPIJeonguiDijainTokeunMunguAikoneul",
+      "text": "API 정의 · 디자인 토큰 · 문구 · 아이콘을 파일로 전달",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gaebalGeomsa",
+      "text": "개발 · 검사",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin",
+      "text": "세 에이전트가 개발, 정합성을 프로그램이 확인 후 사람이 승인하면 합침",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.keiseuSeuteodi1",
+      "text": "케이스 스터디 1",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.uIUXGuhyeonJeonghapseongeulWihanGyuchik",
+      "text": "UI / UX 구현 정합성을 위한 규칙 설계",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.munje",
+      "text": "문제",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.claudeDesignINaebonaeneunHTMLEun",
+      "text": "Claude Design이 내보내는 HTML은 브라우저용 프로토타입이라, 구현 에이전트에 그대로 넘기기엔 걸러지지 않은 것이 많았음",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwamyeon5Gaega917JulPail",
+      "text": "화면 5개가 917줄 파일 하나에 상태 분기로 합쳐져 있음",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.seosikiJeonbuInrainStyle166Gae",
+      "text": "서식이 전부 인라인(style 166개, class 0개)이라 재사용 컴포넌트 개념이 없음",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum",
+      "text": "앱에 없는 프로토타입 장식이 섞여 있음 (가짜 상태바 · 홈 인디케이터 · 스마트폰 프레임 · 런타임 JS)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jeopgeun",
+      "text": "접근",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.makeudaunGibanSanmunEuroIrueojinSoft",
+      "text": "마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro",
+      "text": "수치화된 문서·산출물을 코드 기반 파이프라인으로 생성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo",
+      "text": "하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.guhyeon",
+      "text": "구현",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._1ClaudeDesignUiHandoffPaekijireul",
+      "text": "1. Claude Design의 handoff 패키지를 정제 — HTML → 레이아웃 트리 → 네이티브",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gateunYosoGap20MunguSaek",
+      "text": "같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jeomseonMitjul",
+      "text": "점선 밑줄",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun",
+      "text": "부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.claudeDesignHTMLDesignProjectForest",
+      "text": "① Claude Design HTML · design/project/forest.dc.html",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.divStyleDisplayFlexFlexDirection",
+      "text": "<div style=\"display:flex; flex-direction:column;",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gap20px",
+      "text": "gap:20px",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.divStyleDisplayFlexJustifyContent",
+      "text": "\"> <div style=\"display:flex; justify-content:space-between\"> <span style=\" font-family:var(--font-heading);",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.fontSize20px",
+      "text": "font-size:20px",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.colorVarColorAccent300",
+      "text": "color:var(--color-accent-300)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.t28f195",
+      "text": "\">",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.forest2",
+      "text": "forest",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.styleWidth40pxHeight40pxDiv",
+      "text": "style=\"width:40px;height:40px\"> </div>",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.seobeogaMandeunReiautTeuriDesignDerived",
+      "text": "② 서버가 만든 레이아웃 트리 · design/derived/layout/home.json",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gap20px2",
+      "text": "\"gap\": \"20px\"",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.textStringsHomeForest",
+      "text": "\"text\": \"Strings.Home.forest\"",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.fontSize20px2",
+      "text": "\"font-size\": \"20px\"",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.colorDesignTokensColorAccent300",
+      "text": "\"color\": \"DesignTokens.Color.Accent._300\"",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.onClickOpenSettings",
+      "text": "\"on_click\": \"openSettings\"",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.iOSEijeonteugaOmginSwiftUIAppsIos",
+      "text": "③ iOS 에이전트가 옮긴 SwiftUI · apps/ios/Forest/Screens/HomeView.swift",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.vStackAlignmentLeading",
+      "text": "VStack(alignment: .leading,",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.spacing20",
+      "text": "spacing: 20",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.textStringsHomeForest2",
+      "text": "Text(Strings.Home.forest)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.fontTypographyHeading20",
+      "text": ".font(Typography.heading(20))",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.foregroundStylePaletteAccent300",
+      "text": ".foregroundStyle(Palette.accent300)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.buttonActionModelOpenSettings",
+      "text": "Button(action: model.openSettings)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.androidEijeonteugaOmginComposeAppsAndroid",
+      "text": "④ Android 에이전트가 옮긴 Compose · apps/android/.../ui/screens/HomeScreen.kt",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.columnVerticalArrangement",
+      "text": "Column( verticalArrangement =",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.arrangementSpacedBy20Dp",
+      "text": "Arrangement.spacedBy(20.dp)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.textTextStringsHomeForest",
+      "text": "Text(text = Strings.Home.forest,",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.styleTypographyHeading20Sp",
+      "text": "style = Typography.heading(20.sp)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.colorPaletteAccent300",
+      "text": "color = Palette.accent300",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.iconButtonOnClickModelOpenSettings",
+      "text": "IconButton(onClick = model::openSettings)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon",
+      "text": "정제 전후의 입력을 숫자로 보면",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._917JulHanPail",
+      "text": "917줄 한 파일",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwamyeondangTeuri4Gae321243",
+      "text": "→ 화면당 트리 4개 (321 · 243 · 151 · 104줄)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.saekRiteoreol119Gae",
+      "text": "색 리터럴 119개",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._0Gae",
+      "text": "→ 0개",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.ireumEoldeonMunguAikonDongjak",
+      "text": "이름 없던 문구 · 아이콘 · 동작",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.mungu80Aikon10Haendeulreo25",
+      "text": "→ 문구 80 · 아이콘 10 · 핸들러 25 · 컴포넌트 31",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.peurototaipJangsik",
+      "text": "프로토타입 장식",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jeondalAnHam",
+      "text": "→ 전달 안 함",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome",
+      "text": "2. 서버가 공통 리소스를 각 플랫폼에 맞게 상수 파일로 생성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.sharedGenerated",
+      "text": "shared/generated/",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.eGateunNaeyongiSwiftKotlinEuro",
+      "text": "에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.apiRoutesScreensDesignTokensIcons",
+      "text": "ApiRoutes · Screens · DesignTokens · Icons",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.doDuEoneoroSaengseongdoepnida",
+      "text": "도 두 언어로 생성됩니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.stringsSwift",
+      "text": "Strings.swift",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.stringsKt",
+      "text": "Strings.kt",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gyeolgwa",
+      "text": "결과",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun",
+      "text": "같은 화면을 만드는 데 에이전트가 쓰는 비용이 줄었고, 결과물은 더 디자인에 가까워졌습니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu",
+      "text": "성능 검증 — Handoff package 정제 전후 A/B",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.homeStatsIOSAndroid2Hoe",
+      "text": "home · stats × iOS · Android × 2회 = 16회",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aWonbonHTML57KB",
+      "text": "A · 원본 HTML (57KB)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.bJeongjehanReiautTeuri",
+      "text": "B · 정제한 레이아웃 트리",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.tokeunPyeonggyun",
+      "text": "토큰 (평균)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._905k",
+      "text": "90.5k",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._551k",
+      "text": "55.1k",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._39",
+      "text": "−39%",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwamyeonJeonghapseong",
+      "text": "화면 정합성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._8BeonJung7BeonHwamyeoneul",
+      "text": "8번 중 7번 화면을 제 마음대로 바꿈 — 조건부 영역을 항상 표시, 정해진 색 대신 임의 색",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun",
+      "text": "빠뜨린 건 추출기가 트리에 안 담은 속성뿐 → 이후 스타일 속성을 전부 담는 무손실 방식으로 개선",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago",
+      "text": "같은 화면을 같은 모델로 구현하게 하고",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.ipryeokman",
+      "text": "입력만",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi",
+      "text": "바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.uIUXGuhyeonJeonghapseongBigyo",
+      "text": "UI / UX 구현 정합성 비교",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.oenjjokbuteoBReiautTeuriAHTML",
+      "text": "왼쪽부터 B 레이아웃 트리 · A HTML 직접 변환 · 인터랙티브 프로토타입 · 클릭하면 확대",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.onbodingBeoteunWichiYeobaekiAEseo",
+      "text": "온보딩 — 버튼 위치·여백이 A에서 프로토타입과 달라짐",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.homHadanChucheonMiksingBaechiwaImiji",
+      "text": "홈 — 하단 추천 믹싱 배치와 이미지 스타일 불일치",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.saundeuTaimeoDeuropdaunSiUIKkaejim",
+      "text": "사운드 — 타이머 드롭다운 시 UI 깨짐",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa",
+      "text": "기록 — 하단 SafeArea 및 정렬이 의도와 다르게 구현됨",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul",
+      "text": "그 외 — 버튼 터치영역, 바텀시트 핸들 드래그, 스크롤 인디케이터 미숨김",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.keiseuSeuteodi2",
+      "text": "케이스 스터디 2",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi",
+      "text": "백엔드 인프라 스펙 문서 만들기",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk",
+      "text": "백엔드 인프라 구성은 주요 기능, 예측 사용자 규모, 예산 등에 따라 가변적이라 번거로움이 느껴졌고, 이를 돕는 인터뷰 프로세스가 필요했음. 사용자 니즈를 파악해 과한 서버 구성을 피하기 위함도 있음.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui",
+      "text": "에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.bogiSwipgePyoroJean",
+      "text": "보기 쉽게 표로 제안",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge",
+      "text": "하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.inpeuraGyeoljeong4DangyeInteobyuGak",
+      "text": "인프라 결정 — 4단계 인터뷰, 각 단계가 끝나야 다음으로",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._1Seutaek",
+      "text": "1 스택",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.peulraetpomgwaBaekendeuEoneoreulHubo23",
+      "text": "플랫폼과 백엔드 언어를 후보 2~3개로 좁혀 선택",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._2Gyumo",
+      "text": "2 규모",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.yesangMAUDAUReulSayongjagaDaeryak",
+      "text": "예상 MAU · DAU를 사용자가 대략 입력",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._3HuboChurigi",
+      "text": "3 후보 추리기",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._12GaeJohapJungGeuGyumoe",
+      "text": "12개 조합 중 그 규모에 맞는 5개만 남김",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._4YogeumJohoe",
+      "text": "4 요금 조회",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gongsikYogeumPeijimanIkeumKaesiEoli",
+      "text": "공식 요금 페이지만 읽음. 캐시 없이 매번 새로",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aPIMyeongse",
+      "text": "API 명세",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.inpeuragaJeonghaejimyeonHwamyeonHTMLGwaGaebal",
+      "text": "인프라가 정해지면 화면 HTML과 개발 문서를 읽고,",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gakHwamyeoniPilyoroHaneunDeiteo",
+      "text": "각 화면이 필요로 하는 데이터",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.eseoEndeupointeureulPpopa",
+      "text": "에서 엔드포인트를 뽑아",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.openapiYaml",
+      "text": "openapi.yaml",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye",
+      "text": "초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.openapi303InfoTitle",
+      "text": "openapi: 3.0.3 info: title: forest API description: | 디자인 화면 4개(onboarding · home · sound · stats)와 공유 컴포넌트가 필요로 하는 데이터만 담는다. 범위 밖(디자인에 화면이 없어 만들지 않는다): - 로그인/회원가입 화면이 없다 → 기기 익명 등록으로 계정을 만들고 JWT 를 발급한다. - 확장 음원 브라우징 UI 가 없다 → 카탈로그·다운로드 URL 만 제공한다. - 결제/구독 구매 화면이 없다 → 구독 상태는 읽기 전용, 관리·내역은 외부 링크로 넘긴다. paths: /auth/device: post: operationId: registerDevice summary: 기기 익명 등록 — 계정 생성 또는 기존 계정 재획득 후 토큰 발급",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan",
+      "text": "월 비용 · 확인일 · 종속성 · 장단점을 싼 값 순으로 정리한 비교표를 세션에서 바로 확인",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gyumo",
+      "text": "규모",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.sogyumo",
+      "text": "소규모",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.mAU10000DAU1000",
+      "text": "(MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.id",
+      "text": "id",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.wolBiyong",
+      "text": "월 비용",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwakinil",
+      "text": "확인일",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jongsokseong",
+      "text": "종속성",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.awsServerless",
+      "text": "aws-serverless",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.dynamoDB",
+      "text": "DynamoDB",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.cognito",
+      "text": "Cognito",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.lambdaAPIGW",
+      "text": "Lambda + API GW",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._05",
+      "text": "$0-5",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.nopeum",
+      "text": "높음",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.vpsDocker",
+      "text": "vps-docker",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.postgreSQLJache",
+      "text": "PostgreSQL (자체)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jacheJWT",
+      "text": "자체 JWT",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.vPSHetzner",
+      "text": "VPS (Hetzner)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._410",
+      "text": "$4-10",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.nateum",
+      "text": "낮음",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.firebase",
+      "text": "firebase",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.firestore",
+      "text": "Firestore",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.firebaseAuth",
+      "text": "Firebase Auth",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.cloudRun",
+      "text": "Cloud Run",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._010",
+      "text": "$0-10",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.railway",
+      "text": "railway",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.postgreSQLRailway",
+      "text": "PostgreSQL (Railway)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.railway2",
+      "text": "Railway",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._525",
+      "text": "$5-25",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.supabaseFly",
+      "text": "supabase-fly",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.postgreSQLSupabase",
+      "text": "PostgreSQL (Supabase)",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.supabaseAuth",
+      "text": "Supabase Auth",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.flyIo",
+      "text": "Fly.io",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._030",
+      "text": "$0-30",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.jung",
+      "text": "중",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero",
+      "text": "인터뷰가 끝나면 요약표로 정리되어 다음 단계로 넘어가기 전 사용자에게 세션에서 제공됩니다.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.guhyeonWanryoHuBaekendeuSujeongiPilyohan",
+      "text": "구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.sayongjaegeBogoseoroJechul",
+      "text": "사용자에게 보고서로 제출",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye",
+      "text": "하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul",
+      "text": "보고서가 필요한 이유: 에이전트의 자율성이 차이를 만들기 때문에 이를 아예 강제하기 어렵고, 설계대로 작성해도 추가 요구사항이 발생할 수 있음은 당연한 일.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.keiseuSeuteodi3",
+      "text": "케이스 스터디 3",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji",
+      "text": "공개 배포 전제 — 시크릿을 파이프라인에 들이지 않기",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.aPIKiMingamJeongbogaKeulraudeuSesyeongwa",
+      "text": "API 키, 민감 정보가 클라우드 세션과 공개 저장소에 노출될 수 있는 환경 — 읽는 순간 컨텍스트에 실리고 저장소 기록에도 남음.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.mingamGaleul",
+      "text": "민감 값을",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwangyeongbyeonsuroman",
+      "text": "환경변수로만",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago",
+      "text": "관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hukeuroMakneunda",
+      "text": "훅으로 막는다",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung",
+      "text": "생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent._0Gae2",
+      "text": "0개",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon",
+      "text": "— 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.eijeonteuuiYudoYesi",
+      "text": "에이전트의 유도 예시",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.wranglerTomlUiREPLACEWITHD1",
+      "text": "· wrangler.toml 의 REPLACE_WITH_D1_DATABASE_ID → `npx wrangler d1 create forest` 로 만든 실제 id 로 교체 · JWT_SECRET 은 Worker 시크릿으로만 넣는다 → npx wrangler secret put JWT_SECRET (32바이트 이상 랜덤) → 저장소에는 자리표시자만 있다 · 배포 전 원격 마이그레이션 적용 → npx wrangler d1 migrations apply forest --remote",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.iDoguroMandeulgoItneunSeobiseu",
+      "text": "이 도구로 만들고 있는 서비스",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.forestSaundeuMiksingJipjungMyeongsangAep",
+      "text": "Forest — 사운드 믹싱 집중 & 명상 앱",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.daeumPeurojekteu",
+      "text": "다음 프로젝트 →",
+      "screen": "handoffAgent",
+      "source": "markup"
+    },
+    {
+      "key": "handoffAgent.guseong",
       "text": "구성",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "markup"
     },
     {
-      "key": "shared.uIUXJeonghapseong",
+      "key": "handoffAgent.uIUXJeonghapseong",
       "text": "UI/UX 정합성",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "markup"
     },
     {
-      "key": "shared.baekendeuSeupek",
+      "key": "handoffAgent.baekendeuSeupek",
       "text": "백엔드 스펙",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "markup"
     },
     {
-      "key": "shared.sikeuritGyeokri",
+      "key": "handoffAgent.sikeuritGyeokri",
       "text": "시크릿 격리",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "markup"
     },
     {
-      "key": "shared.spanSpanStyleFontSize15px",
+      "key": "handoffAgent.spanSpanStyleFontSize15px",
       "text": "</span> <span style=\"font-size:15px\"> {greetingHole}</span> <div",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "format",
       "params": [
         "greetingHole"
       ]
     },
     {
-      "key": "shared.scCamelOnClick",
+      "key": "handoffAgent.scCamelOnClick",
       "text": "sc-camel-on-click=\"{openSettingsHole}\"",
-      "screen": "shared",
+      "screen": "handoffAgent",
       "source": "format",
       "params": [
         "openSettingsHole"

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'IBM Plex Sans KR',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;
+--bg:#F7F7F5;--surface:#EEF0F2;--card:#FFFFFF;--line:rgba(22,24,29,.14);--line-soft:rgba(22,24,29,.08);--muted:#6B7280;--ink:#16181D;--accent:#2F5BEA;--accent-ink:#FFFFFF;--accent-soft:rgba(47,91,234,.10);--code-bg:#1D1F24;--code-ink:#D5D8DE;--code-dim:#8A909B;--hl:rgba(47,91,234,.12)}
+body[data-theme="mint"]{--bg:#0F1115;--surface:#181C24;--card:#141821;--line:rgba(230,232,236,.16);--line-soft:rgba(230,232,236,.08);--muted:#8B93A1;--ink:#E6E8EC;--accent:#3DDC97;--accent-ink:#0F1115;--accent-soft:rgba(61,220,151,.12);--code-bg:#0A0C10;--code-ink:#C9CED6;--code-dim:#6F7783;--hl:rgba(61,220,151,.14)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+[data-cur="1"]{color:var(--accent)!important;font-weight:600}
+[data-cur="1"] span{color:var(--accent)!important}
+[data-tok]{border-bottom:1px dashed var(--accent);color:var(--accent);cursor:crosshair;border-radius:3px;transition:background .15s}
+[data-tok="1"]{background:var(--hl);box-shadow:0 0 0 1px var(--accent);border-bottom-color:transparent}
+tbody tr{transition:background .15s}tbody tr:hover td{background:var(--hl);box-shadow:inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}tbody tr:hover td:first-child{box-shadow:inset 1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}tbody tr:hover td:last-child{box-shadow:inset -1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}
+pre{margin:0;font:13.5px/1.65 'IBM Plex Mono',monospace;white-space:pre;overflow:auto}
+table{border-collapse:collapse;width:100%;font-size:15px}th{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--muted);text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surface)}td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+</style></helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+  <div style="max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <a href="Resume.dc.html#work" style="font-weight:700;font-size:16px;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)">← 유영훈</a>
+    <div style="display:flex;gap:6px">
+      <span style="background:var(--ink);color:var(--bg);border:1px solid var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600">handoff-agent</span>
+      <a href="Forest.dc.html" style="border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:500;text-decoration:none" style-hover="border-color:var(--accent);color:var(--accent)">Forest</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <a href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer" style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)" style-hover="color:var(--accent)">GitHub ↗</a>
+      <button type="button" onClick="{{ toggleTheme }}" title="테마 전환" style="display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer" style-hover="border-color:var(--accent)"><span style="width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block"></span>{{ themeLabel }}</button>
+    </div>
+  </div>
+</header>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:0">
+
+<main style="min-width:0;padding-right:36px;border-right:1px solid var(--line-soft)">
+
+  <section id="s0" style="padding:56px 0 40px;border-bottom:1px solid var(--line);scroll-margin-top:90px;animation:rise .5s ease both">
+    <div style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">2026.09 ~ · Claude Code 플러그인 · Python MCP</div>
+    <h1 style="margin:10px 0 0;font-size:34px;line-height:1.3;font-weight:700;letter-spacing:-.01em;text-wrap:pretty">Claude Design의 handoff 패키지를 기반으로<br>iOS · Android · backend 세 플랫폼을 한 번에 구현하는 플러그인</h1>
+    <blockquote style="margin:24px 0 0;padding:18px 22px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 10px 10px 0;font-size:17px;line-height:1.75;color:var(--ink);text-wrap:pretty">모든 게 다 정해져 있다면 세 플랫폼을 한 번에 개발해도 되지 않을까?<br>그리고 그 "정해진 것"이 수치로 말하는 정제된 산출물이라면, 에이전트가 각자의 언어로 옮기기만 해도 구현 정합성을 보장할 수 있지 않을까?</blockquote>
+  </section>
+
+  <section id="s1" style="padding:40px 0 0;scroll-margin-top:90px">
+    <h2 style="margin:0;font-size:24px;font-weight:700">플러그인 구성</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.65">
+      <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)">디자인 정제 · 백엔드 인프라 스펙 인터뷰 · 중간 산출물 관리를 <b>MCP 서버</b>로 구축</div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)">중간 산출물은 각 플랫폼에 맞는 <b>Swift / Kotlin</b> 등 언어로 생성되어 에이전트에 넘겨짐</div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)">Python 기반 MCP가 <b>OpenAPI</b> 기반 백엔드 스펙을 제안 / 조립하여 문서 생성</div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)">플랫폼 (iOS, Android, backend) 에이전트 <b>3개</b> · 디자인 연동 에이전트 <b>1개</b></div>
+    </div>
+  </section>
+
+  <section id="s2" style="padding:44px 0 0;scroll-margin-top:90px">
+    <h2 style="margin:0;font-size:24px;font-weight:700">동작 방식</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:14px">
+      <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">1</div><div style="font-weight:700;font-size:14px;margin-top:2px">디자인</div><div style="font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5">Claude Design 앱 디자인 프로토타입 제작</div></div>
+      <a href="#s3" style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--accent);text-decoration:none"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">2</div><div style="font-weight:700;font-size:14px;margin-top:2px">화면 번역</div><div style="font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5">html 화면을 각 네이티브 에이전트가 iOS · Android 언어로 번역</div></a>
+      <a href="#s4" style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--accent);text-decoration:none"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">3</div><div style="font-weight:700;font-size:14px;margin-top:2px">서버 인프라</div><div style="font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5">주제 · 기능 · 예상 규모를 인터뷰로 묻고 인프라 구성 선택</div></a>
+      <a href="#s4" style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card);color:var(--ink);text-decoration:none;transition:border-color .2s" style-hover="border-color:var(--accent);text-decoration:none"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">4</div><div style="font-weight:700;font-size:14px;margin-top:2px">API 약속</div><div style="font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5">화면에 필요한 데이터를 보고 앱·서버 API 정의</div></a>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">5</div><div style="font-weight:700;font-size:14px;margin-top:2px">공용 파일 생성</div><div style="font-size:13.5px;color:var(--muted);margin-top:3px;line-height:1.5">API 정의 · 디자인 토큰 · 문구 · 아이콘을 파일로 전달</div></div>
+      <a href="#s5" style="border:1px solid var(--ink);border-radius:10px;padding:12px;background:var(--ink);color:var(--bg);text-decoration:none;transition:opacity .2s" style-hover="opacity:.85;text-decoration:none"><div style="font:11px 'IBM Plex Mono',monospace;opacity:.7">6</div><div style="font-weight:700;font-size:14px;margin-top:2px">개발 · 검사</div><div style="font-size:13.5px;opacity:.8;margin-top:3px;line-height:1.5">세 에이전트가 개발, 정합성을 프로그램이 확인 후 사람이 승인하면 합침</div></a>
+    </div>
+  </section>
+
+  <section id="s3" style="padding:56px 0 0;scroll-margin-top:90px">
+    <div style="border-top:1px solid var(--line);padding-top:36px">
+      <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">케이스 스터디 1</div>
+      <h2 style="margin:6px 0 0;font-size:28px;line-height:1.3;font-weight:700">UI / UX 구현 정합성을 위한 규칙 설계</h2>
+
+      <div style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px 22px;margin-top:24px;font-size:17px;line-height:1.75">
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">문제</div>
+        <div>Claude Design이 내보내는 HTML은 브라우저용 프로토타입이라, 구현 에이전트에 그대로 넘기기엔 걸러지지 않은 것이 많았음
+          <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted);font-size:14.5px"><li>화면 5개가 917줄 파일 하나에 상태 분기로 합쳐져 있음</li><li>서식이 전부 인라인(style 166개, class 0개)이라 재사용 컴포넌트 개념이 없음</li><li>앱에 없는 프로토타입 장식이 섞여 있음 (가짜 상태바 · 홈 인디케이터 · 스마트폰 프레임 · 런타임 JS)</li></ul></div>
+
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">접근</div>
+        <div>마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움. <b>수치화된 문서·산출물을 코드 기반 파이프라인으로 생성</b>하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.</div>
+
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">구현</div>
+        <div>
+          <div style="font-weight:700">1. Claude Design의 handoff 패키지를 정제 — HTML → 레이아웃 트리 → 네이티브</div>
+          <div style="font-size:14px;color:var(--muted);margin-top:4px">같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지. <span style="border-bottom:1px dashed var(--accent);color:var(--accent);font-family:'IBM Plex Mono',monospace;font-size:12.5px">점선 밑줄</span> 부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:12px">
+            <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px" data-comment-anchor="af28a1d6e6-div">① Claude Design HTML · design/project/forest.dc.html</div><pre onMouseLeave="{{ tokLeave }}">&lt;div style="display:flex;
+     flex-direction:column;
+     <span data-tok="{{ tGap }}" onMouseEnter="{{ tokGap }}">gap:20px</span>"&gt;
+  &lt;div style="display:flex;
+       justify-content:space-between"&gt;
+    &lt;span style="
+      font-family:var(--font-heading);
+      <span data-tok="{{ tSize }}" onMouseEnter="{{ tokSize }}">font-size:20px</span>;
+      <span data-tok="{{ tColor }}" onMouseEnter="{{ tokColor }}">color:var(--color-accent-300)</span>"&gt;
+      <span data-tok="{{ tText }}" onMouseEnter="{{ tokText }}">forest</span>&lt;/span&gt;
+    &lt;span style="font-size:15px"&gt;
+      {{ greetingHole }}&lt;/span&gt;
+    &lt;div <span data-tok="{{ tClick }}" onMouseEnter="{{ tokClick }}">sc-camel-on-click="{{ openSettingsHole }}"</span>
+         style="width:40px;height:40px"&gt;
+    &lt;/div&gt;</pre></div>
+            <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px">② 서버가 만든 레이아웃 트리 · design/derived/layout/home.json</div><pre onMouseLeave="{{ tokLeave }}">{ "kind": "column",
+  "style": { <span data-tok="{{ tGap }}" onMouseEnter="{{ tokGap }}">"gap": "20px"</span> },
+  "children": [
+  { "kind": "row",
+    "style": { "justify-content":
+               "space-between" },
+    "children": [
+    { "kind": "text",
+      <span data-tok="{{ tText }}" onMouseEnter="{{ tokText }}">"text": "Strings.Home.forest"</span>,
+      "style": {
+        <span data-tok="{{ tSize }}" onMouseEnter="{{ tokSize }}">"font-size": "20px"</span>,
+        <span data-tok="{{ tColor }}" onMouseEnter="{{ tokColor }}">"color": "DesignTokens.Color.Accent._300"</span> } },
+    { "kind": "text", "bind": "greeting" },
+    { "kind": "box",
+      <span data-tok="{{ tClick }}" onMouseEnter="{{ tokClick }}">"on_click": "openSettings"</span>,
+      "style": { "width": "40px",
+                 "height": "40px" } }
+    ] } ] }</pre></div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:10px">
+            <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px">③ iOS 에이전트가 옮긴 SwiftUI · apps/ios/Forest/Screens/HomeView.swift</div><pre onMouseLeave="{{ tokLeave }}">VStack(alignment: .leading,
+       <span data-tok="{{ tGap }}" onMouseEnter="{{ tokGap }}">spacing: 20</span>) {
+  HStack(alignment: .top) {
+    VStack(alignment: .leading,
+           spacing: 4) {
+      <span data-tok="{{ tText }}" onMouseEnter="{{ tokText }}">Text(Strings.Home.forest)</span>
+        <span data-tok="{{ tSize }}" onMouseEnter="{{ tokSize }}">.font(Typography.heading(20))</span>
+        <span data-tok="{{ tColor }}" onMouseEnter="{{ tokColor }}">.foregroundStyle(Palette.accent300)</span>
+      Text(model.greeting)
+        .font(Typography.body(15))
+    }
+    Spacer()
+    <span data-tok="{{ tClick }}" onMouseEnter="{{ tokClick }}">Button(action: model.openSettings)</span> {
+      Circle().frame(width: 40, height: 40)
+    }
+  }
+}</pre></div>
+            <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px">④ Android 에이전트가 옮긴 Compose · apps/android/.../ui/screens/HomeScreen.kt</div><pre onMouseLeave="{{ tokLeave }}">Column(
+  verticalArrangement =
+    <span data-tok="{{ tGap }}" onMouseEnter="{{ tokGap }}">Arrangement.spacedBy(20.dp)</span>
+) {
+  Row(
+    horizontalArrangement = Arrangement.SpaceBetween,
+    verticalAlignment = Alignment.Top
+  ) {
+    Column(verticalArrangement = Arrangement.spacedBy(4.dp)) {
+      <span data-tok="{{ tText }}" onMouseEnter="{{ tokText }}">Text(text = Strings.Home.forest,</span>
+        <span data-tok="{{ tSize }}" onMouseEnter="{{ tokSize }}">style = Typography.heading(20.sp)</span>,
+        <span data-tok="{{ tColor }}" onMouseEnter="{{ tokColor }}">color = Palette.accent300</span>)
+      Text(text = model.greeting,
+        style = Typography.body(15.sp))
+    }
+    <span data-tok="{{ tClick }}" onMouseEnter="{{ tokClick }}">IconButton(onClick = model::openSettings)</span> {
+      Box(Modifier.size(40.dp).clip(CircleShape))
+    }
+  }
+}</pre></div>
+          </div>
+
+          <div style="margin-top:18px;font-weight:600">정제 전후의 입력을 숫자로 보면</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:8px;font-size:15.5px">
+            <div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0"><span style="color:var(--muted)">917줄 한 파일</span><span style="font-weight:600">→ 화면당 트리 4개 (321 · 243 · 151 · 104줄)</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0"><span style="color:var(--muted)">색 리터럴 119개</span><span style="font-weight:600">→ 0개</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0"><span style="color:var(--muted)">이름 없던 문구 · 아이콘 · 동작</span><span style="font-weight:600">→ 문구 80 · 아이콘 10 · 핸들러 25 · 컴포넌트 31</span></div>
+            <div style="display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0"><span style="color:var(--muted)">프로토타입 장식</span><span style="font-weight:600">→ 전달 안 함</span></div>
+          </div>
+
+          <div style="margin-top:26px;font-weight:700">2. 서버가 공통 리소스를 각 플랫폼에 맞게 상수 파일로 생성</div>
+          <div style="font-size:15px;color:var(--muted);margin-top:4px"><code style="font:12.5px 'IBM Plex Mono',monospace">shared/generated/</code> 에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로 <code style="font:12.5px 'IBM Plex Mono',monospace">ApiRoutes · Screens · DesignTokens · Icons</code> 도 두 언어로 생성됩니다.</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin-top:10px">
+            <div style="background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:8px">Strings.swift</div><pre style="color:var(--ink)">// generated by the server; never edit
+public enum Strings {
+  public enum Home {
+    public static let chucheonMiksing = "추천 믹싱"
+    public static let forest = "forest"
+    public static let ibeonJuIlYeonsok = "이번 주 {streakCount}일 연속"
+    public static let jeulgyeochatgi = "즐겨찾기"
+  }</pre></div>
+            <div style="background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:8px">Strings.kt</div><pre style="color:var(--ink)">// generated by the server; never edit
+object Strings {
+  object Home {
+    const val chucheonMiksing = "추천 믹싱"
+    const val forest = "forest"
+    const val ibeonJuIlYeonsok = "이번 주 {streakCount}일 연속"
+    const val jeulgyeochatgi = "즐겨찾기"
+  }</pre></div>
+          </div>
+        </div>
+
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">결과</div>
+        <div>같은 화면을 만드는 데 에이전트가 쓰는 비용이 줄었고, 결과물은 더 디자인에 가까워졌습니다.
+          <div style="margin-top:14px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)">
+            <div style="padding:12px 16px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font-weight:700">성능 검증 — Handoff package 정제 전후 A/B</span><span style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">home · stats × iOS · Android × 2회 = 16회</span></div>
+            <table><thead><tr><th></th><th>A · 원본 HTML (57KB)</th><th>B · 정제한 레이아웃 트리</th></tr></thead><tbody><tr><td style="color:var(--muted)">토큰 (평균)</td><td>90.5k</td><td><b>55.1k</b> <span style="color:var(--accent);font-weight:600">−39%</span></td></tr><tr><td style="color:var(--muted)">화면 정합성</td><td>8번 중 7번 화면을 제 마음대로 바꿈 — 조건부 영역을 항상 표시, 정해진 색 대신 임의 색</td><td>빠뜨린 건 추출기가 트리에 안 담은 속성뿐 → 이후 스타일 속성을 전부 담는 무손실 방식으로 개선</td></tr></tbody></table>
+            <div style="padding:12px 16px;font-size:15px;color:var(--muted)">같은 화면을 같은 모델로 구현하게 하고 <b style="color:var(--ink)">입력만</b> 바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.</div>
+          </div>
+
+          <div style="margin-top:22px;font-weight:600">UI / UX 구현 정합성 비교 <span style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);font-weight:400;margin-left:6px">왼쪽부터 B 레이아웃 트리 · A HTML 직접 변환 · 인터랙티브 프로토타입 · 클릭하면 확대</span></div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px;margin-top:10px">
+            <figure style="margin:0"><img src="assets/compare-01.png" alt="온보딩 화면 비교" style="width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s" style-hover="transform:scale(1.015)" onClick="{{ open1 }}"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">온보딩 — 버튼 위치·여백이 A에서 프로토타입과 달라짐</figcaption></figure>
+            <figure style="margin:0"><img src="assets/compare-02.png" alt="홈 화면 비교" style="width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s" style-hover="transform:scale(1.015)" onClick="{{ open2 }}"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">홈 — 하단 추천 믹싱 배치와 이미지 스타일 불일치</figcaption></figure>
+            <figure style="margin:0"><img src="assets/compare-03.png" alt="사운드 화면 비교" style="width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s" style-hover="transform:scale(1.015)" onClick="{{ open3 }}"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">사운드 — 타이머 드롭다운 시 UI 깨짐</figcaption></figure>
+            <figure style="margin:0"><img src="assets/compare-04.png" alt="기록 화면 비교" style="width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s" style-hover="transform:scale(1.015)" onClick="{{ open4 }}"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">기록 — 하단 SafeArea 및 정렬이 의도와 다르게 구현됨</figcaption></figure>
+            <figure style="margin:0"><img src="assets/compare-05.png" alt="추가 비교" style="width:100%;border-radius:10px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .25s" style-hover="transform:scale(1.015)" onClick="{{ open5 }}"><figcaption style="font-size:14px;color:var(--muted);margin-top:6px">그 외 — 버튼 터치영역, 바텀시트 핸들 드래그, 스크롤 인디케이터 미숨김</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s4" style="padding:56px 0 0;scroll-margin-top:90px">
+    <div style="border-top:1px solid var(--line);padding-top:36px">
+      <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">케이스 스터디 2</div>
+      <h2 style="margin:6px 0 0;font-size:28px;line-height:1.3;font-weight:700">백엔드 인프라 스펙 문서 만들기</h2>
+      <div style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px 22px;margin-top:24px;font-size:17px;line-height:1.75">
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">문제</div>
+        <div>백엔드 인프라 구성은 주요 기능, 예측 사용자 규모, 예산 등에 따라 가변적이라 번거로움이 느껴졌고, 이를 돕는 인터뷰 프로세스가 필요했음. 사용자 니즈를 파악해 과한 서버 구성을 피하기 위함도 있음.</div>
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">접근</div>
+        <div>에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을 <b>보기 쉽게 표로 제안</b>하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.</div>
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">구현</div>
+        <div>
+          <div style="font-weight:700">인프라 결정 — 4단계 인터뷰, 각 단계가 끝나야 다음으로</div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:8px;margin-top:10px">
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);font-size:15px;line-height:1.55"><b>1 스택</b><br><span style="color:var(--muted)">플랫폼과 백엔드 언어를 후보 2~3개로 좁혀 선택</span></div>
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);font-size:15px;line-height:1.55"><b>2 규모</b><br><span style="color:var(--muted)">예상 MAU · DAU를 사용자가 대략 입력</span></div>
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);font-size:15px;line-height:1.55"><b>3 후보 추리기</b><br><span style="color:var(--muted)">12개 조합 중 그 규모에 맞는 5개만 남김</span></div>
+            <div style="border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);font-size:15px;line-height:1.55"><b>4 요금 조회</b><br><span style="color:var(--muted)">공식 요금 페이지만 읽음. 캐시 없이 매번 새로</span></div>
+          </div>
+          <div style="margin-top:22px;font-weight:700">API 명세</div>
+          <div style="font-size:15.5px;margin-top:4px">인프라가 정해지면 화면 HTML과 개발 문서를 읽고, <b>각 화면이 필요로 하는 데이터</b>에서 엔드포인트를 뽑아 <code style="font:12.5px 'IBM Plex Mono',monospace">openapi.yaml</code> 초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.</div>
+          <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;margin-top:10px;min-width:0"><pre>openapi: 3.0.3
+info:
+  title: forest API
+  description: |
+    디자인 화면 4개(onboarding · home · sound · stats)와 공유 컴포넌트가
+    필요로 하는 데이터만 담는다.
+    범위 밖(디자인에 화면이 없어 만들지 않는다):
+    - 로그인/회원가입 화면이 없다 → 기기 익명 등록으로 계정을 만들고 JWT 를 발급한다.
+    - 확장 음원 브라우징 UI 가 없다 → 카탈로그·다운로드 URL 만 제공한다.
+    - 결제/구독 구매 화면이 없다 → 구독 상태는 읽기 전용, 관리·내역은 외부 링크로 넘긴다.
+paths:
+  /auth/device:
+    post:
+      operationId: registerDevice
+      summary: 기기 익명 등록 — 계정 생성 또는 기존 계정 재획득 후 토큰 발급</pre></div>
+        </div>
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">결과</div>
+        <div>월 비용 · 확인일 · 종속성 · 장단점을 싼 값 순으로 정리한 비교표를 세션에서 바로 확인
+          <div style="margin-top:12px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)">
+            <div style="padding:10px 14px;border-bottom:1px solid var(--line);font-size:14.5px;color:var(--muted)">규모 <b style="color:var(--ink)">소규모</b> (MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.</div>
+            <div style="overflow-x:auto"><table style="min-width:640px"><thead><tr><th>id</th><th>db</th><th>auth</th><th>hosting</th><th>월 비용</th><th>확인일</th><th>종속성</th></tr></thead><tbody>
+              <tr><td style="font:12.5px 'IBM Plex Mono',monospace">aws-serverless</td><td>DynamoDB</td><td>Cognito</td><td>Lambda + API GW</td><td><b>$0-5</b></td><td>2026-09-04</td><td>높음</td></tr>
+              <tr><td style="font:12.5px 'IBM Plex Mono',monospace">vps-docker</td><td>PostgreSQL (자체)</td><td>자체 JWT</td><td>VPS (Hetzner)</td><td><b>$4-10</b></td><td>2026-09-04</td><td>낮음</td></tr>
+              <tr><td style="font:12.5px 'IBM Plex Mono',monospace">firebase</td><td>Firestore</td><td>Firebase Auth</td><td>Cloud Run</td><td><b>$0-10</b></td><td>2026-09-04</td><td>높음</td></tr>
+              <tr><td style="font:12.5px 'IBM Plex Mono',monospace">railway</td><td>PostgreSQL (Railway)</td><td>자체 JWT</td><td>Railway</td><td><b>$5-25</b></td><td>2026-09-04</td><td>낮음</td></tr>
+              <tr><td style="font:12.5px 'IBM Plex Mono',monospace">supabase-fly</td><td>PostgreSQL (Supabase)</td><td>Supabase Auth</td><td>Fly.io</td><td><b>$0-30</b></td><td>2026-09-04</td><td>중</td></tr>
+            </tbody></table></div>
+          </div>
+          <ul style="margin:14px 0 0;padding-left:18px;font-size:15.5px;color:var(--muted)"><li>인터뷰가 끝나면 요약표로 정리되어 다음 단계로 넘어가기 전 사용자에게 세션에서 제공됩니다.</li><li>구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우 <b style="color:var(--ink)">사용자에게 보고서로 제출</b>하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.</li><li>보고서가 필요한 이유: 에이전트의 자율성이 차이를 만들기 때문에 이를 아예 강제하기 어렵고, 설계대로 작성해도 추가 요구사항이 발생할 수 있음은 당연한 일.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s5" style="padding:56px 0 64px;scroll-margin-top:90px">
+    <div style="border-top:1px solid var(--line);padding-top:36px">
+      <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">케이스 스터디 3</div>
+      <h2 style="margin:6px 0 0;font-size:28px;line-height:1.3;font-weight:700">공개 배포 전제 — 시크릿을 파이프라인에 들이지 않기</h2>
+      <div style="display:grid;grid-template-columns:72px minmax(0,1fr);gap:16px 22px;margin-top:24px;font-size:17px;line-height:1.75">
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">문제</div>
+        <div>API 키, 민감 정보가 클라우드 세션과 공개 저장소에 노출될 수 있는 환경 — 읽는 순간 컨텍스트에 실리고 저장소 기록에도 남음.</div>
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">구현</div>
+        <div>민감 값을 <b>환경변수로만</b> 관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록 <b>훅으로 막는다</b>.</div>
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);padding-top:5px">결과</div>
+        <div>생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿 <b>0개</b> — 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.
+          <div style="background:var(--code-bg);color:var(--code-ink);border-radius:10px;padding:14px 16px;margin-top:12px;min-width:0"><div style="font:600 12.5px 'IBM Plex Mono',monospace;color:var(--accent);margin-bottom:10px">에이전트의 유도 예시</div><pre>· wrangler.toml 의 REPLACE_WITH_D1_DATABASE_ID
+  → `npx wrangler d1 create forest` 로 만든 실제 id 로 교체
+
+· JWT_SECRET 은 Worker 시크릿으로만 넣는다
+  → npx wrangler secret put JWT_SECRET  (32바이트 이상 랜덤)
+  → 저장소에는 자리표시자만 있다
+
+· 배포 전 원격 마이그레이션 적용
+  → npx wrangler d1 migrations apply forest --remote</pre></div>
+        </div>
+      </div>
+      <div style="margin-top:48px;border:1px solid var(--line);border-radius:12px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--card)">
+        <div><div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">이 도구로 만들고 있는 서비스</div><div style="font-size:18px;font-weight:700;margin-top:2px">Forest — 사운드 믹싱 집중 &amp; 명상 앱</div></div>
+        <a href="Forest.dc.html" style="background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">다음 프로젝트 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<aside style="position:relative">
+  <div style="position:sticky;top:96px;padding:56px 0 0 20px;font:12.5px/1.35 'IBM Plex Mono',monospace">
+    <div style="position:absolute;left:-1px;top:56px;bottom:0;width:2px;background:var(--accent);transform-origin:top;transform:scaleY({{ railScale }});transition:transform .15s linear"></div>
+    <nav style="display:flex;flex-direction:column;gap:16px">
+      <a href="#s0" data-cur="{{ c0 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">01<br><span style="color:var(--ink)">개요</span></a>
+      <a href="#s1" data-cur="{{ c1 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">02<br><span style="color:var(--ink)">구성</span></a>
+      <a href="#s2" data-cur="{{ c2 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">03<br><span style="color:var(--ink)">동작 방식</span></a>
+      <a href="#s3" data-cur="{{ c3 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">04<br><span style="color:var(--ink)">UI/UX 정합성</span></a>
+      <a href="#s4" data-cur="{{ c4 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">05<br><span style="color:var(--ink)">백엔드 스펙</span></a>
+      <a href="#s5" data-cur="{{ c5 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">06<br><span style="color:var(--ink)">시크릿 격리</span></a>
+    </nav>
+  </div>
+</aside>
+</div>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.86);display:flex;align-items:center;justify-content:center;padding:32px;cursor:zoom-out;animation:rise .2s ease both">
+    <img src="{{ lightboxSrc }}" alt="확대 이미지" style="max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'light', cur: 0, rail: 0, tok: null, lightbox: null };
+  componentDidMount() {
+    let t = 'light';
+    try { t = localStorage.getItem('yh-theme') || 'light'; } catch (e) {}
+    document.body.dataset.theme = t;
+    this.setState({ theme: t });
+    this._onScroll = () => {
+      const d = document.documentElement;
+      const max = d.scrollHeight - d.clientHeight;
+      const rail = max > 0 ? Math.min(1, d.scrollTop / max) : 0;
+      let cur = 0;
+      for (let i = 0; i < 6; i++) {
+        const el = document.getElementById('s' + i);
+        if (el && el.getBoundingClientRect().top <= 140) cur = i;
+      }
+      if (cur !== this.state.cur || Math.abs(rail - this.state.rail) > 0.005) this.setState({ cur, rail });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onKey = e => { if (e.key === 'Escape') this.setState({ lightbox: null }); };
+    window.addEventListener('keydown', this._onKey);
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('keydown', this._onKey); }
+  setTheme(t) { document.body.dataset.theme = t; try { localStorage.setItem('yh-theme', t); } catch (e) {} this.setState({ theme: t }); }
+  renderVals() {
+    const { theme, cur, rail, tok, lightbox } = this.state;
+    const c = i => cur === i ? '1' : '0';
+    const t = k => tok === k ? '1' : '0';
+    const set = k => () => this.setState({ tok: k });
+    const open = n => () => this.setState({ lightbox: 'assets/compare-0' + n + '.png' });
+    return {
+      themeLabel: theme === 'mint' ? 'Mint' : 'Light',
+      toggleTheme: () => this.setTheme(theme === 'mint' ? 'light' : 'mint'),
+      railScale: rail.toFixed(3),
+      c0: c(0), c1: c(1), c2: c(2), c3: c(3), c4: c(4), c5: c(5),
+      tGap: t('gap'), tSize: t('size'), tColor: t('color'), tText: t('text'), tClick: t('click'),
+      tokGap: set('gap'), tokSize: set('size'), tokColor: set('color'), tokText: set('text'), tokClick: set('click'),
+      tokLeave: () => this.setState({ tok: null }),
+      greetingHole: '{{ greeting }}', openSettingsHole: '{{ openSettings }}',
+      open1: open(1), open2: open(2), open3: open(3), open4: open(4), open5: open(5),
+      lightboxOpen: !!lightbox, lightboxSrc: lightbox || '',
+      closeLightbox: () => this.setState({ lightbox: null })
+    };
+  }
+}
+</script>
+</body>
+</html>

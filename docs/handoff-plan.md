@@ -1,15 +1,12 @@
-# 계약 v1 — 지문 e531bbfca3f7
+# 계약 v2 — 지문 d5d70e4a61bd
 
 ## 화면 (design/)
 
 | id | 제목 | 파일 | 스크린샷 |
 |---|---|---|---|
-| `s0` | 01 개요 | 6b7a554c-handoffagent.dc.html | 0 |
-| `s1` | 02 구성 | 6b7a554c-handoffagent.dc.html | 0 |
-| `s2` | 03 동작 방식 | 6b7a554c-handoffagent.dc.html | 0 |
-| `s3` | 04 UI/UX 정합성 | 6b7a554c-handoffagent.dc.html | 0 |
-| `s4` | 05 백엔드 스펙 | 6b7a554c-handoffagent.dc.html | 0 |
-| `s5` | 06 시크릿 격리 | 6b7a554c-handoffagent.dc.html | 0 |
+| `resume` | 이력서 — 유영훈 | Resume.dc.html | 0 |
+| `forest` | Forest — 명상 사운드 믹서 | Forest.dc.html | 0 |
+| `handoffAgent` | Handoff Agent — 핸드오프 플러그인 | Handoff Agent.dc.html | 0 |
 
 문서: 없음
 

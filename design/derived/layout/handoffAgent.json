@@ -1,0 +1,2829 @@
+{
+  "kind": "group",
+  "tag": "html",
+  "children": [
+    {
+      "kind": "group",
+      "tag": "head",
+      "children": [
+        {
+          "kind": "box",
+          "tag": "meta"
+        },
+        {
+          "kind": "box",
+          "tag": "meta"
+        },
+        {
+          "kind": "box",
+          "tag": "script"
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "tag": "body",
+      "children": [
+        {
+          "kind": "group",
+          "tag": "x-dc",
+          "children": [
+            {
+              "kind": "group",
+              "tag": "helmet",
+              "children": [
+                {
+                  "kind": "box",
+                  "tag": "link",
+                  "href": "https://fonts.googleapis.com"
+                },
+                {
+                  "kind": "box",
+                  "tag": "link",
+                  "href": "https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+                },
+                {
+                  "kind": "text",
+                  "tag": "style",
+                  "text": "html{scroll-behavior:smooth} body{margin:0;font-family:'IBM Plex Sans KR',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s; --bg:#F7F7F5;--surface:#EEF0F2;--card:#FFFFFF;--line:rgba(22,24,29,.14);--line-soft:rgba(22,24,29,.08);--muted:#6B7280;--ink:#16181D;--accent:#2F5BEA;--accent-ink:#FFFFFF;--accent-soft:rgba(47,91,234,.10);--code-bg:#1D1F24;--code-ink:#D5D8DE;--code-dim:#8A909B;--hl:rgba(47,91,234,.12)} body[data-theme=\"mint\"]{--bg:#0F1115;--surface:#181C24;--card:#141821;--line:rgba(230,232,236,.16);--line-soft:rgba(230,232,236,.08);--muted:#8B93A1;--ink:#E6E8EC;--accent:#3DDC97;--accent-ink:#0F1115;--accent-soft:rgba(61,220,151,.12);--code-bg:#0A0C10;--code-ink:#C9CED6;--code-dim:#6F7783;--hl:rgba(61,220,151,.14)} a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline} [data-cur=\"1\"]{color:var(--accent)!important;font-weight:600} [data-cur=\"1\"] span{color:var(--accent)!important} [data-tok]{border-bottom:1px dashed var(--accent);color:var(--accent);cursor:crosshair;border-radius:3px;transition:background .15s} [data-tok=\"1\"]{background:var(--hl);box-shadow:0 0 0 1px var(--accent);border-bottom-color:transparent} tbody tr{transition:background .15s}tbody tr:hover td{background:var(--hl);box-shadow:inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}tbody tr:hover td:first-child{box-shadow:inset 1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)}tbody tr:hover td:last-child{box-shadow:inset -1px 0 0 var(--accent),inset 0 1px 0 var(--accent),inset 0 -1px 0 var(--accent)} pre{margin:0;font:13.5px/1.65 'IBM Plex Mono',monospace;white-space:pre;overflow:auto} table{border-collapse:collapse;width:100%;font-size:15px}th{font:500 11.5px 'IBM Plex Mono',monospace;color:var(--muted);text-align:left;padding:8px 12px;border-bottom:1px solid var(--line);background:var(--surface)}td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top} @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}",
+                  "raw_text": true
+                }
+              ]
+            },
+            {
+              "kind": "group",
+              "tag": "header",
+              "style": {
+                "position": "sticky",
+                "top": "0",
+                "z-index": "20",
+                "background": "DesignTokens.bg",
+                "border-bottom": "1px solid DesignTokens.line"
+              },
+              "children": [
+                {
+                  "kind": "row",
+                  "style": {
+                    "max-width": "1180px",
+                    "margin": "0 auto",
+                    "padding": "14px 32px",
+                    "display": "flex",
+                    "justify-content": "space-between",
+                    "align-items": "center",
+                    "gap": "16px",
+                    "flex-wrap": "wrap"
+                  },
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "a",
+                      "href": "Resume.dc.html#work",
+                      "text": "Strings.Forest.yuyeonghun",
+                      "style": {
+                        "font-weight": "700",
+                        "font-size": "16px",
+                        "color": "DesignTokens.ink",
+                        "text-decoration": "none"
+                      }
+                    },
+                    {
+                      "kind": "row",
+                      "style": {
+                        "display": "flex",
+                        "gap": "6px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Resume.handoffAgent",
+                          "style": {
+                            "background": "DesignTokens.ink",
+                            "color": "DesignTokens.bg",
+                            "border": "1px solid DesignTokens.ink",
+                            "border-radius": "8px",
+                            "padding": "6px 14px",
+                            "font-size": "13px",
+                            "font-weight": "600"
+                          }
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "a",
+                          "href": "Forest.dc.html",
+                          "text": "Strings.Resume.forest",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "color": "DesignTokens.ink",
+                            "border-radius": "8px",
+                            "padding": "6px 14px",
+                            "font-size": "13px",
+                            "font-weight": "500",
+                            "text-decoration": "none"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "row",
+                      "style": {
+                        "display": "flex",
+                        "align-items": "center",
+                        "gap": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "a",
+                          "href": "https://github.com/yeonghunyoo/handoff-agent",
+                          "text": "Strings.Resume.gitHub",
+                          "style": {
+                            "font": "13px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.muted"
+                          }
+                        },
+                        {
+                          "kind": "row",
+                          "tag": "button",
+                          "on_click": "toggleTheme",
+                          "title": "테마 전환",
+                          "bind": "themeLabel",
+                          "style": {
+                            "display": "flex",
+                            "align-items": "center",
+                            "gap": "6px",
+                            "border": "1px solid DesignTokens.line",
+                            "background": "DesignTokens.card",
+                            "color": "DesignTokens.ink",
+                            "border-radius": "999px",
+                            "padding": "5px 12px 5px 8px",
+                            "font": "500 12px 'IBM Plex Mono',monospace",
+                            "cursor": "pointer"
+                          },
+                          "children": [
+                            {
+                              "kind": "box",
+                              "style": {
+                                "width": "14px",
+                                "height": "14px",
+                                "border-radius": "50%",
+                                "background": "DesignTokens.accent",
+                                "display": "inline-block"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "grid",
+              "style": {
+                "max-width": "1180px",
+                "margin": "0 auto",
+                "padding": "0 32px",
+                "display": "grid",
+                "grid-template-columns": "minmax(0,1fr) 150px",
+                "gap": "0"
+              },
+              "children": [
+                {
+                  "kind": "group",
+                  "tag": "main",
+                  "style": {
+                    "min-width": "0",
+                    "padding-right": "36px",
+                    "border-right": "1px solid DesignTokens.Line.soft"
+                  },
+                  "children": [
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s0",
+                      "style": {
+                        "padding": "56px 0 40px",
+                        "border-bottom": "1px solid DesignTokens.line",
+                        "scroll-margin-top": "90px",
+                        "animation": "rise .5s ease both"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.HandoffAgent._202609ClaudeCodePeulreogeuinPython",
+                          "style": {
+                            "font": "13px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.muted"
+                          }
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "h1",
+                          "text": "Claude Design의 handoff 패키지를 기반으로 iOS · Android · backend 세 플랫폼을 한 번에 구현하는 플러그인",
+                          "raw_text": true,
+                          "style": {
+                            "margin": "10px 0 0",
+                            "font-size": "34px",
+                            "line-height": "1.3",
+                            "font-weight": "700",
+                            "letter-spacing": "-.01em",
+                            "text-wrap": "pretty"
+                          },
+                          "children": [
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "blockquote",
+                          "text": "모든 게 다 정해져 있다면 세 플랫폼을 한 번에 개발해도 되지 않을까? 그리고 그 \"정해진 것\"이 수치로 말하는 정제된 산출물이라면, 에이전트가 각자의 언어로 옮기기만 해도 구현 정합성을 보장할 수 있지 않을까?",
+                          "raw_text": true,
+                          "style": {
+                            "margin": "24px 0 0",
+                            "padding": "18px 22px",
+                            "border-left": "3px solid DesignTokens.accent",
+                            "background": "DesignTokens.surface",
+                            "border-radius": "0 10px 10px 0",
+                            "font-size": "17px",
+                            "line-height": "1.75",
+                            "color": "DesignTokens.ink",
+                            "text-wrap": "pretty"
+                          },
+                          "children": [
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s1",
+                      "style": {
+                        "padding": "40px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "h2",
+                          "text": "Strings.HandoffAgent.peulreogeuinGuseong",
+                          "style": {
+                            "margin": "0",
+                            "font-size": "24px",
+                            "font-weight": "700"
+                          }
+                        },
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(260px,1fr))",
+                            "gap": "10px",
+                            "margin-top": "14px",
+                            "font-size": "15.5px",
+                            "line-height": "1.65"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "text": "디자인 정제 · 백엔드 인프라 스펙 인터뷰 · 중간 산출물 관리를 로 구축",
+                              "raw_text": true,
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "14px 16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "b",
+                                  "text": "Strings.HandoffAgent.mCpSeobeo"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "text": "중간 산출물은 각 플랫폼에 맞는 등 언어로 생성되어 에이전트에 넘겨짐",
+                              "raw_text": true,
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "14px 16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "b",
+                                  "text": "Strings.HandoffAgent.swiftKotlin"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "text": "Python 기반 MCP가 기반 백엔드 스펙을 제안 / 조립하여 문서 생성",
+                              "raw_text": true,
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "14px 16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "b",
+                                  "text": "Strings.Forest.openApi"
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "text": "플랫폼 (iOS, Android, backend) 에이전트 · 디자인 연동 에이전트",
+                              "raw_text": true,
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "14px 16px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "tag": "b",
+                                  "text": "Strings.HandoffAgent._3Gae"
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "b",
+                                  "text": "Strings.HandoffAgent._1Gae"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s2",
+                      "style": {
+                        "padding": "44px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "h2",
+                          "text": "Strings.HandoffAgent.dongjakBangsik",
+                          "style": {
+                            "margin": "0",
+                            "font-size": "24px",
+                            "font-weight": "700"
+                          }
+                        },
+                        {
+                          "kind": "grid",
+                          "style": {
+                            "display": "grid",
+                            "grid-template-columns": "repeat(auto-fit,minmax(150px,1fr))",
+                            "gap": "8px",
+                            "margin-top": "14px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "1",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.dijain",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.claudeDesignAepDijainPeurototaipJejak",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s3",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.card",
+                                "color": "DesignTokens.ink",
+                                "text-decoration": "none",
+                                "transition": "border-color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "2",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.hwamyeonBeonyeok",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIos",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s4",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.card",
+                                "color": "DesignTokens.ink",
+                                "text-decoration": "none",
+                                "transition": "border-color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "3",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.seobeoInpeura",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s4",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.card",
+                                "color": "DesignTokens.ink",
+                                "text-decoration": "none",
+                                "transition": "border-color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "4",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.aPiYaksok",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "style": {
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "5",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.gongyongPailSaengseong",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.aPiJeonguiDijainTokeunMunguAikoneul",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "color": "DesignTokens.muted",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s5",
+                              "style": {
+                                "border": "1px solid DesignTokens.ink",
+                                "border-radius": "10px",
+                                "padding": "12px",
+                                "background": "DesignTokens.ink",
+                                "color": "DesignTokens.bg",
+                                "text-decoration": "none",
+                                "transition": "opacity .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "6",
+                                  "raw_text": true,
+                                  "style": {
+                                    "font": "11px 'IBM Plex Mono',monospace",
+                                    "opacity": ".7"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.gaebalGeomsa",
+                                  "style": {
+                                    "font-weight": "700",
+                                    "font-size": "14px",
+                                    "margin-top": "2px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin",
+                                  "style": {
+                                    "font-size": "13.5px",
+                                    "opacity": ".8",
+                                    "margin-top": "3px",
+                                    "line-height": "1.5"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s3",
+                      "style": {
+                        "padding": "56px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border-top": "1px solid DesignTokens.line",
+                            "padding-top": "36px"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.HandoffAgent.keiseuSeuteodi1",
+                              "style": {
+                                "font": "12px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "h2",
+                              "text": "Strings.HandoffAgent.uIuxGuhyeonJeonghapseongeulWihanGyuchik",
+                              "style": {
+                                "margin": "6px 0 0",
+                                "font-size": "28px",
+                                "line-height": "1.3",
+                                "font-weight": "700"
+                              }
+                            },
+                            {
+                              "kind": "grid",
+                              "style": {
+                                "display": "grid",
+                                "grid-template-columns": "72px minmax(0,1fr)",
+                                "gap": "16px 22px",
+                                "margin-top": "24px",
+                                "font-size": "17px",
+                                "line-height": "1.75"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.munje",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "Strings.HandoffAgent.claudeDesignINaebonaeneunHtmlEun",
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "tag": "ul",
+                                      "style": {
+                                        "margin": "8px 0 0",
+                                        "padding-left": "18px",
+                                        "color": "DesignTokens.muted",
+                                        "font-size": "14.5px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "li",
+                                          "text": "Strings.HandoffAgent.hwamyeon5Gaega917JulPail"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "li",
+                                          "text": "Strings.HandoffAgent.seosikiJeonbuInrainStyle166Gae"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "li",
+                                          "text": "Strings.HandoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.jeopgeun",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움. 하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.",
+                                  "raw_text": true,
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "b",
+                                      "text": "Strings.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.guhyeon",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent._1ClaudeDesignUiHandoffPaekijireul",
+                                      "style": {
+                                        "font-weight": "700"
+                                      }
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "text": "같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지. 부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.",
+                                      "raw_text": true,
+                                      "style": {
+                                        "font-size": "14px",
+                                        "color": "DesignTokens.muted",
+                                        "margin-top": "4px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.HandoffAgent.jeomseonMitjul",
+                                          "style": {
+                                            "border-bottom": "1px dashed DesignTokens.accent",
+                                            "color": "DesignTokens.accent",
+                                            "font-family": "'IBM Plex Mono',monospace",
+                                            "font-size": "12.5px"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(300px,1fr))",
+                                        "gap": "10px",
+                                        "margin-top": "12px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.Code.bg",
+                                            "color": "DesignTokens.Code.ink",
+                                            "border-radius": "10px",
+                                            "padding": "14px 16px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "data-comment-anchor": "af28a1d6e6-div",
+                                              "text": "Strings.HandoffAgent.claudeDesignHtmlDesignProjectForest",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "10px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "tag": "pre",
+                                              "on_mouseleave": "tokLeave",
+                                              "text": "<div style=\"display:flex; flex-direction:column; \"> <div style=\"display:flex; justify-content:space-between\"> <span style=\" font-family:var(--font-heading); ; \"> </span> <span style=\"font-size:15px\"> {{ greetingHole }}</span> <div style=\"width:40px;height:40px\"> </div>",
+                                              "raw_text": true,
+                                              "children": [
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tGap }}",
+                                                  "on_mouseenter": "tokGap",
+                                                  "text": "Strings.HandoffAgent.gap20Px"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tSize }}",
+                                                  "on_mouseenter": "tokSize",
+                                                  "text": "Strings.HandoffAgent.fontSize20Px"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tColor }}",
+                                                  "on_mouseenter": "tokColor",
+                                                  "text": "Strings.HandoffAgent.colorVarColorAccent300"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tText }}",
+                                                  "on_mouseenter": "tokText",
+                                                  "text": "Strings.HandoffAgent.forest2"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tClick }}",
+                                                  "on_mouseenter": "tokClick",
+                                                  "text": "Strings.HandoffAgent.scCamelOnClick",
+                                                  "params": [
+                                                    "openSettingsHole"
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.Code.bg",
+                                            "color": "DesignTokens.Code.ink",
+                                            "border-radius": "10px",
+                                            "padding": "14px 16px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.seobeogaMandeunReiautTeuriDesignDerived",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "10px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "tag": "pre",
+                                              "on_mouseleave": "tokLeave",
+                                              "text": "{ \"kind\": \"column\", \"style\": { }, \"children\": [ { \"kind\": \"row\", \"style\": { \"justify-content\": \"space-between\" }, \"children\": [ { \"kind\": \"text\", , \"style\": { , } }, { \"kind\": \"text\", \"bind\": \"greeting\" }, { \"kind\": \"box\", , \"style\": { \"width\": \"40px\", \"height\": \"40px\" } } ] } ] }",
+                                              "raw_text": true,
+                                              "children": [
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tGap }}",
+                                                  "on_mouseenter": "tokGap",
+                                                  "text": "Strings.HandoffAgent.gap20Px2"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tText }}",
+                                                  "on_mouseenter": "tokText",
+                                                  "text": "Strings.HandoffAgent.textStringsHomeForest"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tSize }}",
+                                                  "on_mouseenter": "tokSize",
+                                                  "text": "Strings.HandoffAgent.fontSize20Px2"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tColor }}",
+                                                  "on_mouseenter": "tokColor",
+                                                  "text": "Strings.HandoffAgent.colorDesignTokensColorAccent300"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tClick }}",
+                                                  "on_mouseenter": "tokClick",
+                                                  "text": "Strings.HandoffAgent.onClickOpenSettings"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(300px,1fr))",
+                                        "gap": "10px",
+                                        "margin-top": "10px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.Code.bg",
+                                            "color": "DesignTokens.Code.ink",
+                                            "border-radius": "10px",
+                                            "padding": "14px 16px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.iOsEijeonteugaOmginSwiftUiAppsIos",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "10px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "tag": "pre",
+                                              "on_mouseleave": "tokLeave",
+                                              "text": "VStack(alignment: .leading, ) { HStack(alignment: .top) { VStack(alignment: .leading, spacing: 4) { Text(model.greeting) .font(Typography.body(15)) } Spacer() { Circle().frame(width: 40, height: 40) } } }",
+                                              "raw_text": true,
+                                              "children": [
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tGap }}",
+                                                  "on_mouseenter": "tokGap",
+                                                  "text": "Strings.HandoffAgent.spacing20"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tText }}",
+                                                  "on_mouseenter": "tokText",
+                                                  "text": "Strings.HandoffAgent.textStringsHomeForest2"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tSize }}",
+                                                  "on_mouseenter": "tokSize",
+                                                  "text": "Strings.HandoffAgent.fontTypographyHeading20"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tColor }}",
+                                                  "on_mouseenter": "tokColor",
+                                                  "text": "Strings.HandoffAgent.foregroundStylePaletteAccent300"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tClick }}",
+                                                  "on_mouseenter": "tokClick",
+                                                  "text": "Strings.HandoffAgent.buttonActionModelOpenSettings"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.Code.bg",
+                                            "color": "DesignTokens.Code.ink",
+                                            "border-radius": "10px",
+                                            "padding": "14px 16px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.androidEijeonteugaOmginComposeAppsAndroid",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "10px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "tag": "pre",
+                                              "on_mouseleave": "tokLeave",
+                                              "text": "Column( verticalArrangement = ) { Row( horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.Top ) { Column(verticalArrangement = Arrangement.spacedBy(4.dp)) { , ) Text(text = model.greeting, style = Typography.body(15.sp)) } { Box(Modifier.size(40.dp).clip(CircleShape)) } } }",
+                                              "raw_text": true,
+                                              "children": [
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tGap }}",
+                                                  "on_mouseenter": "tokGap",
+                                                  "text": "Strings.HandoffAgent.arrangementSpacedBy20Dp"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tText }}",
+                                                  "on_mouseenter": "tokText",
+                                                  "text": "Strings.HandoffAgent.textTextStringsHomeForest"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tSize }}",
+                                                  "on_mouseenter": "tokSize",
+                                                  "text": "Strings.HandoffAgent.styleTypographyHeading20Sp"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tColor }}",
+                                                  "on_mouseenter": "tokColor",
+                                                  "text": "Strings.HandoffAgent.colorPaletteAccent300"
+                                                },
+                                                {
+                                                  "kind": "text",
+                                                  "data-tok": "{{ tClick }}",
+                                                  "on_mouseenter": "tokClick",
+                                                  "text": "Strings.HandoffAgent.iconButtonOnClickModelOpenSettings"
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon",
+                                      "style": {
+                                        "margin-top": "18px",
+                                        "font-weight": "600"
+                                      }
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(240px,1fr))",
+                                        "gap": "8px 24px",
+                                        "margin-top": "8px",
+                                        "font-size": "15.5px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "gap": "10px",
+                                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                                            "padding": "6px 0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent._917JulHanPail",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.hwamyeondangTeuri4Gae321243",
+                                              "style": {
+                                                "font-weight": "600"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "gap": "10px",
+                                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                                            "padding": "6px 0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.saekRiteoreol119Gae",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent._0Gae",
+                                              "style": {
+                                                "font-weight": "600"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "gap": "10px",
+                                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                                            "padding": "6px 0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.ireumEoldeonMunguAikonDongjak",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.mungu80Aikon10Haendeulreo25",
+                                              "style": {
+                                                "font-weight": "600"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "gap": "10px",
+                                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                                            "padding": "6px 0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.peurototaipJangsik",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.jeondalAnHam",
+                                              "style": {
+                                                "font-weight": "600"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome",
+                                      "style": {
+                                        "margin-top": "26px",
+                                        "font-weight": "700"
+                                      }
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "text": "에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로 도 두 언어로 생성됩니다.",
+                                      "raw_text": true,
+                                      "style": {
+                                        "font-size": "15px",
+                                        "color": "DesignTokens.muted",
+                                        "margin-top": "4px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "code",
+                                          "text": "Strings.HandoffAgent.sharedGenerated",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "code",
+                                          "text": "Strings.HandoffAgent.apiRoutesScreensDesignTokensIcons",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(260px,1fr))",
+                                        "gap": "10px",
+                                        "margin-top": "10px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.surface",
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.stringsSwift",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "8px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "pre",
+                                              "text": "// generated by the server; never edit public enum Strings { public enum Home { public static let chucheonMiksing = \"추천 믹싱\" public static let forest = \"forest\" public static let ibeonJuIlYeonsok = \"이번 주 {streakCount}일 연속\" public static let jeulgyeochatgi = \"즐겨찾기\" }",
+                                              "raw_text": true,
+                                              "style": {
+                                                "color": "DesignTokens.ink"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "background": "DesignTokens.surface",
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "min-width": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.stringsKt",
+                                              "style": {
+                                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.accent",
+                                                "margin-bottom": "8px"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "pre",
+                                              "text": "// generated by the server; never edit object Strings { object Home { const val chucheonMiksing = \"추천 믹싱\" const val forest = \"forest\" const val ibeonJuIlYeonsok = \"이번 주 {streakCount}일 연속\" const val jeulgyeochatgi = \"즐겨찾기\" }",
+                                              "raw_text": true,
+                                              "style": {
+                                                "color": "DesignTokens.ink"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.gyeolgwa",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "Strings.HandoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun",
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "margin-top": "14px",
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "overflow": "hidden",
+                                        "background": "DesignTokens.card"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "row",
+                                          "style": {
+                                            "padding": "12px 16px",
+                                            "border-bottom": "1px solid DesignTokens.line",
+                                            "display": "flex",
+                                            "justify-content": "space-between",
+                                            "align-items": "baseline",
+                                            "gap": "12px",
+                                            "flex-wrap": "wrap"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu",
+                                              "style": {
+                                                "font-weight": "700"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.homeStatsIosAndroid2Hoe",
+                                              "style": {
+                                                "font": "12px 'IBM Plex Mono',monospace",
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "table",
+                                          "children": [
+                                            {
+                                              "kind": "group",
+                                              "tag": "thead",
+                                              "children": [
+                                                {
+                                                  "kind": "group",
+                                                  "tag": "tr",
+                                                  "children": [
+                                                    {
+                                                      "kind": "box",
+                                                      "tag": "th"
+                                                    },
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "th",
+                                                      "text": "Strings.HandoffAgent.aWonbonHtml57Kb"
+                                                    },
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "th",
+                                                      "text": "Strings.HandoffAgent.bJeongjehanReiautTeuri"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "kind": "group",
+                                              "tag": "tbody",
+                                              "children": [
+                                                {
+                                                  "kind": "group",
+                                                  "tag": "tr",
+                                                  "children": [
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "td",
+                                                      "text": "Strings.HandoffAgent.tokeunPyeonggyun",
+                                                      "style": {
+                                                        "color": "DesignTokens.muted"
+                                                      }
+                                                    },
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "td",
+                                                      "text": "Strings.HandoffAgent._905K"
+                                                    },
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "td",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "b",
+                                                          "text": "Strings.HandoffAgent._551K"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "text": "Strings.HandoffAgent._39",
+                                                          "style": {
+                                                            "color": "DesignTokens.accent",
+                                                            "font-weight": "600"
+                                                          }
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "kind": "group",
+                                                  "tag": "tr",
+                                                  "children": [
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "td",
+                                                      "text": "Strings.HandoffAgent.hwamyeonJeonghapseong",
+                                                      "style": {
+                                                        "color": "DesignTokens.muted"
+                                                      }
+                                                    },
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "td",
+                                                      "text": "Strings.HandoffAgent._8BeonJung7BeonHwamyeoneul"
+                                                    },
+                                                    {
+                                                      "kind": "text",
+                                                      "tag": "td",
+                                                      "text": "Strings.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun"
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "text": "같은 화면을 같은 모델로 구현하게 하고 바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.",
+                                          "raw_text": true,
+                                          "style": {
+                                            "padding": "12px 16px",
+                                            "font-size": "15px",
+                                            "color": "DesignTokens.muted"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent.ipryeokman",
+                                              "style": {
+                                                "color": "DesignTokens.ink"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "text": "Strings.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo",
+                                      "style": {
+                                        "margin-top": "22px",
+                                        "font-weight": "600"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.HandoffAgent.oenjjokbuteoBReiautTeuriAhtml",
+                                          "style": {
+                                            "font": "12px 'IBM Plex Mono',monospace",
+                                            "color": "DesignTokens.muted",
+                                            "font-weight": "400",
+                                            "margin-left": "6px"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(280px,1fr))",
+                                        "gap": "12px",
+                                        "margin-top": "10px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "tag": "figure",
+                                          "style": {
+                                            "margin": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "image",
+                                              "src": "assets/compare-01.png",
+                                              "alt": "온보딩 화면 비교",
+                                              "tag": "img",
+                                              "on_click": "open1",
+                                              "style": {
+                                                "width": "100%",
+                                                "border-radius": "10px",
+                                                "border": "1px solid DesignTokens.line",
+                                                "display": "block",
+                                                "cursor": "zoom-in",
+                                                "transition": "transform .25s"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "figcaption",
+                                              "text": "Strings.HandoffAgent.onbodingBeoteunWichiYeobaekiAEseo",
+                                              "style": {
+                                                "font-size": "14px",
+                                                "color": "DesignTokens.muted",
+                                                "margin-top": "6px"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "figure",
+                                          "style": {
+                                            "margin": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "image",
+                                              "src": "assets/compare-02.png",
+                                              "alt": "홈 화면 비교",
+                                              "tag": "img",
+                                              "on_click": "open2",
+                                              "style": {
+                                                "width": "100%",
+                                                "border-radius": "10px",
+                                                "border": "1px solid DesignTokens.line",
+                                                "display": "block",
+                                                "cursor": "zoom-in",
+                                                "transition": "transform .25s"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "figcaption",
+                                              "text": "Strings.HandoffAgent.homHadanChucheonMiksingBaechiwaImiji",
+                                              "style": {
+                                                "font-size": "14px",
+                                                "color": "DesignTokens.muted",
+                                                "margin-top": "6px"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "figure",
+                                          "style": {
+                                            "margin": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "image",
+                                              "src": "assets/compare-03.png",
+                                              "alt": "사운드 화면 비교",
+                                              "tag": "img",
+                                              "on_click": "open3",
+                                              "style": {
+                                                "width": "100%",
+                                                "border-radius": "10px",
+                                                "border": "1px solid DesignTokens.line",
+                                                "display": "block",
+                                                "cursor": "zoom-in",
+                                                "transition": "transform .25s"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "figcaption",
+                                              "text": "Strings.HandoffAgent.saundeuTaimeoDeuropdaunSiUiKkaejim",
+                                              "style": {
+                                                "font-size": "14px",
+                                                "color": "DesignTokens.muted",
+                                                "margin-top": "6px"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "figure",
+                                          "style": {
+                                            "margin": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "image",
+                                              "src": "assets/compare-04.png",
+                                              "alt": "기록 화면 비교",
+                                              "tag": "img",
+                                              "on_click": "open4",
+                                              "style": {
+                                                "width": "100%",
+                                                "border-radius": "10px",
+                                                "border": "1px solid DesignTokens.line",
+                                                "display": "block",
+                                                "cursor": "zoom-in",
+                                                "transition": "transform .25s"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "figcaption",
+                                              "text": "Strings.HandoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa",
+                                              "style": {
+                                                "font-size": "14px",
+                                                "color": "DesignTokens.muted",
+                                                "margin-top": "6px"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "figure",
+                                          "style": {
+                                            "margin": "0"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "image",
+                                              "src": "assets/compare-05.png",
+                                              "alt": "추가 비교",
+                                              "tag": "img",
+                                              "on_click": "open5",
+                                              "style": {
+                                                "width": "100%",
+                                                "border-radius": "10px",
+                                                "border": "1px solid DesignTokens.line",
+                                                "display": "block",
+                                                "cursor": "zoom-in",
+                                                "transition": "transform .25s"
+                                              }
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "tag": "figcaption",
+                                              "text": "Strings.HandoffAgent.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul",
+                                              "style": {
+                                                "font-size": "14px",
+                                                "color": "DesignTokens.muted",
+                                                "margin-top": "6px"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s4",
+                      "style": {
+                        "padding": "56px 0 0",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border-top": "1px solid DesignTokens.line",
+                            "padding-top": "36px"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.HandoffAgent.keiseuSeuteodi2",
+                              "style": {
+                                "font": "12px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "h2",
+                              "text": "Strings.HandoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi",
+                              "style": {
+                                "margin": "6px 0 0",
+                                "font-size": "28px",
+                                "line-height": "1.3",
+                                "font-weight": "700"
+                              }
+                            },
+                            {
+                              "kind": "grid",
+                              "style": {
+                                "display": "grid",
+                                "grid-template-columns": "72px minmax(0,1fr)",
+                                "gap": "16px 22px",
+                                "margin-top": "24px",
+                                "font-size": "17px",
+                                "line-height": "1.75"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.munje",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.jeopgeun",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을 하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.",
+                                  "raw_text": true,
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "b",
+                                      "text": "Strings.HandoffAgent.bogiSwipgePyoroJean"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.guhyeon",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent.inpeuraGyeoljeong4DangyeInteobyuGak",
+                                      "style": {
+                                        "font-weight": "700"
+                                      }
+                                    },
+                                    {
+                                      "kind": "grid",
+                                      "style": {
+                                        "display": "grid",
+                                        "grid-template-columns": "repeat(auto-fit,minmax(170px,1fr))",
+                                        "gap": "8px",
+                                        "margin-top": "10px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "background": "DesignTokens.card",
+                                            "font-size": "15px",
+                                            "line-height": "1.55"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent._1Seutaek"
+                                            },
+                                            {
+                                              "kind": "box",
+                                              "tag": "br"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.peulraetpomgwaBaekendeuEoneoreulHubo23",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "background": "DesignTokens.card",
+                                            "font-size": "15px",
+                                            "line-height": "1.55"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent._2Gyumo"
+                                            },
+                                            {
+                                              "kind": "box",
+                                              "tag": "br"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.yesangMaudauReulSayongjagaDaeryak",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "background": "DesignTokens.card",
+                                            "font-size": "15px",
+                                            "line-height": "1.55"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent._3HuboChurigi"
+                                            },
+                                            {
+                                              "kind": "box",
+                                              "tag": "br"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent._12GaeJohapJungGeuGyumoe",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "border": "1px solid DesignTokens.line",
+                                            "border-radius": "10px",
+                                            "padding": "12px 14px",
+                                            "background": "DesignTokens.card",
+                                            "font-size": "15px",
+                                            "line-height": "1.55"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent._4YogeumJohoe"
+                                            },
+                                            {
+                                              "kind": "box",
+                                              "tag": "br"
+                                            },
+                                            {
+                                              "kind": "text",
+                                              "text": "Strings.HandoffAgent.gongsikYogeumPeijimanIkeumKaesiEoli",
+                                              "style": {
+                                                "color": "DesignTokens.muted"
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent.aPiMyeongse",
+                                      "style": {
+                                        "margin-top": "22px",
+                                        "font-weight": "700"
+                                      }
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "text": "인프라가 정해지면 화면 HTML과 개발 문서를 읽고, 에서 엔드포인트를 뽑아 초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.",
+                                      "raw_text": true,
+                                      "style": {
+                                        "font-size": "15.5px",
+                                        "margin-top": "4px"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.HandoffAgent.gakHwamyeoniPilyoroHaneunDeiteo"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "code",
+                                          "text": "Strings.HandoffAgent.openapiYaml",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "background": "DesignTokens.Code.bg",
+                                        "color": "DesignTokens.Code.ink",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "margin-top": "10px",
+                                        "min-width": "0"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "pre",
+                                          "text": "Strings.HandoffAgent.openapi303InfoTitle"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.gyeolgwa",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "Strings.HandoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan",
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "margin-top": "12px",
+                                        "border": "1px solid DesignTokens.line",
+                                        "border-radius": "10px",
+                                        "overflow": "hidden",
+                                        "background": "DesignTokens.card"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "group",
+                                          "text": "규모 (MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.",
+                                          "raw_text": true,
+                                          "style": {
+                                            "padding": "10px 14px",
+                                            "border-bottom": "1px solid DesignTokens.line",
+                                            "font-size": "14.5px",
+                                            "color": "DesignTokens.muted"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent.sogyumo",
+                                              "style": {
+                                                "color": "DesignTokens.ink"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "style": {
+                                            "overflow-x": "auto"
+                                          },
+                                          "children": [
+                                            {
+                                              "kind": "group",
+                                              "tag": "table",
+                                              "style": {
+                                                "min-width": "640px"
+                                              },
+                                              "children": [
+                                                {
+                                                  "kind": "group",
+                                                  "tag": "thead",
+                                                  "children": [
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.HandoffAgent.id"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.Forest.db"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.Forest.auth"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.Forest.hosting"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.HandoffAgent.wolBiyong"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.HandoffAgent.hwakinil"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "th",
+                                                          "text": "Strings.HandoffAgent.jongsokseong"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "kind": "group",
+                                                  "tag": "tbody",
+                                                  "children": [
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.awsServerless",
+                                                          "style": {
+                                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                                          }
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.dynamoDb"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.cognito"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.lambdaApigw"
+                                                        },
+                                                        {
+                                                          "kind": "group",
+                                                          "tag": "td",
+                                                          "children": [
+                                                            {
+                                                              "kind": "text",
+                                                              "tag": "b",
+                                                              "text": "Strings.HandoffAgent._05"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "2026-09-04",
+                                                          "raw_text": true
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.nopeum"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.vpsDocker",
+                                                          "style": {
+                                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                                          }
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.postgreSqlJache"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.jacheJwt"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.vPsHetzner"
+                                                        },
+                                                        {
+                                                          "kind": "group",
+                                                          "tag": "td",
+                                                          "children": [
+                                                            {
+                                                              "kind": "text",
+                                                              "tag": "b",
+                                                              "text": "Strings.HandoffAgent._410"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "2026-09-04",
+                                                          "raw_text": true
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.nateum"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.firebase",
+                                                          "style": {
+                                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                                          }
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.firestore"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.firebaseAuth"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.cloudRun"
+                                                        },
+                                                        {
+                                                          "kind": "group",
+                                                          "tag": "td",
+                                                          "children": [
+                                                            {
+                                                              "kind": "text",
+                                                              "tag": "b",
+                                                              "text": "Strings.HandoffAgent._010"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "2026-09-04",
+                                                          "raw_text": true
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.nopeum"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.railway",
+                                                          "style": {
+                                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                                          }
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.postgreSqlRailway"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.jacheJwt"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.railway2"
+                                                        },
+                                                        {
+                                                          "kind": "group",
+                                                          "tag": "td",
+                                                          "children": [
+                                                            {
+                                                              "kind": "text",
+                                                              "tag": "b",
+                                                              "text": "Strings.HandoffAgent._525"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "2026-09-04",
+                                                          "raw_text": true
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.nateum"
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "kind": "group",
+                                                      "tag": "tr",
+                                                      "children": [
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.supabaseFly",
+                                                          "style": {
+                                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                                          }
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.postgreSqlSupabase"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.supabaseAuth"
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.flyIo"
+                                                        },
+                                                        {
+                                                          "kind": "group",
+                                                          "tag": "td",
+                                                          "children": [
+                                                            {
+                                                              "kind": "text",
+                                                              "tag": "b",
+                                                              "text": "Strings.HandoffAgent._030"
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "2026-09-04",
+                                                          "raw_text": true
+                                                        },
+                                                        {
+                                                          "kind": "text",
+                                                          "tag": "td",
+                                                          "text": "Strings.HandoffAgent.jung"
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "ul",
+                                      "style": {
+                                        "margin": "14px 0 0",
+                                        "padding-left": "18px",
+                                        "font-size": "15.5px",
+                                        "color": "DesignTokens.muted"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "li",
+                                          "text": "Strings.HandoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "li",
+                                          "text": "구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우 하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.",
+                                          "raw_text": true,
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.HandoffAgent.sayongjaegeBogoseoroJechul",
+                                              "style": {
+                                                "color": "DesignTokens.ink"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "li",
+                                          "text": "Strings.HandoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "section",
+                      "id": "s5",
+                      "style": {
+                        "padding": "56px 0 64px",
+                        "scroll-margin-top": "90px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border-top": "1px solid DesignTokens.line",
+                            "padding-top": "36px"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.HandoffAgent.keiseuSeuteodi3",
+                              "style": {
+                                "font": "12px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "h2",
+                              "text": "Strings.HandoffAgent.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji",
+                              "style": {
+                                "margin": "6px 0 0",
+                                "font-size": "28px",
+                                "line-height": "1.3",
+                                "font-weight": "700"
+                              }
+                            },
+                            {
+                              "kind": "grid",
+                              "style": {
+                                "display": "grid",
+                                "grid-template-columns": "72px minmax(0,1fr)",
+                                "gap": "16px 22px",
+                                "margin-top": "24px",
+                                "font-size": "17px",
+                                "line-height": "1.75"
+                              },
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.munje",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.aPiKiMingamJeongbogaKeulraudeuSesyeongwa"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.guhyeon",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "민감 값을 관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록 .",
+                                  "raw_text": true,
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "b",
+                                      "text": "Strings.HandoffAgent.hwangyeongbyeonsuroman"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "b",
+                                      "text": "Strings.HandoffAgent.hukeuroMakneunda"
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.gyeolgwa",
+                                  "style": {
+                                    "font": "12px 'IBM Plex Mono',monospace",
+                                    "color": "DesignTokens.muted",
+                                    "padding-top": "5px"
+                                  }
+                                },
+                                {
+                                  "kind": "group",
+                                  "text": "생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿 — 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.",
+                                  "raw_text": true,
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "b",
+                                      "text": "Strings.HandoffAgent._0Gae2"
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "style": {
+                                        "background": "DesignTokens.Code.bg",
+                                        "color": "DesignTokens.Code.ink",
+                                        "border-radius": "10px",
+                                        "padding": "14px 16px",
+                                        "margin-top": "12px",
+                                        "min-width": "0"
+                                      },
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.HandoffAgent.eijeonteuuiYudoYesi",
+                                          "style": {
+                                            "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                            "color": "DesignTokens.accent",
+                                            "margin-bottom": "10px"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "pre",
+                                          "text": "Strings.HandoffAgent.wranglerTomlUiReplacewithd1"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "row",
+                              "style": {
+                                "margin-top": "48px",
+                                "border": "1px solid DesignTokens.line",
+                                "border-radius": "12px",
+                                "padding": "20px 24px",
+                                "display": "flex",
+                                "justify-content": "space-between",
+                                "align-items": "center",
+                                "gap": "16px",
+                                "flex-wrap": "wrap",
+                                "background": "DesignTokens.card"
+                              },
+                              "children": [
+                                {
+                                  "kind": "group",
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent.iDoguroMandeulgoItneunSeobiseu",
+                                      "style": {
+                                        "font": "12px 'IBM Plex Mono',monospace",
+                                        "color": "DesignTokens.muted"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "text": "Strings.HandoffAgent.forestSaundeuMiksingJipjungMyeongsangAep",
+                                      "style": {
+                                        "font-size": "18px",
+                                        "font-weight": "700",
+                                        "margin-top": "2px"
+                                      }
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "text",
+                                  "tag": "a",
+                                  "href": "Forest.dc.html",
+                                  "text": "Strings.HandoffAgent.daeumPeurojekteu",
+                                  "style": {
+                                    "background": "DesignTokens.ink",
+                                    "color": "DesignTokens.bg",
+                                    "padding": "10px 18px",
+                                    "border-radius": "8px",
+                                    "font-size": "14px",
+                                    "font-weight": "600",
+                                    "text-decoration": "none"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "aside",
+                  "style": {
+                    "position": "relative"
+                  },
+                  "children": [
+                    {
+                      "kind": "group",
+                      "style": {
+                        "position": "sticky",
+                        "top": "96px",
+                        "padding": "56px 0 0 20px",
+                        "font": "12.5px/1.35 'IBM Plex Mono',monospace"
+                      },
+                      "children": [
+                        {
+                          "kind": "box",
+                          "style": {
+                            "position": "absolute",
+                            "left": "-1px",
+                            "top": "56px",
+                            "bottom": "0",
+                            "width": "2px",
+                            "background": "DesignTokens.accent",
+                            "transform-origin": "top",
+                            "transform": "scaleY({{ railScale }})",
+                            "transition": "transform .15s linear"
+                          }
+                        },
+                        {
+                          "kind": "column",
+                          "tag": "nav",
+                          "style": {
+                            "display": "flex",
+                            "flex-direction": "column",
+                            "gap": "16px"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s0",
+                              "data-cur": "{{ c0 }}",
+                              "text": "01",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.Forest.gaeyo",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s1",
+                              "data-cur": "{{ c1 }}",
+                              "text": "02",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.guseong",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s2",
+                              "data-cur": "{{ c2 }}",
+                              "text": "03",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.dongjakBangsik",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s3",
+                              "data-cur": "{{ c3 }}",
+                              "text": "04",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.uIuxJeonghapseong",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s4",
+                              "data-cur": "{{ c4 }}",
+                              "text": "05",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.baekendeuSeupek",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "a",
+                              "href": "#s5",
+                              "data-cur": "{{ c5 }}",
+                              "text": "06",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.muted",
+                                "text-decoration": "none",
+                                "transition": "color .2s"
+                              },
+                              "children": [
+                                {
+                                  "kind": "box",
+                                  "tag": "br"
+                                },
+                                {
+                                  "kind": "text",
+                                  "text": "Strings.HandoffAgent.sikeuritGyeokri",
+                                  "style": {
+                                    "color": "DesignTokens.ink"
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "if",
+              "when": "lightboxOpen",
+              "default": "false",
+              "children": [
+                {
+                  "kind": "row",
+                  "on_click": "closeLightbox",
+                  "style": {
+                    "position": "fixed",
+                    "inset": "0",
+                    "z-index": "50",
+                    "background": "rgba(10,12,16,.86)",
+                    "display": "flex",
+                    "align-items": "center",
+                    "justify-content": "center",
+                    "padding": "32px",
+                    "cursor": "zoom-out",
+                    "animation": "rise .2s ease both"
+                  },
+                  "children": [
+                    {
+                      "kind": "image",
+                      "src": "{{ lightboxSrc }}",
+                      "alt": "확대 이미지",
+                      "tag": "img",
+                      "style": {
+                        "max-width": "100%",
+                        "max-height": "100%",
+                        "border-radius": "12px",
+                        "box-shadow": "0 30px 80px rgba(0,0,0,.5)"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
