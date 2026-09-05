@@ -13,7 +13,10 @@
     "check": "astro check",
     "lint": "astro check",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "shots": "node --experimental-strip-types scripts/shots.ts",
+    "smoke": "node --experimental-strip-types scripts/smoke.ts",
+    "a11y": "node --experimental-strip-types scripts/a11y.ts"
   },
   "dependencies": {
     "@astrojs/vercel": "^9.0.5",
@@ -21,7 +24,10 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "@axe-core/playwright": "^4.13.0",
     "@types/node": "^22.10.2",
+    "axe-core": "^4.13.0",
+    "playwright": "^1.63.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }

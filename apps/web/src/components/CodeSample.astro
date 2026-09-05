@@ -10,7 +10,7 @@ const { sample } = Astro.props;
 
 <div class="card">
   <div class="title">{sample.title}</div>
-  <pre data-tok-leave>{sample.parts.map((part) => (part.tok ? <span data-tok="0" data-tok-key={part.tok}>{part.text}</span> : part.text))}</pre>
+  <pre data-tok-leave tabindex="0">{sample.parts.map((part) => (part.tok ? <span data-tok="0" data-tok-key={part.tok}>{part.text}</span> : part.text))}</pre>
 </div>
 
 <style>

@@ -9,8 +9,17 @@
     },
     "noEmit": true,
     "noUncheckedIndexedAccess": true,
-    "verbatimModuleSyntax": true
+    "verbatimModuleSyntax": true,
+    // the scripts/ entry points run under `node --experimental-strip-types`,
+    // which needs the explicit .ts extension on relative imports
+    "allowImportingTsExtensions": true
   },
-  "include": [".astro/types.d.ts", "src/**/*", "test/**/*", "../../shared/generated/**/*"],
+  "include": [
+    ".astro/types.d.ts",
+    "src/**/*",
+    "test/**/*",
+    "scripts/**/*",
+    "../../shared/generated/**/*"
+  ],
   "exclude": ["dist", "node_modules", ".vercel"]
 }

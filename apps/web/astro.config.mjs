@@ -16,6 +16,9 @@ export default defineConfig({
   // deployment environment; without it the page falls back to the request origin.
   site: process.env.PUBLIC_SITE_URL || undefined,
   trailingSlash: "ignore",
+  // The dev toolbar injects its own shadow DOM; the screenshot and smoke scripts
+  // switch it off with ASTRO_DEV_TOOLBAR=0 so they see only the page.
+  devToolbar: { enabled: process.env.ASTRO_DEV_TOOLBAR !== "0" },
   build: { inlineStylesheets: "auto" },
   vite: {
     resolve: {

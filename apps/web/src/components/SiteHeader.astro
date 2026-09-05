@@ -30,7 +30,7 @@ const themeSwitchLabel = "테마 전환";
         type="button"
         class="themeToggle"
         role="switch"
-        aria-checked={String(DEFAULT_THEME === "mint")}
+        aria-checked={DEFAULT_THEME === "mint" ? "true" : "false"}
         aria-label={themeSwitchLabel}
         title={themeSwitchLabel}
         data-theme-toggle
