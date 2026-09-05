@@ -37,6 +37,17 @@ export const SCREEN_META: Record<ScreenId, ScreenMeta> = {
   },
 };
 
+/**
+ * Where the entry screen actually lives for a reader.
+ *
+ * design/derived/navigation.json makes `resume` the entry, and the contract gives it
+ * the path `/resume`. Serving the same document at two URLs split every arrival in
+ * two — in-site "home" links landed on `/resume`, shared links on `/` — so the root is
+ * the one canonical home and `/resume` redirects to it (see astro.config.mjs).
+ * Internal links use this rather than ScreenPaths so they never take the redirect hop.
+ */
+export const HOME_PATH = "/";
+
 /** Every screen id, in navigation order (entry first — design/derived/navigation.json). */
 export const SCREEN_ORDER: readonly ScreenId[] = [
   Screens.resume,

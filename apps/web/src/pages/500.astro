@@ -4,9 +4,10 @@
  * contract was frozen. Astro renders this page for an unhandled error in an
  * on-demand route; it is also reachable at /500 so the state can be checked.
  */
-import { Screens, ScreenPaths } from "@generated/Screens";
+import { Screens } from "@generated/Screens";
 import Base from "../layouts/Base.astro";
 import SystemChrome from "../components/SystemChrome.astro";
+import { HOME_PATH } from "../lib/meta";
 import { ContactCopy, ServerErrorCopy } from "../content/systemCopy";
 ---
 
@@ -35,7 +36,7 @@ import { ContactCopy, ServerErrorCopy } from "../content/systemCopy";
 
       <div class="actions">
         <button class="primary" type="button" data-on-click="reload">{ServerErrorCopy.reload}</button>
-        <a class="secondary" href={ScreenPaths[Screens.resume]}>{ServerErrorCopy.home}</a>
+        <a class="secondary" href={HOME_PATH}>{ServerErrorCopy.home}</a>
       </div>
 
       <div class="contact">

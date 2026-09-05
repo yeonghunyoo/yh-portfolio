@@ -1,10 +1,10 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import { DesignTokens } from "@generated/DesignTokens";
 import { Screens, ScreenPaths, type ScreenId } from "@generated/Screens";
 import { Strings } from "@generated/Strings";
-import { SCREEN_META, SCREEN_ORDER } from "../src/lib/meta";
+import { HOME_PATH, SCREEN_META, SCREEN_ORDER } from "../src/lib/meta";
 import { ResumeCopy } from "../src/content/resumeCopy";
 import { ForestCopy } from "../src/content/forestCopy";
 import { HandoffAgentCopy } from "../src/content/handoffAgentCopy";
@@ -36,7 +36,6 @@ const allSource = [
 
 const pageSource = [
   read("../src/pages/index.astro"),
-  read("../src/pages/resume.astro"),
   read("../src/pages/forest.astro"),
   read("../src/pages/handoffAgent.astro"),
   read("../src/pages/404.astro"),
@@ -62,13 +61,26 @@ describe("screens", () => {
     }
   });
 
+  it("serves the entry screen at one URL — /resume redirects to the root", () => {
+    // Two URLs for the same document split every arrival in two: in-site "home" links
+    // landed on /resume, shared links on /, and only one of them ran the landing.
+    const config = read("../astro.config.mjs");
+    expect(config).toContain(`redirects: { "${ScreenPaths[Screens.resume]}": "${HOME_PATH}" }`);
+    expect(HOME_PATH).toBe("/");
+    expect(existsSync(fileURLToPath(new URL("../src/pages/resume.astro", import.meta.url)))).toBe(false);
+  });
+
   it("never writes a screen path as a literal", () => {
     for (const path of Object.values(ScreenPaths)) {
       expect(allSource).not.toContain(`"${path}"`);
     }
-    expect(allSource).toContain("ScreenPaths.forest");
-    expect(allSource).toContain("ScreenPaths.handoffAgent");
-    expect(allSource).toContain("ScreenPaths.resume");
+    // …and each one is reached through the generated constant, in either notation.
+    for (const screen of Object.values(Screens)) {
+      const viaConstant =
+        allSource.includes(`ScreenPaths.${screen}`) ||
+        allSource.includes(`ScreenPaths[Screens.${screen}]`);
+      expect(viaConstant, `${screen}'s path must come from ScreenPaths`).toBe(true);
+    }
   });
 
   it("carries no link back to the prototype files", () => {

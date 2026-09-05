@@ -4,6 +4,7 @@
 // every piece of copy is a generated constant, listed in ../content/handoffAgentCopy.ts.
 import { HandoffAgentCopy as Copy } from "../content/handoffAgentCopy";
 import { ScreenPaths } from "@generated/Screens";
+import { HOME_PATH } from "../lib/meta";
 import { RawCopy } from "../content/rawCopy";
 import { CodeSamples } from "../content/codeSamples";
 import { Image } from "astro:assets";
@@ -16,7 +17,7 @@ import Lightbox from "../components/Lightbox.astro";
 ---
 <header class="header1">
   <div class="div1">
-    <a class="a1" href={`${ScreenPaths.resume}#work`}>{Copy.Forest.yuyeonghun}</a>
+    <a class="a1" href={`${HOME_PATH}#work`}>{Copy.Forest.yuyeonghun}</a>
     <div class="div2">
       <span class="span1">{Copy.Resume.handoffAgent}</span>
       <a class="a2" href={ScreenPaths.forest}>{Copy.Resume.forest}</a>

@@ -4,7 +4,8 @@
  * the human added after the contract was frozen. The three contracted screens keep
  * their own headers, so this chrome exists only for the system pages.
  */
-import { Screens, ScreenPaths } from "@generated/Screens";
+import { Screens } from "@generated/Screens";
+import { HOME_PATH } from "../lib/meta";
 import { Strings } from "@generated/Strings";
 import { RawCopy } from "../content/rawCopy";
 import { ContactCopy } from "../content/systemCopy";
@@ -12,7 +13,7 @@ import { ContactCopy } from "../content/systemCopy";
 
 <header class="chrome-header">
   <div class="bar">
-    <a class="wordmark" href={ScreenPaths[Screens.resume]}>{Strings.Resume.yuyeonghun}</a>
+    <a class="wordmark" href={HOME_PATH}>{Strings.Resume.yuyeonghun}</a>
     <button class="theme" type="button" data-on-click="toggleTheme" title={RawCopy.title1}>
       <span class="dot"></span><span data-theme-label>{RawCopy.themeLight}</span>
     </button>
