@@ -57,7 +57,11 @@ try {
     for (const violation of results.violations) {
       failures += 1;
       console.log(`  [${violation.impact}] ${violation.id} — ${violation.help}`);
-      for (const node of violation.nodes.slice(0, 3)) console.log(`      ${node.target.join(" ")}`);
+      for (const node of violation.nodes.slice(0, 3)) {
+        console.log(`      ${node.target.join(" ")}`);
+        // the measured numbers (contrast ratio, colours) — enough to judge a fix without re-running
+        for (const line of (node.failureSummary ?? "").split("\n")) if (line.trim()) console.log(`        ${line.trim()}`);
+      }
     }
   }
 

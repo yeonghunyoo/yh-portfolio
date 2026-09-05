@@ -1,40 +1,45 @@
-# @yh/web — handoff-agent case study site
+# @yh/web — resume + case studies
 
 Astro 5 + vanilla TypeScript islands (no UI framework ships to the browser), deployed
-through `@astrojs/vercel`. The whole document is one page: screens `s0`–`s5` of the
-contract are the six sections of `/` (every entry in `ScreenPaths` is `"/"`).
+through `@astrojs/vercel`. Three documents, one per contracted screen, plus the views API
+mounted on the same app.
 
-| Checklist | Screen | Section component |
-|---|---|---|
-| SCR-01 | `Screens.s0` — 01 개요 | `src/sections/S0Overview.astro` |
-| SCR-02 | `Screens.s1` — 02 구성 | `src/sections/S1Composition.astro` |
-| SCR-03 | `Screens.s2` — 03 동작 방식 | `src/sections/S2HowItWorks.astro` |
-| SCR-04 | `Screens.s3` — 04 UI/UX 정합성 | `src/sections/S3UiParity.astro` |
-| SCR-05 | `Screens.s4` — 05 백엔드 스펙 | `src/sections/S4BackendSpec.astro` |
-| SCR-06 | `Screens.s5` — 06 시크릿 격리 | `src/sections/S5SecretIsolation.astro` |
+| Checklist | Screen | Route | Files |
+|---|---|---|---|
+| SCR-01 | `Screens.resume` — 이력서 — 유영훈 | `ScreenPaths.resume` (and `/`, the entry) | `src/pages/resume.astro` · `src/pages/index.astro` · `src/screens/ResumeScreen.astro` |
+| SCR-02 | `Screens.forest` — Forest — 명상 사운드 믹서 | `ScreenPaths.forest` | `src/pages/forest.astro` · `src/screens/ForestScreen.astro` |
+| SCR-03 | `Screens.handoffAgent` — Handoff Agent — 핸드오프 플러그인 | `ScreenPaths.handoffAgent` | `src/pages/handoffAgent.astro` · `src/screens/HandoffAgentScreen.astro` |
 
-| Checklist | Operation | Consumed by |
-|---|---|---|
-| API-01 | `ApiRoutes.listPageViews` | `src/lib/apiClient.ts → listPageViews` |
-| API-02 | `ApiRoutes.getPageViews` | `src/lib/apiClient.ts → getPageViews` |
-| API-03 | `ApiRoutes.incrementPageViews` | `src/lib/apiClient.ts → incrementPageViews`, called once per page load by `src/lib/pageViews.ts` |
+| Checklist | Operation | Client | Server |
+|---|---|---|---|
+| API-01 | `ApiRoutes.listPageViews` | `src/lib/apiClient.ts → listPageViews` | `src/pages/api/views/index.ts` |
+| API-02 | `ApiRoutes.getPageViews` | `src/lib/apiClient.ts → getPageViews` | `src/pages/api/views/[page].ts` |
+| API-03 | `ApiRoutes.incrementPageViews` | `src/lib/apiClient.ts → incrementPageViews`, called once per page load by `src/lib/pageViews.ts` | `src/pages/api/views/[page].ts` |
+
+No screen displays a view count, so `countVisit()` swallows every failure: the counter can
+never change what the reader sees.
 
 ## Layout
 
 ```
-src/layouts/Base.astro      <html lang="ko">, metadata, tokens.css + global.css, pre-paint theme
-src/components/             SiteHeader (theme toggle) · SectionNav (rail + scroll spy) · Lightbox · CodeSample
-src/sections/               one component per contracted screen — markup and CSS only
-src/content/                the copy: one module per screen, every field a Strings.Shared.* constant
-src/lib/                    apiClient (ApiRoutes) · screens (Screens/ScreenPaths) · theme · scrollSpy ·
-                            tokenHighlight · lightbox · pageViews · codeBlocks
-src/styles/global.css       the design's own <style> block + the light/mint palettes
-src/pages/index.astro       the document · 404.astro · favicon.svg.ts (drawn from DesignTokens)
+src/layouts/Base.astro      <html lang="ko">, metadata + Open Graph, tokens.css + global.css,
+                            pre-paint theme, the theme toggle and the section rail
+src/screens/                one component per contracted screen — markup and its <style> block
+src/components/Lightbox.astro   the shared <dialog> the case-study screenshots open into
+src/content/                the copy the screens cannot express as one Strings key:
+                            codeSamples.ts · rawCopy.ts · skills.ts
+src/lib/                    apiClient (ApiRoutes) · pageViews · meta (Screens/ScreenPaths/Strings) ·
+                            theme · scrollSpy · lightbox · dom · one <screen>Screen.ts per screen
+src/lib/backend-unmounted/  stand-in endpoints, used only when <repo>/backend is not checked out
+src/pages/                  index · resume · forest · handoffAgent · 404 · favicon.svg.ts ·
+                            api/views/* (the two server endpoints)
+src/styles/global.css       the design's own global rules + the light/mint palettes
+scripts/                    shots.ts (compare-page screenshots) · a11y.ts (axe-core)
 ```
 
-Copy and layout are separated on purpose: a `.astro` file never names a string, it
-reads a field of its `src/content/*.ts` module, and those modules only ever assign
-`Strings.Shared.*`. All 207 contracted keys are used; `test/contract.test.ts` proves it.
+Copy and layout are separated on purpose: a `.astro` file never spells a string, it reads
+`Strings.*` (or a field of a `src/content/*.ts` module that does). All 360 contracted keys
+are used; `test/contract.test.ts` proves it and fails on inline Korean.
 
 Nothing is copied out of `design/` or `shared/generated/`. Both are read-only and are
 reached through aliases declared in `astro.config.mjs` and `tsconfig.json`:
@@ -42,7 +47,8 @@ reached through aliases declared in `astro.config.mjs` and `tsconfig.json`:
 | Alias | Points at |
 |---|---|
 | `@generated/*` | `shared/generated/*` — `ApiRoutes`, `Screens`, `ScreenPaths`, `DesignTokens`, `Strings`, `tokens.css` |
-| `@design-uploads/*` | `design/uploads/*` — the five comparison screenshots, optimised by `astro:assets` at build time |
+| `@design-assets/*` | `design/assets/*` — the nine case-study screenshots, optimised by `astro:assets` at build time |
+| `@yh/backend` | `backend/src` when the backend package is checked out, `src/lib/backend-unmounted` when it is not |
 
 ## Themes and tokens
 
@@ -53,38 +59,51 @@ reached through aliases declared in `astro.config.mjs` and `tsconfig.json`:
 ever re-typed by hand. The light palette has no tokens in the contract, so its values are
 literals there (and only there) — see the report's proposals.
 
-Every component consumes colour as `var(--token)`; `test/contract.test.ts` fails if a
-component file contains a hex colour or re-types a generated value.
+Every screen consumes colour as `var(--token)`; `test/contract.test.ts` fails if a screen's
+stylesheet re-types a generated value.
 
 ## Behaviour (design/derived/components.json)
 
 | Component | Where |
 |---|---|
-| `toggleTheme` (toggle) | `SiteHeader.astro` + `src/lib/theme.ts` — `body[data-theme]`, `localStorage['yh-theme']` |
-| `navScrollSpy` (tab) + `scrollRail` (item) + `onScroll` (gesture) | `SectionNav.astro` + `src/lib/scrollSpy.ts` — one passive listener, 140px line, 0.005 rail threshold |
-| `tokGap` `tokSize` `tokColor` `tokText` `tokClick` `tokLeave` (gestures) | `src/lib/tokenHighlight.ts` — one element lights up in all four code samples at once |
-| `open1`..`open5` (buttons) + `lightbox` (modal) + `closeLightbox` + `escClose` | `S3UiParity.astro` + `Lightbox.astro` + `src/lib/lightbox.ts` — a native `<dialog>` (`showModal()` gives the focus trap and Esc) |
+| `toggleTheme` `toggleTheme2` `toggleTheme3` (toggle) | `src/layouts/Base.astro` + `src/lib/theme.ts` — `body[data-theme]`, `localStorage['yh-theme']` |
+| `pickHandoff` `pickForest` (button) + `skillsEnter` (item) + `enter0`..`enter4` (gesture) | `src/lib/resumeScreen.ts` — the project tabs, the skill rail and the pipeline nodes |
+| `mixEnter` `e1`..`e4` (gesture) | `src/lib/forestScreen.ts` — the mixer bars, `setInterval(900)` from behavior.json |
+| `tokGap` `tokSize` `tokColor` `tokText` `tokClick` `tokLeave` (gesture) | `src/lib/handoffAgentScreen.ts` — one element lights up in all four code samples at once |
+| `open1`..`open5` (button) + `closeLightbox` | `src/components/Lightbox.astro` + `src/lib/lightbox.ts` — a native `<dialog>` (`showModal()` gives the focus trap and Esc) |
 
-## Mounting the views API (after the backend branch merges)
+The design's `gesture` components are pointer-only (`mouseenter` / `mouseleave`, wired by
+`src/lib/dom.ts`) and stay that way here: every one of them only *highlights* something
+that is already on screen — the pipeline node, the skill rail, the mixer bars, the matching
+token in the four code samples — so a reader who never hovers loses no content. That is the
+parity divergence recorded in the build report. What is keyboard-reachable is everything
+that carries information or navigation: the project tabs, the links, the theme toggle, the
+lightbox buttons and the horizontally scrollable code blocks (`tabindex="0"`).
 
-The human's decision was "same app, same deployment — no separate backend server". The
-`@yh/backend` package holds the logic and this app mounts it as two re-exports. It is not
-wired yet because `backend/` does not exist on this branch; add it once both branches are
-in main:
+## The views API
 
-1. `"@yh/backend": "workspace:*"` (or a relative `file:../../backend`) in `dependencies`.
-2. `src/pages/api/views/index.ts` — `export { GET, prerender } from "@yh/backend/astro/views-index";`
-3. `src/pages/api/views/[page].ts` — `export { GET, POST, prerender } from "@yh/backend/astro/views-page";`
+The human's decision was "same app, same deployment — no separate backend server".
+`@yh/backend` holds the logic; this app mounts it on the paths Astro derives from the file
+layout, which is exactly `ApiRoutes.*` under the `/api` prefix from `servers[0].url`:
 
-That yields exactly the contracted paths under the `/api` prefix from `servers[0].url`.
-Until then `POST /api/views/handoff-agent` 404s; the client swallows the failure on
-purpose — the counter is invisible in the design and must never affect rendering.
+```
+src/pages/api/views/index.ts    → GET  /api/views
+src/pages/api/views/[page].ts   → GET, POST /api/views/{page}
+```
+
+`prerender = false` is declared in those files as a literal: Astro reads it by static
+analysis, and a re-exported flag is invisible to it.
+
+The backend package is developed on its own branch and lands at `<repo>/backend`. When it
+is absent, `astro.config.mjs` points `@yh/backend` at `src/lib/backend-unmounted`, whose
+handlers answer the contract's `503 store_unavailable` and never invent a count — so this
+app always builds, and the real handlers take over as soon as both branches are together.
 
 ## Environment
 
-Copy `.env.example` to `.env`. Only `PUBLIC_*` values reach the browser; never put a
-secret behind that prefix. The Upstash credentials (`VIEWS_STORE_URL`,
-`VIEWS_STORE_TOKEN`) belong to the backend package, not here.
+Copy `.env.example` to `.env`. Only `PUBLIC_*` values reach the browser; never put a secret
+behind that prefix. `VIEWS_STORE_URL` / `VIEWS_STORE_TOKEN` are the Upstash credentials the
+mounted endpoints read at runtime — server-side only, set in the deployment environment.
 
 ## Commands
 
@@ -96,25 +115,26 @@ npm run check       # astro check           (once, at the end)
 npm run build       # astro build           (once, at the end)
 ```
 
-Three scripts need a browser and a dev server, so they are not part of `npm test`.
-Each one starts and stops its own `astro dev`:
+Two scripts need a browser and a dev server, so they are not part of `npm test`. Each one
+starts and stops its own `astro dev`, and every wait inside them is bounded — they can fail
+loudly, never hang:
 
 ```bash
-npm run smoke   # the four interactive components, in a real browser
-npm run shots   # one PNG per screen into <worktree>/.handoff/shots/
-npm run a11y    # axe-core, WCAG 2.1 A/AA, both themes + the 404 page
+npm run shots   # one PNG per screen into <worktree>/.handoff/shots/<screenId>.png
+npm run a11y    # axe-core, WCAG 2.1 A/AA, over every ScreenPaths.* route
 ```
 
 ## Known accessibility finding
 
-`npm run a11y` reports **0 violations** in the mint theme and on the 404 page. The
-light theme — the default — has one, `color-contrast`, and it comes from the prototype
-palette itself, not from this implementation:
+`npm run a11y` reports **0 violations** on `forest`. The other two screens have three, all
+of them properties of the prototype's default (light) palette rather than of this
+implementation — the same values appear in `design/*.dc.html`:
 
-| Where | Foreground on background | Ratio |
+| Screen | Rule | Measured |
 |---|---|---|
-| code sample titles, `[data-tok]` fragments | `--accent` `#2F5BEA` on `--code-bg` `#1D1F24` | ≈ 3.0 : 1 |
-| table headers | `--muted` `#6B7280` on `--surface` `#EEF0F2` | ≈ 4.2 : 1 |
+| `resume` | `color-contrast` | `--muted` `#6B7280` on `--surface` `#EEF0F2`, 12px → 4.23 : 1 (needs 4.5) |
+| `resume` | `link-in-text-block` | inline link `--accent` `#2F5BEA` vs surrounding `--muted` `#6B7280` → 1.14 : 1 (needs 3, or an underline; the design sets `text-decoration: none`) |
+| `handoffAgent` | `color-contrast` | `--accent` `#2F5BEA` on `--code-bg` `#1D1F24` → 2.98 : 1 (needs 4.5) |
 
-Both need 4.5 : 1. Fixing them means changing the light palette, which is a design
-decision — the app reproduces the prototype's colours exactly and does not invent any.
+Fixing any of them means changing the light palette or the link styling, which is a design
+decision. The app reproduces the prototype's colours exactly and invents none.
