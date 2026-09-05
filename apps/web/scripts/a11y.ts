@@ -41,8 +41,13 @@ try {
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
   const page = await context.newPage();
 
+  page.setDefaultTimeout(45_000);
+  page.setDefaultNavigationTimeout(45_000);
+
   for (const id of Object.values(Screens) as ScreenId[]) {
-    await page.goto(`${origin}${ScreenPaths[id]}`, { waitUntil: "networkidle" });
+    // `domcontentloaded` + a bounded `load` wait: nothing here may wait open-ended.
+    await page.goto(`${origin}${ScreenPaths[id]}`, { waitUntil: "domcontentloaded", timeout: 45_000 });
+    await page.waitForLoadState("load", { timeout: 20_000 }).catch(() => undefined);
     // the design's entrance animations fade in over ~1.4s; measure the resting state
     await page.waitForTimeout(2000);
     const results = await new AxeBuilder({ page })
@@ -62,3 +67,7 @@ try {
 }
 
 process.exitCode = failures === 0 ? 0 : 1;
+
+// The dev server is a child process with inherited stdio; end the run even if
+// something is still holding the event loop after SIGTERM.
+setTimeout(() => process.exit(process.exitCode ?? 0), 3_000);
