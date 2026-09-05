@@ -5,8 +5,16 @@ import * as viewsIndex from "../src/astro/views-index.ts";
 import * as viewsPage from "../src/astro/views-page.ts";
 import { KnownPages, isValidPageSlug, knownPageSlugs, pageSlugForScreen } from "../src/domain/slug.ts";
 import type { PageViews, PageViewsList } from "../src/domain/types.ts";
-import { EnvKeys, createViewsStore, getViewsStore, resetViewsStoreCache } from "../src/store/factory.ts";
+import {
+  EnvFallbackKeys,
+  EnvKeys,
+  createViewsStore,
+  getViewsStore,
+  resetViewsStoreCache,
+  storeCredentials,
+} from "../src/store/factory.ts";
 import { MemoryViewsStore } from "../src/store/memory.ts";
+import { UpstashViewsStore } from "../src/store/upstash.ts";
 import { apiPath } from "../src/http/router.ts";
 import type { AstroApiContext } from "../src/astro/types.ts";
 
@@ -103,6 +111,54 @@ describe("store factory reads the approved env vars", () => {
 
   it("names exactly the env vars the human approved", () => {
     expect([EnvKeys.storeUrl, EnvKeys.storeToken]).toEqual(["VIEWS_STORE_URL", "VIEWS_STORE_TOKEN"]);
+  });
+
+  it("falls back to the names the Upstash integration injects on Vercel", () => {
+    expect(EnvFallbackKeys.storeUrl[0]).toBe("KV_REST_API_URL");
+    expect(EnvFallbackKeys.storeToken[0]).toBe("KV_REST_API_TOKEN");
+    const pairs: ReadonlyArray<readonly [string, string]> = [
+      ["KV_REST_API_URL", "KV_REST_API_TOKEN"],
+      ["UPSTASH_REDIS_REST_URL", "UPSTASH_REDIS_REST_TOKEN"],
+    ];
+    for (const [url, token] of pairs) {
+      expect(createViewsStore({ [url]: "https://x.upstash.io", [token]: "placeholder" })).toBeInstanceOf(
+        UpstashViewsStore,
+      );
+    }
+  });
+
+  it("still needs both halves when only a fallback name is set", () => {
+    expect(createViewsStore({ KV_REST_API_URL: "https://x.upstash.io" })).toBeNull();
+    expect(createViewsStore({ KV_REST_API_TOKEN: "placeholder" })).toBeNull();
+  });
+
+  it("prefers the approved name over the fallback, and ignores blank values", () => {
+    const store = createViewsStore({
+      [EnvKeys.storeUrl]: "https://approved.upstash.io",
+      [EnvKeys.storeToken]: "   ",
+      KV_REST_API_URL: "https://fallback.upstash.io",
+      KV_REST_API_TOKEN: "fallback-token",
+    });
+    // The blank approved token must not shadow the fallback, and the approved URL wins.
+    expect(store).toBeInstanceOf(UpstashViewsStore);
+    expect(storeCredentials({
+      [EnvKeys.storeUrl]: "https://approved.upstash.io",
+      [EnvKeys.storeToken]: "   ",
+      KV_REST_API_URL: "https://fallback.upstash.io",
+      KV_REST_API_TOKEN: "fallback-token",
+    })).toEqual({ url: "https://approved.upstash.io", token: "fallback-token" });
+  });
+
+  it("caches one instance whether the credentials arrive under the approved or fallback name", () => {
+    const approved = getViewsStore({
+      [EnvKeys.storeUrl]: "https://same.upstash.io",
+      [EnvKeys.storeToken]: "same-token",
+    });
+    const viaFallback = getViewsStore({
+      KV_REST_API_URL: "https://same.upstash.io",
+      KV_REST_API_TOKEN: "same-token",
+    });
+    expect(viaFallback).toBe(approved);
   });
 });
 

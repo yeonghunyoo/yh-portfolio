@@ -23,8 +23,10 @@ export default defineConfig({
   // views API routes can opt out of prerendering with `prerender = false`.
   output: "static",
   adapter: vercel(),
-  // Absolute site URL for canonical/Open Graph tags. Set PUBLIC_SITE_URL in the
-  // deployment environment; without it the page falls back to the request origin.
+  // Absolute site URL for canonical/Open Graph tags. Every page here is prerendered,
+  // so this is read at build time and baked in — there is no request-time fallback.
+  // PUBLIC_SITE_URL must be set in each deployed environment, or Astro's default
+  // (http://localhost:4321) ends up in every canonical and og:url.
   site: process.env.PUBLIC_SITE_URL || undefined,
   trailingSlash: "ignore",
   // The dev toolbar injects its own shadow DOM; the screenshot and smoke scripts

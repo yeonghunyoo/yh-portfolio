@@ -97,7 +97,13 @@ Copy `.env.example` to `.env` (git-ignored) or set the same names in Vercel:
 - `VIEWS_STORE_URL` — Upstash Redis REST endpoint
 - `VIEWS_STORE_TOKEN` — Upstash Redis REST token
 
-With either missing, every route answers `503`, which is the contracted behaviour.
+When either is unset, the store falls back to the names the Upstash integration injects
+by itself once the database is attached to a Vercel project — `KV_REST_API_URL` /
+`KV_REST_API_TOKEN`, then `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN`. The two
+names above stay authoritative; the fallbacks only spare an operator from copying the
+same credentials into a second pair of variables by hand.
+
+With no pair resolvable, every route answers `503`, which is the contracted behaviour.
 `VIEWS_STORE_DRIVER=memory` runs the routes on in-process counters for local work only.
 
 ## Commands
@@ -105,6 +111,6 @@ With either missing, every route answers `503`, which is the contracted behaviou
 ```bash
 npm install
 npm run typecheck                                   # tsc --noEmit
-npm test                                            # vitest, 52 tests
+npm test                                            # vitest, 56 tests
 VIEWS_STORE_DRIVER=memory npm run dev               # http://localhost:4321/api/views
 ```

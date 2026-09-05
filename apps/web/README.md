@@ -111,6 +111,9 @@ app always builds, and the real handlers take over as soon as both branches are 
 Copy `.env.example` to `.env`. Only `PUBLIC_*` values reach the browser; never put a secret
 behind that prefix. `VIEWS_STORE_URL` / `VIEWS_STORE_TOKEN` are the Upstash credentials the
 mounted endpoints read at runtime — server-side only, set in the deployment environment.
+When they are unset the store falls back to `KV_REST_API_URL` / `KV_REST_API_TOKEN` (and
+the `UPSTASH_REDIS_REST_*` pair), which the Upstash integration injects on its own, so
+attaching the database to the Vercel project is enough to switch the counters on.
 
 ## Commands
 
