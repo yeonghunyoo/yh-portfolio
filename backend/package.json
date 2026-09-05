@@ -1,0 +1,23 @@
+{
+  "name": "@yh/backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "yh_portfolio views API — per-page view counters served by Astro server endpoints (Upstash Redis)",
+  "exports": {
+    ".": "./src/index.ts",
+    "./astro/views-index": "./src/astro/views-index.ts",
+    "./astro/views-page": "./src/astro/views-page.ts"
+  },
+  "scripts": {
+    "dev": "node --experimental-strip-types src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}
