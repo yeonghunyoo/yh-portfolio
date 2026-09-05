@@ -1,0 +1,16 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": ["astro/client", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@generated/*": ["../../shared/generated/*"],
+      "@design-uploads/*": ["../../design/uploads/*"]
+    },
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true
+  },
+  "include": [".astro/types.d.ts", "src/**/*", "test/**/*", "../../shared/generated/**/*"],
+  "exclude": ["dist", "node_modules", ".vercel"]
+}
