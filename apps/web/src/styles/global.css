@@ -1,0 +1,114 @@
+/*
+ * Global rules of the three design exports — the parts that sit on `html`, `body`
+ * and `a`. Everything else is scoped to its screen component.
+ *
+ * shared/generated/tokens.css declares the design tokens on :root. It carries the
+ * palette the prototype calls `data-theme="mint"`, so the mint theme reads straight
+ * from the tokens and only the prototype's light palette (which has no tokens) is
+ * written out here. `--mint-*` are aliases captured at :root before `body` shadows
+ * the token names, so no token value is ever duplicated as a literal.
+ */
+
+:root {
+  --mint-bg: var(--bg);
+  --mint-surface: var(--surface);
+  --mint-card: var(--card);
+  --mint-line: var(--line);
+  --mint-line-soft: var(--line-soft);
+  --mint-muted: var(--muted);
+  --mint-ink: var(--ink);
+  --mint-accent: var(--accent);
+  --mint-accent-ink: var(--accent-ink);
+  --mint-accent-soft: var(--accent-soft);
+  --mint-code-bg: var(--code-bg);
+  --mint-code-ink: var(--code-ink);
+  --mint-code-dim: var(--code-dim);
+  --mint-hl: var(--hl);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans KR", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.3s, color 0.3s;
+
+  /* light theme — the prototype's default palette; these values carry no token */
+  --bg: #f7f7f5;
+  --surface: #eef0f2;
+  --card: #ffffff;
+  --line: rgba(22, 24, 29, 0.14);
+  --line-soft: rgba(22, 24, 29, 0.08);
+  --muted: #6b7280;
+  --ink: #16181d;
+  --accent: #2f5bea;
+  --accent-ink: #ffffff;
+  --accent-soft: rgba(47, 91, 234, 0.1);
+  --code-bg: #1d1f24;
+  --code-ink: #d5d8de;
+  --code-dim: #8a909b;
+  --hl: rgba(47, 91, 234, 0.12);
+}
+
+body[data-theme="mint"] {
+  --bg: var(--mint-bg);
+  --surface: var(--mint-surface);
+  --card: var(--mint-card);
+  --line: var(--mint-line);
+  --line-soft: var(--mint-line-soft);
+  --muted: var(--mint-muted);
+  --ink: var(--mint-ink);
+  --accent: var(--mint-accent);
+  --accent-ink: var(--mint-accent-ink);
+  --accent-soft: var(--mint-accent-soft);
+  --code-bg: var(--mint-code-bg);
+  --code-ink: var(--mint-code-ink);
+  --code-dim: var(--mint-code-dim);
+  --hl: var(--mint-hl);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Keyframes the screens' scoped rules reference by name. */
+@keyframes drawline {
+  from { background-size: 0% 3px; }
+  to { background-size: 100% 3px; }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes lit {
+  0% { opacity: 0.25; }
+  100% { opacity: 1; }
+}
+
+/* The prototype has no focus styling; a keyboard user needs one. Token colours only. */
+:where(a, button, [tabindex], summary, input):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": {
+    "types": ["astro/client", "node"],
+    "baseUrl": ".",
+    "paths": {
+      "@generated/*": ["../../shared/generated/*"],
+      "@design-assets/*": ["../../design/assets/*"],
+      // the real backend package first, the local stand-in when it is not checked out
+      "@yh/backend/*": ["../../backend/src/*", "./src/lib/backend-unmounted/*"]
+    },
+    "noEmit": true,
+    "noUncheckedIndexedAccess": true,
+    "verbatimModuleSyntax": true,
+    // the scripts/ entry points run under `node --experimental-strip-types`,
+    // which needs the explicit .ts extension on relative imports
+    "allowImportingTsExtensions": true
+  },
+  "include": [
+    ".astro/types.d.ts",
+    "src/**/*",
+    "test/**/*",
+    "scripts/**/*",
+    "../../shared/generated/**/*"
+  ],
+  "exclude": ["dist", "node_modules", ".vercel"]
+}

@@ -1,0 +1,15 @@
+---
+/** `ScreenPaths.handoffAgent` — the Handoff Agent case study. */
+import { Screens } from "@generated/Screens";
+import Base from "../layouts/Base.astro";
+import HandoffAgentScreen from "../screens/HandoffAgentScreen.astro";
+---
+
+<Base screen={Screens.handoffAgent}>
+  <HandoffAgentScreen />
+</Base>
+
+<script>
+  import { initHandoffAgentScreen } from "../lib/handoffAgentScreen";
+  initHandoffAgentScreen();
+</script>

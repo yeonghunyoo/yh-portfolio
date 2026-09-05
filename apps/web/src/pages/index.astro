@@ -1,0 +1,19 @@
+---
+/**
+ * Entry screen — design/derived/navigation.json → `entry: "resume"`.
+ * The same document is served at `ScreenPaths.resume`; `/` is the root the reader
+ * lands on, so both routes render the one screen component.
+ */
+import { Screens } from "@generated/Screens";
+import Base from "../layouts/Base.astro";
+import ResumeScreen from "../screens/ResumeScreen.astro";
+---
+
+<Base screen={Screens.resume}>
+  <ResumeScreen />
+</Base>
+
+<script>
+  import { initResumeScreen } from "../lib/resumeScreen";
+  initResumeScreen();
+</script>

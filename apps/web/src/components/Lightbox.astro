@@ -1,0 +1,61 @@
+---
+/**
+ * The `<sc-if value="{{ lightboxOpen }}">` overlay of the forest and handoffAgent
+ * exports. An overlay is not a screen, so it lives inside the screen that opens it.
+ * On the web it is a real `<dialog>`: `showModal()` traps focus, Escape closes it and
+ * the page behind it cannot be scrolled — the same outcome as the prototype's
+ * `closeLightbox` plus its window `keydown` listener.
+ */
+import { RawCopy } from "../content/rawCopy";
+
+interface Props {
+  /** Corner radius the screen's own overlay uses: 22px in forest, 12px in handoffAgent. */
+  tight?: boolean;
+}
+
+const { tight = false } = Astro.props;
+---
+
+<dialog class="lightbox" data-lightbox aria-label={RawCopy.alt5}>
+  <img class:list={["shot", { tight }]} data-lightbox-image alt={RawCopy.alt5} />
+</dialog>
+
+<style>
+  .lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 32px;
+    border: 0;
+    background: rgba(10, 12, 16, 0.86);
+    cursor: zoom-out;
+    overflow: hidden;
+  }
+
+  .lightbox[open] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: rise 0.2s ease both;
+  }
+
+  .lightbox::backdrop {
+    background: rgba(10, 12, 16, 0.86);
+  }
+
+  .shot {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 22px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.5);
+  }
+
+  .shot.tight {
+    border-radius: 12px;
+  }
+</style>
