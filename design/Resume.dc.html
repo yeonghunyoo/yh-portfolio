@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'IBM Plex Sans KR',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;
+--bg:#F7F7F5;--surface:#EEF0F2;--card:#FFFFFF;--line:rgba(22,24,29,.14);--line-soft:rgba(22,24,29,.08);--muted:#6B7280;--ink:#16181D;--accent:#2F5BEA;--accent-ink:#FFFFFF;--accent-soft:rgba(47,91,234,.10);--code-bg:#1D1F24;--code-ink:#D5D8DE;--hl:rgba(47,91,234,.12)}
+body[data-theme="mint"]{--bg:#0F1115;--surface:#181C24;--card:#141821;--line:rgba(230,232,236,.16);--line-soft:rgba(230,232,236,.08);--muted:#8B93A1;--ink:#E6E8EC;--accent:#3DDC97;--accent-ink:#0F1115;--accent-soft:rgba(61,220,151,.12);--code-bg:#0A0C10;--code-ink:#C9CED6;--hl:rgba(61,220,151,.14)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+[data-hl="1"]{background:var(--hl)!important;border-color:var(--accent)!important}
+[data-dim="1"]{opacity:.35}
+[data-active="1"]{background:var(--ink)!important;color:var(--bg)!important;border-color:var(--ink)!important}
+[data-active="1"] span{color:inherit!important;opacity:.7}
+@keyframes drawline{from{background-size:0% 3px}to{background-size:100% 3px}}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes lit{0%{opacity:.25}100%{opacity:1}}
+</style></helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+  <div style="max-width:1080px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <a href="#top" style="font-weight:700;font-size:16px;color:var(--ink);text-decoration:none">유영훈</a>
+    <nav style="display:flex;gap:22px;font-family:'IBM Plex Mono',monospace;font-size:13px">
+      <a href="#about" style="color:var(--muted)" style-hover="color:var(--ink)">01 소개</a>
+      <a href="#work" style="color:var(--muted)" style-hover="color:var(--ink)">02 만든 것</a>
+      <a href="#career" style="color:var(--muted)" style-hover="color:var(--ink)">03 경력</a>
+    </nav>
+    <button type="button" onClick="{{ toggleTheme }}" title="테마 전환" style="display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer" style-hover="border-color:var(--accent)"><span style="width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block"></span>{{ themeLabel }}</button>
+  </div>
+  <div style="height:2px;background:var(--line-soft)"><div style="height:2px;background:var(--accent);transition:width .1s linear;width:{{ progressPct }}"></div></div>
+</header>
+
+<main id="top" style="max-width:1080px;margin:0 auto;padding:0 32px">
+
+  <section id="about" style="padding:72px 0 44px;scroll-margin-top:80px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)">Software Engineer · iOS · Builder</div>
+    <h1 style="margin:10px 0 0;font-size:52px;line-height:1.05;font-weight:700;letter-spacing:-.02em">유영훈</h1>
+    <p style="margin:26px 0 0;font-size:19px;line-height:1.8;max-width:760px;text-wrap:pretty;animation:rise .6s ease both">iOS 네이티브 앱 개발을 주로 맡아왔지만, 특정 플랫폼이나 직무에 저를 가두지 않습니다.<br>일하다 반복되는 문제를 만나면 <span style="font-weight:600;background-image:linear-gradient(var(--accent),var(--accent));background-repeat:no-repeat;background-position:0 100%;background-size:100% 3px;animation:drawline 1.1s .5s cubic-bezier(.2,.7,.2,1) both;padding-bottom:2px">도구를 직접 만들어 해결</span>하고, 그 도구로 다시 서비스를 만드는 방식으로 일합니다.<br>최근에는 iOS · Android를 따로 개발하며 겪은 비효율을 <a href="#work" onClick="{{ pickHandoff }}" style="font-weight:600;color:var(--ink);border-bottom:1px dashed var(--muted);text-decoration:none" style-hover="color:var(--accent);border-color:var(--accent)">handoff-agent</a>라는 플러그인으로 풀었고,<br>지금은 그 도구로 <a href="#work" onClick="{{ pickForest }}" style="font-weight:600;color:var(--ink);border-bottom:1px dashed var(--muted);text-decoration:none" style-hover="color:var(--accent);border-color:var(--accent)">Forest</a>라는 서비스를 만들고 있습니다.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:34px;animation:rise .6s .15s ease both">
+      <div style="border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:transform .25s,border-color .25s" style-hover="transform:translateY(-3px);border-color:var(--accent)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">원칙 1</div>
+        <div style="font-size:19px;font-weight:700;margin-top:6px">귀찮음은 아이디어의 시작점</div>
+        <p style="margin:10px 0 0;font-size:16px;line-height:1.7;color:var(--muted);text-wrap:pretty">반복되는 업무가 귀찮다고 느껴질 때, 저는 그 감각을 자동화 아이디어의 출발점으로 삼습니다. 사람의 뇌는 사실 멀티태스킹이 되지 않기 때문에, 반복 작업은 최대한 자동화로 덜어내려 합니다.</p>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:transform .25s,border-color .25s" style-hover="transform:translateY(-3px);border-color:var(--accent)">
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">원칙 2</div>
+        <div style="font-size:19px;font-weight:700;margin-top:6px">근거로 말합니다</div>
+        <p style="margin:10px 0 0;font-size:16px;line-height:1.7;color:var(--muted);text-wrap:pretty">말보다 눈으로 확인시키는 것이 오해를 줄입니다. API 통신 로그는 보기 좋게 포맷화해 전달하고, 화면 이슈는 이미지·영상으로, 디자인은 샘플 데이터로 미리 확인하며 대화합니다.</p>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:10px;margin-top:28px;flex-wrap:wrap">
+      <a href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">GitHub ↗</a>
+      <a href="mailto:yeonghun.yoo@gmail.com" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);color:var(--ink);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:500;text-decoration:none" style-hover="border-color:var(--accent);color:var(--accent)">yeonghun.yoo@gmail.com</a>
+    </div>
+  </section>
+
+  <div style="border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 0;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap">
+    <div style="display:flex;align-items:baseline;gap:10px;flex:none"><span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted)">경력</span><span style="font-weight:700;font-size:15px">4년 2개월</span></div>
+    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end">
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--muted);margin-right:4px">Skill</span>
+      <sc-for list="{{ skills }}" as="s" hint-placeholder-count="12">
+        <span onMouseEnter="{{ s.enter }}" onMouseLeave="{{ leaveSkill }}" style="border:1px solid var(--line);border-radius:999px;padding:2px 10px;font:12px 'IBM Plex Mono',monospace;color:var(--ink);cursor:default;transition:all .2s" style-hover="border-color:var(--accent);color:var(--accent);background:var(--accent-soft)">{{ s.name }}</span>
+      </sc-for>
+    </div>
+  </div>
+
+  <section id="work" style="padding:64px 0 24px;scroll-margin-top:80px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)">02 — 만든 것</div>
+    <h2 style="margin:6px 0 0;font-size:30px;line-height:1.25;font-weight:700;letter-spacing:-.01em">도구를 만들고, 그 도구로 서비스를 만듭니다</h2>
+
+    <div role="tablist" tabIndex="0" onKeyDown="{{ onTabKey }}" style="display:flex;gap:10px;margin-top:26px;flex-wrap:wrap;outline:none">
+      <button type="button" role="tab" data-active="{{ tab0 }}" onClick="{{ pickHandoff }}" style="text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:12px 18px;min-width:220px;cursor:pointer;transition:all .2s;font-family:inherit" style-hover="border-color:var(--accent)"><div style="font-weight:700;font-size:16px">handoff-agent</div><span style="display:block;font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:2px">Claude Code 플러그인 · 2026.09 ~</span></button>
+      <button type="button" role="tab" data-active="{{ tab1 }}" onClick="{{ pickForest }}" style="text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:10px;padding:12px 18px;min-width:220px;cursor:pointer;transition:all .2s;font-family:inherit" style-hover="border-color:var(--accent)"><div style="font-weight:700;font-size:16px">Forest</div><span style="display:block;font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:2px">사운드 믹싱 집중 &amp; 명상 앱 · 2026.09 ~</span></button>
+      <span style="align-self:center;font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-left:auto">← → 키로 전환</span>
+    </div>
+
+    <sc-if value="{{ isHandoff }}" hint-placeholder-val="{{ true }}">
+      <div style="margin-top:28px;animation:rise .35s ease both">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+          <div style="max-width:640px"><div style="font-size:24px;font-weight:700">handoff-agent</div><p style="margin:6px 0 0;font-size:17px;line-height:1.7;color:var(--muted);text-wrap:pretty">Claude Design 핸드오프 패키지 1개로 iOS · Android · backend를 한 번에 만드는 Claude Code 플러그인</p></div>
+          <div style="display:flex;gap:8px;flex:none">
+            <a href="https://github.com/yeonghunyoo/handoff-agent" target="_blank" rel="noreferrer" style="background:var(--ink);color:var(--bg);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">GitHub ↗</a>
+            <a href="Handoff%20Agent.dc.html" style="border:1.5px solid var(--accent);color:var(--accent);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">상세 보기 →</a>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--surface)">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><span style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">PIPELINE</span><span style="font-weight:700;font-size:15px">디자인 핸드오프 1개 → iOS · Android · backend 동시 구현</span></div>
+          <div style="display:flex;align-items:center;gap:8px;margin-top:14px;flex-wrap:wrap">
+            <div data-hl="{{ hl0 }}" onMouseEnter="{{ enter0 }}" onMouseLeave="{{ leaveNode }}" style="flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .1s both;transition:all .2s;cursor:default"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">input</div><div style="font-weight:600;font-size:14px;margin-top:2px">Claude Design 산출물</div></div>
+            <span style="color:var(--muted)">→</span>
+            <div data-hl="{{ hl1 }}" onMouseEnter="{{ enter1 }}" onMouseLeave="{{ leaveNode }}" style="flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .3s both;transition:all .2s;cursor:default"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">refine</div><div style="font-weight:600;font-size:14px;margin-top:2px">레이아웃 트리 (JSON)</div></div>
+            <span style="color:var(--muted)">→</span>
+            <div data-hl="{{ hl2 }}" onMouseEnter="{{ enter2 }}" onMouseLeave="{{ leaveNode }}" style="flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .5s both;transition:all .2s;cursor:default"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">interview</div><div style="font-weight:600;font-size:14px;margin-top:2px">스펙 문서 · 선택지 표</div></div>
+            <span style="color:var(--muted)">→</span>
+            <div data-hl="{{ hl3 }}" onMouseEnter="{{ enter3 }}" onMouseLeave="{{ leaveNode }}" style="flex:0 0 auto;display:flex;flex-direction:column;gap:5px;animation:lit .5s .7s both;transition:all .2s;cursor:default;border-radius:10px;padding:4px"><span style="background:var(--ink);color:var(--bg);padding:5px 12px;border-radius:6px;font:600 13px 'IBM Plex Mono',monospace">iOS</span><span style="background:var(--ink);color:var(--bg);padding:5px 12px;border-radius:6px;font:600 13px 'IBM Plex Mono',monospace">Android</span><span style="background:var(--ink);color:var(--bg);padding:5px 12px;border-radius:6px;font:600 13px 'IBM Plex Mono',monospace">backend</span></div>
+            <span style="color:var(--muted)">→</span>
+            <div data-hl="{{ hl4 }}" onMouseEnter="{{ enter4 }}" onMouseLeave="{{ leaveNode }}" style="flex:1 1 140px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--card);animation:lit .5s .9s both;transition:all .2s;cursor:default"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">verify</div><div style="font-weight:600;font-size:14px;margin-top:2px">정합성 체크 → Forest</div></div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px 32px;margin-top:22px;font-size:16px;line-height:1.7">
+          <div data-hl="{{ hl1 }}" onMouseEnter="{{ enter1 }}" onMouseLeave="{{ leaveNode }}" style="padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s"><div style="font-weight:600">Claude Design 프로토타입 산출물을 레이아웃 트리(JSON) 구조로 정제화</div><div style="color:var(--muted)">구현 에이전트 토큰 39% 절감 (16회 A/B 실측)</div></div>
+          <div data-hl="{{ hl2 }}" onMouseEnter="{{ enter2 }}" onMouseLeave="{{ leaveNode }}" style="padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s"><div style="font-weight:600">프론트 + 백엔드 인프라 인터뷰 결과를 토대로 스펙 문서화 프로세스 구축</div><div style="color:var(--muted)">요금·기능·예측 사용자 규모를 인터뷰 기반으로 표로 선택지 제공</div></div>
+          <div data-hl="{{ hl3 }}" onMouseEnter="{{ enter3 }}" onMouseLeave="{{ leaveNode }}" style="padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s"><div style="font-weight:600">위 산출물 기반으로 병렬 구현하는 3개 플랫폼 빌더 에이전트</div><div style="color:var(--muted)">iOS · Android · backend 동시 생성</div></div>
+          <div data-hl="{{ hl4 }}" onMouseEnter="{{ enter4 }}" onMouseLeave="{{ leaveNode }}" style="padding:10px 12px;margin:-10px -12px;border-radius:8px;border:1px solid transparent;transition:all .2s"><div style="font-weight:600">인터뷰 기반 백엔드 인프라 결정구조 및 보고서 기반 정합성 체크 프로세스</div><div style="color:var(--muted)">민감 정보(인증서·키)는 사용자가 직접 입력</div></div>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isForest }}" hint-placeholder-val="{{ false }}">
+      <div style="margin-top:28px;animation:rise .35s ease both">
+        <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap">
+          <div style="max-width:640px"><div style="font-size:24px;font-weight:700">Forest</div><p style="margin:6px 0 0;font-size:17px;line-height:1.7;color:var(--muted);text-wrap:pretty">파도 · 비 · 바람 · 모래 · 장작 다섯 가지 자연 소리를 원하는 비율로 섞어 나만의 소리를 만드는 명상 앱. handoff-agent로 iOS · Android 네이티브 동시 개발 중</p></div>
+          <div style="display:flex;gap:8px;flex:none">
+            <a href="Forest.dc.html" style="border:1.5px solid var(--accent);color:var(--accent);padding:9px 16px;border-radius:8px;font-size:13px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">상세 보기 →</a>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-top:20px">
+          <img src="assets/forest-01-onboarding.png" alt="Forest 온보딩" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s" style-hover="transform:translateY(-4px)">
+          <img src="assets/forest-02-home.png" alt="Forest 홈" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s" style-hover="transform:translateY(-4px)">
+          <img src="assets/forest-03-sound.png" alt="Forest 사운드" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s" style-hover="transform:translateY(-4px)">
+          <img src="assets/forest-04-stats.png" alt="Forest 기록" style="width:100%;border-radius:18px;border:1px solid var(--line);display:block;transition:transform .3s" style-hover="transform:translateY(-4px)">
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px 32px;margin-top:22px;font-size:16px;line-height:1.7">
+          <div><div style="font-weight:600">handoff-agent를 활용한 iOS · Android 네이티브 동시 개발</div><div style="color:var(--muted)">SwiftUI · Jetpack Compose, 같은 화면·컴포넌트 구성</div></div>
+          <div><div style="font-weight:600">Cloudflare Workers + Hono · D1 · R2 백엔드</div><div style="color:var(--muted)">서버 관리 부담 없이, 이 규모에서 비용 거의 0</div></div>
+          <div><div style="font-weight:600">AVAudioEngine 기반 5트랙 동시 믹싱 플레이어</div><div style="color:var(--muted)">레이어별 볼륨 · 프리셋 · 수면 타이머</div></div>
+        </div>
+      </div>
+    </sc-if>
+  </section>
+
+  <section id="career" style="padding:56px 0 24px;scroll-margin-top:80px">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--muted)">03 — 경력 · 4년 2개월</div>
+    <div style="display:flex;flex-direction:column;gap:12px;margin-top:16px">
+
+      <article data-dim="{{ dimA }}" style="border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:opacity .25s">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="font-size:19px;font-weight:700">트립에이드 (Tripaid) · iOS Native</div><span style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">2025.10 ~ 현재</span></div>
+        <div style="margin-top:4px;color:var(--muted);font-size:16px">헬미닥 AI 채팅 건강상담 서비스 · <a href="https://apps.apple.com/kr/app/%ED%97%AC%EB%AF%B8%EB%8B%A5-helpmedoc/id6475003834" target="_blank" rel="noreferrer">App Store ↗</a> · iOS 네이티브 앱 개발 및 아키텍처/DX 고도화</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;font-size:15px;line-height:1.65">
+          <div><div style="font-weight:600">iOS UI/UX 정비 및 플랫폼 간 서비스 동기화</div><div style="color:var(--muted)">Android 대비 정체된 iOS 환경을 점검해 UI/UX 전반 개선, 플랫폼 간 정합성 확보. 디자인 컴포넌트화·토큰화로 뷰 유지보수성 향상</div></div>
+          <div><div style="font-weight:600">네트워크 공통 인터셉터 도입 및 토큰 자동화</div><div style="color:var(--muted)">응답·에러 처리를 인터셉터 계층으로 분리해 중복 제거, 인증 토큰 주입·갱신 자동화. 커스텀 로깅으로 디버깅 효율 개선</div></div>
+          <div><div style="font-weight:600">Claude Design을 활용한 디자인 소요 최소화</div><div style="color:var(--muted)">디자인 샘플로 팀 간 방향성 공유, 디자인·번역 결과를 네이티브 리소스로 컨버트해 빠르게 전달</div></div>
+        </div>
+      </article>
+
+      <article data-dim="{{ dimB }}" style="border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:opacity .25s">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="font-size:19px;font-weight:700">홀리츠 (holich)</div><span style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">2023.04 – 2025.02 · 1년 11개월</span></div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;font-size:15px;line-height:1.65">
+          <div><div style="font-weight:600">Let's Bee 필리핀 음식 배달 서비스</div><div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin:2px 0 4px">2024.07 – 2025.01 · Flutter</div><div style="color:var(--muted)">유저·파트너(점주) 앱 UI/UX 구현, 번역 자동화 프로세스를 기능 개발에 통합</div></div>
+          <div><div style="font-weight:600">(구) Let's Bee 클락 지역 배달 서비스</div><div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin:2px 0 4px">2023.06 – 2024.11 · iOS</div><div style="color:var(--muted)">UI/UX 개선 및 트러블슈팅 6건 — 로그아웃 플래그, 장바구니 동기화, 탭 간 스크롤 위치 캐싱. 비밀번호 찾기, Apple 계정 삭제 대응(토큰 revoke), SNS 가입 정보 통일</div></div>
+          <div><div style="font-weight:600">MyCONECT 호텔 비대면 서비스 플랫폼</div><div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin:2px 0 4px">2023.04 – 2024.12 · iOS</div><div style="color:var(--muted)">얼굴·신분증 인식 기반 본인확인, 가로 스택 차트 형태의 시간별 예약 기능</div></div>
+        </div>
+      </article>
+
+      <article data-dim="{{ dimC }}" style="border:1px solid var(--line);border-radius:12px;padding:22px 24px;background:var(--card);transition:opacity .25s">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap"><div style="font-size:19px;font-weight:700">(주)알파이글루</div><span style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">2020.11 – 2022.03 · 1년 5개월</span></div>
+        <div style="margin-top:4px;color:var(--muted);font-size:16px">사주기반 아이 이름 작명 서비스 · 네이티브 iOS 앱 유지보수</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:16px;font-size:15px;line-height:1.65">
+          <div><div style="font-weight:600">UI/UX 개선 및 컨텐츠 추가</div><div style="color:var(--muted)">'오늘의 띠별 운세', '타로 신년운세' 컨텐츠 추가</div></div>
+          <div><div style="font-weight:600">결제 프로세스 이슈 해결</div><div style="color:var(--muted)">결제 후 상품 미지급으로 CS와 DB 수정이 반복되던 이슈. 클로저 캡처 리스트 메모리 누수로 상품 코드가 섞이던 원인을 로그 분석으로 파악해 수정. IAP finishTransaction이 지급 전에 호출되던 순서를 바로잡아 재지급 안정성 확보</div></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer style="border-top:1px solid var(--line);margin-top:48px">
+  <div style="max-width:1080px;margin:0 auto;padding:26px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <span style="font-size:18px;font-weight:700">함께 만들어볼까요?</span>
+    <span style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)"><a href="mailto:yeonghun.yoo@gmail.com">yeonghun.yoo@gmail.com</a> · <a href="https://github.com/yeonghunyoo" target="_blank" rel="noreferrer">github.com/yeonghunyoo</a> · 010 9390 8827</span>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'light', tab: 0, node: -1, skill: null, progress: 0 };
+  componentDidMount() {
+    let t = 'light';
+    try { t = localStorage.getItem('yh-theme') || 'light'; } catch (e) {}
+    document.body.dataset.theme = t;
+    this.setState({ theme: t });
+    this._onScroll = () => {
+      const d = document.documentElement;
+      const max = d.scrollHeight - d.clientHeight;
+      this.setState({ progress: max > 0 ? Math.min(100, (d.scrollTop / max) * 100) : 0 });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); }
+  setTheme(t) {
+    document.body.dataset.theme = t;
+    try { localStorage.setItem('yh-theme', t); } catch (e) {}
+    this.setState({ theme: t });
+  }
+  renderVals() {
+    const { theme, tab, node, skill, progress } = this.state;
+    const careers = { A: ['Swift','RxSwift','MVVM','Snapkit','Fastlane','Zeplin','Figma','JIRA','Git'], B: ['Swift','Dart','Flutter','Firebase','MVVM','Snapkit','CoreData','Figma','JIRA','Git'], C: ['Swift','MVP','CoreData','Git'] };
+    const names = ['Swift','Dart','Flutter','Python','Firebase','Supabase','Cloudflare Workers','RxSwift','MVVM','MVP','Snapkit','CoreData','Fastlane','OpenAPI','MCP','Zeplin','Figma','JIRA','Git'];
+    const dim = k => skill && !careers[k].includes(skill) ? '1' : '0';
+    const hl = i => node === i ? '1' : '0';
+    const ent = i => () => this.setState({ node: i });
+    return {
+      themeLabel: theme === 'mint' ? 'Mint' : 'Light',
+      toggleTheme: () => this.setTheme(theme === 'mint' ? 'light' : 'mint'),
+      progressPct: progress.toFixed(1) + '%',
+      skills: names.map(n => ({ name: n, enter: () => this.setState({ skill: n }) })),
+      leaveSkill: () => this.setState({ skill: null }),
+      dimA: dim('A'), dimB: dim('B'), dimC: dim('C'),
+      tab0: tab === 0 ? '1' : '0', tab1: tab === 1 ? '1' : '0',
+      isHandoff: tab === 0, isForest: tab === 1,
+      pickHandoff: () => this.setState({ tab: 0, node: -1 }),
+      pickForest: () => this.setState({ tab: 1, node: -1 }),
+      onTabKey: e => { if (e.key === 'ArrowRight') this.setState({ tab: 1 }); if (e.key === 'ArrowLeft') this.setState({ tab: 0 }); },
+      hl0: hl(0), hl1: hl(1), hl2: hl(2), hl3: hl(3), hl4: hl(4),
+      enter0: ent(0), enter1: ent(1), enter2: ent(2), enter3: ent(3), enter4: ent(4),
+      leaveNode: () => this.setState({ node: -1 })
+    };
+  }
+}
+</script>
+</body>
+</html>

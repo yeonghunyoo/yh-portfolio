@@ -1,5 +1,7 @@
 {
   "handlers": {},
   "tab_transitions": {},
-  "timers_ms": []
+  "timers_ms": [
+    900
+  ]
 }

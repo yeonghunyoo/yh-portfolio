@@ -1,9 +1,9 @@
 {
   "_state": {
     "theme": "light",
-    "cur": 0,
-    "rail": 0,
-    "tok": null,
-    "lightbox": null
+    "tab": 0,
+    "node": -1,
+    "skill": null,
+    "progress": 0
   }
 }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"><style>
+html{scroll-behavior:smooth}
+body{margin:0;font-family:'IBM Plex Sans KR',system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased;transition:background .3s,color .3s;
+--bg:#F7F7F5;--surface:#EEF0F2;--card:#FFFFFF;--line:rgba(22,24,29,.14);--line-soft:rgba(22,24,29,.08);--muted:#6B7280;--ink:#16181D;--accent:#2F5BEA;--accent-ink:#FFFFFF;--accent-soft:rgba(47,91,234,.10);--hl:rgba(47,91,234,.12)}
+body[data-theme="mint"]{--bg:#0F1115;--surface:#181C24;--card:#141821;--line:rgba(230,232,236,.16);--line-soft:rgba(230,232,236,.08);--muted:#8B93A1;--ink:#E6E8EC;--accent:#3DDC97;--accent-ink:#0F1115;--accent-soft:rgba(61,220,151,.12);--hl:rgba(61,220,151,.14)}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+[data-cur="1"]{color:var(--accent)!important;font-weight:600}
+[data-cur="1"] span{color:var(--accent)!important}
+[data-pair="1"]{background:var(--hl);border-radius:6px}
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+</style></helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+  <div style="max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap">
+    <a href="Resume.dc.html#work" style="font-weight:700;font-size:16px;color:var(--ink);text-decoration:none" style-hover="color:var(--accent)">← 유영훈</a>
+    <div style="display:flex;gap:6px">
+      <a href="Handoff%20Agent.dc.html" style="border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:500;text-decoration:none" style-hover="border-color:var(--accent);color:var(--accent)">handoff-agent</a>
+      <span style="background:var(--ink);color:var(--bg);border:1px solid var(--ink);border-radius:8px;padding:6px 14px;font-size:13px;font-weight:600">Forest</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">2026.09 ~</span>
+      <button type="button" onClick="{{ toggleTheme }}" title="테마 전환" style="display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px 5px 8px;font:500 12px 'IBM Plex Mono',monospace;cursor:pointer" style-hover="border-color:var(--accent)"><span style="width:14px;height:14px;border-radius:50%;background:var(--accent);display:inline-block"></span>{{ themeLabel }}</button>
+    </div>
+  </div>
+</header>
+
+<div style="max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:0">
+<main style="min-width:0;padding-right:36px;border-right:1px solid var(--line-soft)">
+
+  <section id="s0" style="padding:56px 0 0;scroll-margin-top:90px;animation:rise .5s ease both">
+    <div style="font:13px 'IBM Plex Mono',monospace;color:var(--muted)">사운드 믹싱 집중 &amp; 명상 앱 · iOS · Android 네이티브 동시 개발 중</div>
+    <h1 style="margin:10px 0 0;font-size:34px;line-height:1.3;font-weight:700;letter-spacing:-.01em;text-wrap:pretty">파도 · 비 · 바람 · 모래 · 장작 다섯 가지 자연 소리를<br>원하는 비율로 섞어 나만의 소리를 만드는 명상 앱</h1>
+    <p style="margin:16px 0 0;font-size:17px;line-height:1.75;color:var(--muted);max-width:720px;text-wrap:pretty">잠들 때나 집중할 때 배경음으로 틀어두는 용도. 이 프로젝트는 <a href="Handoff%20Agent.dc.html" style="font-weight:600">handoff-agent</a>를 활용해 사용자 인터뷰, 디자인 프로토타입을 기반으로 자동 생성되는 프로젝트로 iOS · Android 네이티브로 동시 개발 중입니다.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-top:32px">
+      <figure style="margin:0"><img src="assets/forest-01-onboarding.png" alt="Forest 온보딩" onClick="{{ open1 }}" style="width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s" style-hover="transform:translateY(-6px)"><figcaption style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center">온보딩</figcaption></figure>
+      <figure style="margin:0"><img src="assets/forest-02-home.png" alt="Forest 홈" onClick="{{ open2 }}" style="width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s" style-hover="transform:translateY(-6px)"><figcaption style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center">홈</figcaption></figure>
+      <figure style="margin:0"><img src="assets/forest-03-sound.png" alt="Forest 사운드" onClick="{{ open3 }}" style="width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s" style-hover="transform:translateY(-6px)"><figcaption style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center">사운드</figcaption></figure>
+      <figure style="margin:0"><img src="assets/forest-04-stats.png" alt="Forest 기록" onClick="{{ open4 }}" style="width:100%;border-radius:22px;border:1px solid var(--line);display:block;cursor:zoom-in;transition:transform .3s" style-hover="transform:translateY(-6px)"><figcaption style="font:12px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:8px;text-align:center">기록</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="s1" style="padding:56px 0 0;scroll-margin-top:90px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:36px">
+      <div>
+        <h2 style="margin:0;font-size:24px;font-weight:700">기능</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.6">
+          <div onMouseEnter="{{ mixEnter }}" onMouseLeave="{{ mixLeave }}" style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card);transition:border-color .2s" style-hover="border-color:var(--accent)"><b>사운드 믹싱</b><div style="color:var(--muted)">레이어 5개를 각각 볼륨 조절해 겹쳐 재생</div>
+            <div style="display:flex;gap:8px;align-items:flex-end;height:38px;margin-top:10px">
+              <div style="flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden"><div style="position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:{{ m1 }};transition:height .6s cubic-bezier(.2,.7,.2,1)"></div></div>
+              <div style="flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden"><div style="position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:{{ m2 }};transition:height .6s .05s cubic-bezier(.2,.7,.2,1)"></div></div>
+              <div style="flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden"><div style="position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:{{ m3 }};transition:height .6s .1s cubic-bezier(.2,.7,.2,1)"></div></div>
+              <div style="flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden"><div style="position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:{{ m4 }};transition:height .6s .15s cubic-bezier(.2,.7,.2,1)"></div></div>
+              <div style="flex:1;background:var(--surface);border-radius:3px;height:100%;position:relative;overflow:hidden"><div style="position:absolute;left:0;right:0;bottom:0;background:var(--accent);height:{{ m5 }};transition:height .6s .2s cubic-bezier(.2,.7,.2,1)"></div></div>
+            </div>
+            <div style="display:flex;justify-content:space-between;font:10.5px 'IBM Plex Mono',monospace;color:var(--muted);margin-top:4px"><span>파도</span><span>비</span><span>바람</span><span>모래</span><span>장작</span></div>
+          </div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)"><b>프리셋 · 나만의 믹스</b><div style="color:var(--muted)">저녁 물결, 숲속 아침 등 프리셋 5종. 직접 만든 조합도 저장</div></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)"><b>수면 타이머</b><div style="color:var(--muted)">15 / 30 / 45 / 60분 뒤 자동 정지</div></div>
+          <div style="border:1px solid var(--line);border-radius:10px;padding:14px 16px;background:var(--card)"><b>기록 · 통계</b><div style="color:var(--muted)">세션 기록과 연속일 스트릭</div></div>
+          <div style="border:1px dashed var(--line);border-radius:10px;padding:14px 16px;color:var(--muted)"><b style="color:var(--ink)">SNS Login · 내 정보 동기화</b><div style="font:11px 'IBM Plex Mono',monospace;margin-top:2px">추가 예정</div></div>
+          <div style="border:1px dashed var(--line);border-radius:10px;padding:14px 16px;color:var(--muted)"><b style="color:var(--ink)">구독 및 인앱 결제 (IAP)</b><div style="font:11px 'IBM Plex Mono',monospace;margin-top:2px">추가 예정</div></div>
+        </div>
+      </div>
+      <div>
+        <h2 style="margin:0;font-size:24px;font-weight:700">스킬</h2>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:14px">
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">Swift (SwiftUI)</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">Kotlin (Compose)</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">TypeScript</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">Hono</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">Cloudflare Workers</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">D1</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">R2</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">OpenAPI</span>
+          <span style="border:1px solid var(--line);border-radius:999px;padding:4px 12px;font:12.5px 'IBM Plex Mono',monospace">handoff-agent</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s2" style="padding:56px 0 0;scroll-margin-top:90px">
+    <h2 style="margin:0;font-size:24px;font-weight:700">백엔드 — 왜 이렇게 골랐나</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:14px;font-size:15.5px;line-height:1.65">
+      <div style="border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">hosting</div><div style="font-weight:700;margin-top:2px">Cloudflare Workers + Hono</div><p style="margin:6px 0 0;color:var(--muted)">서버를 직접 구축·운영하는 대신 코드만 올리면 전 세계 엣지에서 바로 실행되는 서버리스 플랫폼. Hono는 그 위에서 API를 간단하게 짜게 해주는 가벼운 프레임워크. 서버 관리 부담이 없고, 이 규모 트래픽엔 비용도 가장 저렴해서 선택.</p></div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">db</div><div style="font-weight:700;margin-top:2px">D1 (SQLite)</div><p style="margin:6px 0 0;color:var(--muted)">Workers 안에서 바로 쓸 수 있는 DB라 별도 연결 설정이 필요 없음. 이 규모 트래픽은 무료 티어만으로도 충분해서 선택.</p></div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">storage</div><div style="font-weight:700;margin-top:2px">R2 (음원 저장소)</div><p style="margin:6px 0 0;color:var(--muted)">파일 내려받을 때 붙는 전송(egress) 비용이 없음. AAC 256kbps · 90초 루프 = 개당 약 2.75MB 기준, 무료 10GB로 확장 음원 약 3,700곡까지 저장 가능. 비용 부담이 사실상 없다고 판단.</p></div>
+      <div style="border:1px solid var(--line);border-radius:10px;padding:16px;background:var(--card)"><div style="font:11px 'IBM Plex Mono',monospace;color:var(--muted)">auth</div><div style="font-weight:700;margin-top:2px">자체 JWT 인증 (익명 로그인)</div><p style="margin:6px 0 0;color:var(--muted)">회원가입 절차 없이 기기만으로 바로 쓸 수 있게 함. 사용자가 부담 없이 접근하도록 하려는 목적. 추후 SNS 로그인을 붙여 정보 이관할 수 있도록 동기화 구현 예정.</p></div>
+    </div>
+  </section>
+
+  <section id="s3" style="padding:56px 0 64px;scroll-margin-top:90px">
+    <h2 style="margin:0;font-size:24px;font-weight:700">iOS · Android 나란히</h2>
+    <div style="font-size:14.5px;color:var(--muted);margin-top:4px">같은 handoff 패키지에서 두 플랫폼이 동시에 만들어졌습니다. 항목에 마우스를 올리면 짝이 되는 반대편 항목이 함께 표시됩니다.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-top:16px">
+      <div style="border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--card)">
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">iOS · SwiftUI</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:15.5px;line-height:1.65">
+          <div data-pair="{{ p1 }}" onMouseEnter="{{ e1 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">화면 4개(온보딩 · 홈 · 사운드 · 기록)와 재생 중 화면 · 믹스 시트 · 설정 시트 등 오버레이 컴포넌트 구현</div>
+          <div data-pair="{{ p2 }}" onMouseEnter="{{ e2 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">AVAudioEngine 기반 5트랙 동시 믹싱 플레이어 구현</div>
+          <div data-pair="{{ p3 }}" onMouseEnter="{{ e3 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">API 통신 · 데이터 모델 · 오프라인 목업 폴백 계층 구현</div>
+          <div data-pair="{{ p4 }}" onMouseEnter="{{ e4 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">색상 · 타이포 · 간격 등 디자인 토큰 전용 테마 시스템 구성</div>
+        </div>
+      </div>
+      <div style="border:1px solid var(--line);border-radius:12px;padding:20px 22px;background:var(--card)">
+        <div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">Android · Jetpack Compose</div>
+        <div style="display:flex;flex-direction:column;gap:6px;margin-top:10px;font-size:15.5px;line-height:1.65">
+          <div data-pair="{{ p1 }}" onMouseEnter="{{ e1 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">iOS와 동일한 화면 · 컴포넌트 구성을 Compose로 구현</div>
+          <div data-pair="{{ p2 }}" onMouseEnter="{{ e2 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">오디오 믹스 플레이어 구현</div>
+          <div data-pair="{{ p3 }}" onMouseEnter="{{ e3 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">API 클라이언트, 오프라인 목업 폴백 계층 구현</div>
+          <div data-pair="{{ p4 }}" onMouseEnter="{{ e4 }}" onMouseLeave="{{ pl }}" style="padding:6px 8px;margin:0 -8px;transition:background .2s">앱 상태 뷰모델과 단위 테스트 4개, 내비게이션 UI 테스트 1개 작성</div>
+        </div>
+      </div>
+    </div>
+    <div style="margin-top:48px;border:1px solid var(--line);border-radius:12px;padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;background:var(--card)">
+      <div><div style="font:12px 'IBM Plex Mono',monospace;color:var(--muted)">이 앱을 만든 도구</div><div style="font-size:18px;font-weight:700;margin-top:2px">handoff-agent — 세 플랫폼을 한 번에 구현하는 플러그인</div></div>
+      <a href="Handoff%20Agent.dc.html" style="background:var(--ink);color:var(--bg);padding:10px 18px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none" style-hover="background:var(--accent);color:var(--accent-ink)">handoff-agent 상세 →</a>
+    </div>
+  </section>
+</main>
+
+<aside style="position:relative">
+  <div style="position:sticky;top:96px;padding:56px 0 0 20px;font:12.5px/1.35 'IBM Plex Mono',monospace">
+    <div style="position:absolute;left:-1px;top:56px;bottom:0;width:2px;background:var(--accent);transform-origin:top;transform:scaleY({{ railScale }});transition:transform .15s linear"></div>
+    <nav style="display:flex;flex-direction:column;gap:16px">
+      <a href="#s0" data-cur="{{ c0 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">01<br><span style="color:var(--ink)">개요</span></a>
+      <a href="#s1" data-cur="{{ c1 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">02<br><span style="color:var(--ink)">기능 · 스킬</span></a>
+      <a href="#s2" data-cur="{{ c2 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">03<br><span style="color:var(--ink)">백엔드</span></a>
+      <a href="#s3" data-cur="{{ c3 }}" style="color:var(--muted);text-decoration:none;transition:color .2s" style-hover="color:var(--ink);text-decoration:none">04<br><span style="color:var(--ink)">iOS · Android</span></a>
+    </nav>
+  </div>
+</aside>
+</div>
+
+<sc-if value="{{ lightboxOpen }}" hint-placeholder-val="{{ false }}">
+  <div onClick="{{ closeLightbox }}" style="position:fixed;inset:0;z-index:50;background:rgba(10,12,16,.86);display:flex;align-items:center;justify-content:center;padding:32px;cursor:zoom-out;animation:rise .2s ease both">
+    <img src="{{ lightboxSrc }}" alt="확대 이미지" style="max-width:100%;max-height:100%;border-radius:22px;box-shadow:0 30px 80px rgba(0,0,0,.5)">
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { theme: 'light', cur: 0, rail: 0, pair: 0, mix: [55, 30, 70, 20, 45], lightbox: null };
+  componentDidMount() {
+    let t = 'light';
+    try { t = localStorage.getItem('yh-theme') || 'light'; } catch (e) {}
+    document.body.dataset.theme = t;
+    this.setState({ theme: t });
+    this._onScroll = () => {
+      const d = document.documentElement;
+      const max = d.scrollHeight - d.clientHeight;
+      const rail = max > 0 ? Math.min(1, d.scrollTop / max) : 0;
+      let cur = 0;
+      for (let i = 0; i < 4; i++) { const el = document.getElementById('s' + i); if (el && el.getBoundingClientRect().top <= 140) cur = i; }
+      if (cur !== this.state.cur || Math.abs(rail - this.state.rail) > 0.005) this.setState({ cur, rail });
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onKey = e => { if (e.key === 'Escape') this.setState({ lightbox: null }); };
+    window.addEventListener('keydown', this._onKey);
+    this._onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this._onScroll); window.removeEventListener('keydown', this._onKey); clearInterval(this._mixTimer); }
+  setTheme(t) { document.body.dataset.theme = t; try { localStorage.setItem('yh-theme', t); } catch (e) {} this.setState({ theme: t }); }
+  shuffleMix() { this.setState({ mix: this.state.mix.map(() => 15 + Math.round(Math.random() * 80)) }); }
+  renderVals() {
+    const { theme, cur, rail, pair, mix, lightbox } = this.state;
+    const c = i => cur === i ? '1' : '0';
+    const p = i => pair === i ? '1' : '0';
+    const e = i => () => this.setState({ pair: i });
+    const files = ['forest-01-onboarding', 'forest-02-home', 'forest-03-sound', 'forest-04-stats'];
+    const open = n => () => this.setState({ lightbox: 'assets/' + files[n - 1] + '.png' });
+    return {
+      themeLabel: theme === 'mint' ? 'Mint' : 'Light',
+      toggleTheme: () => this.setTheme(theme === 'mint' ? 'light' : 'mint'),
+      railScale: rail.toFixed(3),
+      c0: c(0), c1: c(1), c2: c(2), c3: c(3),
+      p1: p(1), p2: p(2), p3: p(3), p4: p(4), e1: e(1), e2: e(2), e3: e(3), e4: e(4), pl: () => this.setState({ pair: 0 }),
+      m1: mix[0] + '%', m2: mix[1] + '%', m3: mix[2] + '%', m4: mix[3] + '%', m5: mix[4] + '%',
+      mixEnter: () => { this.shuffleMix(); clearInterval(this._mixTimer); this._mixTimer = setInterval(() => this.shuffleMix(), 900); },
+      mixLeave: () => { clearInterval(this._mixTimer); this.setState({ mix: [55, 30, 70, 20, 45] }); },
+      open1: open(1), open2: open(2), open3: open(3), open4: open(4),
+      lightboxOpen: !!lightbox, lightboxSrc: lightbox || '',
+      closeLightbox: () => this.setState({ lightbox: null })
+    };
+  }
+}
+</script>
+</body>
+</html>
