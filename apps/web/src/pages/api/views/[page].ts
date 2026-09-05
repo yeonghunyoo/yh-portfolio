@@ -6,4 +6,11 @@
  * backend validates it against the `PageSlug` pattern from api/openapi.yaml.
  * The handlers live in `@yh/backend/astro/views-page`; this file only mounts them.
  */
-export { GET, POST, prerender } from "@yh/backend/astro/views-page";
+export { GET, POST } from "@yh/backend/astro/views-page";
+/**
+ * Astro decides prerendering by *static analysis* of this file, so the flag has to be a
+ * literal here — a re-exported `prerender` is invisible to it and the build fails with
+ * GetStaticPathsRequired. The backend module declares the same value.
+ */
+export const prerender = false;
+
