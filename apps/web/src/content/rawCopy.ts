@@ -5,9 +5,9 @@
  * human_check so a key can be added to the contract if the human wants one.
  *
  *   title1        `title` of the theme button          (all three exports)
- *   alt1..alt4    `alt` of the four Forest screenshots (Resume.dc.html, Forest.dc.html)
- *   alt5          `alt` of the lightbox image          (Forest.dc.html, Handoff Agent.dc.html)
- *   alt6..alt10   `alt` of the five comparison shots   (Handoff Agent.dc.html)
+ *   alt1..alt4    `alt` of the four Forest screenshots (the Resume and Forest exports)
+ *   alt5          `alt` of the lightbox image          (Forest, Handoff Agent)
+ *   alt6..alt10   `alt` of the five comparison shots   (Handoff Agent)
  *   themeLight/themeMint  the toggle's two labels, Latin text with no Strings entry
  */
 export const RawCopy = {
