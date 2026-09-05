@@ -1,0 +1,2163 @@
+{
+  "kind": "group",
+  "children": [
+    {
+      "kind": "group",
+      "tag": "section",
+      "id": "s3",
+      "style": {
+        "padding": "56px 0 0",
+        "scroll-margin-top": "90px"
+      },
+      "children": [
+        {
+          "kind": "group",
+          "style": {
+            "border-top": "1px solid DesignTokens.line",
+            "padding-top": "36px"
+          },
+          "children": [
+            {
+              "kind": "text",
+              "text": "Strings.Shared.keiseuSeuteodi1",
+              "style": {
+                "font": "12px 'IBM Plex Mono',monospace",
+                "color": "DesignTokens.muted"
+              }
+            },
+            {
+              "kind": "text",
+              "tag": "h2",
+              "text": "Strings.Shared.uIuxGuhyeonJeonghapseongeulWihanGyuchik",
+              "style": {
+                "margin": "6px 0 0",
+                "font-size": "28px",
+                "line-height": "1.3",
+                "font-weight": "700"
+              }
+            },
+            {
+              "kind": "grid",
+              "style": {
+                "display": "grid",
+                "grid-template-columns": "72px minmax(0,1fr)",
+                "gap": "16px 22px",
+                "margin-top": "24px",
+                "font-size": "17px",
+                "line-height": "1.75"
+              },
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.munje",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "Strings.Shared.claudeDesignINaebonaeneunHtmlEun",
+                  "children": [
+                    {
+                      "kind": "group",
+                      "tag": "ul",
+                      "style": {
+                        "margin": "8px 0 0",
+                        "padding-left": "18px",
+                        "color": "DesignTokens.muted",
+                        "font-size": "14.5px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "li",
+                          "text": "Strings.Shared.hwamyeon5Gaega917JulPail"
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "li",
+                          "text": "Strings.Shared.seosikiJeonbuInrainStyle166Gae"
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "li",
+                          "text": "Strings.Shared.aepeEolneunPeurototaipJangsikiSeokyeoIteum"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.jeopgeun",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움. 하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.",
+                  "raw_text": true,
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "b",
+                      "text": "Strings.Shared.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro"
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.guhyeon",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared._1ClaudeDesignUiHandoffPaekijireul",
+                      "style": {
+                        "font-weight": "700"
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "text": "같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지. 부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.",
+                      "raw_text": true,
+                      "style": {
+                        "font-size": "14px",
+                        "color": "DesignTokens.muted",
+                        "margin-top": "4px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Shared.jeomseonMitjul",
+                          "style": {
+                            "border-bottom": "1px dashed DesignTokens.accent",
+                            "color": "DesignTokens.accent",
+                            "font-family": "'IBM Plex Mono',monospace",
+                            "font-size": "12.5px"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(300px,1fr))",
+                        "gap": "10px",
+                        "margin-top": "12px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.Code.bg",
+                            "color": "DesignTokens.Code.ink",
+                            "border-radius": "10px",
+                            "padding": "14px 16px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "data-comment-anchor": "af28a1d6e6-div",
+                              "text": "Strings.Shared.claudeDesignHtmlDesignProjectForest",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "10px"
+                              }
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "pre",
+                              "on_mouse_leave": "tokLeave",
+                              "text": "<div style=\"display:flex; flex-direction:column; \"> <div style=\"display:flex; justify-content:space-between\"> <span style=\" font-family:var(--font-heading); ; \"> </span> <span style=\"font-size:15px\"> {{ greetingHole }}</span> <div style=\"width:40px;height:40px\"> </div>",
+                              "raw_text": true,
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tGap }}",
+                                  "on_mouse_enter": "tokGap",
+                                  "text": "Strings.Shared.gap20Px"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tSize }}",
+                                  "on_mouse_enter": "tokSize",
+                                  "text": "Strings.Shared.fontSize20Px"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tColor }}",
+                                  "on_mouse_enter": "tokColor",
+                                  "text": "Strings.Shared.colorVarColorAccent300"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tText }}",
+                                  "on_mouse_enter": "tokText",
+                                  "text": "Strings.Shared.forest2"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tClick }}",
+                                  "on_mouse_enter": "tokClick",
+                                  "text": "Strings.Shared.scCamelOnClick",
+                                  "params": [
+                                    "openSettingsHole"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.Code.bg",
+                            "color": "DesignTokens.Code.ink",
+                            "border-radius": "10px",
+                            "padding": "14px 16px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.seobeogaMandeunReiautTeuriDesignDerived",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "10px"
+                              }
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "pre",
+                              "on_mouse_leave": "tokLeave",
+                              "text": "{ \"kind\": \"column\", \"style\": { }, \"children\": [ { \"kind\": \"row\", \"style\": { \"justify-content\": \"space-between\" }, \"children\": [ { \"kind\": \"text\", , \"style\": { , } }, { \"kind\": \"text\", \"bind\": \"greeting\" }, { \"kind\": \"box\", , \"style\": { \"width\": \"40px\", \"height\": \"40px\" } } ] } ] }",
+                              "raw_text": true,
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tGap }}",
+                                  "on_mouse_enter": "tokGap",
+                                  "text": "Strings.Shared.gap20Px2"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tText }}",
+                                  "on_mouse_enter": "tokText",
+                                  "text": "Strings.Shared.textStringsHomeForest"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tSize }}",
+                                  "on_mouse_enter": "tokSize",
+                                  "text": "Strings.Shared.fontSize20Px2"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tColor }}",
+                                  "on_mouse_enter": "tokColor",
+                                  "text": "Strings.Shared.colorDesignTokensColorAccent300"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tClick }}",
+                                  "on_mouse_enter": "tokClick",
+                                  "text": "Strings.Shared.onClickOpenSettings"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(300px,1fr))",
+                        "gap": "10px",
+                        "margin-top": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.Code.bg",
+                            "color": "DesignTokens.Code.ink",
+                            "border-radius": "10px",
+                            "padding": "14px 16px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.iOsEijeonteugaOmginSwiftUiAppsIos",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "10px"
+                              }
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "pre",
+                              "on_mouse_leave": "tokLeave",
+                              "text": "VStack(alignment: .leading, ) { HStack(alignment: .top) { VStack(alignment: .leading, spacing: 4) { Text(model.greeting) .font(Typography.body(15)) } Spacer() { Circle().frame(width: 40, height: 40) } } }",
+                              "raw_text": true,
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tGap }}",
+                                  "on_mouse_enter": "tokGap",
+                                  "text": "Strings.Shared.spacing20"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tText }}",
+                                  "on_mouse_enter": "tokText",
+                                  "text": "Strings.Shared.textStringsHomeForest2"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tSize }}",
+                                  "on_mouse_enter": "tokSize",
+                                  "text": "Strings.Shared.fontTypographyHeading20"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tColor }}",
+                                  "on_mouse_enter": "tokColor",
+                                  "text": "Strings.Shared.foregroundStylePaletteAccent300"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tClick }}",
+                                  "on_mouse_enter": "tokClick",
+                                  "text": "Strings.Shared.buttonActionModelOpenSettings"
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.Code.bg",
+                            "color": "DesignTokens.Code.ink",
+                            "border-radius": "10px",
+                            "padding": "14px 16px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.androidEijeonteugaOmginComposeAppsAndroid",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "10px"
+                              }
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "pre",
+                              "on_mouse_leave": "tokLeave",
+                              "text": "Column( sc-camel-vertical-arrangement = ) { Row( sc-camel-horizontal-arrangement = Arrangement.SpaceBetween, sc-camel-vertical-alignment = Alignment.Top ) { Column(verticalArrangement = Arrangement.spacedBy(4.dp)) { , ) Text(text = model.greeting, style = Typography.body(15.sp)) } { Box(Modifier.size(40.dp).clip(CircleShape)) } } }",
+                              "raw_text": true,
+                              "children": [
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tGap }}",
+                                  "on_mouse_enter": "tokGap",
+                                  "text": "Strings.Shared.arrangementSpacedBy20Dp"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tText }}",
+                                  "on_mouse_enter": "tokText",
+                                  "text": "Strings.Shared.textTextStringsHomeForest"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tSize }}",
+                                  "on_mouse_enter": "tokSize",
+                                  "text": "Strings.Shared.styleTypographyHeading20Sp"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tColor }}",
+                                  "on_mouse_enter": "tokColor",
+                                  "text": "Strings.Shared.colorPaletteAccent300"
+                                },
+                                {
+                                  "kind": "text",
+                                  "data-tok": "{{ tClick }}",
+                                  "on_mouse_enter": "tokClick",
+                                  "text": "Strings.Shared.iconButtonOnClickModelOpenSettings"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon",
+                      "style": {
+                        "margin-top": "18px",
+                        "font-weight": "600"
+                      }
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(240px,1fr))",
+                        "gap": "8px 24px",
+                        "margin-top": "8px",
+                        "font-size": "15.5px"
+                      },
+                      "children": [
+                        {
+                          "kind": "row",
+                          "style": {
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "gap": "10px",
+                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                            "padding": "6px 0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared._917JulHanPail",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.hwamyeondangTeuri4Gae321243",
+                              "style": {
+                                "font-weight": "600"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "row",
+                          "style": {
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "gap": "10px",
+                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                            "padding": "6px 0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.saekRiteoreol119Gae",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared._0Gae",
+                              "style": {
+                                "font-weight": "600"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "row",
+                          "style": {
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "gap": "10px",
+                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                            "padding": "6px 0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.ireumEoldeonMunguAikonDongjak",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.mungu80Aikon10Haendeulreo25",
+                              "style": {
+                                "font-weight": "600"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "row",
+                          "style": {
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "gap": "10px",
+                            "border-bottom": "1px solid DesignTokens.Line.soft",
+                            "padding": "6px 0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.peurototaipJangsik",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.jeondalAnHam",
+                              "style": {
+                                "font-weight": "600"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared._2SeobeogaGongtongRisoseureulGakPeulraetpome",
+                      "style": {
+                        "margin-top": "26px",
+                        "font-weight": "700"
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "text": "에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로 도 두 언어로 생성됩니다.",
+                      "raw_text": true,
+                      "style": {
+                        "font-size": "15px",
+                        "color": "DesignTokens.muted",
+                        "margin-top": "4px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "code",
+                          "text": "Strings.Shared.sharedGenerated",
+                          "style": {
+                            "font": "12.5px 'IBM Plex Mono',monospace"
+                          }
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "code",
+                          "text": "Strings.Shared.apiRoutesScreensDesignTokensIcons",
+                          "style": {
+                            "font": "12.5px 'IBM Plex Mono',monospace"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(260px,1fr))",
+                        "gap": "10px",
+                        "margin-top": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.surface",
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.stringsSwift",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "8px"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "pre",
+                              "text": "// generated by the server; never edit public enum Strings { public enum Home { public static let sc-camel-chucheon-miksing = \"추천 믹싱\" public static let forest = \"forest\" public static let sc-camel-ibeon-ju-il-yeonsok = \"이번 주 {streakCount}일 연속\" public static let jeulgyeochatgi = \"즐겨찾기\" }",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.ink"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "background": "DesignTokens.surface",
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "min-width": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.stringsKt",
+                              "style": {
+                                "font": "600 12.5px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.accent",
+                                "margin-bottom": "8px"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "pre",
+                              "text": "// generated by the server; never edit object Strings { object Home { const val sc-camel-chucheon-miksing = \"추천 믹싱\" const val forest = \"forest\" const val sc-camel-ibeon-ju-il-yeonsok = \"이번 주 {streakCount}일 연속\" const val jeulgyeochatgi = \"즐겨찾기\" }",
+                              "raw_text": true,
+                              "style": {
+                                "color": "DesignTokens.ink"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.gyeolgwa",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "Strings.Shared.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun",
+                  "children": [
+                    {
+                      "kind": "group",
+                      "style": {
+                        "margin-top": "14px",
+                        "border": "1px solid DesignTokens.line",
+                        "border-radius": "10px",
+                        "overflow": "hidden",
+                        "background": "DesignTokens.card"
+                      },
+                      "children": [
+                        {
+                          "kind": "row",
+                          "style": {
+                            "padding": "12px 16px",
+                            "border-bottom": "1px solid DesignTokens.line",
+                            "display": "flex",
+                            "justify-content": "space-between",
+                            "align-items": "baseline",
+                            "gap": "12px",
+                            "flex-wrap": "wrap"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.seongneungGeomjeungHandoffPackageJeongjeJeonhu",
+                              "style": {
+                                "font-weight": "700"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.homeStatsIosAndroid2Hoe",
+                              "style": {
+                                "font": "12px 'IBM Plex Mono',monospace",
+                                "color": "DesignTokens.muted"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "sc-raw-table",
+                          "children": [
+                            {
+                              "kind": "group",
+                              "tag": "sc-raw-thead",
+                              "children": [
+                                {
+                                  "kind": "group",
+                                  "tag": "sc-raw-tr",
+                                  "children": [
+                                    {
+                                      "kind": "box",
+                                      "tag": "sc-raw-th"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-th",
+                                      "text": "Strings.Shared.aWonbonHtml57Kb"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-th",
+                                      "text": "Strings.Shared.bJeongjehanReiautTeuri"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "kind": "group",
+                              "tag": "sc-raw-tbody",
+                              "children": [
+                                {
+                                  "kind": "group",
+                                  "tag": "sc-raw-tr",
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-td",
+                                      "text": "Strings.Shared.tokeunPyeonggyun",
+                                      "style": {
+                                        "color": "DesignTokens.muted"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-td",
+                                      "text": "Strings.Shared._905K"
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-td",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "b",
+                                          "text": "Strings.Shared._551K"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "text": "Strings.Shared._39",
+                                          "style": {
+                                            "color": "DesignTokens.accent",
+                                            "font-weight": "600"
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "group",
+                                  "tag": "sc-raw-tr",
+                                  "children": [
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-td",
+                                      "text": "Strings.Shared.hwamyeonJeonghapseong",
+                                      "style": {
+                                        "color": "DesignTokens.muted"
+                                      }
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-td",
+                                      "text": "Strings.Shared._8BeonJung7BeonHwamyeoneul"
+                                    },
+                                    {
+                                      "kind": "text",
+                                      "tag": "sc-raw-td",
+                                      "text": "Strings.Shared.ppatteurinGeonChuchulgigaTeurieAnDameun"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "text": "같은 화면을 같은 모델로 구현하게 하고 바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.",
+                          "raw_text": true,
+                          "style": {
+                            "padding": "12px 16px",
+                            "font-size": "15px",
+                            "color": "DesignTokens.muted"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared.ipryeokman",
+                              "style": {
+                                "color": "DesignTokens.ink"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "text": "Strings.Shared.uIuxGuhyeonJeonghapseongBigyo",
+                      "style": {
+                        "margin-top": "22px",
+                        "font-weight": "600"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Shared.oenjjokbuteoBReiautTeuriAhtml",
+                          "style": {
+                            "font": "12px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.muted",
+                            "font-weight": "400",
+                            "margin-left": "6px"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(280px,1fr))",
+                        "gap": "12px",
+                        "margin-top": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "tag": "figure",
+                          "style": {
+                            "margin": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "image",
+                              "src": "./uploads/c1bc2403.png",
+                              "alt": "온보딩 화면 비교",
+                              "tag": "img",
+                              "on_click": "open1",
+                              "style": {
+                                "width": "100%",
+                                "border-radius": "10px",
+                                "border": "1px solid DesignTokens.line",
+                                "display": "block",
+                                "cursor": "zoom-in",
+                                "transition": "transform .25s"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "figcaption",
+                              "text": "Strings.Shared.onbodingBeoteunWichiYeobaekiAEseo",
+                              "style": {
+                                "font-size": "14px",
+                                "color": "DesignTokens.muted",
+                                "margin-top": "6px"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "figure",
+                          "style": {
+                            "margin": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "image",
+                              "src": "./uploads/ec8ec00e.png",
+                              "alt": "홈 화면 비교",
+                              "tag": "img",
+                              "on_click": "open2",
+                              "style": {
+                                "width": "100%",
+                                "border-radius": "10px",
+                                "border": "1px solid DesignTokens.line",
+                                "display": "block",
+                                "cursor": "zoom-in",
+                                "transition": "transform .25s"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "figcaption",
+                              "text": "Strings.Shared.homHadanChucheonMiksingBaechiwaImiji",
+                              "style": {
+                                "font-size": "14px",
+                                "color": "DesignTokens.muted",
+                                "margin-top": "6px"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "figure",
+                          "style": {
+                            "margin": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "image",
+                              "src": "./uploads/cf133459.png",
+                              "alt": "사운드 화면 비교",
+                              "tag": "img",
+                              "on_click": "open3",
+                              "style": {
+                                "width": "100%",
+                                "border-radius": "10px",
+                                "border": "1px solid DesignTokens.line",
+                                "display": "block",
+                                "cursor": "zoom-in",
+                                "transition": "transform .25s"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "figcaption",
+                              "text": "Strings.Shared.saundeuTaimeoDeuropdaunSiUiKkaejim",
+                              "style": {
+                                "font-size": "14px",
+                                "color": "DesignTokens.muted",
+                                "margin-top": "6px"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "figure",
+                          "style": {
+                            "margin": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "image",
+                              "src": "./uploads/278ec644.png",
+                              "alt": "기록 화면 비교",
+                              "tag": "img",
+                              "on_click": "open4",
+                              "style": {
+                                "width": "100%",
+                                "border-radius": "10px",
+                                "border": "1px solid DesignTokens.line",
+                                "display": "block",
+                                "cursor": "zoom-in",
+                                "transition": "transform .25s"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "figcaption",
+                              "text": "Strings.Shared.girokHadanSafeAreaMitJeongryeoliUidowa",
+                              "style": {
+                                "font-size": "14px",
+                                "color": "DesignTokens.muted",
+                                "margin-top": "6px"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "figure",
+                          "style": {
+                            "margin": "0"
+                          },
+                          "children": [
+                            {
+                              "kind": "image",
+                              "src": "./uploads/c66951c6.png",
+                              "alt": "추가 비교",
+                              "tag": "img",
+                              "on_click": "open5",
+                              "style": {
+                                "width": "100%",
+                                "border-radius": "10px",
+                                "border": "1px solid DesignTokens.line",
+                                "display": "block",
+                                "cursor": "zoom-in",
+                                "transition": "transform .25s"
+                              }
+                            },
+                            {
+                              "kind": "text",
+                              "tag": "figcaption",
+                              "text": "Strings.Shared.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul",
+                              "style": {
+                                "font-size": "14px",
+                                "color": "DesignTokens.muted",
+                                "margin-top": "6px"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "tag": "section",
+      "id": "s4",
+      "style": {
+        "padding": "56px 0 0",
+        "scroll-margin-top": "90px"
+      },
+      "children": [
+        {
+          "kind": "group",
+          "style": {
+            "border-top": "1px solid DesignTokens.line",
+            "padding-top": "36px"
+          },
+          "children": [
+            {
+              "kind": "text",
+              "text": "Strings.Shared.keiseuSeuteodi2",
+              "style": {
+                "font": "12px 'IBM Plex Mono',monospace",
+                "color": "DesignTokens.muted"
+              }
+            },
+            {
+              "kind": "text",
+              "tag": "h2",
+              "text": "Strings.Shared.baekendeuInpeuraSeupekMunseoMandeulgi",
+              "style": {
+                "margin": "6px 0 0",
+                "font-size": "28px",
+                "line-height": "1.3",
+                "font-weight": "700"
+              }
+            },
+            {
+              "kind": "grid",
+              "style": {
+                "display": "grid",
+                "grid-template-columns": "72px minmax(0,1fr)",
+                "gap": "16px 22px",
+                "margin-top": "24px",
+                "font-size": "17px",
+                "line-height": "1.75"
+              },
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.munje",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.baekendeuInpeuraGuseongeunJuyoGineungYecheuk"
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.jeopgeun",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을 하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.",
+                  "raw_text": true,
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "b",
+                      "text": "Strings.Shared.bogiSwipgePyoroJean"
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.guhyeon",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.inpeuraGyeoljeong4DangyeInteobyuGak",
+                      "style": {
+                        "font-weight": "700"
+                      }
+                    },
+                    {
+                      "kind": "grid",
+                      "style": {
+                        "display": "grid",
+                        "grid-template-columns": "repeat(auto-fit,minmax(170px,1fr))",
+                        "gap": "8px",
+                        "margin-top": "10px"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "background": "DesignTokens.card",
+                            "font-size": "15px",
+                            "line-height": "1.55"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared._1Seutaek"
+                            },
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.peulraetpomgwaBaekendeuEoneoreulHubo23",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "background": "DesignTokens.card",
+                            "font-size": "15px",
+                            "line-height": "1.55"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared._2Gyumo"
+                            },
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.yesangMaudauReulSayongjagaDaeryak",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "background": "DesignTokens.card",
+                            "font-size": "15px",
+                            "line-height": "1.55"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared._3HuboChurigi"
+                            },
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared._12GaeJohapJungGeuGyumoe",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "border": "1px solid DesignTokens.line",
+                            "border-radius": "10px",
+                            "padding": "12px 14px",
+                            "background": "DesignTokens.card",
+                            "font-size": "15px",
+                            "line-height": "1.55"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared._4YogeumJohoe"
+                            },
+                            {
+                              "kind": "box",
+                              "tag": "br"
+                            },
+                            {
+                              "kind": "text",
+                              "text": "Strings.Shared.gongsikYogeumPeijimanIkeumKaesiEoli",
+                              "style": {
+                                "color": "DesignTokens.muted"
+                              }
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.aPiMyeongse",
+                      "style": {
+                        "margin-top": "22px",
+                        "font-weight": "700"
+                      }
+                    },
+                    {
+                      "kind": "group",
+                      "text": "인프라가 정해지면 화면 HTML과 개발 문서를 읽고, 에서 엔드포인트를 뽑아 초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.",
+                      "raw_text": true,
+                      "style": {
+                        "font-size": "15.5px",
+                        "margin-top": "4px"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "b",
+                          "text": "Strings.Shared.gakHwamyeoniPilyoroHaneunDeiteo"
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "code",
+                          "text": "Strings.Shared.openapiYaml",
+                          "style": {
+                            "font": "12.5px 'IBM Plex Mono',monospace"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "style": {
+                        "background": "DesignTokens.Code.bg",
+                        "color": "DesignTokens.Code.ink",
+                        "border-radius": "10px",
+                        "padding": "14px 16px",
+                        "margin-top": "10px",
+                        "min-width": "0"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "pre",
+                          "text": "Strings.Shared.openapi303InfoTitle"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.gyeolgwa",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "Strings.Shared.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan",
+                  "children": [
+                    {
+                      "kind": "group",
+                      "style": {
+                        "margin-top": "12px",
+                        "border": "1px solid DesignTokens.line",
+                        "border-radius": "10px",
+                        "overflow": "hidden",
+                        "background": "DesignTokens.card"
+                      },
+                      "children": [
+                        {
+                          "kind": "group",
+                          "text": "규모 (MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.",
+                          "raw_text": true,
+                          "style": {
+                            "padding": "10px 14px",
+                            "border-bottom": "1px solid DesignTokens.line",
+                            "font-size": "14.5px",
+                            "color": "DesignTokens.muted"
+                          },
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared.sogyumo",
+                              "style": {
+                                "color": "DesignTokens.ink"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "group",
+                          "style": {
+                            "overflow-x": "auto"
+                          },
+                          "children": [
+                            {
+                              "kind": "group",
+                              "tag": "sc-raw-table",
+                              "style": {
+                                "min-width": "640px"
+                              },
+                              "children": [
+                                {
+                                  "kind": "group",
+                                  "tag": "sc-raw-thead",
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.id"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.db"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.auth"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.hosting"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.wolBiyong"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.hwakinil"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-th",
+                                          "text": "Strings.Shared.jongsokseong"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "kind": "group",
+                                  "tag": "sc-raw-tbody",
+                                  "children": [
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.awsServerless",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.dynamoDb"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.cognito"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.lambdaApigw"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "sc-raw-td",
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.Shared._05"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "2026-09-04",
+                                          "raw_text": true
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.nopeum"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.vpsDocker",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.postgreSqlJache"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.jacheJwt"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.vPsHetzner"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "sc-raw-td",
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.Shared._410"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "2026-09-04",
+                                          "raw_text": true
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.nateum"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.firebase",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.firestore"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.firebaseAuth"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.cloudRun"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "sc-raw-td",
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.Shared._010"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "2026-09-04",
+                                          "raw_text": true
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.nopeum"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.railway",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.postgreSqlRailway"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.jacheJwt"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.railway2"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "sc-raw-td",
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.Shared._525"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "2026-09-04",
+                                          "raw_text": true
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.nateum"
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "kind": "group",
+                                      "tag": "sc-raw-tr",
+                                      "children": [
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.supabaseFly",
+                                          "style": {
+                                            "font": "12.5px 'IBM Plex Mono',monospace"
+                                          }
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.postgreSqlSupabase"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.supabaseAuth"
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.flyIo"
+                                        },
+                                        {
+                                          "kind": "group",
+                                          "tag": "sc-raw-td",
+                                          "children": [
+                                            {
+                                              "kind": "text",
+                                              "tag": "b",
+                                              "text": "Strings.Shared._030"
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "2026-09-04",
+                                          "raw_text": true
+                                        },
+                                        {
+                                          "kind": "text",
+                                          "tag": "sc-raw-td",
+                                          "text": "Strings.Shared.jung"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "kind": "group",
+                      "tag": "ul",
+                      "style": {
+                        "margin": "14px 0 0",
+                        "padding-left": "18px",
+                        "font-size": "15.5px",
+                        "color": "DesignTokens.muted"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "tag": "li",
+                          "text": "Strings.Shared.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero"
+                        },
+                        {
+                          "kind": "group",
+                          "tag": "li",
+                          "text": "구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우 하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.",
+                          "raw_text": true,
+                          "children": [
+                            {
+                              "kind": "text",
+                              "tag": "b",
+                              "text": "Strings.Shared.sayongjaegeBogoseoroJechul",
+                              "style": {
+                                "color": "DesignTokens.ink"
+                              }
+                            }
+                          ]
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "li",
+                          "text": "Strings.Shared.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "tag": "section",
+      "id": "s5",
+      "style": {
+        "padding": "56px 0 64px",
+        "scroll-margin-top": "90px"
+      },
+      "children": [
+        {
+          "kind": "group",
+          "style": {
+            "border-top": "1px solid DesignTokens.line",
+            "padding-top": "36px"
+          },
+          "children": [
+            {
+              "kind": "text",
+              "text": "Strings.Shared.keiseuSeuteodi3",
+              "style": {
+                "font": "12px 'IBM Plex Mono',monospace",
+                "color": "DesignTokens.muted"
+              }
+            },
+            {
+              "kind": "text",
+              "tag": "h2",
+              "text": "Strings.Shared.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji",
+              "style": {
+                "margin": "6px 0 0",
+                "font-size": "28px",
+                "line-height": "1.3",
+                "font-weight": "700"
+              }
+            },
+            {
+              "kind": "grid",
+              "style": {
+                "display": "grid",
+                "grid-template-columns": "72px minmax(0,1fr)",
+                "gap": "16px 22px",
+                "margin-top": "24px",
+                "font-size": "17px",
+                "line-height": "1.75"
+              },
+              "children": [
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.munje",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.aPiKiMingamJeongbogaKeulraudeuSesyeongwa"
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.guhyeon",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "민감 값을 관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록 .",
+                  "raw_text": true,
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "b",
+                      "text": "Strings.Shared.hwangyeongbyeonsuroman"
+                    },
+                    {
+                      "kind": "text",
+                      "tag": "b",
+                      "text": "Strings.Shared.hukeuroMakneunda"
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "text": "Strings.Shared.gyeolgwa",
+                  "style": {
+                    "font": "12px 'IBM Plex Mono',monospace",
+                    "color": "DesignTokens.muted",
+                    "padding-top": "5px"
+                  }
+                },
+                {
+                  "kind": "group",
+                  "text": "생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿 — 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.",
+                  "raw_text": true,
+                  "children": [
+                    {
+                      "kind": "text",
+                      "tag": "b",
+                      "text": "Strings.Shared._0Gae2"
+                    },
+                    {
+                      "kind": "group",
+                      "style": {
+                        "background": "DesignTokens.Code.bg",
+                        "color": "DesignTokens.Code.ink",
+                        "border-radius": "10px",
+                        "padding": "14px 16px",
+                        "margin-top": "12px",
+                        "min-width": "0"
+                      },
+                      "children": [
+                        {
+                          "kind": "text",
+                          "text": "Strings.Shared.eijeonteuuiYudoYesi",
+                          "style": {
+                            "font": "600 12.5px 'IBM Plex Mono',monospace",
+                            "color": "DesignTokens.accent",
+                            "margin-bottom": "10px"
+                          }
+                        },
+                        {
+                          "kind": "text",
+                          "tag": "pre",
+                          "text": "Strings.Shared.wranglerTomlUiReplacewithd1"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "kind": "row",
+              "style": {
+                "margin-top": "48px",
+                "border": "1px solid DesignTokens.line",
+                "border-radius": "12px",
+                "padding": "20px 24px",
+                "display": "flex",
+                "justify-content": "space-between",
+                "align-items": "center",
+                "gap": "16px",
+                "flex-wrap": "wrap",
+                "background": "DesignTokens.card"
+              },
+              "children": [
+                {
+                  "kind": "group",
+                  "children": [
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.iDoguroMandeulgoItneunSeobiseu",
+                      "style": {
+                        "font": "12px 'IBM Plex Mono',monospace",
+                        "color": "DesignTokens.muted"
+                      }
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.forestSaundeuMiksingJipjungMyeongsangAep",
+                      "style": {
+                        "font-size": "18px",
+                        "font-weight": "700",
+                        "margin-top": "2px"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "text",
+                  "tag": "a",
+                  "href": "https://github.com/yeonghunyoo",
+                  "text": "Strings.Shared.daeumPeurojekteu",
+                  "style": {
+                    "background": "DesignTokens.ink",
+                    "color": "DesignTokens.bg",
+                    "padding": "10px 18px",
+                    "border-radius": "8px",
+                    "font-size": "14px",
+                    "font-weight": "600",
+                    "text-decoration": "none"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "group",
+      "tag": "aside",
+      "style": {
+        "position": "relative"
+      },
+      "children": [
+        {
+          "kind": "group",
+          "style": {
+            "position": "sticky",
+            "top": "96px",
+            "padding": "56px 0 0 20px",
+            "font": "12.5px/1.35 'IBM Plex Mono',monospace"
+          },
+          "children": [
+            {
+              "kind": "box",
+              "style": {
+                "position": "absolute",
+                "left": "-1px",
+                "top": "56px",
+                "bottom": "0",
+                "width": "2px",
+                "background": "DesignTokens.accent",
+                "transform-origin": "top",
+                "transform": "scaleY({{ railScale }})",
+                "transition": "transform .15s linear"
+              }
+            },
+            {
+              "kind": "column",
+              "tag": "nav",
+              "style": {
+                "display": "flex",
+                "flex-direction": "column",
+                "gap": "16px"
+              },
+              "children": [
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s0",
+                  "data-cur": "{{ c0 }}",
+                  "text": "01",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.gaeyo",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s1",
+                  "data-cur": "{{ c1 }}",
+                  "text": "02",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.guseong",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s2",
+                  "data-cur": "{{ c2 }}",
+                  "text": "03",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.dongjakBangsik",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s3",
+                  "data-cur": "{{ c3 }}",
+                  "text": "04",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.uIuxJeonghapseong",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s4",
+                  "data-cur": "{{ c4 }}",
+                  "text": "05",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.baekendeuSeupek",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "group",
+                  "tag": "a",
+                  "href": "#s5",
+                  "data-cur": "{{ c5 }}",
+                  "text": "06",
+                  "raw_text": true,
+                  "style": {
+                    "color": "DesignTokens.muted",
+                    "text-decoration": "none",
+                    "transition": "color .2s"
+                  },
+                  "children": [
+                    {
+                      "kind": "box",
+                      "tag": "br"
+                    },
+                    {
+                      "kind": "text",
+                      "text": "Strings.Shared.sikeuritGyeokri",
+                      "style": {
+                        "color": "DesignTokens.ink"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "if",
+      "when": "lightboxOpen",
+      "default": "false",
+      "children": [
+        {
+          "kind": "row",
+          "on_click": "closeLightbox",
+          "style": {
+            "position": "fixed",
+            "inset": "0",
+            "z-index": "50",
+            "background": "rgba(10,12,16,.86)",
+            "display": "flex",
+            "align-items": "center",
+            "justify-content": "center",
+            "padding": "32px",
+            "cursor": "zoom-out",
+            "animation": "rise .2s ease both"
+          },
+          "children": [
+            {
+              "kind": "image",
+              "src": "{{ lightboxSrc }}",
+              "alt": "확대 이미지",
+              "tag": "img",
+              "style": {
+                "max-width": "100%",
+                "max-height": "100%",
+                "border-radius": "12px",
+                "box-shadow": "0 30px 80px rgba(0,0,0,.5)"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1252 @@
+{
+  "strings": [
+    {
+      "key": "shared.yuyeonghun",
+      "text": "← 유영훈",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.handoffAgent",
+      "text": "handoff-agent",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.forest",
+      "text": "Forest",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gitHub",
+      "text": "GitHub ↗",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._202609ClaudeCodePeulreogeuinPython",
+      "text": "2026.09 ~ · Claude Code 플러그인 · Python MCP",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.claudeDesignUiHandoffPaekijireulGibaneuro",
+      "text": "Claude Design의 handoff 패키지를 기반으로",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.iOSAndroidBackendSePeulraetpomeulHan",
+      "text": "iOS · Android · backend 세 플랫폼을 한 번에 구현하는 플러그인",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.modeunGeDaJeonghaejyeoItdamyeonSe",
+      "text": "모든 게 다 정해져 있다면 세 플랫폼을 한 번에 개발해도 되지 않을까?",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.geurigoGeuJeonghaejinGeotISuchiro",
+      "text": "그리고 그 \"정해진 것\"이 수치로 말하는 정제된 산출물이라면, 에이전트가 각자의 언어로 옮기기만 해도 구현 정합성을 보장할 수 있지 않을까?",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.peulreogeuinGuseong",
+      "text": "플러그인 구성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.dijainJeongjeBaekendeuInpeuraSeupekInteobyu",
+      "text": "디자인 정제 · 백엔드 인프라 스펙 인터뷰 · 중간 산출물 관리를",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.mCPSeobeo",
+      "text": "MCP 서버",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.roGuchuk",
+      "text": "로 구축",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jungganSanchulmuleunGakPeulraetpomeMatneun",
+      "text": "중간 산출물은 각 플랫폼에 맞는",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.swiftKotlin",
+      "text": "Swift / Kotlin",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim",
+      "text": "등 언어로 생성되어 에이전트에 넘겨짐",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.pythonGibanMCPGa",
+      "text": "Python 기반 MCP가",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.openAPI",
+      "text": "OpenAPI",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo",
+      "text": "기반 백엔드 스펙을 제안 / 조립하여 문서 생성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.peulraetpomIOSAndroidBackendEijeonteu",
+      "text": "플랫폼 (iOS, Android, backend) 에이전트",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._3Gae",
+      "text": "3개",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.dijainYeondongEijeonteu",
+      "text": "· 디자인 연동 에이전트",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._1Gae",
+      "text": "1개",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.dongjakBangsik",
+      "text": "동작 방식",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.dijain",
+      "text": "디자인",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.claudeDesignAepDijainPeurototaipJejak",
+      "text": "Claude Design 앱 디자인 프로토타입 제작",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwamyeonBeonyeok",
+      "text": "화면 번역",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.htmlHwamyeoneulGakNeitibeuEijeonteugaIOS",
+      "text": "html 화면을 각 네이티브 에이전트가 iOS · Android 언어로 번역",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.seobeoInpeura",
+      "text": "서버 인프라",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jujeGineungYesangGyumoreulInteobyuroMutgo",
+      "text": "주제 · 기능 · 예상 규모를 인터뷰로 묻고 인프라 구성 선택",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aPIYaksok",
+      "text": "API 약속",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwamyeonePilyohanDeiteoreulBogoAepSeobeo",
+      "text": "화면에 필요한 데이터를 보고 앱·서버 API 정의",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gongyongPailSaengseong",
+      "text": "공용 파일 생성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aPIJeonguiDijainTokeunMunguAikoneul",
+      "text": "API 정의 · 디자인 토큰 · 문구 · 아이콘을 파일로 전달",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gaebalGeomsa",
+      "text": "개발 · 검사",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.seEijeonteugaGaebalJeonghapseongeulPeurogeuraemiHwakin",
+      "text": "세 에이전트가 개발, 정합성을 프로그램이 확인 후 사람이 승인하면 합침",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.keiseuSeuteodi1",
+      "text": "케이스 스터디 1",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.uIUXGuhyeonJeonghapseongeulWihanGyuchik",
+      "text": "UI / UX 구현 정합성을 위한 규칙 설계",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.munje",
+      "text": "문제",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.claudeDesignINaebonaeneunHTMLEun",
+      "text": "Claude Design이 내보내는 HTML은 브라우저용 프로토타입이라, 구현 에이전트에 그대로 넘기기엔 걸러지지 않은 것이 많았음",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwamyeon5Gaega917JulPail",
+      "text": "화면 5개가 917줄 파일 하나에 상태 분기로 합쳐져 있음",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.seosikiJeonbuInrainStyle166Gae",
+      "text": "서식이 전부 인라인(style 166개, class 0개)이라 재사용 컴포넌트 개념이 없음",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aepeEolneunPeurototaipJangsikiSeokyeoIteum",
+      "text": "앱에 없는 프로토타입 장식이 섞여 있음 (가짜 상태바 · 홈 인디케이터 · 스마트폰 프레임 · 런타임 JS)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jeopgeun",
+      "text": "접근",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.makeudaunGibanSanmunEuroIrueojinSoft",
+      "text": "마크다운 기반 '산문'으로 이루어진 Soft 가이드는 일정한 결과를 내기 어려움.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro",
+      "text": "수치화된 문서·산출물을 코드 기반 파이프라인으로 생성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo",
+      "text": "하고, 이를 기반으로 에이전트가 자율성을 가지고 개발하도록 함. 각 에이전트는 플랫폼 개발 지식과 파이프라인이 만들어내는 중간 산출물에 접근성을 갖는다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.guhyeon",
+      "text": "구현",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._1ClaudeDesignUiHandoffPaekijireul",
+      "text": "1. Claude Design의 handoff 패키지를 정제 — HTML → 레이아웃 트리 → 네이티브",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gateunYosoGap20MunguSaek",
+      "text": "같은 요소(gap 20 · 문구 · 색 · 동작)가 HTML → 트리 → SwiftUI · Compose로 어떻게 옮겨지는지.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jeomseonMitjul",
+      "text": "점선 밑줄",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.bubuneMauseureulOlrimyeonNameojiKodeueseoGateun",
+      "text": "부분에 마우스를 올리면 나머지 코드에서 같은 요소가 함께 표시됩니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.claudeDesignHTMLDesignProjectForest",
+      "text": "① Claude Design HTML · design/project/forest.dc.html",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.divStyleDisplayFlexFlexDirection",
+      "text": "<div style=\"display:flex; flex-direction:column;",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gap20px",
+      "text": "gap:20px",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.divStyleDisplayFlexJustifyContent",
+      "text": "\"> <div style=\"display:flex; justify-content:space-between\"> <span style=\" font-family:var(--font-heading);",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.fontSize20px",
+      "text": "font-size:20px",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.colorVarColorAccent300",
+      "text": "color:var(--color-accent-300)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.t28f195",
+      "text": "\">",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.forest2",
+      "text": "forest",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.styleWidth40pxHeight40pxDiv",
+      "text": "style=\"width:40px;height:40px\"> </div>",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.seobeogaMandeunReiautTeuriDesignDerived",
+      "text": "② 서버가 만든 레이아웃 트리 · design/derived/layout/home.json",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gap20px2",
+      "text": "\"gap\": \"20px\"",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.textStringsHomeForest",
+      "text": "\"text\": \"Strings.Home.forest\"",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.fontSize20px2",
+      "text": "\"font-size\": \"20px\"",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.colorDesignTokensColorAccent300",
+      "text": "\"color\": \"DesignTokens.Color.Accent._300\"",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.onClickOpenSettings",
+      "text": "\"on_click\": \"openSettings\"",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.iOSEijeonteugaOmginSwiftUIAppsIos",
+      "text": "③ iOS 에이전트가 옮긴 SwiftUI · apps/ios/Forest/Screens/HomeView.swift",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.vStackAlignmentLeading",
+      "text": "VStack(alignment: .leading,",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.spacing20",
+      "text": "spacing: 20",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.textStringsHomeForest2",
+      "text": "Text(Strings.Home.forest)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.fontTypographyHeading20",
+      "text": ".font(Typography.heading(20))",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.foregroundStylePaletteAccent300",
+      "text": ".foregroundStyle(Palette.accent300)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.buttonActionModelOpenSettings",
+      "text": "Button(action: model.openSettings)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.androidEijeonteugaOmginComposeAppsAndroid",
+      "text": "④ Android 에이전트가 옮긴 Compose · apps/android/.../ui/screens/HomeScreen.kt",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.columnScCamelVerticalArrangement",
+      "text": "Column( sc-camel-vertical-arrangement =",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.arrangementSpacedBy20Dp",
+      "text": "Arrangement.spacedBy(20.dp)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.textTextStringsHomeForest",
+      "text": "Text(text = Strings.Home.forest,",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.styleTypographyHeading20Sp",
+      "text": "style = Typography.heading(20.sp)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.colorPaletteAccent300",
+      "text": "color = Palette.accent300",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.iconButtonOnClickModelOpenSettings",
+      "text": "IconButton(onClick = model::openSettings)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon",
+      "text": "정제 전후의 입력을 숫자로 보면",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._917JulHanPail",
+      "text": "917줄 한 파일",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwamyeondangTeuri4Gae321243",
+      "text": "→ 화면당 트리 4개 (321 · 243 · 151 · 104줄)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.saekRiteoreol119Gae",
+      "text": "색 리터럴 119개",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._0Gae",
+      "text": "→ 0개",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.ireumEoldeonMunguAikonDongjak",
+      "text": "이름 없던 문구 · 아이콘 · 동작",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.mungu80Aikon10Haendeulreo25",
+      "text": "→ 문구 80 · 아이콘 10 · 핸들러 25 · 컴포넌트 31",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.peurototaipJangsik",
+      "text": "프로토타입 장식",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jeondalAnHam",
+      "text": "→ 전달 안 함",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._2SeobeogaGongtongRisoseureulGakPeulraetpome",
+      "text": "2. 서버가 공통 리소스를 각 플랫폼에 맞게 상수 파일로 생성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.sharedGenerated",
+      "text": "shared/generated/",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.eGateunNaeyongiSwiftKotlinEuro",
+      "text": "에 같은 내용이 Swift · Kotlin으로 나란히 생성됩니다. 같은 방식으로",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.apiRoutesScreensDesignTokensIcons",
+      "text": "ApiRoutes · Screens · DesignTokens · Icons",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.doDuEoneoroSaengseongdoepnida",
+      "text": "도 두 언어로 생성됩니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.stringsSwift",
+      "text": "Strings.swift",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.stringsKt",
+      "text": "Strings.kt",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gyeolgwa",
+      "text": "결과",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun",
+      "text": "같은 화면을 만드는 데 에이전트가 쓰는 비용이 줄었고, 결과물은 더 디자인에 가까워졌습니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.seongneungGeomjeungHandoffPackageJeongjeJeonhu",
+      "text": "성능 검증 — Handoff package 정제 전후 A/B",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.homeStatsIOSAndroid2Hoe",
+      "text": "home · stats × iOS · Android × 2회 = 16회",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aWonbonHTML57KB",
+      "text": "A · 원본 HTML (57KB)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.bJeongjehanReiautTeuri",
+      "text": "B · 정제한 레이아웃 트리",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.tokeunPyeonggyun",
+      "text": "토큰 (평균)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._905k",
+      "text": "90.5k",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._551k",
+      "text": "55.1k",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._39",
+      "text": "−39%",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwamyeonJeonghapseong",
+      "text": "화면 정합성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._8BeonJung7BeonHwamyeoneul",
+      "text": "8번 중 7번 화면을 제 마음대로 바꿈 — 조건부 영역을 항상 표시, 정해진 색 대신 임의 색",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.ppatteurinGeonChuchulgigaTeurieAnDameun",
+      "text": "빠뜨린 건 추출기가 트리에 안 담은 속성뿐 → 이후 스타일 속성을 전부 담는 무손실 방식으로 개선",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gateunHwamyeoneulGateunModelroGuhyeonhageHago",
+      "text": "같은 화면을 같은 모델로 구현하게 하고",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.ipryeokman",
+      "text": "입력만",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi",
+      "text": "바꿔 비교. 디자인이 확정된 상황에선 정합성이 우선이라 B를 택해 도입했습니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.uIUXGuhyeonJeonghapseongBigyo",
+      "text": "UI / UX 구현 정합성 비교",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.oenjjokbuteoBReiautTeuriAHTML",
+      "text": "왼쪽부터 B 레이아웃 트리 · A HTML 직접 변환 · 인터랙티브 프로토타입 · 클릭하면 확대",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.onbodingBeoteunWichiYeobaekiAEseo",
+      "text": "온보딩 — 버튼 위치·여백이 A에서 프로토타입과 달라짐",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.homHadanChucheonMiksingBaechiwaImiji",
+      "text": "홈 — 하단 추천 믹싱 배치와 이미지 스타일 불일치",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.saundeuTaimeoDeuropdaunSiUIKkaejim",
+      "text": "사운드 — 타이머 드롭다운 시 UI 깨짐",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.girokHadanSafeAreaMitJeongryeoliUidowa",
+      "text": "기록 — 하단 SafeArea 및 정렬이 의도와 다르게 구현됨",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.geuOeBeoteunTeochiyeongyeokBateomsiteuHaendeul",
+      "text": "그 외 — 버튼 터치영역, 바텀시트 핸들 드래그, 스크롤 인디케이터 미숨김",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.keiseuSeuteodi2",
+      "text": "케이스 스터디 2",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.baekendeuInpeuraSeupekMunseoMandeulgi",
+      "text": "백엔드 인프라 스펙 문서 만들기",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.baekendeuInpeuraGuseongeunJuyoGineungYecheuk",
+      "text": "백엔드 인프라 구성은 주요 기능, 예측 사용자 규모, 예산 등에 따라 가변적이라 번거로움이 느껴졌고, 이를 돕는 인터뷰 프로세스가 필요했음. 사용자 니즈를 파악해 과한 서버 구성을 피하기 위함도 있음.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui",
+      "text": "에이전트가 기능과 인터뷰 기반 적정 수준의 인프라 조합을",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.bogiSwipgePyoroJean",
+      "text": "보기 쉽게 표로 제안",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge",
+      "text": "하고, 유저는 정해준 조합을 선택하거나 자유롭게 논의해 백엔드 스펙을 구성한다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.inpeuraGyeoljeong4DangyeInteobyuGak",
+      "text": "인프라 결정 — 4단계 인터뷰, 각 단계가 끝나야 다음으로",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._1Seutaek",
+      "text": "1 스택",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.peulraetpomgwaBaekendeuEoneoreulHubo23",
+      "text": "플랫폼과 백엔드 언어를 후보 2~3개로 좁혀 선택",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._2Gyumo",
+      "text": "2 규모",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.yesangMAUDAUReulSayongjagaDaeryak",
+      "text": "예상 MAU · DAU를 사용자가 대략 입력",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._3HuboChurigi",
+      "text": "3 후보 추리기",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._12GaeJohapJungGeuGyumoe",
+      "text": "12개 조합 중 그 규모에 맞는 5개만 남김",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._4YogeumJohoe",
+      "text": "4 요금 조회",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gongsikYogeumPeijimanIkeumKaesiEoli",
+      "text": "공식 요금 페이지만 읽음. 캐시 없이 매번 새로",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aPIMyeongse",
+      "text": "API 명세",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.inpeuragaJeonghaejimyeonHwamyeonHTMLGwaGaebal",
+      "text": "인프라가 정해지면 화면 HTML과 개발 문서를 읽고,",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gakHwamyeoniPilyoroHaneunDeiteo",
+      "text": "각 화면이 필요로 하는 데이터",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.eseoEndeupointeureulPpopa",
+      "text": "에서 엔드포인트를 뽑아",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.openapiYaml",
+      "text": "openapi.yaml",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.choaneulSaengseonghapnidaDijainHandoffPaekijigaSeolgye",
+      "text": "초안을 생성합니다. 디자인 handoff 패키지가 설계 범위를 결정합니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.openapi303InfoTitle",
+      "text": "openapi: 3.0.3 info: title: forest API description: | 디자인 화면 4개(onboarding · home · sound · stats)와 공유 컴포넌트가 필요로 하는 데이터만 담는다. 범위 밖(디자인에 화면이 없어 만들지 않는다): - 로그인/회원가입 화면이 없다 → 기기 익명 등록으로 계정을 만들고 JWT 를 발급한다. - 확장 음원 브라우징 UI 가 없다 → 카탈로그·다운로드 URL 만 제공한다. - 결제/구독 구매 화면이 없다 → 구독 상태는 읽기 전용, 관리·내역은 외부 링크로 넘긴다. paths: /auth/device: post: operationId: registerDevice summary: 기기 익명 등록 — 계정 생성 또는 기존 계정 재획득 후 토큰 발급",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan",
+      "text": "월 비용 · 확인일 · 종속성 · 장단점을 싼 값 순으로 정리한 비교표를 세션에서 바로 확인",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gyumo",
+      "text": "규모",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.sogyumo",
+      "text": "소규모",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.mAU10000DAU1000",
+      "text": "(MAU 10,000 · DAU 1,000) 기준으로 후보 조합의 요금을 오늘(2026-09-04) 다시 읽었습니다. 싼 순입니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.id",
+      "text": "id",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.db",
+      "text": "db",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.auth",
+      "text": "auth",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hosting",
+      "text": "hosting",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.wolBiyong",
+      "text": "월 비용",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwakinil",
+      "text": "확인일",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jongsokseong",
+      "text": "종속성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.awsServerless",
+      "text": "aws-serverless",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.dynamoDB",
+      "text": "DynamoDB",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.cognito",
+      "text": "Cognito",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.lambdaAPIGW",
+      "text": "Lambda + API GW",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._05",
+      "text": "$0-5",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.nopeum",
+      "text": "높음",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.vpsDocker",
+      "text": "vps-docker",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.postgreSQLJache",
+      "text": "PostgreSQL (자체)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jacheJWT",
+      "text": "자체 JWT",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.vPSHetzner",
+      "text": "VPS (Hetzner)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._410",
+      "text": "$4-10",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.nateum",
+      "text": "낮음",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.firebase",
+      "text": "firebase",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.firestore",
+      "text": "Firestore",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.firebaseAuth",
+      "text": "Firebase Auth",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.cloudRun",
+      "text": "Cloud Run",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._010",
+      "text": "$0-10",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.railway",
+      "text": "railway",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.postgreSQLRailway",
+      "text": "PostgreSQL (Railway)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.railway2",
+      "text": "Railway",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._525",
+      "text": "$5-25",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.supabaseFly",
+      "text": "supabase-fly",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.postgreSQLSupabase",
+      "text": "PostgreSQL (Supabase)",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.supabaseAuth",
+      "text": "Supabase Auth",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.flyIo",
+      "text": "Fly.io",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._030",
+      "text": "$0-30",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.jung",
+      "text": "중",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero",
+      "text": "인터뷰가 끝나면 요약표로 정리되어 다음 단계로 넘어가기 전 사용자에게 세션에서 제공됩니다.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.guhyeonWanryoHuBaekendeuSujeongiPilyohan",
+      "text": "구현 완료 후 백엔드 수정이 필요한 경우, 혹은 임의로 수정한 경우",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.sayongjaegeBogoseoroJechul",
+      "text": "사용자에게 보고서로 제출",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye",
+      "text": "하는 프로세스 — 에이전트가 임의로 판단해 수차례 루프를 도는 대신 빠르게 루프를 완료하고 수정 사항을 정리해 다음 루프를 가동하는 게 효율적이라고 판단.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul",
+      "text": "보고서가 필요한 이유: 에이전트의 자율성이 차이를 만들기 때문에 이를 아예 강제하기 어렵고, 설계대로 작성해도 추가 요구사항이 발생할 수 있음은 당연한 일.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.keiseuSeuteodi3",
+      "text": "케이스 스터디 3",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gonggaeBaepoJeonjeSikeuriteulPaipeuraineDeuliji",
+      "text": "공개 배포 전제 — 시크릿을 파이프라인에 들이지 않기",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.aPIKiMingamJeongbogaKeulraudeuSesyeongwa",
+      "text": "API 키, 민감 정보가 클라우드 세션과 공개 저장소에 노출될 수 있는 환경 — 읽는 순간 컨텍스트에 실리고 저장소 기록에도 남음.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.mingamGaleul",
+      "text": "민감 값을",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwangyeongbyeonsuroman",
+      "text": "환경변수로만",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago",
+      "text": "관리하여 직접 값이 노출되지 않도록 하고, 민감 값이 담긴 파일을 직접 접근하지 못하도록",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hukeuroMakneunda",
+      "text": "훅으로 막는다",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung",
+      "text": "생성된 프로젝트의 공개 저장소, 개발 도중 LLM이 읽은 시크릿",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared._0Gae2",
+      "text": "0개",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon",
+      "text": "— 환경변수만 노출. 빌더 에이전트들이 결과물을 내면 그 뒤에 실제 민감 정보(인증서, 키 등)를 사용자가 직접 입력하게 유도.",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.eijeonteuuiYudoYesi",
+      "text": "에이전트의 유도 예시",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.wranglerTomlUiREPLACEWITHD1",
+      "text": "· wrangler.toml 의 REPLACE_WITH_D1_DATABASE_ID → `npx wrangler d1 create forest` 로 만든 실제 id 로 교체 · JWT_SECRET 은 Worker 시크릿으로만 넣는다 → npx wrangler secret put JWT_SECRET (32바이트 이상 랜덤) → 저장소에는 자리표시자만 있다 · 배포 전 원격 마이그레이션 적용 → npx wrangler d1 migrations apply forest --remote",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.iDoguroMandeulgoItneunSeobiseu",
+      "text": "이 도구로 만들고 있는 서비스",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.forestSaundeuMiksingJipjungMyeongsangAep",
+      "text": "Forest — 사운드 믹싱 집중 & 명상 앱",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.daeumPeurojekteu",
+      "text": "다음 프로젝트 →",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.gaeyo",
+      "text": "개요",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.guseong",
+      "text": "구성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.uIUXJeonghapseong",
+      "text": "UI/UX 정합성",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.baekendeuSeupek",
+      "text": "백엔드 스펙",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.sikeuritGyeokri",
+      "text": "시크릿 격리",
+      "screen": "shared",
+      "source": "markup"
+    },
+    {
+      "key": "shared.spanSpanStyleFontSize15px",
+      "text": "</span> <span style=\"font-size:15px\"> {greetingHole}</span> <div",
+      "screen": "shared",
+      "source": "format",
+      "params": [
+        "greetingHole"
+      ]
+    },
+    {
+      "key": "shared.scCamelOnClick",
+      "text": "sc-camel-on-click=\"{openSettingsHole}\"",
+      "screen": "shared",
+      "source": "format",
+      "params": [
+        "openSettingsHole"
+      ]
+    }
+  ]
+}

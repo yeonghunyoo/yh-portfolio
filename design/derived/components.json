@@ -1,0 +1,178 @@
+{
+  "components": [
+    {
+      "screen": "shared",
+      "handler": "toggleTheme",
+      "type": "toggle",
+      "id": "toggleTheme",
+      "title": "{{ themeLabel }}",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokLeave",
+      "type": "gesture",
+      "id": "tokLeave",
+      "title": "tokLeave",
+      "events": [
+        "mouse-leave"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokGap",
+      "type": "gesture",
+      "id": "tokGap",
+      "title": "tokGap",
+      "events": [
+        "mouse-enter"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokSize",
+      "type": "gesture",
+      "id": "tokSize",
+      "title": "tokSize",
+      "events": [
+        "mouse-enter"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokColor",
+      "type": "gesture",
+      "id": "tokColor",
+      "title": "tokColor",
+      "events": [
+        "mouse-enter"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokText",
+      "type": "gesture",
+      "id": "tokText",
+      "title": "tokText",
+      "events": [
+        "mouse-enter"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "tokClick",
+      "type": "gesture",
+      "id": "tokClick",
+      "title": "tokClick",
+      "events": [
+        "mouse-enter"
+      ],
+      "uses": 4,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "open1",
+      "type": "button",
+      "id": "open1",
+      "title": "open1",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "open2",
+      "type": "button",
+      "id": "open2",
+      "title": "open2",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "open3",
+      "type": "button",
+      "id": "open3",
+      "title": "open3",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "open4",
+      "type": "button",
+      "id": "open4",
+      "title": "open4",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "open5",
+      "type": "button",
+      "id": "open5",
+      "title": "open5",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    },
+    {
+      "screen": "shared",
+      "handler": "closeLightbox",
+      "type": "button",
+      "id": "closeLightbox",
+      "title": "closeLightbox",
+      "uses": 1,
+      "screens": [
+        "shared"
+      ],
+      "file": "6b7a554c-handoffagent.dc.html"
+    }
+  ]
+}
