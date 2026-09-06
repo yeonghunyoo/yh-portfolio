@@ -13,9 +13,14 @@
 export const SiteCopy = {
   /** The share card should name the site, not the headline the page already renders. */
   siteTitle: "개발자 유영훈의 포트폴리오",
-  siteDescription:
-    "iOS 네이티브 앱 개발을 주로 맡아왔지만, 특정 플랫폼이나 직무에 저를 가두지 않습니다. 도구를 만들고, 그 도구로 서비스를 만듭니다.",
-} as const;
+  /**
+   * 공유 카드의 서브 문구. 카카오톡·슬랙 카드는 한 줄 반쯤에서 잘리므로 슬로건 길이로
+   * 맞춘다. 본문의 소개 첫 문장을 그대로 쓰던 것을 대신하는데, 그 문장은
+   * "…가두지 않습니다" 로 끝나는 부정문이라 카드만 보면 끝맺음이 없었다.
+   * 직무를 박지 않는 것도 의도다 — 페이지가 특정 플랫폼에 스스로를 가두지 않는다고
+   * 말하면서 카드에 "iOS 개발자" 를 적으면 앞뒤가 맞지 않는다.
+   */
+  siteDescription: "반복을 도구로 바꾸는 개발자.",} as const;
 
 /** The terminal that greets a first visit to the landing page. */
 export const LoadingCopy = {

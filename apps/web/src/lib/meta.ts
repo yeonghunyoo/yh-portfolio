@@ -21,7 +21,7 @@ export const SCREEN_META: Record<ScreenId, ScreenMeta> = {
     // (Strings.Resume.softwareEngineerIosBuilder) stays where it belongs — in the
     // content — instead of being repeated as the title of every shared link.
     title: SiteCopy.siteTitle,
-    description: Strings.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman,
+    description: SiteCopy.siteDescription,
   },
   [Screens.forest]: {
     id: Screens.forest,
