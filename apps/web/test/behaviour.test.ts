@@ -43,10 +43,10 @@ describe("handoffAgent token pairing", () => {
 
 describe("resume skills", () => {
   it("loops the curated chip list", () => {
-    // The export shipped 19. Git · JIRA · Zeplin · Figma and the MVVM/MVP pair came
-    // out (table stakes, process tools, patterns); Kotlin and TypeScript went in so
-    // the Android and backend claims elsewhere on the page have a skill behind them.
-    expect(Skills).toHaveLength(15);
+    // The export shipped 19. Out went the table stakes and process tools, the
+    // patterns, and the service/library names the human judged to be noise; in went
+    // Kotlin and TypeScript so the Android and backend claims have a skill behind them.
+    expect(Skills).toHaveLength(8);
     expect(Skills[0]).toEqual({ name: "Swift" });
     expect(Skills.map((s) => s.name)).toContain("Kotlin (Compose)");
     expect(Skills.map((s) => s.name)).not.toContain("Git");
