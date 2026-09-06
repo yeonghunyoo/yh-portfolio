@@ -33,6 +33,13 @@ html {
 body {
   margin: 0;
   font-family: "IBM Plex Sans KR", system-ui, sans-serif;
+
+  /*
+   * 한글은 기본 word-break 에서 CJK 로 취급돼 음절 사이 어디서나 끊긴다 —
+   * "방식으" / "로" 처럼. keep-all 은 띄어쓰기(어절)에서만 끊는다.
+   * 끊을 자리가 없는 긴 문자열(파일 경로 등)은 각자 overflow-wrap 으로 푼다.
+   */
+  word-break: keep-all;
   background: var(--bg);
   color: var(--ink);
   -webkit-font-smoothing: antialiased;
