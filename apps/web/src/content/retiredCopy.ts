@@ -58,6 +58,17 @@ export const RetiredCopy: RetiredString[] = [
     on: "2026-09-06",
     reason: "위와 같음 — 경력 배지도 careerLength() 가 만든다.",
   },
+  {
+    path: "Strings.Resume.gyeoljePeuroseseuIsyuHaegyeol",
+    on: "2026-09-06",
+    reason:
+      "사람이 알파이글루의 결제 프로세스 항목을 통째로 뺐다 — 지금 문구로는 무슨 일이 있었는지 정확히 설명되지 않는다고 판단했다.",
+  },
+  {
+    path: "Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa",
+    on: "2026-09-06",
+    reason: "위 항목의 상세 내용. 항목과 함께 내렸다.",
+  },
 ];
 
 /**

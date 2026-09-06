@@ -55,7 +55,6 @@ export const ResumeCopy = {
     juAlpaigeulru: Strings.Resume.juAlpaigeulru,
     _2020112022031Nyeon: Strings.Resume._2020112022031Nyeon,
     sajugibanAiIreumJakmyeongSeobiseuNeitibeu: Strings.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu,
-    gyeoljePeuroseseuIsyuHaegyeol: Strings.Resume.gyeoljePeuroseseuIsyuHaegyeol,
     githubComYeonghunyoo: Strings.Resume.githubComYeonghunyoo,
   },
   Handoff: {

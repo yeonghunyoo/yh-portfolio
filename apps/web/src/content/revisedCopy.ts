@@ -329,9 +329,4 @@ export const RevisedLists = {
     "얼굴 · 신분증 인식 기반 본인확인",
     "가로 스택 차트 형태의 시간별 예약 기능",
   ]),
-  alphaiglooPayment: list("Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa", [
-    "결제 후 상품 미지급으로 CS와 DB 수정이 반복되던 이슈",
-    "클로저 캡처 리스트 메모리 누수로 상품 코드가 섞이던 원인을 로그 분석으로 파악해 수정",
-    "IAP finishTransaction이 지급 전에 호출되던 순서를 바로잡아 재지급 안정성 확보",
-  ]),
 } as const;
