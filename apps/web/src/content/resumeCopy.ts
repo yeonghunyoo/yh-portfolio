@@ -17,7 +17,6 @@ export const ResumeCopy = {
     iOsNeitibeuAepGaebaleulJuroMatawatjiman: Strings.Resume.iOsNeitibeuAepGaebaleulJuroMatawatjiman,
     ilhadaBanbokdoeneunMunjereulMannamyeon: Strings.Resume.ilhadaBanbokdoeneunMunjereulMannamyeon,
     dogureulJikjeopMandeuleoHaegyeol: Strings.Resume.dogureulJikjeopMandeuleoHaegyeol,
-    hagoGeuDoguroDasiSeobiseureulMandeuneun: Strings.Resume.hagoGeuDoguroDasiSeobiseureulMandeuneun,
     choegeuneneunIosAndroidReulTtaroGaebalhamyeo: Strings.Resume.choegeuneneunIosAndroidReulTtaroGaebalhamyeo,
     handoffAgent: Strings.Resume.handoffAgent,
     raneunPeulreogeuineuroPuleotgo: Strings.Resume.raneunPeulreogeuineuroPuleotgo,
