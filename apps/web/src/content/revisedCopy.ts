@@ -296,17 +296,22 @@ export const RevisedLists = {
     "유저 · 파트너(점주) 앱 UI/UX 구현",
     "번역 자동화 프로세스를 기능 개발에 통합",
   ]),
+  /**
+   * 사람이 내용을 고쳤다 — 로그아웃 플래그를 빼고, 장바구니 건은 이슈였음을,
+   * 비밀번호 찾기는 기능 추가였음을 밝혔다. 항목이 다섯이 되었으므로 도입부의
+   * 개수도 함께 고친다(세어 보면 바로 드러나는 자리다). 다섯 중 트러블슈팅은
+   * 하나뿐이라 도입부도 "기능 추가" 로 바꿨다.
+   */
   letsbeeClark: list(
     "Strings.Resume.uIuxGaeseonMitTeureobeulsyuting6",
     [
-      "로그아웃 플래그",
-      "장바구니 동기화",
+      "장바구니 동기화 이슈",
       "탭 간 스크롤 위치 캐싱",
-      "비밀번호 찾기",
+      "비밀번호 찾기 기능 추가",
       "Apple 계정 삭제 대응 (토큰 revoke)",
       "SNS 가입 정보 통일",
     ],
-    "UI/UX 개선 및 트러블슈팅 6건",
+    "UI/UX 개선 및 기능 추가 5건",
   ),
   myconect: list("Strings.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro", [
     "얼굴 · 신분증 인식 기반 본인확인",
