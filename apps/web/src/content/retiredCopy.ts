@@ -10,7 +10,7 @@
  * Each entry names the generated path, who asked, when, and why. The next handoff
  * cycle should read this before re-adding the string: it was taken out on purpose.
  */
-import { Revised as RevisedForRecord } from "./revisedCopy";
+import { Revised as RevisedForRecord, RevisedLists as RevisedListsForRecord } from "./revisedCopy";
 
 export interface RetiredString {
   /** Dotted path exactly as it appears in shared/generated/Strings.ts. */
@@ -65,6 +65,11 @@ export const RetiredCopy: RetiredString[] = [
  * 여기 목록은 "생성 키가 더 이상 렌더되지 않는다" 는 가드를 위해 함께 기록한다.
  */
 for (const revised of Object.values(RevisedForRecord)) {
+  RetiredCopy.push({ path: revised.replaces, on: revised.on, reason: revised.reason });
+}
+
+/** 불렛으로 쪼갠 경력 상세도 원래 생성 문자열을 대체한 것이다. */
+for (const revised of Object.values(RevisedListsForRecord)) {
   RetiredCopy.push({ path: revised.replaces, on: revised.on, reason: revised.reason });
 }
 

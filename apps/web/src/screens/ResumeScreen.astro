@@ -7,7 +7,8 @@ import { ScreenPaths } from "@generated/Screens";
 import { RawCopy } from "../content/rawCopy";
 import { Skills } from "../content/skills";
 import { ContactCopy as Contact } from "../content/systemCopy";
-import { Revised, careerLength, careerSectionLabel } from "../content/revisedCopy";
+import { Revised, RevisedLists, careerLength, careerSectionLabel } from "../content/revisedCopy";
+import Bullets from "../components/Bullets.astro";
 import { Image } from "astro:assets";
 import forest01 from "@design-assets/forest-01-onboarding.png";
 import forest02 from "@design-assets/forest-02-home.png";
@@ -140,18 +141,18 @@ import forest04 from "@design-assets/forest-04-stats.png";
         <div class="div21"><div class="div35">{Copy.Resume.teuripeideuTripaidIosNative}</div><span class="span11">{Copy.Resume._202510Hyeonjae}</span></div>
         <div class="div36">{Copy.Resume.helmidakAiChaetingGeongangsangdamSeobiseu} <a href="https://apps.apple.com/kr/app/%ED%97%AC%EB%AF%B8%EB%8B%A5-helpmedoc/id6475003834" target="_blank" rel="noreferrer">{Copy.Resume.appStore}</a> {Copy.Resume.iOsNeitibeuAepGaebalMitAkitekcheo}</div>
         <div class="div37">
-          <div><div class="div32">{Copy.Resume.iOsuiuxJeongbiMitPeulraetpom}</div><div class="span9">{Copy.Resume.androidDaebiJeongchedoenIosHwangyeongeulJeomgeomhae}</div></div>
-          <div><div class="div32">{Copy.Resume.neteuwokeuGongtongInteosepteoDoipMitTokeun}</div><div class="span9">{Copy.Resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae}</div></div>
-          <div><div class="div32">{Copy.Resume.claudeDesignEulHwalyonghanDijainSoyo}</div><div class="span9">{Copy.Resume.dijainSaempeulroTimGanBanghyangseongGongyu}</div></div>
+          <div><div class="div32">{Copy.Resume.iOsuiuxJeongbiMitPeulraetpom}</div><Bullets list={RevisedLists.tripaidIosUx} /></div>
+          <div><div class="div32">{Copy.Resume.neteuwokeuGongtongInteosepteoDoipMitTokeun}</div><Bullets list={RevisedLists.tripaidNetwork} /></div>
+          <div><div class="div32">{Copy.Resume.claudeDesignEulHwalyonghanDijainSoyo}</div><Bullets list={RevisedLists.tripaidDesign} /></div>
         </div>
       </article>
 
       <article class="article1" data-dim="0" data-dim-key="dimB">
         <div class="div21"><div class="div35">{Copy.Resume.holricheuHolich}</div><span class="span11">{Copy.Resume._2023042025021Nyeon}</span></div>
         <div class="div37">
-          <div><div class="div32">{Copy.Resume.letSBeePilripinEumsikBaedal}</div><div class="div38">{Copy.Resume._202407202501Flutter}</div><div class="span9">{Copy.Resume.yujeoPateuneoJeomjuAepUiux}</div></div>
-          <div><div class="div32">{Copy.Resume.guLetSBeeKeulrakJiyeok}</div><div class="div38">{Copy.Resume._202306202411Ios}</div><div class="span9">{Copy.Resume.uIuxGaeseonMitTeureobeulsyuting6}</div></div>
-          <div><div class="div32">{Copy.Resume.myConectHotelBidaemyeonSeobiseuPeulraetpom}</div><div class="div38">{Copy.Resume._202304202412Ios}</div><div class="span9">{Copy.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro}</div></div>
+          <div><div class="div32">{Copy.Resume.letSBeePilripinEumsikBaedal}</div><div class="div38">{Copy.Resume._202407202501Flutter}</div><Bullets list={RevisedLists.letsbeePh} /></div>
+          <div><div class="div32">{Copy.Resume.guLetSBeeKeulrakJiyeok}</div><div class="div38">{Copy.Resume._202306202411Ios}</div><Bullets list={RevisedLists.letsbeeClark} /></div>
+          <div><div class="div32">{Copy.Resume.myConectHotelBidaemyeonSeobiseuPeulraetpom}</div><div class="div38">{Copy.Resume._202304202412Ios}</div><Bullets list={RevisedLists.myconect} /></div>
         </div>
       </article>
 
@@ -160,7 +161,7 @@ import forest04 from "@design-assets/forest-04-stats.png";
         <div class="div36">{Copy.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu}</div>
         <div class="div37">
           <div><div class="div32">{Revised.careerContent.text}</div><div class="span9">{Revised.careerContentDetail.text}</div></div>
-          <div><div class="div32">{Copy.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><div class="span9">{Copy.Resume.gyeoljeHuSangpumMijigeupeuroCsWa}</div></div>
+          <div><div class="div32">{Copy.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><Bullets list={RevisedLists.alphaiglooPayment} /></div>
         </div>
       </article>
     </div>

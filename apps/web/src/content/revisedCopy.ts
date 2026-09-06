@@ -253,3 +253,68 @@ export function careerLength(now: Date = new Date()): string {
 export function careerSectionLabel(now: Date = new Date()): string {
   return `03 — 경력 · ${careerLength(now)}`;
 }
+
+/**
+ * 경력 상세를 불렛으로 쪼갠 것.
+ *
+ * 원문은 한 줄에 쉼표와 마침표로 여러 성과를 이어 붙여 읽기 어려웠다. 구분자가
+ * 항목마다 달라(마침표 · 쉼표 · "6건 —" 나열) 기계적으로 자를 수 없어 손으로 나눈다.
+ * 낱말은 원문 그대로고 순서만 유지한 채 경계에서만 끊었다.
+ */
+export interface RevisedList {
+  /** 불렛 위에 한 줄로 남는 도입부. 없으면 불렛만 나온다. */
+  readonly intro?: string;
+  readonly items: readonly string[];
+  readonly replaces: string;
+  readonly on: string;
+  readonly reason: string;
+}
+
+const REASON = "한 줄에 쉼표·마침표로 여러 성과를 이어 붙여 읽기 어려웠다. 성과 단위로 끊는다.";
+const list = (
+  replaces: string,
+  items: readonly string[],
+  intro?: string,
+): RevisedList => ({ items, replaces, on: ON, reason: REASON, ...(intro ? { intro } : {}) });
+
+export const RevisedLists = {
+  tripaidIosUx: list("Strings.Resume.androidDaebiJeongchedoenIosHwangyeongeulJeomgeomhae", [
+    "Android 대비 정체된 iOS 환경을 점검해 UI/UX 전반 개선",
+    "플랫폼 간 정합성 확보",
+    "디자인 컴포넌트화 · 토큰화로 뷰 유지보수성 향상",
+  ]),
+  tripaidNetwork: list("Strings.Resume.eungdapEreoCheorireulInteosepteoGyecheungeuroBunrihae", [
+    "응답 · 에러 처리를 인터셉터 계층으로 분리해 중복 제거",
+    "인증 토큰 주입 · 갱신 자동화",
+    "커스텀 로깅으로 디버깅 효율 개선",
+  ]),
+  tripaidDesign: list("Strings.Resume.dijainSaempeulroTimGanBanghyangseongGongyu", [
+    "디자인 샘플로 팀 간 방향성 공유",
+    "디자인 · 번역 결과를 네이티브 리소스로 컨버트해 빠르게 전달",
+  ]),
+  letsbeePh: list("Strings.Resume.yujeoPateuneoJeomjuAepUiux", [
+    "유저 · 파트너(점주) 앱 UI/UX 구현",
+    "번역 자동화 프로세스를 기능 개발에 통합",
+  ]),
+  letsbeeClark: list(
+    "Strings.Resume.uIuxGaeseonMitTeureobeulsyuting6",
+    [
+      "로그아웃 플래그",
+      "장바구니 동기화",
+      "탭 간 스크롤 위치 캐싱",
+      "비밀번호 찾기",
+      "Apple 계정 삭제 대응 (토큰 revoke)",
+      "SNS 가입 정보 통일",
+    ],
+    "UI/UX 개선 및 트러블슈팅 6건",
+  ),
+  myconect: list("Strings.Resume.eolgulSinbunjeungInsikGibanBoninhwakinGaro", [
+    "얼굴 · 신분증 인식 기반 본인확인",
+    "가로 스택 차트 형태의 시간별 예약 기능",
+  ]),
+  alphaiglooPayment: list("Strings.Resume.gyeoljeHuSangpumMijigeupeuroCsWa", [
+    "결제 후 상품 미지급으로 CS와 DB 수정이 반복되던 이슈",
+    "클로저 캡처 리스트 메모리 누수로 상품 코드가 섞이던 원인을 로그 분석으로 파악해 수정",
+    "IAP finishTransaction이 지급 전에 호출되던 순서를 바로잡아 재지급 안정성 확보",
+  ]),
+} as const;
