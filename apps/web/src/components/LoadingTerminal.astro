@@ -66,7 +66,7 @@ import { SEEN_KEY, SEEN_FRESH_FOR_MS } from "../lib/loadingTerminal";
 
   .body{
     padding:16px 18px 18px;font:14.5px/1.8 'IBM Plex Mono',monospace;
-    min-height:230px;white-space:pre-wrap;word-break:break-word;
+    min-height:120px;white-space:pre-wrap;word-break:break-word;
   }
   .cursor{
     display:inline-block;width:9px;height:16px;vertical-align:-2px;
@@ -76,8 +76,11 @@ import { SEEN_KEY, SEEN_FRESH_FOR_MS } from "../lib/loadingTerminal";
   @keyframes blink{50%{opacity:0}}
 
   @media (max-width:820px){
-    .overlay{padding:20px}
-    .body{font-size:12.5px;min-height:180px;padding:14px}
+    .overlay{padding:16px}
+    /* Bigger than it was (12.5px), and bigger than the desktop size — a phone held at
+       arm's length needs it more than a monitor does. The opening command is 52
+       characters so it still takes two rows here; that is what a terminal does. */
+    .body{font-size:15px;line-height:1.9;min-height:120px;padding:14px}
     .title{font-size:11px}
   }
 

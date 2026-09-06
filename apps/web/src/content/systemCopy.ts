@@ -21,17 +21,21 @@ export const SiteCopy = {
 export const LoadingCopy = {
   windowTitle: "yeonghun@portfolio: ~ — zsh",
   label: "불러오는 중",
+  /**
+   * Three lines, each short enough to hold one row at 390px. The mount list and the
+   * "warming up pipeline" line are gone — the mounts named routes the reader has not
+   * seen yet, and the progress line duplicated what the blinking cursor already says.
+   * The cursor now simply sits at the end of the last line.
+   *
+   * The wording is trimmed from the export's: at the size a phone uses, the original
+   * two Korean lines ran 5px and 10px past the window and wrapped a single syllable
+   * each. `./load-resume.sh --sections all` became an alias for the same reason.
+   */
   lines: [
-    "yeonghun@portfolio:~$ ./load-resume.sh --sections all",
-    "[ ok ] 유영훈의 포트폴리오를 불러오는 중입니다.",
-    "[ ok ] 귀중한 시간을 내어주셔서 감사드립니다 :)",
-    "[ ok ] mount  /about        (intro · principles)",
-    "[ ok ] mount  /projects     (handoff-agent · forest)",
-    "[ ok ] mount  /career       (4y 2m)",
-    "[ .. ] warming up pipeline  ",
+    "yeonghun@portfolio:~$ load-portfolio",
+    "[ ok ] 유영훈의 포트폴리오를 불러옵니다",
+    "[ ok ] 시간 내주셔서 감사합니다 :)",
   ],
-  /** Braille spinner, one frame per tick, exactly as the export cycles them. */
-  spinner: ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"],
 } as const;
 
 export const NotFoundCopy = {

@@ -1,16 +1,15 @@
 /**
  * Types the loading script out, then gets out of the way.
  *
- * The design export types one character every 8ms and cycles a spinner every 220ms.
- * The human asked for the terminal to hold for two seconds on a first landing, so the
+ * The design export types one character every 8ms.
+ * The human asked for the terminal to hold for a second and a half on a first landing, so
  * typing is paced to finish inside that window and the overlay leaves at 2s regardless
  * of how far the text got — the reader is never kept waiting on an animation.
  */
 import { LoadingCopy } from "../content/systemCopy";
 
-export const HOLD_MS = 2000;
+export const HOLD_MS = 1500;
 const FADE_MS = 350;
-const SPINNER_MS = 220;
 
 /** sessionStorage key holding the epoch-ms of the last time the terminal played. */
 export const SEEN_KEY = "yh-landed";
@@ -92,17 +91,13 @@ function play(overlay: HTMLElement): void {
   // Finish typing a little before the hold ends, whatever the script's length.
   const typeEvery = Math.max(4, Math.floor((HOLD_MS * 0.7) / script.length));
   let typed = 0;
-  let frame = 0;
 
   timers.push(
     window.setInterval(() => {
       typed = Math.min(script.length, typed + 1);
-      const spinner = LoadingCopy.spinner[frame % LoadingCopy.spinner.length] ?? "";
-      out.textContent = typed >= script.length ? `${script}${spinner}` : script.slice(0, typed);
+      out.textContent = script.slice(0, typed);
+      if (typed >= script.length) stop();
     }, typeEvery),
-    window.setInterval(() => {
-      frame += 1;
-    }, SPINNER_MS),
   );
 
   window.setTimeout(leave, HOLD_MS);
