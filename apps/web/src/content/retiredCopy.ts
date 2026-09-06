@@ -48,6 +48,16 @@ export const RetiredCopy: RetiredString[] = [
     on: "2026-09-06",
     reason: "디자인 연동 에이전트 항목과 함께 빠진 개수 표기.",
   },
+  {
+    path: "Strings.Resume._03Gyeongryeok4Nyeon2Gaewol",
+    on: "2026-09-06",
+    reason: "총 경력을 빌드 시점에 계산하도록 바꿨다 — 개별 항목을 더하면 4년 4개월인데 4년 2개월로 적혀 있었고, 시간이 지나면 반드시 다시 낡는 값이다. [revisedCopy] 의 careerLength() 가 센다.",
+  },
+  {
+    path: "Strings.Resume._4Nyeon2Gaewol",
+    on: "2026-09-06",
+    reason: "위와 같음 — 경력 배지도 careerLength() 가 만든다.",
+  },
 ];
 
 /**

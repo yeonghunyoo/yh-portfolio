@@ -15,6 +15,29 @@ import compare03 from "@design-assets/compare-03.png";
 import compare04 from "@design-assets/compare-04.png";
 import compare05 from "@design-assets/compare-05.png";
 import Lightbox from "../components/Lightbox.astro";
+const infraRows = [
+  { id: Copy.HandoffAgent.awsServerless, db: Copy.HandoffAgent.dynamoDb, auth: Copy.HandoffAgent.cognito, hosting: Copy.HandoffAgent.lambdaApigw, cost: Copy.HandoffAgent._05, dep: Copy.HandoffAgent.nopeum },
+  { id: Copy.HandoffAgent.vpsDocker, db: Copy.HandoffAgent.postgreSqlJache, auth: Copy.HandoffAgent.jacheJwt, hosting: Copy.HandoffAgent.vPsHetzner, cost: Copy.HandoffAgent._410, dep: Copy.HandoffAgent.nateum },
+  { id: Copy.HandoffAgent.firebase, db: Copy.HandoffAgent.firestore, auth: Copy.HandoffAgent.firebaseAuth, hosting: Copy.HandoffAgent.cloudRun, cost: Copy.HandoffAgent._010, dep: Copy.HandoffAgent.nopeum },
+  { id: Copy.HandoffAgent.railway, db: Copy.HandoffAgent.postgreSqlRailway, auth: Copy.HandoffAgent.jacheJwt, hosting: Copy.HandoffAgent.railway2, cost: Copy.HandoffAgent._525, dep: Copy.HandoffAgent.nateum },
+  { id: Copy.HandoffAgent.supabaseFly, db: Copy.HandoffAgent.postgreSqlSupabase, auth: Copy.HandoffAgent.supabaseAuth, hosting: Copy.HandoffAgent.flyIo, cost: Copy.HandoffAgent._030, dep: Copy.HandoffAgent.jung },
+];
+
+/**
+ * 표는 "월 상한이 싼 순, 상한이 같으면 하한이 싼 쪽 먼저" 로 정렬한다. 손으로 나열한
+ * 순서는 $4-10 이 $0-10 보다 앞에 있어 어느 기준으로도 맞지 않았다. 기준값을 따로
+ * 적어 두면 또 어긋나므로 화면에 보이는 금액 문자열에서 직접 읽는다.
+ */
+function costRange(label: string): readonly [number, number] {
+  const [low, high] = label.replace(/[^0-9-]/g, "").split("-").map(Number);
+  return [low ?? 0, high ?? low ?? 0];
+}
+
+const sortedInfraRows = [...infraRows].sort((a, b) => {
+  const [aLow, aHigh] = costRange(a.cost);
+  const [bLow, bHigh] = costRange(b.cost);
+  return aHigh - bHigh || aLow - bLow;
+});
 ---
 <header class="header1">
   <div class="div1">
@@ -73,7 +96,7 @@ import Lightbox from "../components/Lightbox.astro";
           <ul class="ul1"><li>{Copy.HandoffAgent.hwamyeon5Gaega917JulPail}</li><li>{Copy.HandoffAgent.seosikiJeonbuInrainStyle166Gae}</li><li>{Copy.HandoffAgent.aepeEolneunPeurototaipJangsikiSeokyeoIteum}</li></ul></div>
 
         <div class="div18">{Copy.HandoffAgent.jeopgeun}</div>
-        <div>{Copy.HandoffAgent.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Copy.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Copy.HandoffAgent.hagoIreulGibaneuroEijeonteugaJayulseongeulGajigo}</div>
+        <div>{Copy.HandoffAgent.makeudaunGibanSanmunEuroIrueojinSoft} <b>{Copy.HandoffAgent.suchihwadoenMunseoSanchulmuleulKodeuGibanPaipeuraineuro}</b>{Revised.agentAutonomy.text}</div>
 
         <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
         <div>
@@ -132,7 +155,7 @@ import Lightbox from "../components/Lightbox.astro";
       <h2 class="h22">{Copy.HandoffAgent.baekendeuInpeuraSeupekMunseoMandeulgi}</h2>
       <div class="div17">
         <div class="div18">{Copy.HandoffAgent.munje}</div>
-        <div>{Copy.HandoffAgent.baekendeuInpeuraGuseongeunJuyoGineungYecheuk}</div>
+        <div>{Revised.infraProblem.text}</div>
         <div class="div18">{Copy.HandoffAgent.jeopgeun}</div>
         <div>{Copy.HandoffAgent.eijeonteugaGineunggwaInteobyuGibanJeokjeongSujunui} <b>{Copy.HandoffAgent.bogiSwipgePyoroJean}</b>{Copy.HandoffAgent.hagoYujeoneunJeonghaejunJohapeulSeontaekhageonaJayuropge}</div>
         <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
@@ -149,15 +172,13 @@ import Lightbox from "../components/Lightbox.astro";
           <div class="div42"><pre tabindex="0">{CodeSamples.h47.text}</pre></div>
         </div>
         <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
-        <div>{Copy.HandoffAgent.wolBiyongHwakinilJongsokseongJangdanjeomeulSsan}
+        <div>{Revised.costTableCaption.text}
           <div class="div43">
-            <div class="div44">{Copy.HandoffAgent.gyumo} <b class="pre1">{Copy.HandoffAgent.sogyumo}</b> {Copy.HandoffAgent.mAu10000Dau1000}</div>
+            <div class="div44">{Copy.HandoffAgent.gyumo} <b class="pre1">{Copy.HandoffAgent.sogyumo}</b> {Revised.costTableIntro.text}</div>
             <div class="div45"><table class="table1"><thead><tr><th>{Copy.HandoffAgent.id}</th><th>{Copy.Forest.db}</th><th>{Copy.Forest.auth}</th><th>{Copy.Forest.hosting}</th><th>{Copy.HandoffAgent.wolBiyong}</th><th>{Copy.HandoffAgent.hwakinil}</th><th>{Copy.HandoffAgent.jongsokseong}</th></tr></thead><tbody>
-              <tr><td class="code1">{Copy.HandoffAgent.awsServerless}</td><td>{Copy.HandoffAgent.dynamoDb}</td><td>{Copy.HandoffAgent.cognito}</td><td>{Copy.HandoffAgent.lambdaApigw}</td><td><b>{Copy.HandoffAgent._05}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nopeum}</td></tr>
-              <tr><td class="code1">{Copy.HandoffAgent.vpsDocker}</td><td>{Copy.HandoffAgent.postgreSqlJache}</td><td>{Copy.HandoffAgent.jacheJwt}</td><td>{Copy.HandoffAgent.vPsHetzner}</td><td><b>{Copy.HandoffAgent._410}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nateum}</td></tr>
-              <tr><td class="code1">{Copy.HandoffAgent.firebase}</td><td>{Copy.HandoffAgent.firestore}</td><td>{Copy.HandoffAgent.firebaseAuth}</td><td>{Copy.HandoffAgent.cloudRun}</td><td><b>{Copy.HandoffAgent._010}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nopeum}</td></tr>
-              <tr><td class="code1">{Copy.HandoffAgent.railway}</td><td>{Copy.HandoffAgent.postgreSqlRailway}</td><td>{Copy.HandoffAgent.jacheJwt}</td><td>{Copy.HandoffAgent.railway2}</td><td><b>{Copy.HandoffAgent._525}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.nateum}</td></tr>
-              <tr><td class="code1">{Copy.HandoffAgent.supabaseFly}</td><td>{Copy.HandoffAgent.postgreSqlSupabase}</td><td>{Copy.HandoffAgent.supabaseAuth}</td><td>{Copy.HandoffAgent.flyIo}</td><td><b>{Copy.HandoffAgent._030}</b></td><td>2026-09-04</td><td>{Copy.HandoffAgent.jung}</td></tr>
+              {sortedInfraRows.map((r) => (
+                <tr><td class="code1">{r.id}</td><td>{r.db}</td><td>{r.auth}</td><td>{r.hosting}</td><td><b>{r.cost}</b></td><td>2026-09-04</td><td>{r.dep}</td></tr>
+              ))}
             </tbody></table></div>
           </div>
           <ul class="ul2"><li>{Copy.HandoffAgent.inteobyugaKkeutnamyeonYoyakpyoroJeongridoeeoDaeumDangyero}</li><li>{Copy.HandoffAgent.guhyeonWanryoHuBaekendeuSujeongiPilyohan} <b class="pre1">{Copy.HandoffAgent.sayongjaegeBogoseoroJechul}</b>{Copy.HandoffAgent.haneunPeuroseseuEijeonteugaImuiroPandanhaeSucharye}</li><li>{Copy.HandoffAgent.bogoseogaPilyohanIyuEijeonteuuiJayulseongiChaireul}</li></ul>
@@ -176,7 +197,7 @@ import Lightbox from "../components/Lightbox.astro";
         <div class="div18">{Copy.HandoffAgent.guhyeon}</div>
         <div>{Copy.HandoffAgent.mingamGaleul} <b>{Copy.HandoffAgent.hwangyeongbyeonsuroman}</b> {Copy.HandoffAgent.gwanrihayeoJikjeopGaliNochuldoejiAndorokHago} <b>{Copy.HandoffAgent.hukeuroMakneunda}</b>.</div>
         <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
-        <div>{Copy.HandoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung} <b>{Copy.HandoffAgent._0Gae2}</b> {Copy.HandoffAgent.hwangyeongbyeonsumanNochulBildeoEijeonteudeuliGyeolgwamuleulNaemyeon}
+        <div>{Copy.HandoffAgent.saengseongdoenPeurojekteuuiGonggaeJeojangsoGaebalDojung} <b>{Copy.HandoffAgent._0Gae2}</b> {Revised.secretsOutcome.text}
           <div class="div46"><div class="div23">{Copy.HandoffAgent.eijeonteuuiYudoYesi}</div><pre tabindex="0">{CodeSamples.h48.text}</pre></div>
         </div>
       </div>

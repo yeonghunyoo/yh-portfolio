@@ -33,7 +33,6 @@ export const ForestCopy = {
     sumyeonTaimeo: Strings.Forest.sumyeonTaimeo,
     _15304560BunDwi: Strings.Forest._15304560BunDwi,
     girokTonggye: Strings.Forest.girokTonggye,
-    sesyeonGirokgwaYeonsokilSeuteurik: Strings.Forest.sesyeonGirokgwaYeonsokilSeuteurik,
     sNsLoginNaeJeongboDonggihwa: Strings.Forest.sNsLoginNaeJeongboDonggihwa,
     chugaYejeong: Strings.Forest.chugaYejeong,
     gudokMitInaepGyeoljeIap: Strings.Forest.gudokMitInaepGyeoljeIap,

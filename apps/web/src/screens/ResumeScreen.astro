@@ -7,7 +7,7 @@ import { ScreenPaths } from "@generated/Screens";
 import { RawCopy } from "../content/rawCopy";
 import { Skills } from "../content/skills";
 import { ContactCopy as Contact } from "../content/systemCopy";
-import { Revised } from "../content/revisedCopy";
+import { Revised, careerLength, careerSectionLabel } from "../content/revisedCopy";
 import { Image } from "astro:assets";
 import forest01 from "@design-assets/forest-01-onboarding.png";
 import forest02 from "@design-assets/forest-02-home.png";
@@ -43,7 +43,7 @@ import forest04 from "@design-assets/forest-04-stats.png";
       <div class="div6">
         <div class="div7">{Copy.Resume.wonchik2}</div>
         <div class="div8">{Copy.Resume.geungeoroMalhapnida}</div>
-        <p class="p2">{Copy.Resume.malbodaNuneuroHwakinsikineunGeotiOhaereulJulipnida}</p>
+        <p class="p2">{Revised.principleTwo.text}</p>
       </div>
     </div>
 
@@ -55,7 +55,7 @@ import forest04 from "@design-assets/forest-04-stats.png";
   </section>
 
   <div class="div10">
-    <div class="div11"><span class="div7">{Copy.Resume.gyeongryeok}</span><span class="span3">{Copy.Resume._4Nyeon2Gaewol}</span></div>
+    <div class="div11"><span class="div7">{Copy.Resume.gyeongryeok}</span><span class="span3">{careerLength()}</span></div>
     <div class="div12">
       <span class="span4">{Copy.Resume.skill}</span>
       {Skills.map((s) => (<span class="span5" data-skill={s.name} data-on-leave="leaveSkill">{s.name}</span>))}
@@ -98,9 +98,9 @@ import forest04 from "@design-assets/forest-04-stats.png";
         </div>
 
         <div class="div30">
-          <div class="div31" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri}</div><div class="span9">{Copy.Handoff.guhyeonEijeonteuTokeun39Jeolgam16}</div></div>
-          <div class="div31" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero}</div><div class="span9">{Copy.Handoff.yogeumGineungYecheukSayongjaGyumoreulInteobyu}</div></div>
-          <div class="div31" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.wiSanchulmulGibaneuroByeongryeolGuhyeonhaneun3}</div><div class="span9">{Copy.Handoff.iOsAndroidBackendDongsiSaengseong}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl1" data-on-enter="enter1" data-on-leave="leaveNode"><div class="div32">{Revised.refineHeadline.text}</div><div class="span9">{Revised.tokenSaving.text}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl2" data-on-enter="enter2" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero}</div><div class="span9">{Revised.interviewScope.text}</div></div>
+          <div class="div31" data-hl="0" data-hl-key="hl3" data-on-enter="enter3" data-on-leave="leaveNode"><div class="div32">{Revised.builderAgents.text}</div><div class="span9">{Copy.Handoff.iOsAndroidBackendDongsiSaengseong}</div></div>
           <div class="div31" data-hl="0" data-hl-key="hl4" data-on-enter="enter4" data-on-leave="leaveNode"><div class="div32">{Copy.Handoff.inteobyuGibanBaekendeuInpeuraGyeoljeonggujoMit}</div><div class="span9">{Copy.Handoff.mingamJeongboInjeungseoKiNeunSayongjaga}</div></div>
         </div>
       </div>
@@ -133,7 +133,7 @@ import forest04 from "@design-assets/forest-04-stats.png";
   </section>
 
   <section class="section3" id="career">
-    <div class="div4">{Copy.Resume._03Gyeongryeok4Nyeon2Gaewol}</div>
+    <div class="div4">{careerSectionLabel()}</div>
     <div class="div34">
 
       <article class="article1" data-dim="0" data-dim-key="dimA">
@@ -159,7 +159,7 @@ import forest04 from "@design-assets/forest-04-stats.png";
         <div class="div21"><div class="div35">{Copy.Resume.juAlpaigeulru}</div><span class="span11">{Copy.Resume._2020112022031Nyeon}</span></div>
         <div class="div36">{Copy.Resume.sajugibanAiIreumJakmyeongSeobiseuNeitibeu}</div>
         <div class="div37">
-          <div><div class="div32">{Copy.Resume.uIuxGaeseonMitKeontencheuChuga}</div><div class="span9">{Copy.Resume.oneuluiTtibyeolUnseTaroSinnyeonunseKeontencheu}</div></div>
+          <div><div class="div32">{Revised.careerContent.text}</div><div class="span9">{Revised.careerContentDetail.text}</div></div>
           <div><div class="div32">{Copy.Resume.gyeoljePeuroseseuIsyuHaegyeol}</div><div class="span9">{Copy.Resume.gyeoljeHuSangpumMijigeupeuroCsWa}</div></div>
         </div>
       </article>
