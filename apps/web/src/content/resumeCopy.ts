@@ -86,7 +86,6 @@ export const ResumeCopy = {
     android: Strings.Handoff.android,
     backend: Strings.Handoff.backend,
     verify: Strings.Handoff.verify,
-    jeonghapseongChekeuForest: Strings.Handoff.jeonghapseongChekeuForest,
     claudeDesignPeurototaipSanchulmuleulReiautTeuri: Strings.Handoff.claudeDesignPeurototaipSanchulmuleulReiautTeuri,
     guhyeonEijeonteuTokeun39Jeolgam16: Strings.Handoff.guhyeonEijeonteuTokeun39Jeolgam16,
     peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero: Strings.Handoff.peuronteuBaekendeuInpeuraInteobyuGyeolgwareulTodaero,

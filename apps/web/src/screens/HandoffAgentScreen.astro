@@ -4,6 +4,7 @@
 // every piece of copy is a generated constant, listed in ../content/handoffAgentCopy.ts.
 import { HandoffAgentCopy as Copy } from "../content/handoffAgentCopy";
 import { ScreenPaths } from "@generated/Screens";
+import { Revised, RefineAxes } from "../content/revisedCopy";
 import { HOME_PATH } from "../lib/meta";
 import { RawCopy } from "../content/rawCopy";
 import { CodeSamples } from "../content/codeSamples";
@@ -45,7 +46,7 @@ import Lightbox from "../components/Lightbox.astro";
       <div class="div7">{Copy.HandoffAgent.dijainJeongjeBaekendeuInpeuraSeupekInteobyu} <b>{Copy.HandoffAgent.mCpSeobeo}</b>{Copy.HandoffAgent.roGuchuk}</div>
       <div class="div7">{Copy.HandoffAgent.jungganSanchulmuleunGakPeulraetpomeMatneun} <b>{Copy.HandoffAgent.swiftKotlin}</b> {Copy.HandoffAgent.deungEoneoroSaengseongdoeeoEijeonteueNeomgyeojim}</div>
       <div class="div7">{Copy.HandoffAgent.pythonGibanMcpGa} <b>{Copy.Forest.openApi}</b> {Copy.HandoffAgent.gibanBaekendeuSeupekeulJeanJoriphayeoMunseo}</div>
-      <div class="div7">{Copy.HandoffAgent.peulraetpomIosAndroidBackendEijeonteu} <b>{Copy.HandoffAgent._3Gae}</b> {Copy.HandoffAgent.dijainYeondongEijeonteu} <b>{Copy.HandoffAgent._1Gae}</b></div>
+      <div class="div7">{Copy.HandoffAgent.peulraetpomIosAndroidBackendEijeonteu} <b>{Copy.HandoffAgent._3Gae}</b></div>
     </div>
   </section>
 
@@ -53,7 +54,7 @@ import Lightbox from "../components/Lightbox.astro";
     <h2 class="h21">{Copy.HandoffAgent.dongjakBangsik}</h2>
     <div class="div8">
       <div class="div9"><div class="div10">1</div><div class="div11">{Copy.HandoffAgent.dijain}</div><div class="div12">{Copy.HandoffAgent.claudeDesignAepDijainPeurototaipJejak}</div></div>
-      <a class="a4" href="#s3"><div class="div10">2</div><div class="div11">{Copy.HandoffAgent.hwamyeonBeonyeok}</div><div class="div12">{Copy.HandoffAgent.htmlHwamyeoneulGakNeitibeuEijeonteugaIos}</div></a>
+      <a class="a4" href="#s3"><div class="div10">2</div><div class="div11">{Revised.refineLabel.text}</div><div class="div12">{Revised.refineBody.text}</div></a>
       <a class="a4" href="#s4"><div class="div10">3</div><div class="div11">{Copy.HandoffAgent.seobeoInpeura}</div><div class="div12">{Copy.HandoffAgent.jujeGineungYesangGyumoreulInteobyuroMutgo}</div></a>
       <a class="a4" href="#s4"><div class="div10">4</div><div class="div11">{Copy.HandoffAgent.aPiYaksok}</div><div class="div12">{Copy.HandoffAgent.hwamyeonePilyohanDeiteoreulBogoAepSeobeo}</div></a>
       <div class="div9"><div class="div10">5</div><div class="div11">{Copy.HandoffAgent.gongyongPailSaengseong}</div><div class="div12">{Copy.HandoffAgent.aPiJeonguiDijainTokeunMunguAikoneul}</div></div>
@@ -87,13 +88,14 @@ import Lightbox from "../components/Lightbox.astro";
             <div class="div22"><div class="div23">{Copy.HandoffAgent.androidEijeonteugaOmginComposeAppsAndroid}</div><pre data-on-leave="tokLeave" tabindex="0">{CodeSamples.h34.text}<span data-tok="0" data-tok-key="tGap" data-on-enter="tokGap">{CodeSamples.h35.text}</span>{CodeSamples.h36.text}<span data-tok="0" data-tok-key="tText" data-on-enter="tokText">{CodeSamples.h37.text}</span>{CodeSamples.h38.text}<span data-tok="0" data-tok-key="tSize" data-on-enter="tokSize">{CodeSamples.h39.text}</span>{CodeSamples.h40.text}<span data-tok="0" data-tok-key="tColor" data-on-enter="tokColor">{CodeSamples.h41.text}</span>{CodeSamples.h42.text}<span data-tok="0" data-tok-key="tClick" data-on-enter="tokClick">{CodeSamples.h43.text}</span>{CodeSamples.h44.text}</pre></div>
           </div>
 
-          <div class="div25">{Copy.HandoffAgent.jeongjeJeonhuuiIpryeokeulSutjaroBomyeon}</div>
+          <div class="div25">{Revised.refineLead.text}</div>
           <div class="div26">
-            <div class="div27"><span class="span4">{Copy.HandoffAgent._917JulHanPail}</span><span class="span5">{Copy.HandoffAgent.hwamyeondangTeuri4Gae321243}</span></div>
-            <div class="div27"><span class="span4">{Copy.HandoffAgent.saekRiteoreol119Gae}</span><span class="span5">{Copy.HandoffAgent._0Gae}</span></div>
-            <div class="div27"><span class="span4">{Copy.HandoffAgent.ireumEoldeonMunguAikonDongjak}</span><span class="span5">{Copy.HandoffAgent.mungu80Aikon10Haendeulreo25}</span></div>
-            <div class="div27"><span class="span4">{Copy.HandoffAgent.peurototaipJangsik}</span><span class="span5">{Copy.HandoffAgent.jeondalAnHam}</span></div>
+            <div class="div27"><span class="axis">{RefineAxes[0]}</span><span class="span4">{Copy.HandoffAgent._917JulHanPail}</span><span class="span5">{Revised.refineTrees.text}</span></div>
+            <div class="div27"><span class="axis">{RefineAxes[1]}</span><span class="span4">{Revised.refineColorBefore.text}</span><span class="span5">{Copy.HandoffAgent._0Gae}</span></div>
+            <div class="div27"><span class="axis">{RefineAxes[2]}</span><span class="span4">{Revised.refineNameBefore.text}</span><span class="span5">{Copy.HandoffAgent.mungu80Aikon10Haendeulreo25}</span></div>
           </div>
+          <p class="refine-note">{Revised.refineExclusions.text}</p>
+          <p class="refine-note">{Revised.refineOverlayNote.text}</p>
 
           <div class="div28">{Copy.HandoffAgent._2SeobeogaGongtongRisoseureulGakPeulraetpome}</div>
           <div class="div29"><code class="code1">{Copy.HandoffAgent.sharedGenerated}</code> {Copy.HandoffAgent.eGateunNaeyongiSwiftKotlinEuro} <code class="code1">{Copy.HandoffAgent.apiRoutesScreensDesignTokensIcons}</code> {Copy.HandoffAgent.doDuEoneoroSaengseongdoepnida}</div>
@@ -106,14 +108,14 @@ import Lightbox from "../components/Lightbox.astro";
         <div class="div18">{Copy.HandoffAgent.gyeolgwa}</div>
         <div>{Copy.HandoffAgent.gateunHwamyeoneulMandeuneunDeEijeonteugaSseuneun}
           <div class="div33">
-            <div class="div34"><span class="div19">{Copy.HandoffAgent.seongneungGeomjeungHandoffPackageJeongjeJeonhu}</span><span class="div16">{Copy.HandoffAgent.homeStatsIosAndroid2Hoe}</span></div>
-            <table><thead><tr><th></th><th>{Copy.HandoffAgent.aWonbonHtml57Kb}</th><th>{Copy.HandoffAgent.bJeongjehanReiautTeuri}</th></tr></thead><tbody><tr><td class="span4">{Copy.HandoffAgent.tokeunPyeonggyun}</td><td>{Copy.HandoffAgent._905K}</td><td><b>{Copy.HandoffAgent._551K}</b> <span class="span6">{Copy.HandoffAgent._39}</span></td></tr><tr><td class="span4">{Copy.HandoffAgent.hwamyeonJeonghapseong}</td><td>{Copy.HandoffAgent._8BeonJung7BeonHwamyeoneul}</td><td>{Copy.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun}</td></tr></tbody></table>
-            <div class="div35">{Copy.HandoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="pre1">{Copy.HandoffAgent.ipryeokman}</b> {Copy.HandoffAgent.bakkwoBigyoDijainiHwakjeongdoenSanghwangeseonJeonghapseongi}</div>
+            <div class="div34"><span class="div19">{Revised.abSectionTitle.text}</span><span class="div16">{Revised.abRunCount.text}</span></div>
+            <table><thead><tr><th></th><th>{Revised.abArmHtml.text}</th><th>{Revised.abArmTree.text}</th></tr></thead><tbody><tr><td class="span4">{Copy.HandoffAgent.tokeunPyeonggyun}</td><td>{Copy.HandoffAgent._905K}</td><td><b>{Copy.HandoffAgent._551K}</b> <span class="span6">{Copy.HandoffAgent._39}</span></td></tr><tr><td class="span4">{Copy.HandoffAgent.hwamyeonJeonghapseong}</td><td>{Revised.abParityHtml.text}</td><td>{Copy.HandoffAgent.ppatteurinGeonChuchulgigaTeurieAnDameun}</td></tr></tbody></table>
+            <div class="div35">{Copy.HandoffAgent.gateunHwamyeoneulGateunModelroGuhyeonhageHago} <b class="pre1">{Copy.HandoffAgent.ipryeokman}</b> {Revised.abConclusion.text}</div>
           </div>
 
-          <div class="div36">{Copy.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo} <span class="span7">{Copy.HandoffAgent.oenjjokbuteoBReiautTeuriAhtml}</span></div>
+          <div class="div36">{Copy.HandoffAgent.uIuxGuhyeonJeonghapseongBigyo} <span class="span7">{Revised.abFigureOrder.text}</span></div>
           <div class="div37">
-            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt6}><Image src={compare01} class="img1" alt={RawCopy.alt6} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.onbodingBeoteunWichiYeobaekiAEseo}</figcaption></figure>
+            <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open1" aria-label={RawCopy.alt6}><Image src={compare01} class="img1" alt={RawCopy.alt6} /></button><figcaption class="figcaption1">{Revised.abOnboardingGap.text}</figcaption></figure>
             <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open2" aria-label={RawCopy.alt7}><Image src={compare02} class="img1" alt={RawCopy.alt7} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.homHadanChucheonMiksingBaechiwaImiji}</figcaption></figure>
             <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open3" aria-label={RawCopy.alt8}><Image src={compare03} class="img1" alt={RawCopy.alt8} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.saundeuTaimeoDeuropdaunSiUiKkaejim}</figcaption></figure>
             <figure class="figure1"><button type="button" class="zoombtn" data-on-click="open4" aria-label={RawCopy.alt9}><Image src={compare04} class="img1" alt={RawCopy.alt9} /></button><figcaption class="figcaption1">{Copy.HandoffAgent.girokHadanSafeAreaMitJeongryeoliUidowa}</figcaption></figure>
@@ -272,6 +274,8 @@ td{padding:8px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
 .div24{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px;margin-top:10px}
 .div25{margin-top:18px;font-weight:600}
 .div26{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:8px 24px;margin-top:8px;font-size:15.5px}
+.axis{font:11px 'IBM Plex Mono',monospace;color:var(--muted);min-width:34px}
+.refine-note{margin:8px 0 0;font-size:13.5px;line-height:1.7;color:var(--muted);text-wrap:pretty}
 .div27{display:flex;justify-content:space-between;gap:10px;border-bottom:1px solid var(--line-soft);padding:6px 0}
 .span4{color:var(--muted)}
 .span5{font-weight:600}
